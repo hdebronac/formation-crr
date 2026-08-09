@@ -1,78 +1,568 @@
 ---
-title: "M10 · L’appel sélectif numérique"
-description: "Voie 70, identité MMSI et MID, classes A, B et D, formats et catégories d’appel, alerte de détresse, accusé de réception, essais."
+title: "M10 · L'appel sélectif numérique"
+description: "Voie 70, identité MMSI et MID, classes A, B et D, formats et catégories d'appel, alerte de détresse, accusé de réception, essais."
 sidebar:
   order: 10
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 3,5 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 à M9 validés, en particulier la procédure de
+  détresse en phonie (**M8**)
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+C'est le module le plus lourd du programme, et ce n'est pas un hasard :
+l'épreuve C pèse à elle seule 10 questions sur 24, et l'appel sélectif
+numérique en est le cœur. C'est aussi le module le plus utile en mer. Un
+appel de détresse en phonie suppose que quelqu'un écoute, comprenne
+votre position et la note correctement. Une alerte ASN transmet votre
+identité et votre position en une seconde, automatiquement, à toutes les
+stations à portée — y compris pendant que vous avez les deux mains
+occupées ailleurs.
+
+Mais l'ASN a une limite que l'examen exploite systématiquement, et qui
+porte précisément sur le matériel du bateau de plaisance : une VHF de
+**classe D ne peut pas accuser réception d'une détresse sur la voie
+70**. Si vous ne retenez qu'une chose de ce module, retenez celle-là.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Expliquer ce que l'appel sélectif numérique **fait** et ce qu'il
+  **ne fait pas**, et pourquoi la voie 70 n'accepte aucune phonie.
+- [ ] Lire un MMSI et en déduire la nature de la station qui appelle.
+- [ ] Distinguer les classes A, B et D, et en tirer la conséquence
+  opérationnelle sur l'accusé de réception.
+- [ ] Émettre une alerte de détresse par ASN, par la méthode simple et
+  par la méthode détaillée.
+- [ ] Enchaîner sur le message de détresse en phonie sur la voie 16,
+  dans l'ordre exact des champs.
+- [ ] Dérouler la conduite à tenir à la **réception** d'une alerte,
+  selon la classe de mon poste.
+- [ ] Réaliser un essai ASN sans jamais déclencher de fausse alerte.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| ASN | Appel sélectif numérique (DSC) : transmission automatique de codes numériques, sans voix |
+| Voie 70 | Voie exclusivement réservée à l'ASN ; aucune phonie n'y est admise |
+| MMSI | Identité du service mobile maritime : neuf chiffres identifiant une station |
+| MID | Les trois premiers chiffres d'un MMSI ; identifient le pays de rattachement |
+| Classe A | Poste professionnel : accusé de réception et relais de détresse par ASN |
+| Classe B | Poste allégé, capable d'accuser réception d'une détresse sur la voie 70 |
+| Classe D | Poste de plaisance : **ne peut pas** accuser réception d'une détresse sur la voie 70 |
+| Bouton DISTRESS | Poussoir rouge sous capot ; appui d'au moins 5 secondes |
+| Alerte de détresse | Message ASN transmis 5 fois de suite sur la voie 70, renouvelé toutes les 4 minutes |
+| Accusé de réception | Réponse d'une station, qui arrête le renouvellement de l'alerte |
+| Format d'appel | Destinataire de l'appel : à tous, individuel, de groupe, ou par zone |
+| Catégorie d'appel | Priorité de l'appel : détresse, urgence, sécurité, routine |
+| Nature de la détresse | Motif choisi dans une liste normalisée ; à défaut, « undesignated » |
+| Historique ASN | Mémoire de l'équipement, où tout appel émis ou reçu est enregistré |
+| Essai ASN | Test interne, ou appel **individuel** de catégorie **routine** |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve C et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module porte l'essentiel de l'**épreuve C**, « utilisation pratique
+  de VHF ASN (SMDSM) », **10 questions sur 24** — plus que les épreuves
+  A et B prises séparément. Et il faut la moyenne à **chacune** des
+  trois épreuves : c'est ici qu'un échec se joue.
+- Il correspond au chapitre du manuel ANFR intitulé **« L'appel
+  sélectif numérique (ASN) »** et à celui des **« Procédures des
+  communications de détresse, d'urgence et de sécurité en ASN »**.
+- **N'est pas interrogé** : la **liste des MID** et la liste des MMSI
+  des CROSS relèvent de l'annexe 3 du manuel, et *« l'examen ne
+  comporte pas de questions se rapportant aux annexes »*. Elles sont
+  reprises en [Référence](/reference) parce qu'elles servent à bord,
+  pas parce qu'elles s'apprennent.
+- **Confusion n°1 — la classe D.** Le manuel est explicite : *« Seules
+  les VHF de classe A ou B peuvent transmettre un accusé réception sur
+  la voie 70. La majorité des VHF utilisées par les plaisanciers étant
+  de classe D, l'accusé de réception ne pourra se faire que par la voix
+  sur la voie 16. »* C'est le point le plus piégeux du programme.
+- **Confusion n°2 — les quatre nombres.** **5 secondes** d'appui sur le
+  bouton, **5 fois** de suite sur la voie 70, **4 minutes** entre deux
+  renouvellements. Le quatrième, **5 minutes**, n'appartient pas à ce
+  module : c'est le délai avant un MAYDAY RELAY (**M8**) — et c'est
+  aussi, par coïncidence, le délai avant de répéter un appel de
+  **routine** resté sans réponse.
+- **Confusion n°3 — voie 70 contre voie 16.** La 70 ne transporte que
+  des données, la 16 ne transporte que de la voix. Une alerte part sur
+  la 70 ; le message qui la suit se dit sur la 16.
+- **Confusion n°4 — MAYDAY une fois ou trois fois.** Dans l'appel de
+  détresse en phonie, MAYDAY se dit **trois fois** (**M8**). Dans le
+  message qui suit une alerte ASN, il se dit **une seule fois**.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Ce que l'ASN fait — et ce qu'il ne fait pas
 
-### 2. *(section à rédiger)*
+L'**appel sélectif numérique (ASN)**, en anglais *DSC — Digital
+Selective Calling*, n'est pas un mode de conversation. C'est un mode
+d'**appel** : il transmet un court paquet de codes numériques qui dit
+qui appelle, qui est appelé, avec quelle priorité, et — en détresse —
+où se trouve l'appelant.
 
-### 3. *(section à rédiger)*
+Une VHF ASN est une VHF ordinaire à laquelle on a ajouté trois choses :
+un codeur-décodeur d'appel sélectif, un **récepteur de veille
+permanente de la voie 70**, et un accès au GPS. Ce troisième point n'est
+pas un détail : sans position, une alerte perd l'essentiel de sa
+valeur. Les portatives ASN et les postes récents intègrent leur propre
+récepteur GPS ; les modèles plus anciens doivent être reliés à une
+antenne GPS externe.
+
+<Aside type="caution" title="Ce que l'ASN ne fait pas">
+  L'ASN **ne parle pas à votre place**. Il ouvre la communication, il ne
+  la conduit pas. Après une alerte de détresse, c'est toujours **vous**
+  qui devez émettre le message en phonie sur la voie 16 — nature de
+  l'avarie, assistance demandée, personnes à bord. Une alerte sans
+  message, c'est une position sans contexte.
+
+  Il ne remplace pas non plus la **veille** : recevoir les alertes des
+  autres suppose que le poste reste allumé et veille effectivement la
+  voie 70 et la voie 16.
+</Aside>
+
+La **voie 70** lui est exclusivement réservée. Elle transporte :
+
+- les alertes de détresse et leurs accusés de réception ;
+- les relais de détresse et leurs accusés de réception ;
+- les appels destinés à établir une communication d'**urgence** ou de
+  **sécurité** ;
+- les appels de **routine**, commerciaux ou de demande de
+  renseignements — position, essais.
+
+Ce qu'elle ne transporte jamais, c'est de la **voix**. On a vu en
+**M7** que la voie 16 est la voie d'appel et de détresse en phonie ;
+les deux voies sont complémentaires et ne se substituent pas l'une à
+l'autre. Le pourquoi de cette séparation est traité en **M11** : une
+voie de données saturée par de la parole ne remplirait plus sa
+fonction d'alerte.
+
+### 2. Le MMSI : neuf chiffres qui disent qui vous êtes
+
+Le **MMSI** — identité du service mobile maritime — est le numéro à
+**neuf chiffres** qui identifie une station en ASN. Il est attribué par
+l'ANFR avec la **licence de station de navire**, ce document gratuit et
+sans examen qu'on a distingué du CRR en **M0** et en **M1**.
+
+Ses **trois premiers chiffres** forment le **MID**, qui identifie le
+pays de rattachement. Mais la position de ces trois chiffres dans le
+numéro n'est pas la même selon la nature de la station, et c'est
+précisément ce qui permet de lire un MMSI au premier coup d'œil :
+
+| Type de station | Format | Exemple |
+|---|---|---|
+| Station de navire | `MID XXX XXX` | 227 132 120 |
+| Appel de groupe de navires | `0MID XXX XX` | 0227 310 00 |
+| Station côtière | `00 MID XXXX` | 00 227 5400 |
+| Appel de groupe de stations côtières | `00 MID XXXX` | 00 227 4000 |
+| Aide à la navigation (phare, bouée) | `99 MID XXXX` | — |
+| Embarcation rattachée à un navire | `98 MID XXXX` | — |
+| Aéronef participant au sauvetage | `111 MID XXX` | — |
+
+<Aside type="tip" title="Deux zéros devant : c'est la terre qui parle">
+  Un MMSI qui **commence par 00** est celui d'une **station côtière**.
+  C'est la lecture la plus rentable du module : quand un accusé de
+  réception arrive et que son MMSI commence par 00, vous savez
+  immédiatement qu'une station à terre — en France, un CROSS — a reçu
+  votre alerte et prend l'affaire en main.
+</Aside>
+
+Les **MID attribués à la France métropolitaine sont 226, 227 et 228**,
+et les CROSS ont chacun leur MMSI — Gris-Nez `002275100`, La Garde
+`002275400`, et ainsi de suite. Ces listes figurent à l'**annexe 3** du
+manuel : elles **ne sont pas interrogées à l'examen**. Elles sont
+reprises en [Référence](/reference) pour l'usage à bord, et vous ne
+devez pas passer une minute à les apprendre par cœur.
+
+Un identifiant voisin mérite d'être distingué : l'**ID-AIS**, programmé
+par le fabricant dans les émetteurs AIS de sécurité, commence par
+**970**, **972** ou **974** selon le matériel. Ce n'est pas un MMSI de
+navire, et l'AIS ne fait pas partie du SMDSM — on y revient en **M13**.
+
+<Aside type="danger" title="Le MMSI ne se recopie pas d'un bateau à l'autre">
+  Le MMSI est attribué à **un** navire. Le reprogrammer sur
+  l'équipement d'un autre bateau expose à ne pas être secouru : les
+  informations associées — caractéristiques du navire, matériel radio,
+  coordonnées du propriétaire, personnes à contacter — sont celles que
+  le CROSS consultera dans la base Radiomaritime de l'ANFR pendant
+  l'urgence.
+
+  Conséquence pratique : la programmation se fait de préférence par un
+  professionnel, et **certains modèles n'acceptent la saisie qu'une
+  seule fois**. Une erreur oblige alors à faire reprogrammer le poste.
+</Aside>
+
+### 3. Classes A, B et D — le point le plus piégeux du programme
+
+Les VHF ASN ne se valent pas. Trois classes, et une conséquence
+opérationnelle que l'examen interroge sans se lasser :
+
+| Classe | Destination | Accusé de réception d'une détresse sur la voie 70 |
+|---|---|---|
+| **A** | Navires professionnels | **Oui**, plus le relais de détresse |
+| **B** | Poste allégé | **Oui** |
+| **D** | Plaisance | **Non** |
+
+Le manuel l'écrit sans ambiguïté : *« Seules les VHF de classe A ou B
+peuvent transmettre un accusé réception sur la voie 70. La majorité des
+VHF utilisées par les plaisanciers étant de classe D, l'accusé de
+réception ne pourra se faire que par la voix sur la voie 16. »*
+
+<Aside type="danger" title="Classe D : l'accusé passe par la voix">
+  Le bateau du fil rouge — décrit dans la section [À bord](/bord) — est
+  équipé d'une **VHF de classe D**. Si vous recevez une alerte de
+  détresse à son bord, votre poste **ne peut pas** y répondre sur la
+  voie 70. Vous basculez sur la **voie 16**, vous écoutez, et vous
+  accusez réception **à la voix**.
+
+  Ce n'est pas une limitation à contourner : c'est le comportement
+  attendu, et c'est ce que l'examen vérifie.
+</Aside>
+
+Une remarque de bon sens qui évite un contresens fréquent : ne pas
+pouvoir *accuser réception* d'une détresse n'empêche pas d'en *émettre*
+une. Une classe D émet parfaitement une alerte de détresse ASN. La
+restriction porte sur la réponse, pas sur l'appel.
+
+### 4. Les formats et les catégories d'appel
+
+Deux notions distinctes, souvent confondues parce qu'on les choisit
+l'une après l'autre dans le même menu.
+
+Le **format** dit **à qui** l'appel s'adresse :
+
+- **DISTRESS** — l'alerte de détresse, diffusée à tous ;
+- **ALL SHIPS** — à tous les navires à portée, pour l'urgence et la
+  sécurité ;
+- **INDIVIDUAL** — à une station précise, dont il faut saisir le MMSI ;
+- **de groupe** ou **par zone géographique** — à un ensemble de
+  stations. L'appel de groupe est, selon le manuel, *« quasiment pas
+  utilisé »*.
+
+La **catégorie** dit avec **quelle priorité** :
+
+| Catégorie | Priorité | Ce qui suit l'appel |
+|---|---|---|
+| Détresse | La plus haute | Message MAYDAY en phonie sur la voie 16 |
+| Urgence | Après la détresse | Message PAN PAN en phonie sur la voie 16 |
+| Sécurité | Après l'urgence | Message SÉCURITÉ sur la voie annoncée |
+| Routine | La plus basse | Communication ordinaire sur la voie convenue |
+
+Cet ordre de priorité est celui vu en **M7** ; l'ASN ne le modifie pas,
+il l'applique. Les procédures en phonie correspondantes sont l'objet de
+**M8** pour la détresse et de **M9** pour l'urgence et la sécurité.
+
+### 5. Émettre une alerte de détresse
+
+Le poussoir **DISTRESS** est **rouge** et placé **sous un capot** — de
+sorte qu'on ne l'actionne pas par mégarde. Il existe deux méthodes.
+
+**Méthode 1 — l'alerte simple.** On soulève le capot et on appuie **au
+moins 5 secondes**. L'écran clignote, une alarme retentit, et l'alerte
+part sans préciser le motif : la nature de la détresse sera
+`UNDESIGNATED`. Les stations à portée reçoivent votre **MMSI**,
+l'**heure** et votre **position**.
+
+**Méthode 2 — l'alerte détaillée.** Elle ajoute la nature de la
+détresse, ce qui oriente immédiatement les moyens de secours.
+
+<Steps>
+
+1. **Ouvrir le menu d'appel** — `CALL/SET`, `DSC/CALL` ou `DSC/MENU`
+   selon la marque.
+
+2. **Sélectionner le format `DISTRESS`.**
+
+3. **Choisir le type de détresse** dans la liste proposée.
+
+4. **Valider** le choix — `ACCEPT`.
+
+5. **Contrôler le message affiché**, puis corriger (`CANCEL`) ou
+   émettre (`SEND`).
+
+</Steps>
+
+La liste des natures de détresse est normalisée, et le libellé affiché
+sur le poste est **en anglais** :
+
+| En français | En anglais |
+|---|---|
+| Nature de la détresse non précisée | Undesignated |
+| Incendie, explosion | Fire, explosion |
+| Voie d'eau | Flooding |
+| Abordage | Collision |
+| Échouement | Grounding |
+| Gîte, danger de chavirement | Listing, in danger of capsizing |
+| Navire coule | Sinking |
+| Navire désemparé et à la dérive | Disabled and adrift |
+| Abandon de navire | Abandoning ship |
+| Homme à la mer | Man over board |
+| Piraterie, agression, vol à main armée | Piracy, armed robbery attack |
+
+Une fois émise, l'alerte est transmise **cinq fois de suite** sur la
+voie 70, puis **renouvelée automatiquement toutes les quatre minutes**
+tant qu'aucun accusé de réception n'est reçu.
+
+<Aside type="tip" title="5 secondes, 5 fois, 4 minutes">
+  Trois nombres, trois moments différents : **5 secondes** d'appui sur
+  le bouton, **5 fois** de suite sur la voie 70, **4 minutes** entre
+  deux renouvellements. Le poste s'en charge seul — vous n'avez rien à
+  recommencer.
+
+  Le nombre qui manque à cette série, **5 minutes**, appartient à
+  **M8** : c'est le délai au-delà duquel un MAYDAY resté sans accusé de
+  réception justifie un MAYDAY RELAY.
+</Aside>
+
+<Aside type="danger" title="En cas de doute, on alerte">
+  Le déclenchement d'une alerte n'est pas une décision difficile.
+  Devant un doute sérieux sur la sécurité du bord ou d'une personne, on
+  alerte. Une alerte déclenchée sans motif suffisant **s'annule** — la
+  procédure est enseignée en entier en **M11**, et c'est une procédure
+  normale, prévue par le manuel.
+
+  Ce qui est sanctionné, ce n'est pas l'erreur : ce sont les fausses
+  alertes **intentionnelles ou par négligence**, et le fait de ne pas
+  les annuler.
+</Aside>
+
+### 6. Après l'alerte : le message sur la voie 16
+
+L'accusé de réception arrive généralement vite, émis sur la voie 70 par
+une **station côtière à portée**, dont le MMSI commence par **00**. En
+France, ce sera un CROSS — celui de la zone concernée. Dès qu'il est
+reçu, la réémission automatique de l'alerte **s'arrête**.
+
+C'est alors à vous de parler.
+
+<Steps>
+
+1. **Arrêter l'alarme sonore** et lire le message reçu, qui confirme
+   l'accusé de réception et rappelle votre propre MMSI.
+
+2. **Se positionner sur la voie 16.** L'alerte est partie sur la 70 ;
+   le message part sur la 16.
+
+3. **Émettre le message de détresse en phonie**, dans l'ordre des
+   champs ci-dessous.
+
+4. **Rester à l'écoute** et répondre aux instructions de la station
+   coordonnatrice.
+
+</Steps>
+
+Le message suit cet ordre exact :
+
+| Étape | Contenu |
+|---|---|
+| Préambule | **MAYDAY** — **une seule fois** |
+| Identification | `ICI` nom du navire, MMSI, indicatif d'appel |
+| Position | Position et heure de la position |
+| Détresse | Nature de la détresse et assistance demandée |
+| Complément | Toute information susceptible de faciliter le sauvetage |
+| Fin | `À VOUS` |
+
+<Aside type="caution" title="MAYDAY trois fois, ou une seule ?">
+  **Trois fois** dans l'appel de détresse en phonie pur, celui de
+  **M8**, quand aucune alerte ASN ne l'a précédé.
+
+  **Une seule fois** dans le message qui **suit une alerte ASN** — la
+  machine a déjà crié à votre place, il s'agit maintenant de préciser.
+
+  L'examen pose la question dans les deux sens.
+</Aside>
+
+### 7. Recevoir une alerte de détresse
+
+La réception d'une alerte est signalée par une **alarme sonore**, et
+l'écran affiche le MMSI de l'émetteur, la nature de la détresse, sa
+position et l'heure. La conduite à tenir dépend alors de deux choses :
+la classe de votre poste, et le fait qu'une station côtière ait déjà
+répondu ou non.
+
+**Cas 1 — une station côtière accuse réception avant le renouvellement
+de l'alerte.** L'écran affiche l'accusé, par exemple *Distress
+acknowledgment received from 002275140*. L'affaire est prise en charge
+par la terre. Vous stoppez l'alarme, vous vous assurez d'être sur la
+**voie 16**, et vous **écoutez** le message de détresse. Vous
+n'intervenez pas sans nécessité.
+
+**Cas 2 — aucune station n'accuse réception avant le renouvellement.**
+C'est à vous d'agir :
+
+<Steps>
+
+1. **Si votre VHF est de classe A ou B** — vous accusez réception de
+   l'alerte **sur la voie 70**.
+
+2. **Sinon — et c'est le cas d'une classe D** — vous sélectionnez la
+   **voie 16**.
+
+3. **Vous écoutez** le message de détresse.
+
+4. **Vous accusez réception en téléphonie**, à la voix, sur la
+   voie 16.
+
+</Steps>
+
+La conduite à tenir détaillée à la réception d'un message de détresse —
+cesser toute transmission, noter, attendre la réponse d'une station
+côtière — est l'objet de **M8**. Ce qui est propre à l'ASN, c'est le
+choix de la voie sur laquelle on répond, et il découle entièrement de
+la classe du poste.
+
+### 8. Urgence, sécurité, routine — et l'essai qui ne déclenche rien
+
+Les trois autres catégories suivent toutes le même principe en **deux
+temps** : une **annonce par ASN sur la voie 70**, puis l'**appel et le
+message en radiotéléphonie**.
+
+| Catégorie | Annonce ASN | Le récepteur accuse-t-il réception ? | Il écoute ensuite |
+|---|---|---|---|
+| Urgence | `ALL SHIPS`, catégorie `URGENCY` | **Non** | La voie 16 |
+| Sécurité | `ALL SHIPS`, catégorie `SAFETY` | **Non** | La voie annoncée |
+| Routine | `INDIVIDUAL`, catégorie `ROUTINE` | Oui, s'il est demandé | La voie convenue |
+
+<Aside type="caution" title="Une annonce à tous ne s'accuse pas">
+  Les navires et les stations côtières qui reçoivent par ASN une
+  annonce d'urgence ou de sécurité **adressée à tous** n'y répondent
+  pas : ils passent à l'écoute de la voie indiquée. Répondre
+  encombrerait la voie 70 pour rien. Les messages PAN PAN et SÉCURITÉ
+  qui suivent sont l'objet de **M9**.
+</Aside>
+
+Pour un appel de **routine** — joindre un navire dont on connaît le
+MMSI, ou une station côtière pour de la correspondance publique — on
+sélectionne le format `INDIVIDUAL`, on compose le MMSI, on choisit la
+catégorie `ROUTINE`, on indique la voie de travail souhaitée, et on
+émet. Le poste attend alors l'accusé de réception ; **l'appel peut être
+répété si aucun accusé n'est reçu dans les 5 minutes**.
+
+Tout appel ASN émis ou reçu est enregistré dans l'**historique** de
+l'équipement. C'est utile après coup, pour retrouver un MMSI ou vérifier
+qu'une alerte est bien partie.
+
+<Aside type="danger" title="L'essai ne se fait jamais par une alerte de détresse">
+  Pour vérifier que la fonction ASN marche, deux moyens, et deux
+  seulement :
+
+  - la **fonction de test interne** du poste ;
+  - un **essai avec une station côtière ou un autre navire**, en
+    **appel de routine, format individuel** : on ouvre le menu de
+    sélection du type d'appel, on saisit le MMSI, et on choisit la
+    catégorie `ROUTINE`.
+
+  On n'essaie **jamais** le bouton DISTRESS « pour voir ». La
+  protection des fréquences de détresse, les protocoles d'essai et la
+  procédure d'annulation d'une fausse alerte sont l'objet de **M11**.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié sur ce site avant d'avoir été **ouvert,
+  vérifié et daté**. La prudence est particulièrement de mise sur ce
+  module : le manuel de l'ANFR a été refondu en **juin 2025** avec
+  **davantage d'ASN**, et une vidéo de préparation antérieure peut
+  enseigner un contenu périmé sur le point exact que l'examen pèse le
+  plus lourd.
+
+  En attendant, entraînez-vous sur le **simulateur reproduisant la
+  télécommande d'examen** et sur le module d'entraînement de l'ANFR,
+  listés sur la page [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+Ce module produit la pièce maîtresse du dossier radio : la
+configuration réelle du poste, vérifiée et notée.
+
+**Livrable attendu** : un dossier `dossier-radio/M10/` contenant :
+
+1. **`identite-station.md`** — le **MMSI** du bateau, relevé sur la
+   licence de station, et le MMSI **effectivement programmé dans la
+   VHF**, relevé dans le menu du poste. Les deux doivent coïncider ;
+   s'ils diffèrent, ou si le poste n'est pas programmé, l'écrire en
+   toutes lettres et noter la démarche à engager. Consigner aussi
+   l'indicatif d'appel, et vérifier que le poste reçoit bien une
+   position GPS.
+
+2. **`classe-du-poste.md`** — la classe de la VHF fixe (A, B ou D),
+   relevée sur la documentation du constructeur, et la conclusion
+   opérationnelle qui en découle **écrite noir sur blanc** : sur ce
+   bateau, l'accusé de réception d'une détresse se fait sur la voie 70,
+   ou à la voix sur la voie 16. Faire de même pour la portative ASN si
+   le bord en dispose.
+
+3. **`arbre-des-menus.md`** — le chemin exact, sur **votre** poste,
+   pour : émettre une alerte détaillée, émettre un appel individuel de
+   routine, consulter l'historique. Les libellés varient d'une marque à
+   l'autre — `CALL/SET`, `DSC/CALL`, `DSC/MENU` — et c'est précisément
+   ce qu'il faut avoir noté avant d'en avoir besoin.
+
+4. **`mmsi-utiles.md`** — les MMSI des CROSS de vos zones de
+   navigation, enregistrés dans le répertoire du poste. Ils ne sont pas
+   à l'examen ; ils servent en mer.
+
+Ces fichiers alimentent la page `bord/station-radio`, et
+`classe-du-poste.md` conditionne directement les scénarios de
+`bord/scenarios`.
 
 ## Entraînement — micro en main
 
+<Aside type="danger" title="Poste hors tension, ou simulateur">
+  Toutes les manipulations de ce module se font **micro éteint, poste
+  hors tension, ou sur simulateur**. Le bouton DISTRESS ne s'appuie
+  pas « pour essayer » : l'appui réel de 5 secondes déclenche une vraie
+  alerte, mobilise des moyens de secours, et engage une responsabilité
+  pénale.
+</Aside>
+
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Lire un MMSI à voix haute et le classer.** Prenez cinq MMSI —
+   celui du bord, ceux des CROSS de votre zone, un MMSI de navire
+   quelconque. Pour chacun, dites à voix haute s'il s'agit d'une
+   station de navire, d'une station côtière, d'un appel de groupe ou
+   d'une aide à la navigation, et sur quel indice vous tranchez.
+   L'objectif est la reconnaissance immédiate du préfixe `00`.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Dérouler l'alerte détaillée, sans émettre.** Sur le poste hors
+   tension ou sur simulateur, parcourez la méthode 2 en entier :
+   menu d'appel, format `DISTRESS`, choix de la nature, validation,
+   écran de contrôle. Arrêtez-vous **avant** `SEND`. Refaites-le
+   jusqu'à ne plus chercher les menus, puis notez le chemin dans
+   `arbre-des-menus.md`.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Enchaîner sur le message de la voie 16.** Immédiatement après
+   l'étape précédente, chronomètre en main, dites le message complet :
+   MAYDAY une seule fois, `ICI` nom, MMSI, indicatif, position et
+   heure, nature et assistance demandée, complément, `À VOUS`. Le
+   MMSI se dit chiffre par chiffre — révisez la prononciation des
+   chiffres en **M5**.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Jouer la réception d'une alerte.** Un équipier annonce une alerte
+   reçue d'un MMSI donné, avec une nature de détresse. Vous énoncez à
+   voix haute : ce que vous faites de l'alarme, sur quelle voie vous
+   basculez, et **pourquoi cette voie-là** compte tenu de la classe de
+   votre poste. Répétez en variant : station côtière ayant déjà
+   accusé réception, ou silence radio complet.
+
+5. **Faire un vrai essai — de routine.** Avec un autre navire à portée
+   ou une station côtière, réalisez un essai ASN par **appel
+   individuel de catégorie routine**, en suivant votre
+   `arbre-des-menus.md`. Vérifiez ensuite que l'appel figure bien dans
+   l'**historique** du poste. C'est le seul essai autorisé.
 
 </Steps>
 
@@ -80,9 +570,134 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m10"
+  questions={[
+    {
+      question:
+        'Sur quelle voie une alerte de détresse par appel sélectif numérique est-elle transmise ?',
+      choices: ['La voie 16', 'La voie 06', 'La voie 70', 'La voie 13'],
+      answer: 2,
+      explanation:
+        'La voie 70 est exclusivement réservée à l’ASN et n’accepte aucune phonie. La voie 16 est la voie de détresse et d’appel en phonie : c’est sur elle que se dit le message qui suit l’alerte (M8).',
+    },
+    {
+      question:
+        'Combien de temps faut-il appuyer sur le bouton DISTRESS pour émettre une alerte ?',
+      choices: [
+        'Au moins 5 secondes',
+        'Au moins 1 seconde',
+        'Au moins 30 secondes',
+        'Un appui bref suffit',
+      ],
+      answer: 0,
+      explanation:
+        'Au moins 5 secondes, sur un poussoir rouge placé sous un capot. Ces deux protections — la durée et le capot — existent précisément pour éviter le déclenchement accidentel (M11).',
+    },
+    {
+      question:
+        'Une fois émise, l’alerte de détresse ASN est renouvelée automatiquement :',
+      choices: [
+        'toutes les 30 secondes',
+        'toutes les minutes',
+        'jamais : elle n’est émise qu’une fois',
+        'toutes les 4 minutes, jusqu’à l’accusé de réception',
+      ],
+      answer: 3,
+      explanation:
+        'L’alerte est transmise 5 fois de suite, puis renouvelée toutes les 4 minutes tant qu’aucun accusé de réception n’est reçu. Ne pas confondre avec les 5 minutes du délai avant un MAYDAY RELAY (M8).',
+    },
+    {
+      question:
+        'Vous êtes à bord d’un voilier équipé d’une VHF ASN de classe D et vous recevez une alerte de détresse à laquelle aucune station n’a répondu. Comment accusez-vous réception ?',
+      choices: [
+        'Sur la voie 70, par ASN',
+        'À la voix, sur la voie 16',
+        'Par ASN, en appel individuel de routine',
+        'Vous ne pouvez pas accuser réception, et vous n’avez rien à faire',
+      ],
+      answer: 1,
+      explanation:
+        'Seules les classes A et B peuvent accuser réception d’une détresse sur la voie 70. Une classe D, celle de la plaisance, accuse réception à la voix sur la voie 16. C’est le point le plus piégeux du programme.',
+    },
+    {
+      question: 'Que signifient les deux premiers chiffres « 00 » d’un MMSI ?',
+      choices: [
+        'Que le navire est immatriculé en France métropolitaine',
+        'Qu’il s’agit d’un appel de groupe',
+        'Qu’il s’agit d’une station côtière',
+        'Que la station est une aide à la navigation',
+      ],
+      answer: 2,
+      explanation:
+        'Un MMSI commençant par 00 est celui d’une station côtière — en France, un CROSS. C’est la lecture la plus utile en détresse : elle indique que la terre a pris l’affaire en main.',
+    },
+    {
+      question:
+        'Dans le message de détresse en phonie qui suit une alerte ASN, le mot MAYDAY est prononcé :',
+      choices: [
+        'trois fois',
+        'cinq fois',
+        'autant de fois que nécessaire',
+        'une seule fois',
+      ],
+      answer: 3,
+      explanation:
+        'Une seule fois lorsque le message suit une alerte ASN. C’est dans l’appel de détresse en phonie pur, sans alerte préalable, que MAYDAY se répète trois fois (M8).',
+    },
+    {
+      question:
+        'Comment vérifie-t-on que la fonction ASN d’une VHF fonctionne correctement ?',
+      choices: [
+        'Par un appel individuel de catégorie routine, ou par le test interne du poste',
+        'Par un appui bref sur le bouton DISTRESS',
+        'Par un appel à tous de catégorie sécurité sur la voie 70',
+        'En émettant un MAYDAY d’essai sur la voie 16',
+      ],
+      answer: 0,
+      explanation:
+        'Le manuel ne prévoit que deux moyens : la fonction de test interne, ou un essai avec une station côtière ou un autre navire en appel individuel de catégorie routine. Le bouton DISTRESS ne s’essaie jamais (M11).',
+    },
+    {
+      question:
+        'Un navire reçoit par ASN une annonce d’urgence adressée à tous. Que doit-il faire ?',
+      choices: [
+        'Accuser réception sur la voie 70, puis écouter la voie 16',
+        'Ne pas accuser réception et passer à l’écoute de la voie 16',
+        'Accuser réception à la voix sur la voie 16',
+        'Retransmettre l’annonce aux navires voisins',
+      ],
+      answer: 1,
+      explanation:
+        'Une annonce d’urgence ou de sécurité adressée à tous ne s’accuse pas : on passe à l’écoute de la voie indiquée — la voie 16 pour l’urgence. Répondre encombrerait la voie 70 inutilement. Le message PAN PAN qui suit est traité en M9.',
+    },
+    {
+      question: 'Quel est le format d’un MMSI de station de navire ?',
+      choices: [
+        '00 suivi du MID puis de quatre chiffres',
+        'Un zéro, puis le MID, puis cinq chiffres',
+        'Le MID suivi de six chiffres, soit neuf chiffres au total',
+        'Le MID suivi de sept chiffres, soit dix chiffres au total',
+      ],
+      answer: 2,
+      explanation:
+        'Un MMSI comporte neuf chiffres : le MID sur les trois premiers, puis six chiffres. Le format « 0MID XXXXX » désigne un appel de groupe de navires, et « 00MID XXXX » une station côtière.',
+    },
+    {
+      question:
+        'Vous émettez une alerte de détresse ASN et recevez un accusé de réception d’une station dont le MMSI est 002275140. Que faites-vous ensuite ?',
+      choices: [
+        'Vous renouvelez l’alerte ASN pour confirmer',
+        'Vous attendez d’être contacté sur la voie 70',
+        'Vous accusez réception de l’accusé sur la voie 70',
+        'Vous passez sur la voie 16 et émettez votre message de détresse en phonie',
+      ],
+      answer: 3,
+      explanation:
+        'L’accusé de réception arrête la réémission automatique de l’alerte. Il faut alors passer sur la voie 16 et donner les précisions : nature de la détresse, assistance demandée, personnes à bord. Une alerte sans message, c’est une position sans contexte.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +705,66 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M10 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+VOIE 70 = ASN SEULEMENT — JAMAIS DE VOIX
+VOIE 16 = VOIX SEULEMENT
+  70 porte : alertes + accusés, relais, appels urgence/sécurité,
+             appels de routine et essais
+
+ALERTE DE DÉTRESSE — ÉMISSION
+  Bouton DISTRESS rouge, SOUS CAPOT
+  Appui  >= 5 SECONDES
+  Émise  5 FOIS de suite sur la voie 70
+  Renouvelée toutes les 4 MINUTES jusqu'à accusé de réception
+  Transmet : MMSI + POSITION + HEURE  (+ nature si méthode 2)
+
+  Méthode 1  → appui long           → nature "UNDESIGNATED"
+  Méthode 2  → menu → DISTRESS → nature → ACCEPT → SEND
+
+APRÈS L'ACCUSÉ  → LA VOIX PREND LE RELAIS (voie 16)
+  MAYDAY                     ← UNE SEULE FOIS
+  ICI <nom> / <MMSI> / <indicatif>
+  Position + heure
+  Nature de la détresse + assistance demandée
+  Tout renseignement utile
+  À VOUS
+  (MAYDAY x3 = appel en phonie pur, sans ASN → M8)
+
+CLASSES — LE PIÈGE DU PROGRAMME
+  A  professionnel  → accuse sur le 70 + relais de détresse
+  B                 → accuse sur le 70
+  D  PLAISANCE      → N'ACCUSE PAS sur le 70
+                      → accusé À LA VOIX sur la VOIE 16
+  Une classe D ÉMET une alerte sans problème : c'est la
+  RÉPONSE qui passe par la voix.
+
+LIRE UN MMSI  (9 chiffres, MID = les 3 premiers)
+  MID XXXXXX     station de navire        227 132 120
+  0MID XXXXX     appel de groupe          0227 310 00
+  00 MID XXXX    STATION CÔTIÈRE          00 227 5400
+  99 MID XXXX    aide à la navigation
+  98 MID XXXX    embarcation rattachée
+  111 MID XXX    aéronef de sauvetage
+  → COMMENCE PAR 00 = LA TERRE RÉPOND
+  MID métropole : 226 · 227 · 228   (annexe — hors examen)
+
+RÉCEPTION D'UNE ALERTE
+  Station côtière a déjà accusé → voie 16, ÉCOUTER
+  Personne n'a accusé :
+    classe A ou B → accuser sur le 70
+    classe D      → voie 16, écouter, accuser À LA VOIX
+
+URGENCE / SÉCURITÉ / ROUTINE — TOUJOURS EN 2 TEMPS
+  1. annonce ASN sur le 70    2. message en phonie
+  Annonce à tous → ON N'ACCUSE PAS, on écoute
+    urgence  → voie 16      sécurité → voie annoncée
+  Routine → INDIVIDUAL + MMSI ; répétable après 5 min
+
+ESSAI — LE SEUL AUTORISÉ
+  Test interne du poste
+  OU appel INDIVIDUEL de catégorie ROUTINE
+  JAMAIS le bouton DISTRESS. Fausse alerte → annuler (M11).
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec les cartes **M8** (détresse en phonie) et **M11**
+(protection des fréquences et annulation d'une fausse alerte) : les
+trois se lisent ensemble, et c'est dans cet ordre qu'on s'en sert.
