@@ -1,0 +1,67 @@
+# Licences
+
+Ce dépôt réunit deux natures de travaux, sous deux licences distinctes.
+
+## Contenu pédagogique — CC BY-SA 4.0
+
+Le contenu rédactionnel — les modules `src/content/docs/modules/`, le dossier
+du bord `src/content/docs/bord/`, les aides-mémoire
+`src/content/docs/reference/`, les pages `src/content/docs/meta/`, ainsi que
+`SPECS.md` — est publié sous licence **Creative Commons Attribution -
+Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0)**.
+
+Vous êtes libre de le partager et de l'adapter, y compris commercialement, à
+deux conditions : **créditer** l'auteur d'origine et un lien vers la licence,
+et **diffuser vos adaptations sous la même licence**.
+
+Texte complet : https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+
+## Code — MIT
+
+Le code — `src/components/`, `scripts/`, `astro.config.mjs` et les fichiers de
+configuration — est publié sous **licence MIT** :
+
+> Copyright (c) 2026 Hugues de Bronac
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+> of this software and associated documentation files (the "Software"), to deal
+> in the Software without restriction, including without limitation the rights
+> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+> copies of the Software, and to permit persons to whom the Software is
+> furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
+
+## Illustrations — licences propres
+
+Les images de `src/assets/` **ne sont pas couvertes par les licences
+ci-dessus**. Chacune reste soumise à sa licence d'origine, avec son auteur et
+sa source : voir la page « Crédits des illustrations ».
+
+Les schémas produits pour ce programme, signalés comme tels sur cette même
+page, suivent la licence du contenu (CC BY-SA 4.0).
+
+## Contenus non couverts
+
+Le **manuel de préparation du CRR maritime de l'ANFR** n'est ni reproduit ni
+redistribué par ce dépôt : il est cité et lié vers sa source officielle. Il en
+va de même des textes réglementaires, dont seules les références sont données.
+
+## Absence de garantie
+
+Ce dépôt est un **carnet d'auto-formation**, rédigé par un candidat en cours
+de préparation. Il ne constitue ni un document réglementaire, ni un support de
+formation agréé, ni un substitut au manuel de préparation de l'ANFR ou aux
+Règlements des radiocommunications de l'UIT. Aucune garantie n'est donnée
+quant à l'exactitude ou à l'exhaustivité de son contenu, et la responsabilité
+de l'auteur ne saurait être engagée du fait de son usage — notamment en
+situation de détresse en mer, où seules les procédures officielles font foi.

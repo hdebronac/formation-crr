@@ -1,0 +1,28 @@
+{
+  "name": "formation-crr",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Programme d'auto-formation au certificat restreint de radiotéléphoniste du service mobile maritime (CRR), aligné sur le manuel ANFR V16.",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/starlight": "^0.39.2",
+    "astro": "^6.3.1",
+    "sharp": "^0.34.5",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}
