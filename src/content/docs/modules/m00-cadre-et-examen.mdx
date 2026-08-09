@@ -1,78 +1,473 @@
 ---
 title: "M0 · Cadre, examen et méthode"
-description: "Ce qu’est le CRR et ce qu’il n’est pas, le format de l’examen métropolitain, l’inscription à l’ANFR, et la méthode de travail sur trois à quatre semaines."
+description: "Ce qu'est le CRR et ce qu'il n'est pas, le format de l'examen métropolitain, l'inscription à l'ANFR, et la méthode de travail sur trois à quatre semaines."
 sidebar:
   order: 0
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : transverse (aucune épreuve dédiée) · **Volume** : 1 h ·
   **Prérequis** : aucun
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Ce module ne contient pas une seule procédure radio. Il sert à autre chose,
+et c'est pour cela qu'il vient en premier : savoir **exactement** ce qu'on
+prépare. Le CRR est entouré de trois confusions qui coûtent du temps, de
+l'argent, et parfois l'examen lui-même. On le confond avec la licence de la
+station de navire, qui est un autre document. On le confond avec le CRR
+fluvial, qui est un autre examen. Et on cale son entraînement sur des chiffres
+trouvés en ligne qui décrivent l'outre-mer, ou qui ne sont publiés nulle part.
+
+À la fin de cette heure, vous saurez ce que le certificat autorise, quand il
+est obligatoire, ce que l'épreuve contient réellement, ce que l'ANFR ne dit
+pas, et comment répartir les trente heures qui suivent. Vous aurez aussi
+réservé votre session : c'est la meilleure façon de rendre le calendrier réel.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Distinguer le **CRR**, la **licence de station de navire** et le
+  **permis plaisance**, et dire ce que chacun autorise.
+- [ ] Déterminer, pour une situation donnée (type de VHF, zone de
+  navigation), **quel titre est exigé**.
+- [ ] Décrire le **format de l'examen métropolitain** : nombre de questions,
+  épreuves, durée par question, règle de réussite.
+- [ ] Identifier les valeurs d'examen qui **ne sont pas publiées** par l'ANFR,
+  et refuser de m'entraîner sur un chiffre non sourcé.
+- [ ] Reconnaître un contenu qui décrit **l'outre-mer ou le fluvial** plutôt
+  que le CRR maritime métropolitain.
+- [ ] Dérouler la procédure d'inscription et réunir les pièces exigées.
+- [ ] Organiser ma préparation sur trois à quatre semaines selon le rythme
+  **2S + 1B**.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| CRR | Certificat restreint de radiotéléphoniste du service mobile maritime : titre personnel autorisant l'exploitation d'une station radio de navire en VHF |
+| SRC | *Short Range Certificate* — l'équivalence internationale du CRR, mentionnée sur le certificat lui-même |
+| ANFR | Agence nationale des fréquences : elle organise l'examen et délivre le certificat, par délégation de la Direction des affaires maritimes |
+| Licence de station de navire | Autorisation administrative **distincte**, gratuite et sans examen, qui attribue l'indicatif d'appel et le MMSI au **bateau** |
+| Indicatif d'appel | Identifiant attribué à la station de navire, utilisé pour s'annoncer en phonie |
+| MMSI | Identité du service mobile maritime : le numéro à neuf chiffres qui identifie la station en appel sélectif numérique (M10) |
+| Épreuve A | Généralités du service mobile maritime — 6 questions sur 24 |
+| Épreuve B | Radiotéléphonie VHF — 8 questions sur 24 |
+| Épreuve C | Utilisation pratique de VHF ASN (SMDSM) — 10 questions sur 24 |
+| Télécommande intelligente | Le boîtier de réponse remis au candidat, comme au permis plaisance. Ni papier, ni ordinateur personnel |
+| Annexes du manuel | Les annexes 1 à 7 du manuel de préparation : utiles à bord, **non interrogées** à l'examen |
+| Manuel V16 | Manuel de préparation du CRR maritime de l'ANFR, édition de juin 2025 : c'est le programme d'examen |
+| CRR fluvial | Examen **séparé**, manuel séparé, épreuves séparées. Le CRR maritime vaut en zone fluviale, mais le fluvial n'est pas interrogé ici |
+| Marqueur `[à vérifier ANFR]` | Signale, dans ce site, une valeur qui n'a pas pu être confirmée sur une source primaire |
+| Rythme 2S + 1B | Deux séances d'étude et une séance de bachotage chronométré par semaine |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve concernée et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module **ne correspond à aucune épreuve** : il n'y a pas de question
+  d'examen sur « comment s'inscrire ». Il est là pour éviter les erreurs de
+  préparation, qui coûtent plus cher que les erreurs de connaissance.
+- Deux de ses contenus sont **directement interrogés**, mais dans l'épreuve
+  A : la distinction entre le certificat et la licence de station, et le
+  périmètre d'obligation du certificat. Ils sont repris et approfondis en
+  **M1** (chapitre « Dispositions règlementaires et administratives » du
+  manuel).
+- **Les annexes du manuel ne sont pas interrogées.** Le manuel l'écrit :
+  *« L'examen ne comporte pas de questions se rapportant aux annexes de ce
+  manuel. »* Cela concerne le tableau des voies VHF, la liste des MID, le
+  lexique de l'OMI et la radiotéléphonie fluviale. Les apprendre par cœur est
+  du temps perdu ; ils sont rangés dans la section
+  [Référence](/reference).
+- **Confusion classique n°1 — certificat contre licence.** Le CRR est un titre
+  **personnel** obtenu par examen et payant ; la licence est une autorisation
+  administrative **du bateau**, gratuite et sans examen. Les deux peuvent être
+  exigés lors d'un contrôle. Traitée en détail en **M1**.
+- **Confusion classique n°2 — métropole contre outre-mer.** Les pages
+  d'outre-mer de l'ANFR décrivent un examen différent. Traitée ci-dessous, une
+  fois pour toutes.
+- **Confusion classique n°3 — maritime contre fluvial.** Deux examens, deux
+  manuels. Le fluvial n'a pas de module ici : voir la page de
+  [Référence](/reference) qui lui est consacrée.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Ce qu'est le CRR — et ce qu'il n'est pas
 
-### 2. *(section à rédiger)*
+Le **certificat restreint de radiotéléphoniste du service mobile maritime**
+est un titre **personnel**. Il atteste que son titulaire sait exploiter une
+station radiotéléphonique de navire : appeler, répondre, respecter les
+priorités, et surtout émettre et traiter une alerte de détresse.
 
-### 3. *(section à rédiger)*
+Son équivalence internationale, imprimée sur le certificat, est le **SRC —
+*Short Range Certificate***. C'est ce nom que reconnaîtront les autorités
+étrangères.
+
+Trois précisions qui règlent beaucoup de questions :
+
+- **C'est un certificat VHF uniquement.** Un CRR délivré aujourd'hui ne couvre
+  ni les ondes hectométriques (MF), ni les ondes décamétriques (HF), ni
+  Inmarsat. Seuls les CRR délivrés **avant** l'arrêté du 18 mai 2005 couvrent
+  encore le MF/HF, au titre d'une disposition transitoire (art. 2).
+- **Il ne périme pas.** L'arrêté énumère limitativement les mentions du
+  certificat (art. 6) et n'y fait figurer aucune date d'expiration ; aucun
+  mécanisme de revalidation n'est prévu, contrairement au certificat général
+  d'opérateur. Attention à la formulation : c'est une conclusion **par absence
+  de disposition contraire**, pas une garantie écrite quelque part.
+- **Il ne dit rien de votre aptitude à naviguer.** Le CRR n'est pas un permis.
+  Il n'autorise pas à conduire un bateau, et le permis plaisance n'apprend pas
+  à émettre un MAYDAY.
+
+Le cadre juridique se lit à trois étages : le **Règlement des
+radiocommunications de l'UIT** (art. 47 et tableau 47.1) pose le principe des
+certificats d'opérateur ; la **Résolution 343 (CMR-97)** fixe le programme ; la
+recommandation **CEPT REC 31-04** l'harmonise en Europe ; et en France
+l'**arrêté du 18 mai 2005**, modifié par l'arrêté du 22 février 2011, organise
+l'examen. Ces textes sont détaillés en **M1**.
+
+### 2. Trois documents à ne pas confondre
+
+C'est le point d'examen le plus rentable de ce module, parce qu'il est simple
+et qu'il est raté souvent.
+
+| Document | Porte sur | Comment on l'obtient | Coût |
+|---|---|---|---|
+| **CRR** | **La personne** | Examen à l'ANFR | 78 € |
+| **Licence de station de navire** | **Le bateau** | Demande administrative à l'ANFR, **sans examen** | Gratuite |
+| **Permis plaisance** | **La personne**, pour la conduite | Examen distinct | Autre tarif |
+
+La **licence de station de navire** est le document qui attribue à votre
+bateau son **indicatif d'appel** et son **MMSI** — le numéro à neuf chiffres
+sans lequel l'appel sélectif numérique ne fonctionne pas. Elle n'a rien à voir
+avec vos compétences : elle autorise l'**installation** à émettre.
+
+<Aside type="caution" title="Deux documents, deux contrôles">
+  Lors d'un contrôle, l'administration peut demander **les deux** : votre
+  certificat, et la licence du bateau. Avoir le CRR sans licence de station ne
+  vous met pas en règle, et détenir la licence ne vous autorise pas à
+  exploiter le poste. La programmation du MMSI dans la VHF est traitée en
+  **M10** ; les documents à conserver à bord, en **M1**.
+</Aside>
+
+### 3. Quand le certificat est obligatoire
+
+La règle a changé en 2011 et reste mal comprise. Elle dépend de **deux
+critères** : le type de VHF, et la zone de navigation.
+
+| Situation | Titre requis |
+|---|---|
+| VHF **portative non-ASN, ≤ 6 W**, dans les eaux territoriales françaises | **Aucun** |
+| VHF **fixe**, ou portative **avec ASN**, dans les eaux françaises | **Permis plaisance OU CRR** |
+| **Toute** VHF, en eaux internationales ou à l'étranger | **CRR** (ou SRC équivalent) |
+| Voies de navigation intérieure | CRR fluvial au minimum ; **le CRR maritime vaut aussi** |
+
+L'ANFR le formule ainsi : *« Depuis 2011, le CRR n'est plus obligatoire dans
+les eaux territoriales françaises pour les plaisanciers utilisant une VHF
+portative sans la fonction ASN. »*
+
+Deux conséquences pratiques pour le bateau du fil rouge, décrit dans la
+section [À bord](/bord) :
+
+- il a une **VHF fixe avec appel sélectif numérique** — donc un titre est
+  exigé, même en eaux françaises ;
+- il navigue **au-delà de 6 milles d'un abri** — donc l'emport d'un moyen
+  radio est obligatoire, et il traverse la Manche, donc il sort des eaux
+  territoriales françaises. Le CRR n'est pas une option pour lui.
+
+<Aside type="tip" title="La question à se poser dans l'ordre">
+  1. La VHF est-elle fixe, ou dotée de l'appel sélectif numérique ? →
+  si oui, un titre est exigé. 2. Sortez-vous des eaux territoriales
+  françaises ? → si oui, ce titre doit être le **CRR**, le permis plaisance ne
+  suffit plus.
+</Aside>
+
+### 4. Le format de l'examen
+
+L'épreuve est courte, entièrement en QCM, et se passe sur une **télécommande
+intelligente** — le même type de boîtier qu'au permis plaisance. Les questions
+sont **projetées sur un écran et lues par une voix synthétique**.
+
+| Paramètre | Valeur |
+|---|---|
+| Nombre de questions | **24** |
+| Réponses possibles | **une seule** par question |
+| Temps par question | **22 secondes**, avec une barre de défilement à l'écran |
+| Retour en arrière | **impossible** |
+| Durée totale | **environ 25 minutes** |
+| Épreuve pratique | **aucune** en métropole |
+
+Les 24 questions se répartissent en **trois épreuves**, et c'est cette
+répartition qui structure tout le programme :
+
+| Épreuve | Intitulé | Questions | Modules |
+|---|---|---:|---|
+| **A** | Généralités du service mobile maritime | **6** | M1 → M5 |
+| **B** | Radiotéléphonie VHF | **8** | M6 → M9 |
+| **C** | Utilisation pratique de VHF ASN (SMDSM) | **10** | M10 → M13 |
+| | **Total** | **24** | |
+
+<Aside type="danger" title="Un bon total ne rattrape rien">
+  La règle de réussite est **la moyenne à chacune des trois épreuves**, prises
+  séparément. Un excellent score en A et B qui masquerait un effondrement en C
+  ne suffit pas. C'est la raison pour laquelle ce programme n'est pas lissé :
+  l'épreuve C pèse à elle seule **10 questions sur 24**, plus que les deux
+  autres réunies, et **M10 à M13** sont volontairement les modules les plus
+  denses.
+</Aside>
+
+Les **22 secondes sans retour en arrière** ne sont pas un détail
+d'organisation : c'est une contrainte d'examen à part entière. On peut
+parfaitement connaître la réponse et la manquer parce qu'on hésite trop
+longtemps, ou parce qu'on a validé le mauvais bouton. C'est pourquoi les quiz
+de ce site peuvent être passés **en mode examen chronométré** — voir la séance
+de bachotage décrite en §8, et les examens blancs de **M14**.
+
+### 5. Ce que l'ANFR ne publie pas
+
+Trois valeurs circulent partout et ne sont publiées nulle part. Elles ne
+figurent ni sur la page de l'ANFR consacrée au CRR, ni dans sa FAQ, ni dans
+l'arrêté du 18 mai 2005, ni dans le manuel de préparation.
+
+- **Le barème chiffré par épreuve.** `[à vérifier ANFR]` — L'ANFR et l'arrêté
+  disent « la moyenne », jamais « 3/6, 4/8, 5/10 ». Le cas d'un score
+  exactement égal à la moitié n'est tranché par aucun texte.
+- **L'existence ou non de points négatifs.** `[à vérifier ANFR]` — Aucune
+  source officielle ne l'aborde pour le CRR, dans un sens comme dans l'autre.
+- **Les règles de repassage et un éventuel délai de carence.**
+  `[à vérifier ANFR]` — Aucune disposition trouvée.
+
+<Aside type="caution" title="Le piège de la page radioamateur">
+  Vous rencontrerez, y compris sur des sites d'entraînement sérieux, la règle
+  « 1 point par bonne réponse, 0 point en l'absence de réponse, en cas de
+  réponses multiples ou de réponse fausse ». Cette règle **existe bien sur le
+  site de l'ANFR** — mais sur la page de l'examen **radioamateur**, qui est un
+  autre examen, avec un autre programme et une autre réglementation. Elle est
+  recopiée à tort vers le CRR par de nombreux sites et forums.
+
+  Conséquence pratique : **ne construisez aucune stratégie de réponse**
+  (répondre au hasard ou s'abstenir) sur une règle que personne n'a publiée.
+  Répondez à tout, au mieux de ce que vous savez.
+</Aside>
+
+Ce site applique une règle simple, et vous devriez l'appliquer aussi à toute
+ressource que vous lirez : **soit une valeur est vérifiée sur une source
+primaire et sa source est citée, soit elle porte un marqueur.** Un chiffre
+plausible est plus dangereux qu'un blanc, parce qu'on cale son entraînement
+dessus sans y repenser.
+
+### 6. Métropole, outre-mer, fluvial
+
+Trois examens différents portent des noms voisins. Voici de quoi les
+distinguer immédiatement.
+
+| | CRR maritime **métropole** | CRR maritime **Nouvelle-Calédonie** | **CRR fluvial** |
+|---|---|---|---|
+| Questions | **24** | 20 **+ épreuve pratique** | 20 |
+| Épreuves | 3 (6 / 8 / 10) | 1 + simulation sur VHF portative | 2 (10 / 10) |
+| Durée | ~25 min | 30 min | ~25 min |
+| Seuil publié | « la moyenne à chacune » | **10/20** | « la moyenne » à chacune |
+| Tarif | **78 €** | **gratuit** | 78 € |
+| Manuel | Maritime V16, juin 2025 | Manuel local | Fluvial v6, mai 2025 |
+
+Le régime néo-calédonien repose sur un texte propre (arrêté n°4052 du
+28 décembre 1976). Ses chiffres — et surtout ce « 10/20 » — sont largement
+repris, y compris par des pages préfectorales, **parce qu'ils figurent sur des
+pages officielles de l'ANFR**. Ils ne sont pas ceux de la métropole.
+
+<Aside type="note" title="L'écart se referme, mais il existe encore">
+  L'ANFR indique que l'ancien manuel néo-calédonien fait référence jusqu'au
+  1ᵉʳ janvier 2026, et qu'un nouveau manuel **aligné sur la métropole**
+  s'applique au 1ᵉʳ mars 2026. Le contenu converge donc ; le **format
+  d'épreuve** local, lui, reste distinct à la date de rédaction de cette page.
+  Si vous passez l'examen outre-mer, vérifiez le format auprès du service
+  régional concerné.
+</Aside>
+
+Quant au **CRR fluvial** : c'est un examen séparé, avec son propre manuel.
+Votre CRR maritime vous autorisera à utiliser une VHF en zone fluviale, et
+vous y rencontrerez des notions spécifiques — l'ATIS, l'interdiction de
+l'appel sélectif numérique. Mais **rien de tout cela n'est interrogé à
+l'examen maritime**. C'est pour cette raison que le fluvial n'a pas de module
+ici, seulement une page de [Référence](/reference).
+
+### 7. S'inscrire, passer, recevoir le certificat
+
+<Steps>
+
+1. **Choisir une session.** Le calendrier par département est publié sur
+   [crr.anfr.fr](https://crr.anfr.fr/). La base est actualisée chaque nuit :
+   une session affichée ouverte le matin peut être close dans la journée.
+
+2. **S'inscrire en ligne.** Sur
+   [examen-crr.anfr.fr](https://examen-crr.anfr.fr/), avec paiement par carte
+   bancaire. C'est la voie recommandée par l'ANFR.
+
+3. **Régler les 78 €.** Le droit d'examen n'est **pas remboursable**. Si un
+   premier règlement a déjà été effectué, ne vous réinscrivez pas : contactez
+   l'ANFR au 03 29 42 20 01 ou à `regie-mail@anfr.fr`.
+
+4. **Réunir les pièces.** Une pièce d'identité : CNI, **ou** passeport, **ou**
+   livret de famille recto-verso. **Le permis de conduire n'est pas accepté.**
+   Et une photographie couleur **35 × 45 mm**, 4 Mo maximum — une photo non
+   conforme empêche la délivrance du certificat même en cas de réussite.
+
+5. **Attendre les résultats.** Ils arrivent **« une dizaine de jours »** après
+   l'examen, **par voie postale**, accompagnés du certificat en cas de
+   réussite.
+
+</Steps>
+
+Condition d'accès : **16 ans révolus** à la date de l'examen.
+
+<Aside type="caution" title="Une photo ou deux ?">
+  L'ANFR et le manuel de préparation demandent **une** photographie.
+  L'article 4 de l'arrêté du 18 mai 2005 écrit **« Deux photographies
+  d'identité »**. La contradiction n'est pas tranchée : suivez les
+  instructions du téléservice d'inscription, qui décrit la procédure
+  réellement en vigueur, et prévoyez la seconde par précaution.
+  `[à vérifier ANFR]`
+</Aside>
+
+### 8. Comment travailler
+
+Trente-trois heures utiles, réparties sur trois à quatre semaines à raison de
+8 à 10 heures hebdomadaires. À six heures par semaine, comptez cinq à six
+semaines.
+
+Le rythme retenu est **2S + 1B** : deux séances d'étude, une séance de
+bachotage.
+
+| Séance | Nature | Durée | Contenu |
+|---|---|---|---|
+| **S1** | Étude | 3–4 h | Lecture active des modules de la semaine, fiches de synthèse recopiées à la main |
+| **S2** | Étude | 3–4 h | Modules suivants, mise en situation à bord, entraînement micro en main |
+| **B** | Bachotage | 1,5–2 h | Quiz **en mode examen chronométré**, puis analyse des erreurs |
+
+En parallèle, **le manuel de l'ANFR se lit deux à trois fois en entier** : une
+fois en survol au début, une fois en lecture active, une fois en révision. Ce
+site le découpe et l'interroge ; il ne le remplace pas.
+
+Un module est validé quand **les deux** conditions sont réunies :
+
+1. **quiz du module réussi à 80 % ou plus** ;
+2. **procédure du module récitée de mémoire, sans note.**
+
+Le second critère n'est pas décoratif. Un quiz réussi prouve qu'on
+**reconnaît** la bonne réponse parmi quatre. Seule la récitation prouve qu'on
+la **produira** de nuit, avec de l'eau dans le bateau et une main occupée
+ailleurs. Les procédures elles-mêmes commencent en **M7**, et le MAYDAY est
+l'objet de **M8**.
+
+<Aside type="danger" title="On ne s'entraîne jamais à l'antenne">
+  Avant d'aller plus loin, une règle qui vaut pour tout le programme : les
+  mots MAYDAY, PAN PAN et SÉCURITÉ ne se prononcent pas « pour voir », et le
+  bouton DISTRESS ne s'appuie pas « pour essayer ». Toutes les récitations se
+  font micro éteint, poste hors tension, ou sur simulateur. Les essais réels
+  suivent la procédure d'essai prévue, sur une voie autorisée — objet de
+  **M11**.
+
+  Une fausse alerte, même par négligence, mobilise des moyens de secours et
+  est **pénalement sanctionnée**. Sa contrepartie compte tout autant :
+  **savoir annuler une fausse alerte fait partie du programme** (M11). Une
+  alerte déclenchée par erreur s'annule — elle ne se cache pas.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié sur ce site avant d'avoir été **ouvert,
+  vérifié et daté**. Un titre plausible n'est pas un lien vérifié. La
+  vigilance est d'autant plus nécessaire ici que le manuel a changé en **juin
+  2025** : une vidéo de préparation antérieure peut enseigner un contenu
+  périmé, en particulier sur l'appel sélectif numérique. Les liens seront
+  ajoutés lors de la passe vidéos, avec leur date de publication.
+
+  En attendant, la ressource à utiliser pour ce module est le **module
+  d'entraînement de l'ANFR**, listé sur la page
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+Ce module ne touche pas encore au poste. Il ouvre le **dossier radio du
+bord** — celui que les quatorze modules suivants vont remplir.
+
+**Livrable attendu** : un dossier `dossier-radio/M0/` contenant :
+
+1. **`etat-des-titres.md`** — l'inventaire de la situation réelle. Quels
+   titres sont déjà détenus (permis plaisance ? aucun ?). Quel matériel radio
+   est à bord : VHF fixe ou portative, avec ou sans appel sélectif numérique,
+   quelle puissance. Quelle zone de navigation est pratiquée. **Conclure** en
+   appliquant le tableau du §3 : quel titre est exigé, et pourquoi. Si un
+   point reste indéterminé — par exemple si l'on ignore si la portative
+   embarquée dispose de l'ASN — l'écrire explicitement plutôt que de trancher.
+
+2. **`licence-de-station.md`** — l'état du **bateau**, pas de l'équipage. La
+   licence de station de navire existe-t-elle ? Si oui : indicatif d'appel et
+   MMSI relevés tels qu'ils y figurent. Si non : la démarche à engager auprès
+   de l'ANFR. Ce fichier est repris et complété en **M1**, puis utilisé en
+   **M10** au moment de vérifier la programmation du MMSI dans la VHF.
+
+3. **`inscription.md`** — la trace de la démarche : département et date de la
+   session visée, statut de l'inscription et du paiement, pièces réunies,
+   date attendue des résultats. Un dossier d'inscription qui traîne est la
+   première cause de report d'un examen.
+
+4. **`planning.md`** — le calendrier daté des trois à quatre semaines, séance
+   par séance selon le rythme 2S + 1B, avec les jalons hebdomadaires repris
+   des spécifications : alphabet récité en fin de semaine 1, MAYDAY récité en
+   fin de semaine 2, alerte ASN déroulée en fin de semaine 3, examen blanc
+   réussi aux trois épreuves en semaine 4.
+
+Ces quatre fichiers alimentent la page `bord/station-radio` et servent de
+point de départ à **M1**.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Télécharger le manuel, et le dater.** Récupérez le **manuel de
+   préparation du CRR maritime, édition de juin 2025 (V16)** depuis le site de
+   l'ANFR, et notez votre date de téléchargement sur la première page ou dans
+   le nom du fichier. Vérifiez la page de garde : elle doit porter la mention
+   de l'édition. Si vous trouvez un fichier nommé `manuel-crr-23.pdf` ou
+   `Manuel_Maritime_REV_Aout17_V10.pdf`, **supprimez-le** : ce sont des
+   éditions périmées qui remontent encore dans les moteurs de recherche.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Faire l'inventaire du poste et des papiers.** Sans rien allumer, relevez
+   ce qui est réellement à bord : marque et modèle de la VHF fixe, présence
+   d'un bouton DISTRESS sous capot, présence d'une portative et sa puissance,
+   emplacement de l'antenne. Puis cherchez les papiers : licence de station,
+   certificats existants. Consignez tout dans `etat-des-titres.md` et
+   `licence-de-station.md`. Ce que vous ne trouvez pas, notez-le comme
+   introuvable — c'est une information.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Passer un premier entraînement ANFR, à froid.** Ouvrez le module
+   d'entraînement de l'ANFR et faites une série **avant d'avoir rien révisé**.
+   L'objectif n'est pas le score : c'est de mesurer l'écart de départ et de
+   repérer les rubriques où vous êtes à zéro. Notez le résultat dans
+   `planning.md` — vous le comparerez en M14.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Se chronométrer à 22 secondes.** Refaites une série, cette fois en mode
+   chronométré, et observez ce qui se passe quand le temps se raccourcit :
+   à quel moment vous relisez l'énoncé, à quel moment vous changez d'avis.
+   C'est cette contrainte-là, plus que la difficulté des questions, qui fait
+   échouer des candidats qui connaissaient leur cours.
+
+5. **Réserver la session.** Consultez le calendrier, choisissez une date
+   compatible avec quatre semaines de préparation, inscrivez-vous et payez.
+   Une date réservée transforme un projet en échéance. Consignez tout dans
+   `inscription.md`.
+
+6. **Établir le planning.** Reportez les quatre semaines dans un calendrier
+   réel, séance par séance, en plaçant les séances **B** au même moment chaque
+   semaine. Une séance de bachotage qu'on « fera quand on aura le temps » ne
+   se fait pas.
 
 </Steps>
 
@@ -80,9 +475,123 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m00"
+  questions={[
+    {
+      question:
+        'Combien de questions comporte l’examen du CRR maritime passé en France métropolitaine ?',
+      choices: ['20 questions', '24 questions', '30 questions', '40 questions'],
+      answer: 1,
+      explanation:
+        '24 questions, réparties en trois épreuves de 6, 8 et 10 questions. Les 20 questions que l’on rencontre souvent en ligne sont celles du CRR fluvial ou du régime néo-calédonien : ce ne sont pas les mêmes examens.',
+    },
+    {
+      question: 'Quelle est la règle de réussite de l’examen ?',
+      choices: [
+        'Obtenir la moyenne sur le total des 24 questions',
+        'Obtenir au moins 10/20 sur le total',
+        'Réussir l’épreuve C, les deux autres étant indicatives',
+        'Obtenir la moyenne à chacune des trois épreuves prises séparément',
+      ],
+      answer: 3,
+      explanation:
+        'Il faut la moyenne à chacune des trois épreuves. Un bon total général ne compense pas une épreuve sous la moyenne — c’est pourquoi l’épreuve C, la plus lourde avec 10 questions, ne peut pas être négligée (M10 à M13).',
+    },
+    {
+      question:
+        'De combien de temps disposez-vous pour répondre à chaque question ?',
+      choices: [
+        '15 secondes, avec retour en arrière possible',
+        '20 secondes, avec retour en arrière possible',
+        '22 secondes, sans retour en arrière',
+        '30 secondes, sans retour en arrière',
+      ],
+      answer: 2,
+      explanation:
+        '22 secondes, matérialisées par une barre de défilement, et il est impossible de revenir sur une question déjà passée. C’est une contrainte d’examen à part entière : les quiz de ce site peuvent être passés en mode chronométré pour s’y préparer (M14).',
+    },
+    {
+      question:
+        'Quel document attribue à un bateau son indicatif d’appel et son MMSI ?',
+      choices: [
+        'La licence de station de navire',
+        'Le certificat restreint de radiotéléphoniste (CRR)',
+        'Le permis plaisance',
+        'L’acte de francisation',
+      ],
+      answer: 0,
+      explanation:
+        'La licence de station de navire est une autorisation administrative distincte, gratuite et sans examen, délivrée par l’ANFR. Le CRR porte sur la personne ; la licence porte sur le bateau. Les deux peuvent être exigés lors d’un contrôle (M1).',
+    },
+    {
+      question:
+        'Un plaisancier navigue dans les eaux territoriales françaises avec une VHF portative de 6 W sans appel sélectif numérique. Quel titre lui est exigé ?',
+      choices: [
+        'Le CRR obligatoirement',
+        'Le permis plaisance obligatoirement',
+        'Aucun titre',
+        'Le CRR ou le permis plaisance, au choix',
+      ],
+      answer: 2,
+      explanation:
+        'Depuis 2011, aucun titre n’est exigé dans ce cas précis. Dès que la VHF est fixe ou dotée de l’ASN, un titre devient nécessaire ; et hors des eaux territoriales françaises, ce titre doit être le CRR.',
+    },
+    {
+      question: 'Quel est le montant du droit d’examen ?',
+      choices: ['Gratuit', '23 €', '38 €', '78 €'],
+      answer: 3,
+      explanation:
+        '78 €, non remboursables. Les 23 € correspondent au duplicata en cas de perte ou de vol, et la gratuité au régime néo-calédonien, qui est un autre examen.',
+    },
+    {
+      question:
+        'Concernant le barème de l’examen du CRR métropolitain, quelle affirmation est exacte ?',
+      choices: [
+        'Le barème est de 3/6, 4/8 et 5/10, publié par l’ANFR',
+        'L’ANFR ne publie aucun barème chiffré ni règle sur les points négatifs',
+        'Chaque mauvaise réponse retire un point',
+        'Une absence de réponse est comptée comme une réponse fausse',
+      ],
+      answer: 1,
+      explanation:
+        'Rien de tout cela n’est publié : ni la page de l’ANFR, ni sa FAQ, ni l’arrêté, ni le manuel n’abordent le barème chiffré ou les points négatifs. La règle « 1 point / 0 point » que l’on voit circuler provient de la page de l’examen radioamateur — un autre examen.',
+    },
+    {
+      question:
+        'Combien de questions comporte l’épreuve C, « utilisation pratique de VHF ASN » ?',
+      choices: ['10 questions', '8 questions', '6 questions', '4 questions'],
+      answer: 0,
+      explanation:
+        'L’épreuve C pèse 10 questions sur 24, soit plus que les épreuves A (6) et B (8) prises séparément. C’est pourquoi les modules M10 à M13 sont les plus denses du programme.',
+    },
+    {
+      question:
+        'Que dit le manuel de préparation à propos de ses propres annexes ?',
+      choices: [
+        'Elles constituent le cœur du programme d’examen',
+        'Elles sont interrogées uniquement dans l’épreuve A',
+        'Aucune question de l’examen ne porte sur les annexes',
+        'Seule l’annexe sur les voies VHF est interrogée',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel écrit que l’examen ne comporte pas de questions se rapportant à ses annexes. Le tableau des voies VHF, la liste des MID et le lexique de l’OMI restent utiles à bord — ils sont rangés en section Référence — mais les apprendre par cœur est du temps perdu pour l’examen.',
+    },
+    {
+      question: 'Le CRR du service mobile fluvial, par rapport au CRR maritime :',
+      choices: [
+        'est une simple mention ajoutée au certificat maritime',
+        'est un examen distinct, avec son propre manuel et ses propres épreuves',
+        'est inclus dans l’épreuve A du CRR maritime',
+        'a été supprimé et remplacé par le CRR maritime',
+      ],
+      answer: 1,
+      explanation:
+        'Ce sont deux examens séparés. Le CRR maritime autorise l’usage d’une VHF en zone fluviale, mais le fluvial n’est pas interrogé à l’examen maritime : il fait l’objet d’une page de Référence, pas d’un module.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +599,65 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M0 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+TROIS DOCUMENTS — NE PAS CONFONDRE
+  CRR                  → LA PERSONNE · examen · 78 €
+  Licence de station   → LE BATEAU   · sans examen · GRATUITE
+                         attribue INDICATIF + MMSI
+  Permis plaisance     → LA PERSONNE · conduite du bateau
+  Contrôle : les DEUX premiers peuvent être exigés.
+
+QUAND LE CRR EST-IL EXIGÉ ?
+  Portative non-ASN <= 6 W, eaux FR    → aucun titre
+  VHF fixe OU portative ASN, eaux FR   → permis plaisance OU CRR
+  Toute VHF, eaux internationales      → CRR (SRC)
+  Voies intérieures                    → CRR fluvial mini
+                                         (le maritime vaut aussi)
+
+L'EXAMEN — MÉTROPOLE
+  24 questions · 1 seule réponse · 22 s/question
+  PAS de retour en arrière · ~25 min · pas d'épreuve pratique
+  Télécommande intelligente, voix synthétique, écran
+
+  Épreuve A  Généralités              6 questions   M1-M5
+  Épreuve B  Radiotéléphonie VHF      8 questions   M6-M9
+  Épreuve C  VHF ASN / SMDSM         10 questions   M10-M13
+                                     ----
+                                       24
+
+  RÉUSSITE = LA MOYENNE À CHACUNE DES TROIS.
+  Un bon total ne rattrape pas une épreuve ratée.
+
+NON PUBLIÉ PAR L'ANFR   → [à vérifier ANFR]
+  Barème chiffré par épreuve
+  Points négatifs (la règle « 1 pt / 0 pt » = page RADIOAMATEUR)
+  Règles de repassage et délai de carence
+  → répondre à tout, ne rien caler sur un chiffre non sourcé.
+
+NE PAS CONFONDRE TROIS EXAMENS
+  Métropole        24 q · 3 épreuves · 78 €
+  Nouvelle-Caléd.  20 q + pratique · 30 min · 10/20 · gratuit
+  Fluvial          20 q · 2 épreuves · manuel séparé
+  Les annexes du manuel NE SONT PAS interrogées.
+
+INSCRIPTION
+  Sessions   crr.anfr.fr        (base actualisée chaque nuit)
+  Inscrire   examen-crr.anfr.fr (CB — 78 € NON remboursables)
+  Âge        16 ans révolus
+  Pièces     CNI OU passeport OU livret de famille recto-verso
+             (permis de conduire REFUSÉ)
+             photo 35 x 45 mm, 4 Mo max
+  Résultats  ~10 jours, par voie postale
+  ANFR       03 29 42 20 01 · regie-mail@anfr.fr
+
+MÉTHODE — 33 h sur 3 à 4 semaines
+  2S + 1B : 2 séances d'étude + 1 bachotage CHRONOMÉTRÉ / semaine
+  Manuel ANFR V16 (juin 2025) lu 2 à 3 fois en entier
+  Module validé = quiz >= 80 %  ET  procédure récitée SANS NOTE
+
+  ON NE S'ENTRAÎNE JAMAIS À L'ANTENNE.
+  Mais une fausse alerte S'ANNULE — elle ne se cache pas (M11).
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+Première fiche du jeu. À conserver avec les cartes M1 (cadre réglementaire) et
+M14 (bachotage) : ce sont les trois qui parlent de l'examen plutôt que de la
+mer.
