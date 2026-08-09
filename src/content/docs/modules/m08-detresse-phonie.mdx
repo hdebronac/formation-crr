@@ -1,78 +1,485 @@
 ---
 title: "M8 · Détresse en phonie"
-description: "Émission d’un MAYDAY sur la voie 16, message de détresse, accusé de réception, MAYDAY RELAY, SILENCE MAYDAY et SILENCE FINI."
+description: "Émission d'un MAYDAY sur la voie 16, message de détresse, accusé de réception, MAYDAY RELAY, silence radio et contrôle du trafic de détresse."
 sidebar:
   order: 8
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **B** — 8 questions sur 24 · **Volume** : 3 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M5, M6 et M7 validés — épellation, poste, priorités
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+C'est le module que vous relirez le plus, et celui qui compte
+vraiment. Tout ce qui précède existe pour que ces quelques phrases
+sortent correctement le jour où elles serviront.
+
+La procédure est **normalisée** : des mots convenus, dans un ordre fixe,
+avec un nombre de répétitions défini. Cette rigidité n'est pas
+bureaucratique — elle permet à un opérateur qui ne parle pas votre
+langue de comprendre ce dont vous avez besoin, et elle vous donne
+quelque chose à réciter au moment où vous serez le moins capable
+d'improviser. **On ne paraphrase pas un MAYDAY. On ne l'améliore pas.**
+
+Vous apprendrez ici les quatre séquences : **émettre** un appel et un
+message de détresse, **recevoir** un MAYDAY et y accuser réception,
+**relayer** celui d'un autre, et comprendre le **contrôle du trafic**
+que la station coordinatrice exerce ensuite. Le versant ASN — le bouton
+rouge sous capot — est en **M10** ; les deux se complètent et ne se
+remplacent pas.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Décider **quand** un MAYDAY est justifié.
+- [ ] Émettre un **appel de détresse** dans sa forme exacte.
+- [ ] Transmettre un **message de détresse** avec ses champs, dans
+  l'ordre.
+- [ ] Appliquer les **cinq obligations** de tout navire qui entend un
+  MAYDAY.
+- [ ] **Accuser réception** d'un message de détresse dans la forme
+  prescrite.
+- [ ] Émettre un **MAYDAY RELAY** et dire à quelles conditions.
+- [ ] Reconnaître `SILENCE MAYDAY` et `SILENCE FINI`.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Détresse | Danger grave et imminent menaçant un navire ou une personne, exigeant une aide immédiate |
+| `MAYDAY` | Signal de détresse, prononcé « maider » |
+| Appel de détresse | La séquence qui annonce et identifie : MAYDAY, ICI, nom, indicatif |
+| Message de détresse | Le contenu : position, nature, assistance, personnes, intentions |
+| Voie 16 | Voie sur laquelle se traite toute la détresse en phonie |
+| Nombre de personnes à bord | Champ obligatoire du message, il dimensionne les moyens engagés |
+| Accusé de réception | Réponse normalisée d'une station ayant reçu le message |
+| `REÇU MAYDAY` | Formule de l'accusé de réception, en anglais `RECEIVED MAYDAY` |
+| Délai de cinq minutes | Délai au-delà duquel un navire doit relayer une détresse non acquittée |
+| `MAYDAY RELAY` | Retransmission d'une détresse au profit d'un autre navire |
+| `À TOUS` | Appel à toutes les stations, en anglais `ALL STATIONS` |
+| `SILENCE MAYDAY` | Ordre de silence sur la voie 16, imposé par la station coordinatrice |
+| `SILENCE FINI` | Fin du silence radio, opérations terminées |
+| Station coordinatrice | MRCC, station côtière ou unité de sauvetage qui dirige les opérations |
+| Fausse alerte | Alerte émise par erreur : son annulation est une procédure normale |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve B et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module est le cœur de l'**épreuve B**, « Radiotéléphonie VHF »,
+  **8 questions sur 24**. Il correspond à la section du manuel ANFR
+  intitulée **« Communications de détresse (voie 16) »**, au sein du
+  chapitre sur les procédures d'exploitation.
+- **Ce qui est interrogé, c'est la forme exacte** : combien de fois
+  chaque élément se répète, dans quel ordre les champs se suivent, et
+  quelle formule s'emploie. Une réponse « à peu près juste » est fausse.
+- **Confusion classique — trois fois ou une fois ?** Dans l'appel, le
+  mot `MAYDAY` et le **nom du navire** sont dits **trois fois**, mais
+  l'**indicatif est épelé une seule fois**. Dans l'accusé de réception,
+  **tout est dit une fois**.
+- **Confusion classique — les cinq minutes.** Elles concernent le
+  **MAYDAY RELAY**, pas le renouvellement d'une alerte ASN, qui est de
+  **quatre minutes** (**M10**). L'examen exploite ce voisinage.
+- **Confusion classique — qui impose le silence.** `SILENCE MAYDAY` est
+  transmis par la **station qui coordonne** les opérations, pas par le
+  navire en détresse.
+- **N'est pas interrogé** : les extraits de réglementation sur les
+  fausses alertes relèvent de l'**annexe 1**. On retient le principe et
+  la conduite à tenir, pas l'article.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Quand émettre un MAYDAY
 
-### 2. *(section à rédiger)*
+La définition est celle vue en **M7**, et elle mérite d'être relue
+lentement :
 
-### 3. *(section à rédiger)*
+> Lorsqu'un navire ou une personne est sous la menace d'un **danger
+> grave et imminent** et a besoin qu'on lui vienne **immédiatement** en
+> aide.
+
+Les exemples du manuel : **voie d'eau importante, incendie, échouement,
+homme à la mer**.
+
+Deux critères, donc, et ils sont cumulatifs : la gravité **et**
+l'imminence. Une avarie qui vous laissera dériver trois jours n'est pas
+une détresse — c'est une urgence (**M9**). Un incendie qui démarre en
+est une, même si le feu est encore petit, parce que dans dix minutes il
+sera trop tard pour appeler.
+
+<Aside type="danger" title="En cas de doute, on alerte">
+  Ce n'est pas une décision à peser longuement. Un MAYDAY émis pour une
+  situation qui se résout est une **fausse alerte**, dont l'annulation
+  est une procédure normale, prévue, enseignée — et traitée en
+  section 8. Un MAYDAY non émis pour une situation qui se dégrade coûte
+  les minutes pendant lesquelles les secours n'ont pas été prévenus.
+
+  Ces deux erreurs ne sont pas symétriques. **Alertez.**
+</Aside>
+
+Rappel de **M7** : l'appel est émis **sur ordre du chef de bord**. Si le
+chef de bord est ce qui manque à bord — tombé à l'eau, inconscient —
+c'est à l'équipier présent d'appeler, et cette délégation doit avoir été
+préparée à terre.
+
+### 2. L'appel de détresse
+
+Sur la **voie 16**, en **puissance normale — 25 W** (**M6**).
+
+<Steps>
+
+1. **`MAYDAY`** — prononcé **trois fois**. Le manuel donne la
+   prononciation : « maider ».
+
+2. **« ICI »** — en anglais **`THIS IS`**.
+
+3. **Le nom du navire** — prononcé **trois fois**.
+
+4. **L'indicatif d'appel du navire** — **épelé une seule fois**, avec
+   l'alphabet phonétique international (**M5**).
+
+</Steps>
+
+<Aside type="caution" title="Trois, trois, une">
+  C'est le rythme à mémoriser : `MAYDAY` trois fois, le nom trois fois,
+  l'indicatif **une** fois — et il s'**épelle**.
+
+  Le piège d'examen consiste à proposer une variante où l'indicatif est
+  répété trois fois, ou bien donné sans être épelé. Les deux sont
+  fausses.
+</Aside>
+
+### 3. Le message de détresse
+
+L'appel annonce ; le message dit ce qui se passe. Il suit immédiatement,
+et comporte ces éléments :
+
+| Champ | Contenu |
+|---|---|
+| Rappel d'identité | `MAYDAY`, le nom du navire, son indicatif |
+| **Position** | Absolue — coordonnées — ou relative à un point fixe connu |
+| **Nature de la détresse** | Ce qui arrive : feu, voie d'eau, échouement, homme à la mer |
+| **Type d'assistance requise** | Ce que vous demandez |
+| **Nombre de personnes à bord** | Un chiffre, toujours |
+| **Intentions du responsable** | Ce que vous allez faire : abandonner, mouiller, dériver |
+| **Renseignements utiles** | Tout ce qui facilite les secours : description du bateau, moyens de survie |
+
+Puis, règle capitale :
+
+> Le message sera **répété, autant de fois qu'il sera possible**, jusqu'à
+> ce qu'une **station côtière ou un navire ait répondu**.
+
+<Aside type="note" title="Sur l'ordre des champs">
+  Le manuel énumère en prose la nature de la détresse, l'assistance
+  requise, le nombre de personnes, les intentions et les renseignements
+  utiles. La **position** figure en tête du texte dans l'exemple
+  travaillé qu'il donne, et c'est l'ordre reproduit ici.
+
+  Nous le signalons plutôt que de l'attribuer silencieusement à la liste
+  en prose : l'ordre ci-dessus est celui qu'**atteste l'exemple du
+  manuel**.
+</Aside>
+
+**Exemple complet**, avec le voilier du fil rouge — ALIZÉ, indicatif
+`FH 2827` — en feu à deux milles dans l'ouest de l'île de Groix, cinq
+personnes à bord qui abandonnent :
+
+| En français | En anglais |
+|---|---|
+| `MAYDAY, MAYDAY, MAYDAY` | `MAYDAY, MAYDAY, MAYDAY` |
+| `ICI ALIZÉ, ALIZÉ, ALIZÉ` | `THIS IS ALIZÉ, ALIZÉ, ALIZÉ` |
+| `Indicatif Foxtrot, Hotel, 2, 8, 2, 7` | `Call sign Foxtrot, Hotel, 2, 8, 2, 7` |
+| `MAYDAY ALIZÉ` | `MAYDAY ALIZÉ` |
+| `Indicatif Foxtrot, Hotel, 2, 8, 2, 7` | `Call sign Foxtrot, Hotel, 2, 8, 2, 7` |
+| `Deux milles dans l'ouest de Groix` | `Two miles West of Groix` |
+| `Feu à bord` | `Fire on board` |
+| `Demandons assistance immédiate` | `Require immediate assistance` |
+| `5 personnes à bord` | `5 persons on board` |
+| `Quittons le navire` | `Leaving the vessel` |
+| `À vous` | `Over` |
+
+<Aside type="danger" title="Le nombre de personnes à bord n'est pas un détail">
+  C'est le champ qui dimensionne les moyens engagés et qui dit aux
+  sauveteurs **quand s'arrêter de chercher**. Un chiffre faux, ou
+  omis, prolonge une recherche ou l'interrompt trop tôt.
+
+  Comptez avant de parler, et donnez le nombre de personnes **à bord**,
+  pas le nombre de couchettes ni l'équipage habituel.
+</Aside>
+
+### 4. Recevoir un MAYDAY : les cinq obligations
+
+À la réception d'un message de détresse, **tout navire doit** :
+
+<Steps>
+
+1. **Cesser toute transmission et écouter.**
+
+2. **Noter soigneusement le contenu du message**, en restant à l'écoute
+   sur la **voie 16**.
+
+3. **Attendre un certain temps** pour permettre à une **station côtière**
+   de répondre.
+
+4. **Si aucune station n'a répondu dans un délai raisonnable**, indiquer
+   au navire en détresse **qu'il a été entendu** et **qu'on peut lui
+   porter secours**.
+
+5. **Essayer, lorsque cela est possible, d'alerter une station
+   côtière.**
+
+</Steps>
+
+<Aside type="caution" title="Pourquoi attendre avant de répondre">
+  L'étape 3 surprend, et elle est régulièrement interrogée. Une station
+  côtière ou un CROSS dispose de moyens qu'un voilier n'a pas :
+  couverture, moyens aériens, coordination. Répondre trop vite risque de
+  **couvrir** leur réponse et de désorganiser la suite.
+
+  On écoute, on note, on **laisse sa chance à la côtière**. Puis, si
+  personne ne répond, on prend le relais — parce qu'à ce moment-là,
+  personne d'autre ne le fera.
+</Aside>
+
+Notez que ces obligations s'appliquent **même si vous ne pouvez rien
+faire** : noter le message et alerter une station côtière est déjà une
+contribution décisive quand le navire en détresse est hors de portée des
+secours.
+
+### 5. Accuser réception
+
+Quand il vous revient de répondre, la forme est fixée :
+
+<Steps>
+
+1. **`MAYDAY`** — **une fois**.
+
+2. **Le nom et l'indicatif du navire en détresse** — **une fois**.
+
+3. **« ICI »** — en anglais **`THIS IS`**.
+
+4. **Le nom et l'indicatif du navire qui répond** — **une fois**.
+
+5. **`REÇU MAYDAY`** — **une fois** — en anglais **`RECEIVED MAYDAY`**.
+
+6. **Tous renseignements complémentaires.**
+
+</Steps>
+
+Exemple, le voilier *Petrel* répondant à ALIZÉ :
+
+| En français | En anglais |
+|---|---|
+| `MAYDAY ALIZÉ` | `MAYDAY ALIZÉ` |
+| `Indicatif Foxtrot, Hotel, 2, 8, 2, 7` | `Call sign Foxtrot, Hotel, 2, 8, 2, 7` |
+| `ICI PETREL, indicatif Foxtrot, Papa, 4, 1` | `THIS IS PETREL, call sign Foxtrot, Papa, 4, 1` |
+| `REÇU MAYDAY` | `RECEIVED MAYDAY` |
+| `Suis à environ un mille au nord de votre position` | `We are one mile north of your position` |
+| `Serai sur zone dans 15 minutes environ` | `We should arrive within 15 minutes` |
+| `À vous` | `Over` |
+
+<Aside type="tip" title="Tout une fois">
+  L'accusé de réception ne comporte **aucune répétition triple**. C'est
+  la différence la plus simple à retenir entre l'appel — trois, trois,
+  une — et la réponse — une, une, une.
+
+  Les renseignements complémentaires ne sont pas optionnels en pratique :
+  votre position relative et votre délai d'arrivée sont exactement ce
+  dont le naufragé et les secours ont besoin.
+</Aside>
+
+### 6. Le MAYDAY RELAY
+
+Un navire **doit** retransmettre un message de détresse au profit d'un
+autre navire dans **deux cas** :
+
+- si l'appel **n'a pas fait l'objet d'un accusé de réception** d'une
+  station côtière ou d'un autre navire **dans un délai de cinq
+  minutes** ;
+- ou si **le navire n'arrive pas à joindre la station côtière** —
+  portée trop faible, radio en panne.
+
+Le relais s'effectue **sur la voie 16** :
+
+<Steps>
+
+1. **`MAYDAY RELAY`** — **trois fois**.
+
+2. **`À TOUS`** — **trois fois** — en anglais **`ALL STATIONS`**.
+
+3. **« ICI »** — en anglais **`THIS IS`**.
+
+4. **Le nom de la station effectuant le relais** — **trois fois**.
+
+5. **L'indicatif de la station effectuant le relais** — **une fois**.
+
+6. **`MAYDAY`** — **une fois**.
+
+7. **Le nom et l'indicatif d'appel du navire en détresse** — **une
+   fois**.
+
+8. **Répétition des renseignements** contenus dans le message de
+   détresse.
+
+</Steps>
+
+<Aside type="caution" title="Cinq minutes, et non quatre">
+  Les **cinq minutes** du MAYDAY RELAY se confondent facilement avec les
+  **quatre minutes** de renouvellement automatique d'une alerte ASN
+  (**M10**), et avec les **cinq minutes** après lesquelles un appel de
+  routine sans réponse peut être répété.
+
+  Trois durées voisines, trois procédures différentes. L'examen les
+  mélange volontiers ; la carte de synthèse les met côte à côte.
+</Aside>
+
+<Aside type="tip" title="Relayer, c'est parler pour un autre">
+  Toute la difficulté du MAYDAY RELAY est là : **vous n'êtes pas en
+  détresse**. C'est pourquoi votre nom est donné trois fois — c'est vous
+  qui émettez — mais le nom du navire en détresse **une seule fois**,
+  précédé d'un `MAYDAY` unique.
+
+  Concrètement, cela arrive quand vous entendez un appel faible que
+  personne n'a acquitté. Votre antenne en tête de mât porte peut-être
+  plus loin que la sienne.
+</Aside>
+
+### 7. `SILENCE MAYDAY` et `SILENCE FINI`
+
+Une fois les opérations engagées, la voie 16 doit rester utilisable par
+ceux qui y participent.
+
+La station qui coordonne les opérations de sauvetage — **MRCC, station
+côtière ou unité de sauvetage** — **peut imposer le silence sur la voie
+16** aux stations qui pourraient perturber les opérations, en leur
+transmettant le signal **`SILENCE MAYDAY`**.
+
+Lorsque les opérations sont terminées, la station qui les a coordonnées
+transmet **`SILENCE FINI`**.
+
+<Aside type="danger" title="Ce que vous faites en entendant SILENCE MAYDAY">
+  Rien. Vous vous taisez sur la voie 16, et vous continuez d'écouter.
+
+  Vous ne demandez pas de précisions, vous ne proposez pas votre aide sur
+  cette voie, vous ne signalez pas que vous avez bien compris. Toute
+  émission non nécessaire retire du temps de parole à une opération de
+  sauvetage en cours.
+
+  Le silence prend fin sur `SILENCE FINI`, et pas avant — pas même si
+  vous n'entendez plus rien depuis un moment.
+</Aside>
+
+L'obligation générale de protection des fréquences de détresse, dont
+ceci n'est qu'un cas particulier, est l'objet de **M11**.
+
+### 8. La fausse alerte, et son annulation
+
+Une alerte émise par erreur — bouton heurté, essai mal conduit,
+manipulation d'un équipier — **s'annule**. C'est une procédure normale
+et prévue, pas une faute qu'on dissimulerait.
+
+Le principe, en phonie : **on reste sur la voie 16 et on annonce
+clairement l'annulation**, en donnant son identité et en précisant que
+l'alerte était injustifiée. La procédure d'annulation d'une **fausse
+alerte ASN**, qui est la plus fréquente et qui obéit à une séquence
+précise, est traitée en **M10** et **M11**.
+
+<Aside type="danger" title="Ne jamais éteindre le poste pour faire disparaître le problème">
+  C'est le réflexe le plus dommageable, et le plus répandu. Une alerte
+  non annulée déclenche des recherches réelles : moyens engagés, autres
+  navires détournés, équipages exposés.
+
+  À l'inverse, **les fausses alertes intentionnelles ou émises par
+  négligence sont pénalement sanctionnées**. La négligence, ici, c'est
+  précisément de ne pas annuler.
+
+  Annuler prend trente secondes. Ne pas annuler mobilise un hélicoptère.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. La vigilance est maximale sur ce module : une démonstration de
+  MAYDAY qui omet un champ ou change l'ordre **apprend une procédure
+  fausse**, et c'est celle-là qui ressortira sous stress. En attendant,
+  la source à utiliser est le **manuel ANFR lui-même** — voir
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M8/` contenant :
+
+1. **`mayday.md`** — la carte de détresse du bord, **rédigée mot pour
+   mot avec l'identité réelle du bateau**, en français et en anglais.
+   Elle doit pouvoir être **lue telle quelle** par quelqu'un qui n'a
+   jamais émis. Laisser en blanc les seuls champs variables — position,
+   nature, nombre de personnes — et prévoir un feutre à côté.
+
+2. **`position.md`** — comment donner sa position depuis ce bateau, en
+   trois formes : coordonnées lues sur le GPS, relèvement et distance
+   d'un amer connu, et zone de navigation. Noter **où se lit la
+   position** sur l'installation, et ce qu'on fait si le GPS est mort.
+
+3. **`personnes-a-bord.md`** — la règle du bord pour connaître à tout
+   instant le nombre de personnes embarquées : où c'est noté, qui le met
+   à jour, et comment on le vérifie avant d'appareiller.
+
+4. **`reception-mayday.md`** — la conduite à tenir en réception, sous
+   forme de liste courte : se taire, noter, attendre la côtière,
+   répondre si personne, alerter. Avec, en annexe, un **formulaire de
+   prise de note** — nom, indicatif, position, nature, personnes,
+   intentions — à imprimer en plusieurs exemplaires et à ranger près du
+   poste.
+
+5. **`silence.md`** — une ligne, mais elle doit exister : ce que fait
+   l'équipage en entendant `SILENCE MAYDAY`, et jusqu'à quand.
+
+Ces fichiers alimentent `bord/procedures-affichees` et
+`bord/scenarios`.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Réciter l'appel, poste éteint, vingt fois.** `MAYDAY` trois fois,
+   « ICI », le nom trois fois, l'indicatif épelé une fois. Jusqu'à ce
+   que le rythme trois-trois-une soit automatique. C'est le seul passage
+   du programme qui doit être su **par cœur**, sans support.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Dérouler le message complet, carte en main puis sans.** Position,
+   nature, assistance, nombre de personnes, intentions, renseignements.
+   Chronométrez : un message complet tient largement en une minute.
+   Refaites-le en anglais.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Jouer la réception.** Un équipier lit un MAYDAY depuis une autre
+   pièce, avec la portative. Vous appliquez les cinq obligations : vous
+   vous taisez, vous notez sur le formulaire, vous attendez, puis vous
+   accusez réception dans la forme — tout une fois. Comparez ensuite vos
+   notes au texte original : ce qui manque est ce qu'il faut travailler.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Émettre un MAYDAY RELAY.** Même exercice, mais personne n'a répondu
+   à l'appel entendu. Vous relayez : votre nom trois fois, votre
+   indicatif une fois, puis l'identité du navire en détresse une fois et
+   ses renseignements. La confusion des rôles est ici l'erreur la plus
+   fréquente.
+
+5. **Faire réciter l'équipage.** Chaque personne susceptible d'être
+   seule à la barre doit pouvoir émettre l'appel de détresse. Testez-les
+   sans prévenir, une fois par saison. Ce qui n'est pas su n'est pas
+   acquis.
+
+6. **Répéter l'annulation.** Simulez une fausse alerte et annulez-la à
+   voix haute, calmement, avec votre identité. Le but est de retirer
+   toute honte au geste : une annulation faite est une opération de
+   sauvetage évitée.
 
 </Steps>
 
@@ -80,17 +487,220 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m08"
+  questions={[
+    {
+      question: 'Dans l’appel de détresse, l’indicatif d’appel du navire est :',
+      choices: [
+        'prononcé trois fois, sans être épelé',
+        'épelé une seule fois avec l’alphabet phonétique international',
+        'épelé trois fois',
+        'omis, le nom du navire suffisant',
+      ],
+      answer: 1,
+      explanation:
+        'Le rythme est trois-trois-une : MAYDAY trois fois, le nom du navire trois fois, l’indicatif épelé une seule fois. Le manuel précise en note qu’il doit l’être avec l’alphabet phonétique international (M5).',
+    },
+    {
+      question:
+        'Quel élément du message de détresse dimensionne les moyens engagés et dit aux sauveteurs quand cesser les recherches ?',
+      choices: [
+        'La nature de la détresse',
+        'Les intentions du responsable du navire',
+        'Le nombre de personnes à bord',
+        'Le type d’assistance requise',
+      ],
+      answer: 2,
+      explanation:
+        'Un chiffre faux ou omis prolonge une recherche ou l’interrompt trop tôt. On donne le nombre de personnes réellement à bord, pas l’équipage habituel.',
+    },
+    {
+      question: 'Jusqu’à quand le message de détresse doit-il être répété ?',
+      choices: [
+        'Trois fois au maximum, pour ne pas saturer la voie 16',
+        'Pendant cinq minutes, puis on passe en MAYDAY RELAY',
+        'Jusqu’à épuisement de la batterie',
+        'Autant de fois qu’il sera possible, jusqu’à ce qu’une station côtière ou un navire ait répondu',
+      ],
+      answer: 3,
+      explanation:
+        'C’est la formulation du manuel. Le silence après un MAYDAY ne signifie pas qu’on a été entendu : tant que personne n’a répondu, on répète.',
+    },
+    {
+      question:
+        'Vous recevez un message de détresse. Quelle est la première chose à faire ?',
+      choices: [
+        'Cesser toute transmission et écouter',
+        'Répondre immédiatement pour rassurer le navire en détresse',
+        'Appeler le CROSS sur une voie de travail',
+        'Émettre un MAYDAY RELAY',
+      ],
+      answer: 0,
+      explanation:
+        'C’est la première des cinq obligations. On note ensuite le message en restant à l’écoute sur la voie 16, et on laisse à une station côtière le temps de répondre avant de le faire soi-même.',
+    },
+    {
+      question:
+        'Pourquoi faut-il attendre avant d’accuser réception d’un message de détresse ?',
+      choices: [
+        'Pour vérifier qu’il ne s’agit pas d’une fausse alerte',
+        'Pour permettre à une station côtière de répondre, ses moyens étant supérieurs',
+        'Parce que la réglementation interdit à un navire de plaisance de répondre',
+        'Pour laisser le temps au navire en détresse de répéter son message',
+      ],
+      answer: 1,
+      explanation:
+        'Une station côtière ou un CROSS dispose d’une couverture et de moyens qu’un voilier n’a pas. Répondre trop vite risque de couvrir sa réponse. Si personne n’a répondu dans un délai raisonnable, on prend alors le relais.',
+    },
+    {
+      question: 'Quelle est la forme de l’accusé de réception ?',
+      choices: [
+        'MAYDAY trois fois, puis les deux identités et REÇU MAYDAY',
+        'REÇU MAYDAY trois fois, puis l’identité du navire répondant',
+        'MAYDAY une fois, identité du navire en détresse une fois, ICI, identité du répondant une fois, REÇU MAYDAY une fois',
+        'MAYDAY RELAY trois fois, puis les renseignements complémentaires',
+      ],
+      answer: 2,
+      explanation:
+        'L’accusé de réception ne comporte aucune répétition triple : tout est dit une fois. C’est la différence la plus simple à retenir avec l’appel, qui suit le rythme trois-trois-une.',
+    },
+    {
+      question:
+        'Au bout de combien de temps sans accusé de réception un navire doit-il relayer une détresse entendue ?',
+      choices: ['Cinq minutes', 'Quatre minutes', 'Une minute', 'Quinze minutes'],
+      answer: 0,
+      explanation:
+        'Cinq minutes — ou immédiatement si le navire en détresse n’arrive pas à joindre la station côtière. À ne pas confondre avec les quatre minutes de renouvellement automatique d’une alerte ASN (M10).',
+    },
+    {
+      question: 'Dans un MAYDAY RELAY, le nom du navire qui effectue le relais est :',
+      choices: [
+        'donné une fois, puisque ce n’est pas lui qui est en détresse',
+        'omis, seule l’identité du navire en détresse important',
+        'donné trois fois, et son indicatif une fois',
+        'épelé trois fois avec l’alphabet phonétique',
+      ],
+      answer: 2,
+      explanation:
+        'C’est lui qui émet : son nom est donné trois fois, son indicatif une fois. Le nom et l’indicatif du navire en détresse, eux, sont donnés une seule fois, précédés d’un MAYDAY unique.',
+    },
+    {
+      question: 'Le signal SILENCE MAYDAY est transmis :',
+      choices: [
+        'par le navire en détresse, pour dégager la voie',
+        'par tout navire témoin de l’accident',
+        'automatiquement par les VHF ASN de classe A',
+        'par la station qui coordonne les opérations : MRCC, station côtière ou unité de sauvetage',
+      ],
+      answer: 3,
+      explanation:
+        'Elle l’impose aux stations susceptibles de perturber les opérations. Le silence prend fin lorsque cette même station transmet SILENCE FINI, et pas avant.',
+    },
+    {
+      question:
+        'Une alerte de détresse a été émise par erreur depuis votre bord. Que faites-vous ?',
+      choices: [
+        'Vous éteignez la VHF pour que l’alerte cesse',
+        'Vous l’annulez : c’est une procédure normale et prévue',
+        'Vous attendez qu’un CROSS vous contacte pour vous expliquer',
+        'Vous changez de voie et poursuivez votre navigation',
+      ],
+      answer: 1,
+      explanation:
+        'Éteindre le poste ne supprime pas l’alerte et déclenche des recherches réelles. Les fausses alertes intentionnelles ou émises par négligence sont pénalement sanctionnées — et la négligence, ici, consiste précisément à ne pas annuler (M10, M11).',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
-FORMATION CRR — M8 — Carte de cockpit
-=======================================
+FORMATION CRR — M8 — DÉTRESSE — Carte de cockpit
+==================================================
+    VOIE 16 · PUISSANCE 25 W · SUR ORDRE DU CHEF DE BORD
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+QUAND ?  danger GRAVE **et** IMMINENT, aide IMMÉDIATE
+         voie d'eau · incendie · échouement · homme à la mer
+         EN CAS DE DOUTE, ON ALERTE.
+
+--------------------------------------------------
+1. APPEL DE DÉTRESSE            « trois, trois, une »
+--------------------------------------------------
+  MAYDAY, MAYDAY, MAYDAY              (3 fois, dire « maider »)
+  ICI                        / THIS IS
+  <NOM DU NAVIRE> x3
+  <INDICATIF> ÉPELÉ UNE FOIS          (alphabet phonétique)
+
+--------------------------------------------------
+2. MESSAGE DE DÉTRESSE
+--------------------------------------------------
+  MAYDAY  <nom>  <indicatif>
+  → POSITION ................ absolue ou relative
+  → NATURE de la détresse
+  → ASSISTANCE requise
+  → NOMBRE DE PERSONNES À BORD    ← dimensionne les secours
+  → INTENTIONS du responsable
+  → RENSEIGNEMENTS utiles
+  À VOUS / OVER
+
+  RÉPÉTER AUTANT DE FOIS QUE POSSIBLE
+  jusqu'à réponse d'une station côtière OU d'un navire.
+
+--------------------------------------------------
+3. J'ENTENDS UN MAYDAY — LES 5 OBLIGATIONS
+--------------------------------------------------
+  1. CESSER TOUTE TRANSMISSION et écouter
+  2. NOTER soigneusement, rester à l'écoute sur la 16
+  3. ATTENDRE — laisser répondre une STATION CÔTIÈRE
+  4. si personne dans un délai raisonnable → RÉPONDRE
+  5. essayer d'ALERTER une station côtière
+
+--------------------------------------------------
+4. ACCUSÉ DE RÉCEPTION           « tout une fois »
+--------------------------------------------------
+  MAYDAY                                       (1 fois)
+  <nom + indicatif du navire EN DÉTRESSE>      (1 fois)
+  ICI                        / THIS IS
+  <nom + indicatif de MON navire>              (1 fois)
+  REÇU MAYDAY                / RECEIVED MAYDAY (1 fois)
+  + renseignements complémentaires (position, délai)
+
+--------------------------------------------------
+5. MAYDAY RELAY — je parle POUR UN AUTRE
+--------------------------------------------------
+  SI pas d'accusé de réception sous CINQ MINUTES
+  OU si le navire n'arrive pas à joindre la côtière.
+
+  MAYDAY RELAY x3
+  À TOUS x3                  / ALL STATIONS x3
+  ICI                        / THIS IS
+  <MON nom> x3
+  <MON indicatif>                              (1 fois)
+  MAYDAY                                       (1 fois)
+  <nom + indicatif du navire en détresse>      (1 fois)
+  + répétition de ses renseignements
+
+--------------------------------------------------
+6. CONTRÔLE DU TRAFIC
+--------------------------------------------------
+  SILENCE MAYDAY  imposé par la STATION QUI COORDONNE
+                  (MRCC, station côtière, unité de sauvetage)
+                  → JE ME TAIS SUR LA 16 ET J'ÉCOUTE
+  SILENCE FINI    opérations terminées — et pas avant.
+
+--------------------------------------------------
+NE PAS CONFONDRE LES DURÉES
+--------------------------------------------------
+  5 min  → MAYDAY RELAY (pas d'accusé de réception)
+  5 min  → répétition d'un appel de ROUTINE sans réponse
+  4 min  → renouvellement automatique d'une alerte ASN (M10)
+
+FAUSSE ALERTE → ON ANNULE. Procédure normale.
+  NE JAMAIS ÉTEINDRE LE POSTE.
+  Fausse alerte intentionnelle ou par négligence = sanction pénale.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À afficher **dans le cockpit**, pas dans un classeur. Elle se complète
+de la carte **M9** — urgence et sécurité — et de la carte **M10**, pour
+le versant ASN de la même procédure.
