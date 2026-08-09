@@ -1,78 +1,344 @@
 ---
 title: "M4 · Le SMDSM"
-description: "Les neuf fonctions du système mondial de détresse et de sécurité en mer, les zones A1 à A4, les sous-systèmes, l’organisation SAR, les CROSS et les MRCC."
+description: "Les neuf fonctions du système mondial de détresse et de sécurité en mer, les zones A1 à A4, les sous-systèmes, l'organisation SAR, les CROSS et les MRCC."
 sidebar:
   order: 4
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 2,5 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 à M3 validés, en particulier la portée d'une VHF
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Jusqu'ici on a parlé de votre poste. Ce module explique ce qu'il y a à
+l'autre bout : un système mondial, organisé par traité, qui garantit
+qu'une alerte émise quelque part sera reçue, traitée et suivie d'une
+opération de recherche. Le **SMDSM** est le cadre dans lequel votre VHF
+prend son sens — sans lui, appuyer sur DISTRESS reviendrait à crier dans
+le vide.
+
+Il faut en retenir trois choses, et l'examen les interroge toutes les
+trois : **ce que le système doit savoir faire** (les neuf fonctions),
+**où il vous couvre** (les zones A1 à A4), et **qui décroche** (les
+MRCC, qui en France sont les CROSS). Vous verrez aussi pourquoi votre
+CRR ne vaut, en pratique, que dans la première de ces quatre zones.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Dire ce qu'est le **SMDSM** et à quels navires il s'impose.
+- [ ] Énumérer les **neuf fonctions** que tout navire soumis au SMDSM
+  doit pouvoir assurer.
+- [ ] Définir les **quatre zones** A1 à A4 et les distances associées.
+- [ ] Situer **ma propre navigation** dans ces zones et en tirer les
+  conséquences sur mon équipement.
+- [ ] Citer les **sous-systèmes** du SMDSM et dire lesquels sont hors
+  programme.
+- [ ] Décrire l'**organisation SAR** : SRR, MRCC, CROSS, et le rôle
+  particulier de Gris-Nez.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| SMDSM | Système mondial de détresse et de sécurité en mer (GMDSS) |
+| Zone A1 | Couverture d'au moins une station côtière VHF avec ASN permanent |
+| Zone A2 | Couverture d'une station côtière MF avec ASN permanent, hors A1 |
+| Zone A3 | Couverture Inmarsat, entre 76° N et 76° S, hors A1 et A2 |
+| Zone A4 | Le reste : au-delà de 76° N et de 76° S |
+| Navire astreint au SMDSM | Navire tenu par SOLAS ou par la réglementation nationale d'en assurer les fonctions |
+| Alerte navire-terre | Alerte émise vers les autorités à terre, par au moins deux moyens indépendants |
+| Communications sur site | Échanges entre les moyens engagés sur le lieu du sinistre |
+| Signaux de repérage | Signaux permettant de localiser le navire ou les naufragés |
+| RSM | Renseignements sur la sécurité maritime |
+| Convention SAR | Convention *Search And Rescue*, qui organise le sauvetage sans tenir compte des frontières |
+| SRR | *Search and Rescue Region* : subdivision placée sous la responsabilité d'un État |
+| MRCC | *Maritime Rescue Coordination Centre* : centre de coordination du sauvetage |
+| Cospas-Sarsat | Système satellitaire de traitement des alertes émises par radiobalise |
+| FMCC | Centre de contrôle de la mission Cospas-Sarsat pour la France, à Toulouse |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve A et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve A**, **6 questions sur 24**. Il
+  correspond au chapitre du manuel ANFR intitulé **« Le Système Mondial
+  de Détresse et Sécurité en Mer (SMDSM) »**, avec ses quatre sections :
+  les neuf fonctions, le concept de zones, les sous-systèmes,
+  l'organisation SAR.
+- **N'est pas interrogé** : le détail des **zones océaniques d'Europe
+  occidentale** relève de l'**annexe 4** du manuel. On retient la
+  définition des zones, pas leur tracé.
+- **Hors programme, et le manuel le dit lui-même** : *« L'utilisation
+  des équipements MF, HF et Inmarsat ne figure pas au programme
+  d'examen. »* On cite ces sous-systèmes pour situer la VHF dans
+  l'ensemble ; on ne les exploite jamais.
+- **Confusion classique — A1 et la portée VHF.** La zone A1 n'est pas
+  définie par une distance mais par une **couverture** : celle d'une
+  station côtière VHF dont la fonction ASN est disponible en
+  permanence. En France métropolitaine, cela correspond à **20 à
+  30 milles des côtes** — la portée VHF vue en **M3**.
+- **Confusion classique — CROSS, MRCC, SNSM.** Le MRCC est la fonction,
+  le CROSS est l'organisme français qui l'exerce, la SNSM intervient à
+  sa demande (**M2**).
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Ce qu'est le SMDSM
 
-### 2. *(section à rédiger)*
+Le **SMDSM** — en anglais *GMDSS, Global Maritime Distress and Safety
+System* — est un **système international de couverture mondiale**
+utilisant des moyens de télécommunications, satellites et appel sélectif
+numérique, **pour la recherche et le sauvetage en mer et la prévention
+des accidents maritimes**.
 
-### 3. *(section à rédiger)*
+Son principe tient en une phrase : **tout navire astreint au SMDSM, où
+qu'il soit**, doit pouvoir entrer en contact avec les autorités à terre
+et assurer les communications indispensables à sa propre sécurité et à
+celle des navires proches. Les organismes chargés des secours doivent
+être avertis rapidement.
+
+Il s'impose à tous les navires relevant de la **convention SOLAS**
+(**M1**). En France, **la quasi-totalité des navires professionnels est
+astreinte au SMDSM**, au titre de SOLAS et de la réglementation
+nationale.
+
+<Aside type="note" title="Un voilier de plaisance n'est pas astreint au SMDSM">
+  Le bateau du fil rouge ne relève pas de ces obligations : il n'est ni
+  un navire SOLAS, ni un navire professionnel. Ce qui s'impose à lui,
+  c'est la **division 240** vue en **M1** — emport radio obligatoire
+  au-delà de 6 milles d'un abri.
+
+  Mais il **bénéficie** du SMDSM : c'est ce système qui garantit qu'un
+  CROSS veille en permanence la voie 70 et répondra à son alerte. On
+  apprend le SMDSM pour savoir sur quoi l'on compte, pas parce qu'on y
+  est soumis.
+</Aside>
+
+### 2. Les neuf fonctions
+
+Tout navire soumis au SMDSM doit pouvoir assurer les fonctions
+suivantes. L'examen peut en demander une, ou demander laquelle ne
+figure pas dans la liste.
+
+| # | Fonction |
+|---|---|
+| 1 | Émettre des **alertes de détresse navire-terre** par **au moins deux moyens distincts et indépendants**, utilisant chacun un service différent |
+| 2 | Recevoir des alertes de détresse **terre-navire** |
+| 3 | Émettre et recevoir des alertes de détresse **navire-navire** |
+| 4 | Émettre et recevoir des communications ayant trait à la **coordination des opérations de recherche et de sauvetage** |
+| 5 | Émettre et recevoir des **communications sur site** |
+| 6 | Émettre et recevoir des **signaux destinés au repérage** |
+| 7 | Émettre et recevoir des **renseignements sur la sécurité maritime (RSM)** |
+| 8 | Émettre et recevoir des **communications d'ordre général** |
+| 9 | Émettre et recevoir des **communications de passerelle à passerelle** |
+
+<Aside type="tip" title="La fonction 1 est celle qui explique tout le reste">
+  **Au moins deux moyens distincts et indépendants.** C'est le principe
+  fondateur du système : une seule voie d'alerte peut tomber en panne,
+  être hors de portée, ou partir avec le mât.
+
+  C'est pourquoi le bateau du fil rouge emporte une VHF fixe **et** une
+  portative dans le sac de survie, et pourquoi une radiobalise se
+  justifie au-delà de la zone côtière (**M13**). Ce n'est pas de la
+  redondance décorative.
+</Aside>
+
+### 3. Les quatre zones
+
+Les zones du SMDSM ne se définissent pas par des distances arbitraires
+mais par la **couverture disponible**. La distance n'en est que la
+conséquence.
+
+| Zone | Définition | Portée indicative |
+|---|---|---|
+| **A1** | Sous couverture d'au moins une **station côtière VHF** avec fonction d'**alerte ASN disponible en permanence** | **20 à 30 milles** des côtes en France métropolitaine |
+| **A2** | Sous couverture d'au moins une **station côtière MF** dont la fonction ASN est disponible en permanence, **hors zone A1** | **150 à 300 milles** |
+| **A3** | Sous couverture d'un **satellite Inmarsat**, **entre 76° N et 76° S**, hors zones A1 et A2 | — |
+| **A4** | **En dehors** des zones A1, A2 et A3 : au-delà de 76° N et de 76° S. Couverture HF et radiobalises Cospas-Sarsat | — |
+
+<Aside type="caution" title="Votre CRR ne vaut qu'en A1">
+  Le CRR est un **certificat VHF uniquement** (**M1**). Il vous rend
+  compétent pour exploiter la VHF et son ASN — donc pour la **zone
+  A1**, et elle seule.
+
+  Au-delà, les moyens changent : MF en A2, Inmarsat en A3, HF et
+  Cospas-Sarsat en A4. Aucun n'est au programme du CRR, et leur usage
+  suppose d'autres certificats (**M0**). Une radiobalise reste
+  cependant utilisable par tout navigateur, en toute zone : c'est
+  précisément son intérêt (**M13**).
+</Aside>
+
+Le bateau du fil rouge, en navigation côtière et semi-hauturière en
+Manche et en Atlantique, reste **en zone A1** l'essentiel du temps. Une
+traversée peut l'en faire sortir ponctuellement : c'est exactement le
+moment où la portative et la radiobalise cessent d'être des accessoires.
+
+### 4. Les sous-systèmes
+
+Le SMDSM n'est pas un équipement mais un assemblage de systèmes, ayant
+chacun ses limites.
+
+| Sous-système | Bandes | Rôle | Au programme du CRR ? |
+|---|---|---|---|
+| **Radiotéléphonie** | VHF, MF, HF | Communications entre navires et stations côtières, ou entre navires | **Oui**, en VHF |
+| **Appel sélectif numérique** | VHF, MF, HF | Alerte de détresse et établissement des communications | **Oui**, en VHF (**M10**) |
+| **NAVTEX** | — | Diffusion des renseignements sur la sécurité maritime | **Oui** (**M12**) |
+| **Cospas-Sarsat** | 406 MHz | Alerte et localisation par radiobalise ; fonctionne **en toutes zones A1 à A4** | **Oui** (**M13**) |
+| **Répondeur radar SART** | — | Localisation des embarcations de sauvetage | **Oui** (**M13**) |
+| Télégraphie à impression directe | HF, MF | Alerte de détresse | **Non** |
+| Services par satellite Inmarsat | SHF | Alerte, RSM, zones A1 à A3 | **Non** |
+
+<Aside type="caution" title="Ce que le manuel écrit noir sur blanc">
+  *« L'utilisation des équipements MF, HF et Inmarsat ne figure pas au
+  programme d'examen. »*
+
+  Ils figurent dans ce tableau pour une seule raison : comprendre que le
+  SMDSM dépasse largement votre VHF, et que sortir de la zone A1
+  signifie sortir de ce que votre certificat couvre.
+</Aside>
+
+Une particularité mérite d'être retenue : **Cospas-Sarsat fonctionne
+dans toutes les zones, de A1 à A4**. C'est le seul sous-système dont ce
+soit le cas, et c'est ce qui fait la valeur d'une radiobalise.
+
+### 5. L'organisation SAR
+
+La **convention SAR** — *Search And Rescue* — a pour objectif un plan
+international permettant de **coordonner les opérations de recherche et
+de sauvetage sans tenir compte des frontières**.
+
+Son architecture :
+
+<Steps>
+
+1. **Les mers sont divisées en 13 zones.**
+
+2. Ces zones sont subdivisées en **régions de recherche et de sauvetage**
+   — *SRR, Search and Rescue Regions*.
+
+3. Chaque SRR est placée **sous la responsabilité d'un État**, qui
+   s'engage à assurer la **réception des alertes** et à **diriger les
+   opérations**.
+
+4. Pour cela, l'État met en place des **centres de coordination** —
+   *MRCC, Maritime Rescue Coordination Centre*.
+
+</Steps>
+
+**En métropole et outre-mer, les CROSS sont les MRCC** responsables des
+opérations SAR pour leur région respective. On les a énumérés en
+**M2** : Gris-Nez, Jobourg, Corsen, Etel, La Garde en métropole.
+
+<Aside type="tip" title="Le rôle particulier de Gris-Nez">
+  Le **CROSS Gris-Nez** assure, **en plus de ses missions de MRCC**, les
+  points de contact avec les MRCC étrangers qui sollicitent une
+  coopération internationale de la France en zone SAR étrangère.
+
+  C'est un détail interrogeable, et il se retient facilement : Gris-Nez
+  est le CROSS de la Manche Est, donc celui qui fait face au trafic le
+  plus dense d'Europe et aux voisins les plus proches.
+</Aside>
+
+### 6. Cospas-Sarsat, en quatre étapes
+
+Le programme international **Cospas-Sarsat**, reconnu par l'OMI dans le
+cadre du SMDSM, permet le traitement des alertes de détresse envoyées
+par **radiobalise de localisation des sinistres**.
+
+Après déclenchement d'une balise en mer, le système fonctionne en
+**quatre étapes** :
+
+<Steps>
+
+1. **Déclenchement** de la balise de détresse.
+
+2. **Transmission** de l'alerte vers les satellites, en **orbite
+   géostationnaire** et en **orbite polaire**.
+
+3. **Transfert des signaux**, pour la France, vers le **centre de
+   contrôle de la mission Cospas-Sarsat — le FMCC — à Toulouse**.
+
+4. **Transmission au centre de coordination des sauvetages** compétent,
+   qui engage les moyens.
+
+</Steps>
+
+Les fréquences en jeu sont le **406 MHz** pour l'alerte et le
+**121,5 MHz** pour le radioralliement. Les balises elles-mêmes — RLS,
+PLB, et leurs différences — sont l'objet de **M13**.
+
+<Aside type="danger" title="Aucun de ces systèmes ne remplace la veille">
+  Le SMDSM garantit qu'une alerte sera reçue. Il ne garantit ni qu'elle
+  sera émise à temps, ni que le bateau évitera l'accident. La veille
+  visuelle, le gilet, le harnais et le plan de navigation restent la
+  première ligne — la radio est ce qui reste quand tout cela a échoué.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Vigilance propre à ce module : les schémas du SMDSM
+  **antérieurs à la généralisation de l'ASN** décrivent une organisation
+  dépassée, et circulent encore largement. Voir
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M4/` contenant :
+
+1. **`ma-zone.md`** — pour chaque navigation type du bateau, dire dans
+   quelle **zone SMDSM** elle se déroule et sur quels moyens on compte
+   réellement. Une sortie à la journée : zone A1, VHF fixe et portative.
+   Une traversée de la Manche : A1 quasiment tout du long, mais
+   identifier le point le plus éloigné d'une station côtière. Conclure
+   par la question qui compte : **à quel moment de cette navigation
+   suis-je hors de portée VHF, et qu'ai-je alors ?**
+
+2. **`deux-moyens.md`** — appliquer au bateau la première des neuf
+   fonctions du SMDSM. Lister les moyens d'alerte réellement
+   disponibles, et vérifier qu'ils sont **distincts et indépendants** :
+   une VHF fixe et une portative partageant la même batterie ne sont pas
+   indépendantes. Conclure sur ce qui manque, s'il manque quelque chose.
+
+3. **`qui-repond.md`** — pour chaque zone de navigation, le CROSS
+   compétent, son MMSI, et la manière de le joindre : ASN, phonie, 196.
+   Compléter `dossier-radio/M2/mes-cross.md` plutôt que de le
+   dupliquer.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Réciter les neuf fonctions.** Sans note, dans l'ordre ou non. Puis
+   l'exercice inverse : un équipier propose une fonction, vous dites si
+   elle appartient à la liste. Glissez des intrus plausibles — « assurer
+   la navigation », « transmettre la position toutes les heures » — pour
+   travailler le refus.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Placer les quatre zones.** Énoncez A1, A2, A3 et A4 avec leur
+   définition et, pour A1 et A2, la portée indicative. Puis dites, pour
+   chacune, **quel moyen d'alerte** y est disponible, et **lequel relève
+   du CRR**.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Situer une position réelle.** Prenez trois points sur votre carte
+   habituelle — un mouillage, un point de traversée, un point au large —
+   et dites pour chacun la zone, le CROSS compétent, et le moyen que
+   vous emploieriez en premier.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Dérouler Cospas-Sarsat.** Récitez les quatre étapes, du
+   déclenchement de la balise jusqu'au centre de coordination, en
+   nommant le FMCC de Toulouse. C'est la seule chaîne du programme qui
+   fonctionne sans que vous puissiez rien y faire une fois lancée : la
+   connaître évite de douter au moment de déclencher.
 
 </Steps>
 
@@ -80,9 +346,130 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m04"
+  questions={[
+    {
+      question: 'La zone A1 du SMDSM est définie comme la zone :',
+      choices: [
+        'située à moins de 20 milles de la côte, quelle que soit la couverture',
+        'couverte par au moins une station côtière VHF dont la fonction ASN est disponible en permanence',
+        'couverte par au moins une station côtière MF avec ASN permanent',
+        'couverte par les satellites Inmarsat entre 76° N et 76° S',
+      ],
+      answer: 1,
+      explanation:
+        'La zone se définit par la couverture, non par une distance. En France métropolitaine, cette couverture correspond à 20 à 30 milles des côtes — c’est la portée d’une VHF vue en M3.',
+    },
+    {
+      question:
+        'Combien de moyens d’alerte de détresse navire-terre distincts un navire soumis au SMDSM doit-il pouvoir mettre en œuvre ?',
+      choices: [
+        'Un seul, à condition qu’il soit satellitaire',
+        'Trois au minimum',
+        'Autant que la zone de navigation l’impose, sans minimum',
+        'Au moins deux, distincts et indépendants',
+      ],
+      answer: 3,
+      explanation:
+        'C’est la première des neuf fonctions, et le principe fondateur du système : un moyen unique peut tomber en panne, être hors de portée, ou disparaître avec le mât.',
+    },
+    {
+      question: 'Quelle est la portée indicative de la zone A2 ?',
+      choices: ['20 à 30 milles', '60 à 100 milles', '150 à 300 milles', 'Au-delà de 76° de latitude'],
+      answer: 2,
+      explanation:
+        'La zone A2 correspond à la couverture d’une station côtière MF avec ASN permanent, hors zone A1, soit 150 à 300 milles. Les 20 à 30 milles sont ceux de la zone A1 en métropole.',
+    },
+    {
+      question:
+        'En France, quels organismes exercent la fonction de MRCC au sens de la convention SAR ?',
+      choices: [
+        'Les CROSS',
+        'La SNSM',
+        'Les sémaphores de la Marine nationale',
+        'Les stations portuaires',
+      ],
+      answer: 0,
+      explanation:
+        'En métropole et outre-mer, les CROSS sont les MRCC responsables des opérations SAR pour leur région. La SNSM intervient à leur demande, et les sémaphores peuvent les relayer en cas d’indisponibilité d’un émetteur (M2).',
+    },
+    {
+      question: 'Quel sous-système du SMDSM fonctionne dans toutes les zones, de A1 à A4 ?',
+      choices: [
+        'L’appel sélectif numérique en VHF',
+        'Les services par satellite Inmarsat',
+        'Le NAVTEX',
+        'Cospas-Sarsat',
+      ],
+      answer: 3,
+      explanation:
+        'Cospas-Sarsat, qui traite les alertes émises par radiobalise, est le seul à couvrir les quatre zones. C’est ce qui fait la valeur d’une radiobalise au-delà de la portée VHF (M13).',
+    },
+    {
+      question: 'Pour la France, vers quel centre les signaux Cospas-Sarsat sont-ils transférés ?',
+      choices: [
+        'Vers le CROSS Gris-Nez',
+        'Vers le FMCC de Toulouse',
+        'Vers le centre Inmarsat de Brest',
+        'Vers l’ANFR à Saint-Dié-des-Vosges',
+      ],
+      answer: 1,
+      explanation:
+        'Le centre de contrôle de la mission Cospas-Sarsat pour la France est le FMCC, à Toulouse. Il transmet ensuite au centre de coordination des sauvetages compétent.',
+    },
+    {
+      question: 'Quelle mission particulière le CROSS Gris-Nez assure-t-il en plus de son rôle de MRCC ?',
+      choices: [
+        'La diffusion des bulletins météorologiques pour toute la métropole',
+        'La coordination de l’ensemble des CROSS français',
+        'Les points de contact avec les MRCC étrangers sollicitant la coopération de la France',
+        'Le contrôle des licences de station de navire',
+      ],
+      answer: 2,
+      explanation:
+        'Gris-Nez assure les points de contact avec les MRCC étrangers qui sollicitent une coopération internationale de la France en zone SAR étrangère. C’est cohérent avec sa position, face au trafic le plus dense d’Europe.',
+    },
+    {
+      question:
+        'Laquelle de ces fonctions ne figure PAS parmi les neuf fonctions du SMDSM ?',
+      choices: [
+        'Émettre et recevoir des communications de passerelle à passerelle',
+        'Émettre et recevoir des signaux destinés au repérage',
+        'Assurer la conduite et la navigation du navire',
+        'Émettre et recevoir des renseignements sur la sécurité maritime',
+      ],
+      answer: 2,
+      explanation:
+        'Le SMDSM est un système de communications, pas de navigation. Les huit autres propositions figurent bien parmi les neuf fonctions, avec les communications sur site et les alertes dans les trois sens.',
+    },
+    {
+      question: 'Les mers sont divisées, au titre de la convention SAR, en :',
+      choices: [
+        '4 zones correspondant aux zones A1 à A4',
+        '13 zones, subdivisées en régions de recherche et de sauvetage',
+        '5 zones, une par CROSS métropolitain',
+        '76 zones, une par degré de latitude',
+      ],
+      answer: 1,
+      explanation:
+        '13 zones, subdivisées en SRR — Search and Rescue Regions — chacune placée sous la responsabilité d’un État qui s’engage à recevoir les alertes et à diriger les opérations. Les zones A1 à A4 relèvent d’un tout autre découpage.',
+    },
+    {
+      question:
+        'Un plaisancier navigue en zone A1 avec une VHF ASN. Que dit le manuel de l’usage des équipements MF, HF et Inmarsat ?',
+      choices: [
+        'Ils sont recommandés dès la zone semi-hauturière',
+        'Ils remplacent la VHF au-delà de 20 milles',
+        'Leur utilisation ne figure pas au programme d’examen',
+        'Ils sont obligatoires pour tout navire astreint à la division 240',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel l’écrit littéralement. Un CRR délivré aujourd’hui est un certificat VHF uniquement (M1) : il couvre la zone A1, et les autres zones supposent d’autres moyens et d’autres certificats.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +477,61 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M4 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+SMDSM / GMDSS
+  Système MONDIAL pour la recherche et le sauvetage en mer
+  et la prévention des accidents. Satellites + ASN.
+  S'impose aux navires SOLAS ; en France, quasi tous les
+  navires professionnels. Un voilier de plaisance n'y est
+  pas astreint — mais il en BÉNÉFICIE.
+
+LES NEUF FONCTIONS
+  1  alertes détresse NAVIRE → TERRE
+     par AU MOINS DEUX MOYENS DISTINCTS ET INDÉPENDANTS
+  2  recevoir alertes TERRE → NAVIRE
+  3  émettre/recevoir alertes NAVIRE ↔ NAVIRE
+  4  communications de COORDINATION SAR
+  5  communications SUR SITE
+  6  signaux destinés au REPÉRAGE
+  7  RENSEIGNEMENTS SUR LA SÉCURITÉ MARITIME (RSM)
+  8  communications d'ordre général
+  9  communications de PASSERELLE À PASSERELLE
+
+LES QUATRE ZONES  (définies par la COUVERTURE, pas la distance)
+  A1  station côtière VHF avec ASN permanent
+      → 20 à 30 milles des côtes (métropole)   ← LE CRR
+  A2  station côtière MF avec ASN permanent, hors A1
+      → 150 à 300 milles
+  A3  satellite Inmarsat, entre 76° N et 76° S, hors A1/A2
+  A4  le reste : au-delà de 76° N et 76° S
+      (HF + Cospas-Sarsat)
+
+  VOTRE CRR NE VAUT QU'EN A1.
+
+SOUS-SYSTÈMES
+  Radiotéléphonie ......... VHF/MF/HF     au programme (VHF)
+  ASN ..................... VHF/MF/HF     au programme (VHF)
+  NAVTEX (RSM) ...........................  au programme → M12
+  COSPAS-SARSAT (406 MHz) ... TOUTES ZONES A1→A4  → M13
+  Répondeur radar SART ................... au programme → M13
+  Télégraphie impression directe HF/MF ... HORS PROGRAMME
+  Inmarsat (SHF) ......................... HORS PROGRAMME
+
+ORGANISATION SAR
+  Convention SAR → sauvetage SANS FRONTIÈRES
+  13 zones → subdivisées en SRR
+  1 SRR = 1 État responsable → met en place des MRCC
+  EN FRANCE, LES MRCC SONT LES CROSS.
+  GRIS-NEZ en plus : contact avec les MRCC ÉTRANGERS.
+
+COSPAS-SARSAT — 4 ÉTAPES
+  1. déclenchement de la balise
+  2. transmission aux satellites (géostationnaires + polaires)
+  3. France → FMCC de TOULOUSE
+  4. → centre de coordination des sauvetages
+  406 MHz = alerte    121,5 MHz = radioralliement
+
+  AUCUN DE CES SYSTÈMES NE REMPLACE LA VEILLE.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M2** — les CROSS y sont nommés — et
+**M13**, qui détaille les balises dont il est question ici.
