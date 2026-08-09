@@ -1,0 +1,117 @@
+/* Lisibilité des tableaux sur écran étroit.
+ *
+ * Les tableaux sont l'ossature des modules : « Concepts clés » en compte 12 à
+ * 15 lignes, et plusieurs comparaisons tiennent sur 4 colonnes. Sur un
+ * téléphone, la largeur utile du contenu tombe à ~343 px : chaque cellule se
+ * casse alors sur trois ou quatre lignes, les lignes deviennent très hautes,
+ * l'œil perd la correspondance entre une valeur et sa colonne, et la dernière
+ * colonne peut même être tronquée.
+ *
+ * On bascule donc, sous le point de rupture mobile de Starlight (50em), vers
+ * un rendu empilé : chaque ligne devient une fiche, chaque cellule porte le
+ * libellé de sa colonne. Le libellé est injecté au build dans l'attribut
+ * `data-libelle` par le plugin rehype d'`astro.config.mjs` — pas de
+ * JavaScript côté client.
+ *
+ * Au-dessus de 50em, le rendu reste exactement celui de Starlight.
+ */
+
+@media (max-width: 50em) {
+  .sl-markdown-content table {
+    display: block;
+    border-collapse: collapse;
+    /* Starlight impose une largeur pleine ; en empilé elle n'a plus de sens. */
+    width: 100%;
+  }
+
+  /* L'en-tête est repris cellule par cellule : on le masque en tant que ligne,
+     sans le retirer du DOM (lecteurs d'écran, Pagefind). */
+  .sl-markdown-content table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .sl-markdown-content table tbody {
+    display: block;
+  }
+
+  /* Une ligne = une fiche. */
+  .sl-markdown-content table tbody tr {
+    display: block;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.75rem;
+    margin-block: 0.7rem;
+    background: var(--sl-color-bg-nav);
+  }
+
+  .sl-markdown-content table tbody td {
+    display: block;
+    border: 0;
+    padding: 0.2rem 0;
+    /* Une colonne alignée à droite (les durées de vidéos) n'a plus de raison
+       de l'être une fois empilée. */
+    text-align: start;
+  }
+
+  /* Le libellé de colonne, au-dessus de la valeur. */
+  .sl-markdown-content table tbody td[data-libelle]::before {
+    content: attr(data-libelle);
+    display: block;
+    font-size: 0.72em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--sl-color-gray-3);
+  }
+
+  /* La première cellule ancre la fiche. */
+  .sl-markdown-content table tbody td:first-child {
+    font-weight: 600;
+    padding-top: 0;
+  }
+
+  /* Les tableaux comportent des cellules vides — la ligne « Total » d'un
+     décompte, par exemple. Les afficher produirait un libellé orphelin. */
+  .sl-markdown-content table tbody td:empty {
+    display: none;
+  }
+
+  .sl-markdown-content table tbody td:last-child {
+    padding-bottom: 0;
+  }
+}
+
+/* À l'impression, on veut la grille, pas les fiches : les fiches de synthèse
+   et les aides-mémoire sont faits pour être imprimés et plastifiés. */
+@media print {
+  .sl-markdown-content table {
+    display: table;
+  }
+  .sl-markdown-content table thead {
+    position: static;
+    width: auto;
+    height: auto;
+    clip-path: none;
+  }
+  .sl-markdown-content table tbody {
+    display: table-row-group;
+  }
+  .sl-markdown-content table tbody tr {
+    display: table-row;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+  .sl-markdown-content table tbody td {
+    display: table-cell;
+  }
+  .sl-markdown-content table tbody td[data-libelle]::before {
+    content: none;
+  }
+}

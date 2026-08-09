@@ -21,11 +21,32 @@ situation, fiches — pas une reformulation approximative.
 
 ## Stack technique
 
-- **Astro 6** + **Starlight 0.39** (thème documentation)
+- **Astro 6.3.5** + **Starlight 0.39.2** (thème documentation) — **versions
+  figées, voir l'avertissement ci-dessous**
 - **MDX** pour les cours (composants interactifs intégrables)
 - **Pagefind** (recherche statique, fournie par Starlight, rien à configurer)
 - **pnpm 10**, **Node 22**
 - Déploiement **GitHub Pages** via Actions, sur `crr.bronac.net`
+
+⚠️ **Ne pas mettre à jour Astro ni Starlight sans vérifier les tableaux des
+modules.** Avec **astro 6.4.8 + Starlight 0.39.3**, GFM n'est plus appliqué au
+pipeline **MDX** : les tableaux Markdown des modules sont rendus en **texte
+brut**, barres verticales comprises, dans un simple `<p>`. Le build passe,
+`astro check` passe, aucune erreur n'est émise — la régression est
+**silencieuse**, et elle ne touche que les `.mdx` : les pages `.md` de `meta/`,
+`bord/` et `reference/` continuent de rendre leurs tableaux normalement, ce qui
+la rend d'autant plus facile à manquer.
+
+Les versions sont donc **épinglées à l'exact** dans `package.json`, sans
+accent circonflexe. Starlight 0.41 n'est pas une issue : il exige Astro 7.
+Après toute tentative de mise à jour, contrôler :
+
+```sh
+pnpm build && grep -c "<table" dist/modules/m00-cadre-et-examen/index.html
+```
+
+Le compte doit être **8**, et `grep -o '<p>| ' dist/modules/*/index.html` ne
+doit rien remonter.
 
 **Pas de KaTeX.** Le CRR ne comporte aucune formule ; les rares expressions
 (longueur d'onde, portée) s'écrivent en texte. N'ajouter `remark-math` /
@@ -131,6 +152,27 @@ Propre à ce projet. Elle contient, en 4 à 8 puces :
   relevant des **annexes du manuel**, explicitement hors questions ;
 - les confusions classiques que l'examen exploite, avec renvoi au module qui
   les traite.
+
+### Tableaux
+
+Les tableaux sont l'ossature des modules : « Concepts clés » en compte 12 à 15
+lignes, et plusieurs comparaisons tiennent sur 4 colonnes. Sous 50em — donc sur
+téléphone — ils basculent automatiquement en **rendu empilé** : chaque ligne
+devient une fiche, chaque cellule est précédée du libellé de sa colonne
+(`src/styles/tableaux.css`, alimenté par le plugin rehype d'`astro.config.mjs`
+qui injecte `data-libelle` au build).
+
+Deux conséquences pour la rédaction :
+
+- **Les en-têtes de colonnes deviennent des libellés.** Ils doivent être courts
+  et compréhensibles isolément : « Questions », « Épreuve », « Titre requis ».
+  Éviter « Valeur », « Item », « — », qui n'apprennent rien une fois détachés
+  de leur ligne.
+- **La première colonne ancre la fiche** : y mettre l'entrée qui identifie la
+  ligne (le concept, la situation, le document), pas une donnée secondaire.
+
+Une cellule vide ne produit pas de libellé orphelin, elle est masquée. À
+l'impression, la grille classique est rétablie.
 
 ### Principe spirale
 

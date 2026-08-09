@@ -2,11 +2,97 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+/**
+ * Nœud hast, réduit à ce dont le plugin ci-dessous a besoin. Défini localement
+ * plutôt qu'importé de `@types/hast`, pour ne pas ajouter de dépendance.
+ *
+ * @typedef {object} Noeud
+ * @property {string} type
+ * @property {string} [tagName]
+ * @property {string} [value]
+ * @property {Record<string, unknown>} [properties]
+ * @property {Noeud[]} [children]
+ */
+
+/**
+ * Recopie dans chaque `<td>` le libellé de sa colonne, sous forme d'attribut
+ * `data-libelle`.
+ *
+ * Sert uniquement au rendu empilé des tableaux sur écran étroit, décrit dans
+ * `src/styles/tableaux.css` : sans le libellé, une valeur isolée dans une
+ * fiche (« 78 € », « 10 ») serait ininterprétable. Le calcul se fait au build ;
+ * aucun JavaScript n'est envoyé au navigateur.
+ *
+ * Écrit à la main plutôt qu'avec `unist-util-visit`, pour ne pas ajouter de
+ * dépendance à ce seul usage.
+ */
+function rehypeLibellesDeColonne() {
+  /**
+   * @param {Noeud} noeud
+   * @param {(n: Noeud) => void} action
+   */
+  const parcourir = (noeud, action) => {
+    action(noeud);
+    for (const enfant of noeud.children ?? []) parcourir(enfant, action);
+  };
+
+  /** @param {Noeud} noeud */
+  const texte = (noeud) => {
+    let out = '';
+    parcourir(noeud, (n) => {
+      if (n.type === 'text') out += n.value ?? '';
+    });
+    return out.replace(/\s+/g, ' ').trim();
+  };
+
+  /** @param {Noeud} arbre */
+  return (arbre) => {
+    parcourir(arbre, (noeud) => {
+      if (noeud.type !== 'element' || noeud.tagName !== 'table') return;
+
+      /** @type {Noeud[]} */
+      const lignes = [];
+      parcourir(noeud, (n) => {
+        if (n.type === 'element' && n.tagName === 'tr') lignes.push(n);
+      });
+
+      const enTete = lignes.find((l) =>
+        l.children?.some((c) => c.type === 'element' && c.tagName === 'th'),
+      );
+      if (!enTete?.children) return;
+
+      const libelles = enTete.children
+        .filter((c) => c.type === 'element')
+        .map(texte);
+
+      for (const ligne of lignes) {
+        if (ligne === enTete) continue;
+        (ligne.children ?? [])
+          .filter((c) => c.type === 'element' && c.tagName === 'td')
+          .forEach((cellule, i) => {
+            const libelle = libelles[i];
+            // Une colonne au libellé vide (première colonne d'un tableau de
+            // comparaison) ne doit pas produire de libellé orphelin.
+            if (!libelle) return;
+            cellule.properties = {
+              ...cellule.properties,
+              'data-libelle': libelle,
+            };
+          });
+      }
+    });
+  };
+}
+
 export default defineConfig({
   // Domaine personnalisé : `public/CNAME` est publié tel quel par GitHub
   // Pages. Pas de `base` — le site est servi à la racine du domaine.
   site: 'https://crr.bronac.net',
   trailingSlash: 'ignore',
+
+  markdown: {
+    rehypePlugins: [rehypeLibellesDeColonne],
+  },
 
   integrations: [
     starlight({
@@ -17,6 +103,7 @@ export default defineConfig({
       locales: {
         root: { label: 'Français', lang: 'fr' },
       },
+      customCss: ['./src/styles/tableaux.css'],
       social: [
         {
           icon: 'github',
