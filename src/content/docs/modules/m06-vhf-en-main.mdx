@@ -7,72 +7,345 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **B** — 8 questions sur 24 · **Volume** : 2 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 à M5 validés, en particulier la portée vue en M3
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+On arrête ici la théorie : ce module se fait **devant le poste**, la main
+sur les boutons. Une VHF marine n'a qu'une poignée de commandes, et
+elles sont les mêmes chez tous les constructeurs — marche/arrêt, volume,
+squelch, sélection de voie, touche 16, puissance, double veille,
+alternat. Sept gestes, dont deux décident si vous entendrez quelque
+chose et si l'on vous entendra.
+
+Le module suit l'ordre du manuel, qui est aussi l'ordre dans lequel on
+prend un poste en main. Il se termine par la **portative**, qui n'est
+pas un jouet : c'est elle qui part dans le radeau, et c'est la seule
+radio qui survit à une panne électrique générale.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Mettre le poste en service et **régler le squelch** selon la
+  procédure.
+- [ ] Sélectionner une voie et **revenir instantanément sur la 16**.
+- [ ] Choisir entre **25 W et 1 W** et justifier mon choix.
+- [ ] Activer la **double veille** et dire ce qu'elle fait exactement.
+- [ ] Utiliser l'**alternat** sans couper mon correspondant.
+- [ ] Énoncer les caractéristiques et les limites d'une **VHF
+  portative**.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| POWER | Commande de mise en service, parfois commune avec le volume |
+| Volume | Réglage du niveau sonore, sans effet sur la sensibilité |
+| Squelch | Réglage de la sensibilité de réception : rend le récepteur silencieux sous un certain seuil |
+| Bruit de souffle | Souffle entendu squelch au minimum, signe que le récepteur est ouvert |
+| Touche 16 | Touche d'accès direct à la voie 16, présente sur tout poste |
+| H/L | Commande de puissance de sortie, *High* / *Low* |
+| Puissance normale | 25 watts |
+| Puissance réduite | 1 watt |
+| DW | *Dual Watch*, double veille : veille la voie de détresse depuis une autre voie |
+| TW | *Triple Watch*, triple veille, sur certains modèles |
+| PTT | *Push To Talk*, touche d'alternat : on émet tant qu'on appuie |
+| VHF portative | Poste autonome, 6 W au maximum, portée d'une dizaine de milles |
+| Indice de protection | Cote d'étanchéité, à choisir avec résistance à l'immersion |
+| Autonomie | Généralement 8 heures pour une portative |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve B et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module ouvre l'**épreuve B**, « Radiotéléphonie VHF », **8
+  questions sur 24**. Il correspond au chapitre du manuel ANFR intitulé
+  **« Utilisation pratique de l'équipement en ondes métriques »**.
+- Le manuel précise lui-même que ce chapitre traite **des VHF classiques,
+  fixes ou portables, utilisées en phonie** — les commandes propres à
+  l'ASN relèvent du chapitre sur l'appel sélectif numérique, donc de
+  **M10**.
+- **N'est pas interrogé** : la documentation du constructeur de votre
+  poste. L'examen porte sur des commandes **génériques**, celles qu'on
+  retrouve sur tout appareil. Apprenez la fonction, pas l'emplacement du
+  bouton sur votre modèle.
+- **Confusion classique — squelch et volume.** Le volume règle ce que le
+  haut-parleur restitue ; le squelch règle **à partir de quel niveau de
+  signal** le récepteur laisse passer quelque chose. Un squelch trop
+  fermé rend un poste parfaitement muet sur un appel réel.
+- **Confusion classique — la portée.** Elle dépend de la **hauteur
+  d'antenne** *et* de la puissance, pas de la seule puissance
+  (**M3**). Passer de 1 W à 25 W ne compense pas une antenne mal placée.
+- **Confusion classique — la double veille n'est pas une veille
+  permanente.** Elle bascule entre deux voies ; elle ne remplace ni
+  l'écoute de la 16, ni la veille visuelle.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Mettre en service : POWER et volume
 
-### 2. *(section à rédiger)*
+Un bouton **« marche/arrêt » (POWER)** active et désactive l'appareil.
+Le réglage du **volume** sonore se fait par un bouton **parfois commun
+avec la touche marche/arrêt** — c'est la disposition la plus répandue
+sur les postes fixes.
 
-### 3. *(section à rédiger)*
+Le volume n'a **aucun effet sur la sensibilité du poste**. Monter le
+volume ne fait pas mieux recevoir : cela ne fait qu'amplifier ce qui a
+déjà franchi le seuil du squelch. C'est le premier réflexe à
+désapprendre.
+
+### 2. Le squelch : le réglage qui décide de ce que vous entendez
+
+Le **squelch** est un dispositif de réglage de la **sensibilité de la
+réception**. Il **force le récepteur à être silencieux** quand celui-ci
+ne reçoit aucun signal, ou lorsque ce signal est **inférieur à un
+certain seuil**.
+
+Sans lui, un poste allumé cracherait en permanence un souffle
+insupportable. Mal réglé, il coupe les correspondants lointains — c'est
+à dire, souvent, ceux qui ont besoin d'aide.
+
+La procédure du manuel, dans l'ordre :
+
+<Steps>
+
+1. **Se placer sur la voie 16.**
+
+2. **Régler le squelch au minimum.** On entend alors un **bruit de
+   souffle** : le récepteur est grand ouvert, il laisse tout passer.
+
+3. **Reprendre doucement le réglage en sens inverse**, jusqu'au
+   **silence complet**.
+
+4. **Revenir légèrement en arrière.**
+
+5. **Contrôler le résultat.** Quand le haut-parleur n'émet qu'un
+   **« cloc » de temps à autre**, le réglage est parfait.
+
+</Steps>
+
+<Aside type="caution" title="Le piège du squelch trop fermé">
+  Fermer le squelch à fond donne un poste agréablement silencieux — et
+  parfaitement sourd. Un navire lointain, un appel faible, une portative
+  à bout de batterie : tout ce qui est en dessous du seuil disparaît
+  sans laisser de trace.
+
+  Le « cloc » occasionnel n'est pas un défaut de réglage. C'est la
+  preuve que le récepteur est encore ouvert.
+</Aside>
+
+### 3. Sélectionner une voie, et revenir sur la 16
+
+Le mode de sélection dépend du poste : **bouton rotatif**, touches
+**▲** et **▼**, ou clavier. Peu importe — une chose est constante :
+
+> Il existera **toujours** un bouton ou une touche portant le repère
+> **16**, permettant d'accéder **directement** à la voie 16.
+
+C'est la commande la plus importante du poste. Elle est conçue pour être
+trouvée sans regarder, de nuit, avec des gants, par quelqu'un qui ne
+connaît pas le bateau. **Repérez-la maintenant**, et montrez-la à vos
+équipiers.
+
+Les voies utiles au quotidien ont été vues en **M2** : 16 pour l'appel
+et la détresse, 9 pour les ports de plaisance, 6, 8, 72 et 77 entre
+navires, 70 pour l'ASN — et sur celle-là, jamais de voix.
+
+### 4. La puissance : 25 W ou 1 W
+
+La commande de puissance de sortie est généralement appelée **`H/L`**
+(*High/Low*). Elle permet :
+
+| Mode | Puissance | Usage |
+|---|---|---|
+| Puissance **normale** | **25 watts** | Portée maximale, appel lointain, détresse |
+| Puissance **réduite** | **1 watt** | Zones portuaires, communications de proximité |
+
+La **portée dépend de la hauteur de l'antenne et de la puissance
+utilisée** : en puissance normale, elle **peut varier de 20 à 30 milles,
+voire au-delà** (**M3**).
+
+Le manuel **recommande** d'utiliser la puissance réduite dans les zones
+portuaires et pour toute communication de proximité, pour deux raisons
+précises :
+
+- **éviter les brouillages** par l'utilisation simultanée de la même
+  voie par plusieurs navires éloignés de quelques milles ;
+- **réduire la consommation de la batterie**.
+
+<Aside type="tip" title="1 W n'est pas une VHF au rabais">
+  C'est un réflexe de bon opérateur, pas une dégradation. Appeler la
+  capitainerie à 25 W depuis le bassin, c'est occuper la voie 9 pour
+  tous les ports à trente milles à la ronde — et vider une batterie qui
+  servira peut-être le soir même.
+
+  La règle est simple : **1 W par défaut au port et en proximité, 25 W
+  dès qu'on veut être entendu loin**. Et toujours 25 W pour un appel de
+  détresse (**M8**).
+</Aside>
+
+### 5. La double veille
+
+Une touche appelée **`DUAL DW`** (*Dual Watch*) permet de **veiller la
+voie de détresse tout en étant positionné sur une autre voie** — par
+exemple la voie 6, navire-navire.
+
+Son fonctionnement exact, tel que le manuel le décrit : **à réception
+d'un signal sur la voie 16, le poste reste positionné sur celle-ci**,
+puis bascule sur l'autre voie choisie.
+
+Certains modèles proposent une **triple veille (TW)**.
+
+<Aside type="caution" title="Ce que la double veille ne fait pas">
+  Elle ne permet pas d'écouter deux voies **en même temps** : elle
+  alterne. Un échange qui commence sur votre voie de travail pendant que
+  le poste est sur la 16 peut vous échapper, et réciproquement.
+
+  Elle ne dispense pas non plus de la **veille sur la voie 16**, qui est
+  une obligation d'exploitation traitée en **M11**, ni de la veille
+  visuelle — aucune fonction d'un poste radio ne remplace un équipier qui
+  regarde dehors.
+</Aside>
+
+### 6. L'alternat
+
+Le poste possède une touche **`PTT`** (*Push To Talk*) qui permet
+d'**alterner émission et réception**. On reste en mode émission **tant
+que l'on maintient la pression** sur cette touche. Lorsqu'on a terminé
+de parler, **on relâche** pour repasser en réception et entendre son
+correspondant.
+
+C'est la conséquence directe du **simplex** vu en **M3** : une seule
+fréquence, donc un seul qui parle à la fois.
+
+<Aside type="tip" title="Les trois fautes d'alternat">
+  - **Parler avant d'appuyer** : le début du message est perdu. Appuyez,
+    comptez un temps, puis parlez.
+  - **Relâcher trop tôt** : la fin du message est coupée, souvent le mot
+    le plus important.
+  - **Garder le doigt appuyé** en écoutant : vous bloquez la voie et
+    n'entendez rien. C'est ainsi qu'on brouille une voie pendant de
+    longues minutes sans s'en apercevoir — un cas explicitement traité
+    en **M11**.
+
+  D'où le `à vous` en fin de chaque prise de parole : il dit à l'autre
+  que vous avez relâché (**M7**).
+</Aside>
+
+### 7. La VHF portative
+
+Les commandes d'une portative sans ASN sont **similaires** à celles d'un
+poste fixe. Ses caractéristiques propres, en revanche, changent tout :
+
+| Caractéristique | Valeur |
+|---|---|
+| Puissance | **6 watts au maximum** |
+| Portée | **une dizaine de milles** |
+| Voies | peut être équipée des **57 voies** |
+| Étanchéité | choisir un **indice de protection à l'immersion** |
+| Autonomie | **généralement 8 heures** |
+
+Le manuel en donne deux usages, et le second est celui qui compte :
+
+- **La liberté de communication**, quel que soit l'endroit où l'on se
+  trouve sur le navire — à la barre, à l'avant, en tête de mât.
+- **L'emport dans le radeau de secours en cas d'abandon du navire.**
+  Elle pourra alors **alerter et guider les navires proches**.
+
+<Aside type="danger" title="Une portative se prépare avant de partir">
+  Elle ne sert que si elle est **chargée**. Le manuel insiste : il faut
+  s'assurer de la bonne charge de l'accumulateur, et **posséder une
+  batterie de secours peut s'avérer fort utile**.
+
+  Deux conséquences concrètes : elle se recharge **avant** chaque
+  navigation, pas quand on y pense ; et elle se range **avec le sac de
+  survie**, pas au fond d'une équipet. Le jour de l'abandon, on ne
+  cherche pas.
+
+  Rappel qui vaut pour tout ce module : une portative **ne remplace ni
+  la veille, ni le gilet, ni le plan de navigation** (**M13**).
+</Aside>
+
+L'**antenne** — fouet vertical, accordée, en tête de mât, à deux
+longueurs d'onde de tout métal important — a été traitée en **M3**, où
+elle explique la portée. Retenez ici seulement qu'une portative, tenue à
+hauteur d'homme dans un cockpit, ne portera jamais comme le poste fixe
+du même bateau, même en poussant la puissance.
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Pour ce module, la meilleure ressource reste **votre propre
+  poste**, notice en main. Les démonstrations en ligne portent souvent
+  sur du matériel américain, dont les voies et les usages diffèrent
+  (**M3**). Voir [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M6/` contenant :
+
+1. **`mon-poste.md`** — la fiche du poste fixe : marque, modèle, classe
+   ASN, emplacement. Puis, **commande par commande**, où elle se trouve
+   sur ce poste précis : POWER, volume, squelch, sélection de voie,
+   **touche 16**, `H/L`, `DW`, `PTT`. Une photo annotée vaut mieux qu'un
+   paragraphe. Ce fichier est destiné à un équipier qui monte à bord
+   pour la première fois.
+
+2. **`squelch.md`** — le réglage effectué selon la procédure, et le
+   repère obtenu noté de façon reproductible : position du bouton,
+   valeur affichée, ou nombre de crans depuis le minimum. Refaire le
+   réglage au mouillage puis en navigation, et **noter si le point
+   optimal diffère** — le bruit ambiant et l'électronique du bord ne
+   sont pas les mêmes moteur en marche.
+
+3. **`portative.md`** — modèle, puissance, indice de protection,
+   autonomie constatée, date de la dernière charge, présence ou absence
+   d'une batterie de secours, et **où elle est rangée**. Conclure par
+   une phrase nette : est-elle, oui ou non, dans le sac de survie ?
+
+4. **`consignes-equipage.md`** — une demi-page affichable près du
+   poste : allumer, régler le volume, revenir sur la 16, passer en
+   25 W, appuyer et parler. Écrite pour quelqu'un qui n'a jamais touché
+   une VHF, parce que c'est peut-être cette personne qui appellera.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Régler le squelch, trois fois de suite.** Poste sur la voie 16,
+   squelch au minimum jusqu'au souffle, remontée douce jusqu'au silence,
+   léger retour en arrière, contrôle du « cloc ». Refaites-le en
+   partant à chaque fois d'une position différente : le geste doit
+   devenir indépendant du point de départ.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Retrouver la 16 les yeux fermés.** Changez de voie, puis revenez
+   sur la 16 par la touche dédiée, sans regarder le poste. Répétez
+   jusqu'à ce que ce soit un réflexe. Faites ensuite l'exercice avec
+   chaque équipier — c'est le seul geste que tout le monde à bord doit
+   savoir faire.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Comparer 25 W et 1 W en réel.** Sur une voie de travail libre,
+   avec un correspondant volontaire à quelques milles, échangez en
+   puissance réduite puis en puissance normale. Notez la différence
+   perçue dans `portee-estimee.md` (**M3**). L'objectif est de savoir à
+   quel moment 1 W ne suffit plus.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Éprouver la double veille.** Activez `DW` depuis une voie de
+   travail et faites émettre un équipier sur la 16 avec la portative.
+   Observez le comportement exact du poste. Vous saurez alors ce que la
+   fonction fait — et ce qu'elle ne fait pas.
+
+5. **Travailler l'alternat.** Enregistrez-vous si possible. Appuyez,
+   marquez un temps, parlez, terminez par `à vous`, relâchez. Chassez
+   les trois fautes : parler avant d'appuyer, relâcher trop tôt, garder
+   le doigt appuyé en écoutant.
 
 </Steps>
 
@@ -80,9 +353,130 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m06"
+  questions={[
+    {
+      question: 'À quoi sert le squelch ?',
+      choices: [
+        'À régler le niveau sonore du haut-parleur',
+        'À rendre le récepteur silencieux en dessous d’un certain seuil de signal',
+        'À sélectionner la puissance d’émission',
+        'À basculer automatiquement sur la voie 16',
+      ],
+      answer: 1,
+      explanation:
+        'Le squelch règle la sensibilité de la réception. Le volume, lui, n’agit que sur ce qui a déjà franchi ce seuil : monter le volume ne fait pas mieux recevoir.',
+    },
+    {
+      question:
+        'Vous réglez le squelch. À quoi reconnaît-on que le réglage est parfait ?',
+      choices: [
+        'Le haut-parleur émet un souffle continu',
+        'Le haut-parleur est totalement silencieux en toutes circonstances',
+        'Le haut-parleur n’émet qu’un « cloc » de temps à autre',
+        'Le voyant de réception clignote régulièrement',
+      ],
+      answer: 2,
+      explanation:
+        'La procédure : voie 16, squelch au minimum jusqu’au souffle, remontée douce jusqu’au silence complet, léger retour en arrière. Le « cloc » occasionnel prouve que le récepteur est encore ouvert.',
+    },
+    {
+      question: 'Quelles sont les deux puissances d’une VHF fixe ?',
+      choices: [
+        '6 watts et 1 watt',
+        '50 watts et 5 watts',
+        '10 watts et 2 watts',
+        '25 watts en puissance normale, 1 watt en puissance réduite',
+      ],
+      answer: 3,
+      explanation:
+        'La commande H/L (High/Low) bascule entre 25 W et 1 W. Les 6 watts sont le maximum d’une portative, ce qui limite sa portée à une dizaine de milles.',
+    },
+    {
+      question:
+        'Pourquoi le manuel recommande-t-il la puissance réduite en zone portuaire ?',
+      choices: [
+        'Pour éviter les brouillages entre navires éloignés de quelques milles et pour économiser la batterie',
+        'Parce que la réglementation interdit les 25 W dans les ports',
+        'Parce que 25 W endommagent l’antenne à faible distance',
+        'Pour laisser la voie 16 libre pour les communications de détresse',
+      ],
+      answer: 0,
+      explanation:
+        'Ce sont les deux raisons données par le manuel. Émettre à 25 W depuis un bassin occupe la même voie pour tous les ports à des milles à la ronde, et consomme inutilement.',
+    },
+    {
+      question: 'Que fait la fonction de double veille (DW) ?',
+      choices: [
+        'Elle enregistre les communications reçues sur deux voies',
+        'Elle permet de veiller la voie de détresse tout en étant positionné sur une autre voie',
+        'Elle écoute simultanément les voies 16 et 70 sans alterner',
+        'Elle bascule automatiquement en 25 W à réception d’un appel',
+      ],
+      answer: 1,
+      explanation:
+        'À réception d’un signal sur la voie 16, le poste reste positionné sur celle-ci puis bascule sur l’autre voie choisie. Elle alterne, elle n’écoute pas deux voies en même temps, et elle ne dispense pas de la veille (M11).',
+    },
+    {
+      question: 'La touche PTT :',
+      choices: [
+        'coupe le squelch le temps d’un appel',
+        'sélectionne directement la voie 16',
+        'met le poste en émission tant que l’on maintient la pression',
+        'active la triple veille sur les modèles qui en disposent',
+      ],
+      answer: 2,
+      explanation:
+        'Push To Talk : on émet tant qu’on appuie, on relâche pour entendre son correspondant. C’est la conséquence directe du simplex vu en M3, et la raison d’être du « à vous ».',
+    },
+    {
+      question: 'Quelle est la puissance maximale d’une VHF portative ?',
+      choices: ['1 watt', '6 watts', '25 watts', '12 watts'],
+      answer: 1,
+      explanation:
+        'Elle ne doit pas dépasser 6 watts, ce qui limite sa portée à une dizaine de milles. Elle peut en revanche être équipée des 57 voies de la bande VHF marine.',
+    },
+    {
+      question: 'Concernant la VHF portative, quelle affirmation est exacte ?',
+      choices: [
+        'Elle ne peut recevoir que les voies 16 et 70',
+        'Son autonomie est généralement de 8 heures et elle peut être emportée dans le radeau de secours',
+        'Elle est interdite à bord des navires de plaisance de moins de 24 mètres',
+        'Sa portée est supérieure à celle du poste fixe car elle est tenue à la main',
+      ],
+      answer: 1,
+      explanation:
+        'Emportée dans le radeau en cas d’abandon, elle pourra alerter et guider les navires proches. D’où l’insistance du manuel sur la charge de l’accumulateur et l’utilité d’une batterie de secours.',
+    },
+    {
+      question:
+        'Quelle commande est présente sur tout poste VHF marin, quel que soit le constructeur ?',
+      choices: [
+        'Un sélecteur de classe ASN',
+        'Un bouton d’annulation de fausse alerte',
+        'Un bouton ou une touche repérée 16, donnant accès direct à la voie 16',
+        'Un afficheur de position GPS',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel l’indique : il existera toujours une commande d’accès direct à la voie 16. C’est le geste que tout l’équipage doit savoir faire sans regarder le poste.',
+    },
+    {
+      question:
+        'Vous n’arrivez pas à joindre un correspondant situé à 15 milles. Quelle analyse est correcte ?',
+      choices: [
+        'La portée dépend de la hauteur de l’antenne et de la puissance : monter en 25 W peut aider, mais une antenne mal placée ne se compense pas',
+        'Il suffit toujours de passer en 25 W, la puissance étant le seul facteur de portée',
+        'Il faut fermer le squelch au maximum pour capter les signaux lointains',
+        'La double veille augmente la portée en alternant les voies',
+      ],
+      answer: 0,
+      explanation:
+        'Les ondes métriques se propagent en ligne droite : la hauteur d’antenne est le facteur principal (M3). Fermer le squelch produirait exactement l’effet inverse en supprimant les signaux faibles.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +484,55 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M6 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+LES SEPT COMMANDES, DANS L'ORDRE
+  1. POWER ......... marche/arrêt (parfois commun au volume)
+  2. VOLUME ........ n'agit PAS sur la sensibilité
+  3. SQUELCH ....... seuil de réception  ← le réglage qui compte
+  4. VOIES ......... rotatif / ▲▼ / clavier
+     + TOUCHE 16 ... accès DIRECT, présente sur TOUT poste
+  5. H/L ........... 25 W normale · 1 W réduite
+  6. DW ............ double veille (TW = triple, selon modèle)
+  7. PTT ........... alternat : on émet tant qu'on appuie
+
+RÉGLAGE DU SQUELCH — LA PROCÉDURE
+  1. se placer sur la VOIE 16
+  2. squelch au MINIMUM → on entend un BRUIT DE SOUFFLE
+  3. remonter DOUCEMENT jusqu'au SILENCE COMPLET
+  4. revenir LÉGÈREMENT en arrière
+  5. un « CLOC » de temps à autre = RÉGLAGE PARFAIT
+  Squelch trop fermé = poste silencieux et SOURD.
+
+PUISSANCE
+  25 W  portée 20 à 30 milles, voire au-delà
+        → appel lointain · DÉTRESSE (toujours 25 W)
+   1 W  → ZONES PORTUAIRES et PROXIMITÉ
+        pourquoi : éviter les brouillages entre navires
+                   distants de quelques milles
+                   + économiser la BATTERIE
+  Portée = HAUTEUR D'ANTENNE + puissance (→ M3)
+
+DOUBLE VEILLE (DW)
+  Veiller la 16 depuis une autre voie.
+  Signal sur la 16 → le poste RESTE sur la 16, puis rebascule.
+  Elle ALTERNE — elle n'écoute pas deux voies à la fois.
+  Ne remplace NI la veille sur la 16 (→ M11), NI la veille visuelle.
+
+ALTERNAT (PTT) — LES TROIS FAUTES
+  parler AVANT d'appuyer ....... début perdu
+  relâcher TROP TÔT ............ fin coupée
+  doigt appuyé en ÉCOUTANT ..... voie bloquée, rien entendu
+  → appuyer · marquer un temps · parler · « à vous » · relâcher
+
+VHF PORTATIVE
+  6 W MAXIMUM → portée ~10 milles
+  peut être équipée des 57 voies
+  ÉTANCHE, indice de protection à l'IMMERSION
+  autonomie GÉNÉRALEMENT 8 H → charger AVANT de partir
+  batterie de secours : fort utile
+  EMPORT DANS LE RADEAU en cas d'abandon
+    → elle alerte et GUIDE les navires proches
+  Ne remplace ni la veille, ni le gilet, ni le plan de nav.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M3** — l'antenne et la portée y sont — et
+**M7**, qui dit maintenant quoi *dire* une fois le poste réglé.
