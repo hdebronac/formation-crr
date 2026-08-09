@@ -1,78 +1,400 @@
 ---
 title: "M1 · Cadre réglementaire et administratif"
-description: "OMI et SOLAS, UIT, textes français, licence de station de navire, indicatif d’appel, documents à conserver à bord, secret des correspondances."
+description: "OMI et SOLAS, UIT, textes français, licence de station de navire, indicatif d'appel, documents à conserver à bord, secret des correspondances."
 sidebar:
   order: 1
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 2,5 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 validé
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Une VHF marine n'est pas un talkie-walkie. Elle émet sur des fréquences
+attribuées par traité international, sous une identité déclarée, et son
+usage engage une responsabilité pénale. Ce module explique pourquoi, et
+surtout **quels papiers doivent être à bord** — parce que c'est ce
+qu'un contrôle vérifiera, et parce que la confusion entre le certificat
+qui vous autorise, vous, et la licence qui autorise l'installation est
+la plus fréquente du programme.
+
+On voit ici les trois étages du droit applicable, ce que contient
+exactement une licence de station de navire, d'où viennent l'indicatif
+d'appel et le MMSI, ce que la division 240 impose d'emporter selon la
+distance à un abri, et une règle que beaucoup de plaisanciers ignorent :
+il est interdit de faire état de ce qu'on a entendu sur une voie radio,
+même par inadvertance.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Situer l'**OMI**, l'**UIT** et les textes français, et dire ce
+  que chacun régit.
+- [ ] Distinguer le **CRR** de la **licence de station de navire**, et
+  énoncer ce que contient cette dernière.
+- [ ] Dire d'où viennent l'**indicatif d'appel** et le **MMSI**, et
+  pourquoi un MMSI ne se réutilise pas.
+- [ ] Déterminer, pour une zone de navigation donnée, **quel titre** et
+  **quels équipements** sont exigés.
+- [ ] Énumérer les **documents à produire** lors d'un contrôle en mer.
+- [ ] Appliquer la règle du **secret des correspondances**.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| OMI | Organisation maritime internationale, institution de l'ONU chargée de renforcer la sécurité en mer |
+| SOLAS | Convention internationale pour la sauvegarde de la vie humaine en mer ; son chapitre IV traite des radiocommunications |
+| UIT | Union internationale des télécommunications, institution de l'ONU qui coordonne les réseaux et services mondiaux |
+| RR | Règlement des radiocommunications de l'UIT : fréquences, procédures d'appel, certificats |
+| MARS | Base de données maritimes de l'UIT, alimentée par chaque pays et consultable en ligne |
+| ANFR | Agence nationale des fréquences, déléguée par la Direction des affaires maritimes |
+| Licence de station de navire | Autorisation administrative **gratuite et sans examen** d'exploiter une installation radio à bord |
+| Indicatif d'appel | Identifiant du navire, en anglais *call sign*, délivré avec la première licence |
+| MMSI | Identité à neuf chiffres codée dans les équipements ASN et les balises |
+| Navire astreint | Navire soumis par la réglementation à des équipements radio et à une visite de sécurité périodique |
+| Division 240 | Texte français fixant les zones de navigation et le matériel obligatoire à bord |
+| Zone côtière | De 0 à 6 milles d'un abri |
+| Zone semi-hauturière | Entre 6 et 60 milles d'un abri |
+| Zone hauturière | Au-delà de 60 milles d'un abri |
+| Secret des correspondances | Interdiction de faire référence à une communication entendue sur une voie radio |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve A et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve A**, « généralités du service mobile
+  maritime », **6 questions sur 24**. C'est la plus légère des trois
+  épreuves, mais il faut la moyenne à **chacune** : elle ne se néglige
+  pas pour autant.
+- Il correspond au chapitre du manuel ANFR intitulé **« Dispositions
+  réglementaires et administratives »** et à sa suite, **« Mise en
+  œuvre des dispositions réglementaires »**.
+- **N'est pas interrogé** : le détail des extraits de réglementation
+  française relève de l'**annexe 1** du manuel, hors questions. On
+  retient le principe et l'autorité compétente, pas le numéro
+  d'article.
+- **Confusion classique — certificat contre licence.** Le CRR porte sur
+  **la personne**, s'obtient par examen et coûte 78 €. La licence porte
+  sur **le bateau**, s'obtient sur demande, sans examen, et elle est
+  **gratuite**. Un contrôle peut exiger les deux. Déjà signalée en
+  **M0**, elle revient ici en détail.
+- **Confusion classique — le titre dépend de la zone ET du matériel.**
+  Une portative non-ASN de 6 W au plus, dans les eaux territoriales
+  françaises, n'exige aucun titre. Tout le reste en exige un, et hors
+  de ces eaux ce titre doit être le CRR.
+- Les distances de la division 240 — **6** et **60 milles d'un abri** —
+  reviennent régulièrement, et la RLS obligatoire au-delà de 60 milles
+  est traitée en **M13**.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Trois étages, et qui décide quoi
 
-### 2. *(section à rédiger)*
+Le droit applicable à votre VHF se lit de haut en bas.
 
-### 3. *(section à rédiger)*
+**L'OMI** — Organisation maritime internationale — est une institution
+spécialisée des Nations unies dont la mission principale est de
+renforcer la sécurité en mer. C'est elle qui porte la convention
+**SOLAS** (*Safety Of Life At Sea*), dont le **chapitre IV**,
+« radiocommunications », énumère les obligations d'équipement radio sur
+les bases du **SMDSM** — le système mondial de détresse et de sécurité
+en mer, objet de **M4**. Ces obligations sont complétées par de
+nombreuses résolutions et recommandations, **à caractère contraignant** :
+normes minimales de fonctionnement des équipements, formation des
+opérateurs, installations à terre.
+
+**L'UIT** — Union internationale des télécommunications — est elle
+aussi une institution des Nations unies. Elle favorise le développement
+des télécommunications et coordonne les réseaux et services mondiaux.
+Son **Règlement des radiocommunications (RR)** traite des sujets qui
+vous concernent directement : **fréquences**, **procédures d'appel**,
+**certificats** — dont le CRR, qui relève de son article 47. L'UIT
+publie également des recommandations, et tient une base de données
+maritime, **MARS**, alimentée par chaque pays : stations côtières,
+stations de navire, aides à la navigation.
+
+**Les textes français** transposent et complètent. C'est l'**arrêté du
+22 février 2011** qui fixe les compétences requises pour utiliser une
+VHF maritime selon la zone de navigation pratiquée, et le **code des
+postes et des communications électroniques** qui soumet l'usage d'un
+équipement radio — VHF comme balise — à une autorisation, la licence de
+station de navire.
+
+<Aside type="note" title="Qui délivre quoi, en France">
+  C'est l'**ANFR**, l'Agence nationale des fréquences, **déléguée par la
+  Direction des affaires maritimes**, qui délivre le certificat, la
+  licence, l'indicatif d'appel et le MMSI. Un seul interlocuteur pour
+  quatre choses différentes — d'où la confusion fréquente entre elles.
+</Aside>
+
+### 2. La licence de station de navire
+
+C'est le document qui autorise **l'installation** à émettre. Elle est
+exigée dès lors qu'il y a à bord une VHF — fixe ou portative, avec ou
+sans ASN — ou une balise de détresse Cospas-Sarsat.
+
+**Elle n'est pas soumise à paiement.** Il n'y a ni examen, ni épreuve,
+ni condition d'âge : c'est une démarche administrative.
+
+La licence mentionne :
+
+| Rubrique | Contenu |
+|---|---|
+| Titulaire | Nom et adresse |
+| Navire | Nom, quartier et immatriculation |
+| Identifiants | **Indicatif d'appel** et **MMSI**, liés à un seul navire |
+| Équipements | Liste des équipements radio à bord, avec les codes ID-AIS et hexadécimaux |
+
+<Aside type="caution" title="Deux documents, deux objets">
+  Le **CRR** dit que **vous** savez exploiter une station. La
+  **licence** dit que **ce bateau-là** a le droit d'en porter une. L'un
+  ne remplace pas l'autre, et lors d'un contrôle en mer les deux
+  peuvent être exigés.
+
+  Corollaire à retenir : une licence sans opérateur certifié ne suffit
+  pas, et un CRR sans licence non plus.
+</Aside>
+
+### 3. Indicatif d'appel et MMSI
+
+L'**indicatif d'appel** — en anglais *call sign* — identifie le navire
+dans les procédures en phonie. C'est lui que vous épelez, avec
+l'alphabet phonétique de **M5**, quand vous vous annoncez. Il est
+délivré avec la **première licence** attribuée au navire.
+
+Le **MMSI** est l'identité numérique. Il est codé dans les équipements
+qui en ont besoin : la VHF ASN, mais aussi les balises. Sa structure —
+neuf chiffres dont les trois premiers forment le MID — est détaillée en
+**M10**, parce que c'est en ASN qu'on s'en sert vraiment.
+
+<Aside type="danger" title="Un MMSI, un navire">
+  **Il est interdit de réutiliser sur une autre embarcation un MMSI
+  attribué à un navire.** Ce n'est pas une formalité : en cas de
+  détresse, le CROSS interroge la base Radiomaritime de l'ANFR à partir
+  du MMSI reçu. Il y trouve les caractéristiques du navire, son matériel
+  radio, les coordonnées du propriétaire et les personnes à contacter.
+  Un MMSI qui désigne le mauvais bateau envoie les secours chercher le
+  mauvais objet, avec les mauvaises informations.
+</Aside>
+
+### 4. Quel titre, pour quelle navigation
+
+La règle combine **deux critères** : le matériel embarqué, et la zone
+où l'on navigue.
+
+| Situation | Titre requis |
+|---|---|
+| VHF **portative non-ASN, ≤ 6 W**, eaux territoriales françaises | **Aucun** |
+| VHF **fixe**, ou portative **avec ASN**, eaux territoriales françaises | **Permis plaisance OU CRR** |
+| **Toute** VHF, eaux internationales ou à l'étranger | **CRR** |
+| Voies de navigation intérieure | CRR fluvial minimum ; le CRR maritime vaut aussi |
+
+Deux précisions que l'on rencontre rarement ailleurs :
+
+- Le **CRR est exigé pour certains métiers**, indépendamment de la zone
+  et du matériel : formateurs, moniteurs, accompagnateurs en mer.
+- Le **permis plaisance** ne vaut que dans les **eaux territoriales
+  françaises**. Dès qu'on en sort — une traversée de la Manche suffit —
+  il faut le CRR.
+
+<Aside type="tip" title="La question à se poser dans l'ordre">
+  1. La VHF est-elle fixe, ou dotée de l'ASN ? Si oui, un titre est
+  exigé. 2. Sort-on des eaux territoriales françaises ? Si oui, ce titre
+  doit être le **CRR**.
+</Aside>
+
+### 5. Ce qu'il faut emporter, selon la distance à un abri
+
+C'est la **division 240** qui fixe les zones de navigation et le
+matériel obligatoire pour les navires de plaisance à usage personnel ou
+de formation d'une longueur de coque **inférieure ou égale à
+24 mètres**.
+
+| Zone | Distance d'un abri |
+|---|---|
+| Côtière | De 0 à 6 milles |
+| Semi-hauturière | Entre 6 et 60 milles |
+| Hauturière | Au-delà de 60 milles |
+
+**L'obligation d'emport d'un équipement radioélectrique naît au-delà de
+6 milles d'un abri.** En zone hauturière s'ajoute notamment une
+radiobalise de localisation des sinistres, dont le détail est l'objet
+de **M13**.
+
+Le bateau du fil rouge, décrit dans la section [À bord](/bord),
+navigue en côtier et en semi-hauturier : il est donc concerné par
+l'obligation d'emport, et par le CRR dès qu'il traverse.
+
+<Aside type="note" title="Navires astreints : ce n'est pas votre cas">
+  Un navire est dit **« astreint »** lorsqu'une réglementation
+  internationale ou nationale le contraint à porter des équipements
+  radio **et** le soumet à une **visite de sécurité périodique**. Le
+  sont une grande partie des navires professionnels français — charge,
+  pêche, passagers — et les navires de plaisance de **plus de
+  24 mètres**.
+
+  Les contrôles portent alors sur la présence des équipements
+  obligatoires, leur conformité et leur bon fonctionnement. Ils sont
+  réalisés par l'ANFR ou par des sociétés habilitées. À retenir pour
+  situer votre propre situation, pas pour l'appliquer à un voilier de
+  10 mètres.
+</Aside>
+
+### 6. Ce qu'un contrôle peut exiger
+
+Les autorités de contrôle en mer, françaises ou étrangères —
+gendarmerie, garde-côtes, douanes — peuvent exiger la **production
+immédiate** des documents du bord. Pour un navire de plaisance équipé
+d'une VHF, cela signifie :
+
+- le **CRR** — ou le permis plaisance, dans les eaux territoriales
+  françaises ;
+- la **licence de station de navire**.
+
+S'y ajoutent deux obligations matérielles :
+
+- **Le marquage du navire.** Le nom, le port d'immatriculation et le
+  numéro d'immatriculation attribué par l'autorité compétente doivent
+  être **visibles à proximité du poste de pilotage**, en **caractères
+  latins**, de couleur claire sur fond foncé ou de couleur foncée sur
+  fond clair.
+- **La position permanente.** Si le navire dispose d'une VHF avec ASN,
+  **la position GPS doit être fournie en permanence** à l'équipement.
+  Une VHF ASN dont le GPS est débranché émettra une alerte sans
+  position : c'est la moitié de son intérêt qui disparaît (**M10**).
+
+<Aside type="tip" title="Le classeur du bord">
+  Ces documents ont vocation à être rangés ensemble et à rester à bord.
+  C'est l'objet du livrable de ce module, versé au dossier radio décrit
+  dans la section [À bord](/bord).
+</Aside>
+
+### 7. Le secret des correspondances
+
+Une VHF reçoit tout ce qui passe à portée, y compris ce qui ne vous est
+pas destiné. La règle est nette :
+
+> **La violation du secret des correspondances est un délit**, dont les
+> sanctions sont prévues par le **code pénal**. Il est **rigoureusement
+> interdit de faire quelque référence que ce soit à une communication
+> entendue, par inadvertance ou non, sur une voie radio.**
+
+Autrement dit : entendre est inévitable, **répéter est interdit**. Cela
+vaut pour une conversation entre deux navires comme pour un appel à une
+station côtière, au ponton comme sur les réseaux sociaux.
+
+<Aside type="danger" title="Une exception, et une seule">
+  Ce que vous entendez d'une **communication de détresse** ne relève pas
+  de cette interdiction : la retransmettre à une station côtière ou aux
+  secours fait partie de la conduite à tenir (**M8**). Le secret protège
+  la vie privée des correspondants, pas les naufragés.
+</Aside>
+
+### 8. Correspondance publique et taxation
+
+La **correspondance publique** désigne toute communication émise par un
+navire qui fait appel à une **station côtière** pour être relié à un
+correspondant disposant d'une **ligne téléphonique à terre**.
+
+<Aside type="caution" title="En France, ce service n'existe plus">
+  Le manuel est explicite : quelques rares stations étrangères
+  permettent encore ce service, mais **en France il n'existe plus**.
+  C'est une notion à connaître pour l'examen et pour l'étranger, pas une
+  pratique courante. La procédure — la station côtière répond sur la
+  **voie 16** en précisant la voie de dégagement — est reprise en
+  **M7**, et sa variante en ASN en **M10**.
+</Aside>
+
+Les **taxes** liées à ces communications sont recouvrées au niveau
+national par des autorités comptables, organismes publics ou privés
+reconnus par l'administration du pays qui a délivré la licence.
+
+Un dernier point de conformité, souvent visible sur le matériel : les
+équipements relevant d'une réglementation internationale doivent
+répondre soit à la directive européenne dite **MED**, reconnaissable au
+marquage « barre de gouvernail », soit à la directive **RED**. Un poste
+acheté d'occasion à l'étranger n'est pas nécessairement conforme.
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. La prudence vaut particulièrement pour ce module : la
+  réglementation a évolué en 2011 pour le périmètre d'obligation, et le
+  manuel a été refondu en juin 2025. Une vidéo plus ancienne peut
+  énoncer une règle abrogée. En attendant, les **fiches pratiques
+  plaisance de l'ANFR** couvrent exactement ce terrain — voir
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M1/` contenant :
+
+1. **`licence-de-station.md`** — reprendre et compléter le fichier
+   ouvert en **M0**. Recopier les mentions de la licence : titulaire,
+   nom du navire, quartier et immatriculation, **indicatif d'appel**,
+   **MMSI**, et la liste des équipements radio déclarés avec leurs
+   codes. Comparer cette liste au matériel réellement à bord :
+   **signaler tout écart**, en particulier une portative ou une balise
+   achetée après la délivrance de la licence et jamais déclarée.
+
+2. **`titres-et-zones.md`** — une page qui répond à une seule question :
+   pour chacune des navigations réellement pratiquées par le bateau —
+   sortie à la journée, cabotage, traversée de la Manche — quel titre
+   est exigé, et quels équipements la division 240 impose. Conclure par
+   la liste des situations où le permis plaisance ne suffirait pas.
+
+3. **`controle-en-mer.md`** — la checklist des documents à produire
+   immédiatement, avec l'endroit exact où chacun est rangé à bord. Y
+   ajouter le contrôle du **marquage** : nom, port et numéro
+   d'immatriculation visibles près du poste de pilotage, en caractères
+   latins contrastés. Photographier le marquage existant et conclure
+   s'il est conforme.
+
+4. **`gps-vers-vhf.md`** — vérifier que la VHF ASN reçoit bien une
+   position en permanence, noter comment on s'en assure sur ce poste
+   précis, et ce qu'affiche l'écran si la position est perdue. Ce
+   fichier alimente directement **M10**.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Épeler l'indicatif du bord, sans note.** Relevez l'indicatif
+   d'appel sur la licence, puis épelez-le à voix haute avec l'alphabet
+   phonétique international. Vous ne le maîtriserez qu'en **M5** :
+   faites-le d'abord avec la fiche sous les yeux, puis sans. C'est
+   l'information que vous donnerez en premier dans tout appel.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Dire son MMSI chiffre par chiffre.** Neuf chiffres, énoncés un par
+   un, sans les grouper en dizaines. Chronométrez : cela doit tenir en
+   quelques secondes et rester compréhensible.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Jouer le contrôle.** Un équipier tient le rôle du contrôleur et
+   demande, dans le désordre : le certificat, la licence, l'indicatif,
+   le MMSI. Vous produisez chaque document en moins de trente secondes.
+   Ce qui n'est pas trouvé en trente secondes n'est pas rangé au bon
+   endroit.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Trancher cinq situations.** Pour chacune, dire à voix haute le
+   titre exigé et pourquoi : portative 5 W non-ASN à 3 milles de la
+   côte ; même portative à 20 milles ; VHF fixe ASN dans un port
+   français ; VHF fixe ASN au milieu de la Manche ; VHF fixe sur un
+   canal fluvial.
+
+5. **Vérifier la position en permanence.** Poste allumé, sur une voie
+   de travail libre, vérifiez que la position GPS s'affiche. Débranchez
+   la source si l'installation le permet sans risque, observez le
+   comportement du poste, puis rebranchez. Consignez dans
+   `gps-vers-vhf.md`.
 
 </Steps>
 
@@ -80,9 +402,133 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m01"
+  questions={[
+    {
+      question: 'La licence de station de navire est :',
+      choices: [
+        'un titre personnel obtenu par examen, au tarif de 78 €',
+        'une autorisation administrative gratuite, délivrée sans examen',
+        'une mention portée sur le permis plaisance',
+        'un document délivré par la Direction des affaires maritimes elle-même',
+      ],
+      answer: 1,
+      explanation:
+        'La licence porte sur le bateau, pas sur la personne : elle n’est pas soumise à paiement et ne suppose aucun examen. C’est le CRR qui coûte 78 € et s’obtient par examen (M0).',
+    },
+    {
+      question:
+        'Quel chapitre de la convention SOLAS traite des radiocommunications ?',
+      choices: ['Le chapitre I', 'Le chapitre III', 'Le chapitre IV', 'Le chapitre IX'],
+      answer: 2,
+      explanation:
+        'Le chapitre IV de SOLAS énumère les obligations d’équipement radio sur les bases du SMDSM. SOLAS est portée par l’OMI, institution spécialisée des Nations unies.',
+    },
+    {
+      question:
+        'Un plaisancier navigue à 30 milles d’un abri, dans les eaux territoriales françaises, avec une VHF fixe. Quel titre lui est exigé ?',
+      choices: [
+        'Aucun titre',
+        'Le CRR obligatoirement, le permis plaisance ne valant jamais',
+        'Le CRR fluvial',
+        'Le permis plaisance ou le CRR',
+      ],
+      answer: 3,
+      explanation:
+        'Dans les eaux territoriales françaises, une VHF fixe exige le permis plaisance ou le CRR. C’est en sortant de ces eaux que le CRR devient seul valable.',
+    },
+    {
+      question:
+        'À partir de quelle distance d’un abri l’emport d’un équipement radioélectrique devient-il obligatoire ?',
+      choices: [
+        'Au-delà de 6 milles',
+        'Au-delà de 2 milles',
+        'Au-delà de 20 milles',
+        'Au-delà de 60 milles',
+      ],
+      answer: 0,
+      explanation:
+        'La division 240 rend l’emport obligatoire au-delà de 6 milles d’un abri, ce qui correspond à la limite de la zone côtière. Les 60 milles marquent l’entrée en zone hauturière, où s’ajoute notamment une radiobalise (M13).',
+    },
+    {
+      question:
+        'Vous entendez par hasard, sur une voie de travail, une conversation privée entre deux navires. Que pouvez-vous en faire ?',
+      choices: [
+        'La rapporter, dès lors qu’elle a été entendue sans intention',
+        'La rapporter uniquement aux autorités portuaires',
+        'Rien : toute référence à une communication entendue est interdite',
+        'La rapporter, à condition de ne pas nommer les navires',
+      ],
+      answer: 2,
+      explanation:
+        'La violation du secret des correspondances est un délit sanctionné par le code pénal, et l’interdiction vaut que la communication ait été entendue par inadvertance ou non. Seules les communications de détresse échappent à cette règle (M8).',
+    },
+    {
+      question: 'L’indicatif d’appel d’un navire est délivré :',
+      choices: [
+        'par le vendeur de la VHF, au moment de l’achat',
+        'avec la première licence attribuée au navire',
+        'lors de la réussite au CRR',
+        'par le CROSS de la zone de navigation',
+      ],
+      answer: 1,
+      explanation:
+        'L’indicatif d’appel — call sign — est délivré avec la première licence de station de navire, en même temps que le MMSI. C’est l’ANFR qui les attribue, par délégation de la Direction des affaires maritimes.',
+    },
+    {
+      question:
+        'Que doit-on faire du MMSI attribué à un navire que l’on revend, si l’on rachète un autre bateau ?',
+      choices: [
+        'Le reprogrammer sur la VHF du nouveau bateau, il reste attribué au propriétaire',
+        'Le conserver pour les deux bateaux, un MMSI valant par propriétaire',
+        'Le transmettre au nouveau propriétaire, qui devra le reprogrammer lui-même',
+        'Ne pas le réutiliser : il est interdit de reporter un MMSI sur une autre embarcation',
+      ],
+      answer: 3,
+      explanation:
+        'Le MMSI est lié à un navire, pas à une personne. Le réutiliser expose à ne pas être secouru : le CROSS interroge la base Radiomaritime de l’ANFR à partir du MMSI reçu et y trouverait les caractéristiques du mauvais bateau (M10).',
+    },
+    {
+      question:
+        'Le marquage réglementaire du navire doit être visible à proximité du poste de pilotage. Il comporte :',
+      choices: [
+        'le nom du navire, son port d’immatriculation et son numéro d’immatriculation',
+        'le nom du navire et le MMSI',
+        "le nom du navire et l'indicatif d'appel",
+        'le seul numéro d’immatriculation',
+      ],
+      answer: 0,
+      explanation:
+        'Nom, port d’immatriculation et numéro attribué par l’autorité compétente, en caractères latins, clairs sur fond foncé ou foncés sur fond clair. L’indicatif et le MMSI figurent sur la licence, pas sur le marquage.',
+    },
+    {
+      question:
+        'Une VHF équipée de l’ASN se trouve à bord. Quelle obligation particulière s’y attache ?',
+      choices: [
+        'Elle doit être éteinte hors navigation',
+        'Elle doit être contrôlée chaque année par l’ANFR',
+        'Elle doit recevoir en permanence la position GPS du navire',
+        'Elle doit être doublée d’une portative non-ASN',
+      ],
+      answer: 2,
+      explanation:
+        'La position du navire doit en permanence être fournie à l’équipement. Sans elle, une alerte de détresse partirait sans coordonnées, ce qui lui retire l’essentiel de son intérêt (M10).',
+    },
+    {
+      question: 'La correspondance publique, en France :',
+      choices: [
+        'est le mode normal d’appel d’une station côtière',
+        'n’existe plus ; seules quelques stations étrangères la pratiquent encore',
+        'est réservée aux navires astreints',
+        'a été remplacée par l’appel sélectif numérique en 2011',
+      ],
+      answer: 1,
+      explanation:
+        'Le manuel indique que ce service n’existe plus en France, et que de rares stations étrangères le permettent encore. La notion reste au programme pour l’examen et pour la navigation à l’étranger (M7).',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +536,61 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M1 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+TROIS ÉTAGES DE DROIT
+  OMI   → convention SOLAS, chapitre IV = radiocommunications
+          bases du SMDSM · résolutions CONTRAIGNANTES
+  UIT   → Règlement des radiocommunications (RR)
+          fréquences · procédures d'appel · certificats
+          base de données MARS
+  FRANCE → arrêté du 22 février 2011 (compétences exigées)
+           code des postes et communications électroniques
+           ANFR, déléguée par les Affaires maritimes
+
+DEUX DOCUMENTS — NE PAS CONFONDRE
+  CRR      → LA PERSONNE · examen · 78 €
+  LICENCE  → LE BATEAU    · sans examen · GRATUITE
+             porte : titulaire, nom, quartier + immatriculation,
+                     INDICATIF D'APPEL, MMSI,
+                     liste des équipements (ID-AIS, hexadécimal)
+  Contrôle en mer → LES DEUX peuvent être exigés.
+
+QUEL TITRE ?
+  Portative non-ASN <= 6 W, eaux FR    → aucun
+  VHF fixe OU portative ASN, eaux FR   → permis plaisance OU CRR
+  Toute VHF, eaux internationales      → CRR
+  Voies intérieures                    → CRR fluvial mini
+  + CRR exigé pour formateurs, moniteurs, accompagnateurs
+
+ZONES — DIVISION 240   (coque <= 24 m, plaisance)
+  Côtière           0 à 6 milles d'un abri
+  Semi-hauturière   6 à 60 milles
+  Hauturière        au-delà de 60 milles
+  EMPORT RADIO OBLIGATOIRE AU-DELÀ DE 6 MILLES
+  Au-delà de 60 milles : + RLS (→ M13)
+
+À BORD, EN PERMANENCE
+  CRR (ou permis plaisance en eaux FR) + LICENCE
+  Marquage : nom + port + n° d'immatriculation
+             près du poste de pilotage, caractères latins,
+             clair sur foncé ou foncé sur clair
+  VHF ASN → POSITION GPS FOURNIE EN PERMANENCE
+
+MMSI : UN NAVIRE, UN MMSI
+  Interdit de le reporter sur une autre embarcation.
+  Le CROSS y lit le navire, le matériel, qui prévenir.
+
+SECRET DES CORRESPONDANCES
+  Entendre est inévitable — RÉPÉTER EST INTERDIT.
+  Délit, sanctions au code pénal.
+  Vaut même si l'on a entendu par inadvertance.
+  Exception : les communications de DÉTRESSE (→ M8).
+
+CORRESPONDANCE PUBLIQUE
+  Navire → station côtière → abonné à terre.
+  EN FRANCE : N'EXISTE PLUS. Rares stations étrangères.
+  Matériel : directive MED (barre de gouvernail) ou RED.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M0** — les deux disent ce qu'il faut avoir,
+et ce qu'il faut pouvoir montrer. La suite du programme parle enfin de
+radio.
