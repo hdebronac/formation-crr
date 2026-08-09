@@ -1,78 +1,413 @@
 ---
-title: "M9 · Urgence et sécurité en phonie"
-description: "PAN PAN et SÉCURITÉ, consultation radiomédicale, avis urgents aux navigateurs et bulletins météorologiques spéciaux."
+title: "M9 · Urgence et sécurité"
+description: "PAN PAN et SÉCURITÉ : appels, messages, consultation radiomédicale, avis urgents aux navigateurs et différences avec la procédure de détresse."
 sidebar:
   order: 9
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
-  **Épreuve** : **B** — 8 questions sur 24 · **Volume** : 2 h ·
-  **Prérequis** : modules précédents validés
+  **Épreuve** : **B** — 8 questions sur 24 · **Volume** : 2,5 h ·
+  **Prérequis** : M7 et M8 validés — les priorités et le MAYDAY
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Entre le MAYDAY et l'appel de routine, il y a deux niveaux que
+beaucoup de plaisanciers ignorent — et qui couvrent la grande majorité
+des situations réelles. Le gouvernail cassé à vingt milles de la côte,
+l'équipier qui fait un malaise, le conteneur à moitié immergé sur votre
+route : rien de tout cela n'est une détresse, et rien de tout cela ne se
+règle par un appel de routine.
+
+`PAN PAN` et `SÉCURITÉ` obéissent à la même logique que le MAYDAY —
+des mots convenus, un ordre fixe — avec des variantes précises que
+l'examen interroge parce qu'elles se confondent facilement. Ce module
+les installe, puis les met en contraste champ par champ avec la
+procédure de détresse. Vous y trouverez aussi la **consultation
+radiomédicale**, qui est la procédure d'urgence la plus utile à
+connaître pour un équipage familial.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Distinguer **urgence** et **sécurité**, et les séparer de la
+  détresse.
+- [ ] Émettre un appel et un message **`PAN PAN`** dans la forme
+  exacte.
+- [ ] Demander une **consultation radiomédicale** et dire qui me
+  répondra.
+- [ ] Émettre un appel et un message **`SÉCURITÉ`**.
+- [ ] Dire jusqu'à quand chacun de ces messages doit être **répété**.
+- [ ] Énoncer les **différences** entre les trois procédures SVH.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Urgence | Message concernant la sécurité d'un navire ou d'une personne, sans danger imminent |
+| `PAN PAN` | Signal d'urgence, prononcé « panne, panne » |
+| Sécurité | Message concernant la sécurité de la navigation ou la météorologie |
+| `SÉCURITÉ` | Signal de sécurité, prononcé « sécurité » |
+| `À TOUS` | Appel à toutes les stations, en anglais `ALL STATIONS` |
+| Position absolue | Position donnée en coordonnées géographiques |
+| Position relative | Position donnée par rapport à un point fixe connu |
+| Voie de dégagement | Voie annoncée sur la 16 lorsque le message est trop long |
+| Consultation radiomédicale | Avis médical obtenu par radio, demandé par un message d'urgence |
+| CCMM | Centre de consultation médicale maritime, à Toulouse |
+| SAMU côtier | Service d'aide médicale urgente pouvant être mis en liaison avec le navire |
+| Évacuation sanitaire | Transfert médical du malade ou du blessé, si nécessaire |
+| AVURNAV | Avis urgent aux navigateurs, diffusé par les services à terre |
+| BMS | Bulletin météorologique spécial |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve B et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module clôt l'**épreuve B**, « Radiotéléphonie VHF », **8
+  questions sur 24**. Il correspond aux sections du manuel ANFR
+  intitulées **« Communications d'urgence »** et **« Communications de
+  sécurité »**.
+- **Ce qui est interrogé** : la forme des deux appels, l'ordre des
+  champs du message d'urgence — que le manuel donne explicitement comme
+  un ordre — et la destination des messages de sécurité.
+- **Confusion classique — urgence ou détresse ?** L'urgence concerne la
+  sécurité d'un navire ou d'une personne **sans danger grave et
+  imminent**. Dès que l'aide doit être **immédiate**, c'est un MAYDAY
+  (**M8**).
+- **Confusion classique — jusqu'à quand répéter ?** Le message de
+  **détresse** se répète jusqu'à réponse d'une station côtière **ou d'un
+  navire** ; le message de **sécurité** se répète jusqu'à l'accusé de
+  réception **d'une station côtière**.
+- **Confusion classique — à qui s'adresse-t-on ?** Les communications
+  d'urgence peuvent être adressées **à toutes les stations ou à une
+  station déterminée** ; les communications de sécurité sont
+  **généralement adressées à toutes les stations**.
+- **N'est pas interrogé** : le détail des zones de diffusion des
+  AVURNAV et des BMS, qui relève de **M12** et des annexes.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Deux niveaux au-dessous de la détresse
 
-### 2. *(section à rédiger)*
+Reprenons les définitions de **M7**, côte à côte :
 
-### 3. *(section à rédiger)*
+| Rang | Signal | Ce qui le déclenche | Exemples du manuel |
+|---|---|---|---|
+| 1 | `MAYDAY` | Danger **grave et imminent**, aide **immédiate** | Voie d'eau importante, incendie, échouement, homme à la mer |
+| 2 | `PAN PAN` | Sécurité **d'un navire** ou **d'une personne** | Demande de remorquage après avarie, blessé ou malade à bord, consultation médicale |
+| 3 | `SÉCURITÉ` | Sécurité de la **navigation** ou **météorologie** | Objets dangereux, épaves à la dérive, phares éteints, coup de vent ou tempête non annoncés |
+
+<Aside type="tip" title="La question à se poser">
+  **Faut-il venir me chercher maintenant ?** → MAYDAY.
+  **Ai-je un problème sérieux qui concerne mon bateau ou quelqu'un à
+  bord ?** → PAN PAN.
+  **Est-ce que je préviens les autres d'un danger qui ne me menace pas
+  particulièrement ?** → SÉCURITÉ.
+
+  Le troisième cas est le seul où vous n'êtes pas le sujet du message.
+  C'est un bon test : si le message parle de vous, ce n'est pas un
+  message de sécurité.
+</Aside>
+
+### 2. L'appel d'urgence : `PAN PAN`
+
+Le signal se prononce **« panne, panne »**. Les communications d'urgence
+peuvent être adressées **à toutes les stations ou à une station
+déterminée**.
+
+L'appel est formulé **sur la voie 16** de la façon suivante :
+
+<Steps>
+
+1. **`PAN PAN`** — **trois fois**.
+
+2. **Le nom de la station appelée**, ou l'appel **`À TOUS`** — **trois
+   fois** — en anglais **`ALL STATIONS`**.
+
+3. **« ICI »** — en anglais **`THIS IS`**.
+
+4. **Le nom du navire appelant** — **trois fois**.
+
+5. **L'indicatif du navire appelant** — **épelé une fois**.
+
+</Steps>
+
+<Aside type="note" title="Si le message est trop long">
+  Le manuel prévoit le cas : lorsque le message est trop long, **la voie
+  de dégagement sera indiquée lors de l'appel d'urgence sur la voie
+  16**.
+
+  C'est une différence pratique avec la détresse, qui reste sur la 16 de
+  bout en bout. Une consultation radiomédicale, par nature longue et
+  confidentielle, se poursuivra ainsi sur une autre voie.
+</Aside>
+
+### 3. Le message d'urgence
+
+Le manuel est explicite : le texte du message d'urgence **comportera
+dans l'ordre** les indications suivantes.
+
+<Steps>
+
+1. **La position du navire** — **absolue** (coordonnées géographiques)
+   ou **relative** (par rapport à un point fixe connu).
+
+2. **La nature de l'urgence.**
+
+3. **Les secours demandés.**
+
+4. **Les intentions du responsable du navire.**
+
+5. **Tout renseignement destiné à faciliter les secours.**
+
+</Steps>
+
+**Exemple complet**, ALIZÉ ayant cassé son gouvernail à vingt milles
+dans le nord-ouest de Cherbourg :
+
+| En français | En anglais |
+|---|---|
+| `PAN PAN, PAN PAN, PAN PAN` | `PAN PAN, PAN PAN, PAN PAN` |
+| `À TOUS, À TOUS, À TOUS` | `ALL STATIONS, ALL STATIONS, ALL STATIONS` |
+| `ICI ALIZÉ, ALIZÉ, ALIZÉ` | `THIS IS ALIZÉ, ALIZÉ, ALIZÉ` |
+| `Indicatif Foxtrot, Hotel, 2, 8, 2, 7` | `Call sign Foxtrot, Hotel, 2, 8, 2, 7` |
+| `Position 20 milles nord-ouest de Cherbourg` | `20 miles North West of Cherbourg` |
+| `Gouvernail cassé, partons à la dérive` | `Broken rudder, drifting` |
+| `Demandons remorquage` | `Require tow` |
+| `Voilier coque blanche, 3 personnes à bord` | `White hull yacht, 3 persons on board` |
+| `À vous` | `Over` |
+
+<Aside type="caution" title="La position d'abord, et deux façons de la donner">
+  Contrairement à ce qu'on croit souvent, la position **ouvre** le
+  message d'urgence. Et le manuel admet explicitement les deux formes :
+  **coordonnées géographiques**, ou **position relative à un point fixe
+  connu**.
+
+  La seconde est souvent la meilleure. « Vingt milles au nord-ouest de
+  Cherbourg » se comprend, se retient et se transcrit sans erreur, là où
+  une latitude dictée chiffre à chiffre s'écorche facilement. Donnez les
+  deux si vous le pouvez.
+</Aside>
+
+### 4. La consultation radiomédicale
+
+C'est la procédure d'urgence la plus utile à connaître pour un équipage
+familial, et elle est intégralement décrite par le manuel.
+
+Lorsque **la santé d'une personne se trouvant à bord se révèle
+préoccupante**, il est possible de demander une **consultation
+radiomédicale** — **par le biais d'un message d'urgence**, donc d'un
+`PAN PAN`.
+
+Le navire sera alors **mis en liaison, par une station côtière ou un
+CROSS**, avec :
+
+- le **Centre de consultation médicale maritime (CCMM) de Toulouse**,
+- ou un **SAMU côtier**.
+
+**Une évacuation sanitaire pourra être nécessaire.**
+
+<Aside type="tip" title="Ce qu'il faut avoir sous la main avant d'appeler">
+  Le médecin vous posera des questions précises. Préparez :
+
+  - **l'identité, l'âge et le sexe** de la personne ;
+  - les **symptômes** et depuis quand ;
+  - les **constantes** que vous savez prendre : conscience, respiration,
+    pouls, température ;
+  - les **traitements en cours** et les **allergies connues** ;
+  - le contenu de la **pharmacie du bord** ;
+  - votre **position**, votre **route** et votre **délai** jusqu'au port
+    le plus proche.
+
+  Les noms de médicaments **s'épellent** (**M5**) : un nom mal compris
+  peut conduire à un mauvais conseil.
+</Aside>
+
+<Aside type="danger" title="Une consultation n'est pas une détresse — jusqu'à ce qu'elle le devienne">
+  Un malaise qui évolue mal, une hémorragie qui ne cède pas, une perte
+  de conscience : la situation bascule alors en **détresse**, et vous
+  passez au `MAYDAY` (**M8**). Le médecin lui-même peut vous le dire.
+
+  N'hésitez pas à surclasser en cours de route. Ce n'est ni une faute ni
+  un aveu d'erreur : c'est la situation qui a changé.
+</Aside>
+
+### 5. L'appel de sécurité : `SÉCURITÉ`
+
+Le signal se prononce **« sécurité »**. Les communications de sécurité
+sont **généralement adressées à toutes les stations**.
+
+<Steps>
+
+1. **`SÉCURITÉ`** — **trois fois**.
+
+2. **Le nom de la station appelée**, ou l'appel **`À TOUS`** — **trois
+   fois** — en anglais **`ALL STATIONS`**.
+
+3. **« ICI »** — en anglais **`THIS IS`**.
+
+4. **Le nom du navire** — **trois fois**.
+
+5. **L'indicatif du navire** — **une fois**.
+
+</Steps>
+
+Comme pour l'urgence, si le message est trop long, **la voie de
+dégagement est indiquée lors de l'appel de sécurité sur la voie 16**.
+
+<Aside type="note" title="Une nuance de rédaction du manuel">
+  Pour l'urgence, le manuel écrit que l'indicatif est **« épelé une
+  fois »** ; pour la sécurité, il écrit simplement **« une fois »**,
+  sans le mot « épelé ».
+
+  Nous reproduisons cette différence telle quelle plutôt que de
+  l'uniformiser. En pratique, **épelez dans les deux cas** : l'alphabet
+  phonétique existe pour être compris, et aucun opérateur ne vous
+  reprochera d'être clair.
+</Aside>
+
+### 6. Le message de sécurité et les AVURNAV
+
+Ici se trouve la particularité la plus interrogée du module :
+
+> Le message sera **répété jusqu'à ce que le navire ait obtenu l'accusé
+> de réception d'une station côtière**. Celle-ci se chargera de
+> **retransmettre l'information aux services diffusant les AVURNAV**
+> — avis urgents aux navigateurs.
+
+Autrement dit, un message de sécurité ne s'adresse pas seulement aux
+navires qui l'entendent : il **alimente la chaîne d'information
+maritime**. Le conteneur que vous signalez ce matin peut figurer dans un
+avis diffusé cet après-midi, et sauver un bateau que vous ne
+rencontrerez jamais.
+
+**Exemple complet**, ALIZÉ signalant un conteneur à la dérive :
+
+| En français | En anglais |
+|---|---|
+| `SÉCURITÉ, SÉCURITÉ, SÉCURITÉ` | `SECURITE, SECURITE, SECURITE` |
+| `À TOUS, À TOUS, À TOUS` | `ALL STATIONS, ALL STATIONS, ALL STATIONS` |
+| `ICI ALIZÉ, ALIZÉ, ALIZÉ` | `THIS IS ALIZÉ, ALIZÉ, ALIZÉ` |
+| `Indicatif Foxtrot, Hotel, 2, 8, 2, 7` | `Call sign Foxtrot, Hotel, 2, 8, 2, 7` |
+| `Conteneur à la dérive à un mille au nord de la pointe du Raz` | `Container adrift one nautical mile north of Pointe du Raz` |
+| `Terminé` | `Out` |
+
+<Aside type="caution" title="« Terminé », et non « à vous »">
+  Regardez la dernière ligne. Le message d'urgence se termine par **« à
+  vous »** — *over* — parce qu'on attend une réponse. Le message de
+  sécurité se termine par **« terminé »** — *out* — parce qu'on
+  informe.
+
+  C'est un détail révélateur du sens de chaque procédure, et il est
+  facile à retenir : **on demande** en urgence, **on prévient** en
+  sécurité.
+</Aside>
+
+Rappel de **M7** : ce type de message **précède toute émission de
+bulletins météorologiques spéciaux (BMS) et tout avis urgent aux
+navigateurs**. Quand vous entendez `SÉCURITÉ` émis par une station
+côtière, c'est le signal qu'une information de navigation ou de météo va
+suivre — la réception de ces renseignements est l'objet de **M12**.
+
+### 7. Les différences à ne pas confondre
+
+Le tableau que l'examen exploite. À lire ligne à ligne :
+
+| Élément | Détresse | Urgence | Sécurité |
+|---|---|---|---|
+| Signal | `MAYDAY` ×3 | `PAN PAN` ×3 | `SÉCURITÉ` ×3 |
+| Prononciation | « maider » | « panne, panne » | « sécurité » |
+| Destinataire | Tout navire et toute station | Toutes les stations **ou une station déterminée** | **Généralement** toutes les stations |
+| Nom du navire | 3 fois | 3 fois | 3 fois |
+| Indicatif | épelé **1 fois** | épelé **1 fois** | **1 fois** |
+| Ordre du message | Position, nature, assistance, **personnes à bord**, intentions | Position, nature, secours, intentions, renseignements | Le danger signalé |
+| Répété jusqu'à | réponse d'une station côtière **ou d'un navire** | — | accusé de réception **d'une station côtière** |
+| Voie de dégagement | non, reste sur la 16 | oui, si le message est trop long | oui, si le message est trop long |
+| Fin de l'exemple | `à vous` | `à vous` | `terminé` |
+
+<Aside type="tip" title="Le seul champ propre à la détresse">
+  Comparez les lignes « ordre du message » : le **nombre de personnes à
+  bord** figure dans le message de détresse et **pas** dans le message
+  d'urgence.
+
+  Ce n'est pas un oubli du manuel : en détresse, ce chiffre dit aux
+  sauveteurs combien de personnes chercher. En urgence, on demande un
+  remorquage, pas un sauvetage. Rien ne vous empêche cependant de le
+  donner au titre des « renseignements destinés à faciliter les
+  secours » — l'exemple du manuel le fait d'ailleurs.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Même vigilance qu'en **M8** : une démonstration qui intervertit
+  les champs enseigne une procédure fausse. Voir
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M9/` contenant :
+
+1. **`pan-pan.md`** — la carte d'urgence du bord, rédigée mot pour mot
+   avec l'identité réelle du bateau, en français et en anglais, sur le
+   même modèle que la carte MAYDAY de **M8**. Prévoir les champs
+   variables en blanc.
+
+2. **`securite.md`** — la carte de sécurité, avec deux ou trois
+   formulations types prêtes à l'emploi pour les cas les plus probables
+   sur vos zones : objet flottant, épave, feu de balisage éteint.
+
+3. **`radiomedicale.md`** — la **fiche de préparation** de la
+   consultation : identité, âge, symptômes, constantes, traitements,
+   allergies, contenu de la pharmacie du bord, position et délai jusqu'au
+   port. À imprimer en plusieurs exemplaires et à ranger avec la
+   pharmacie, pas avec les cartes — c'est là qu'on ira la chercher.
+
+4. **`pharmacie.md`** — l'inventaire réel de la pharmacie du bord, avec
+   les dates de péremption. Il n'a d'intérêt que s'il est **à jour** :
+   datez-le et fixez la date du prochain contrôle.
+
+5. **`surclassement.md`** — une demi-page : dans quelles circonstances
+   une urgence devient une détresse à bord de ce bateau, et qui prend la
+   décision. À relire avec l'équipage.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Émettre un PAN PAN complet.** Appel puis message, dans l'ordre :
+   position, nature, secours demandés, intentions, renseignements. Poste
+   éteint, carte en main d'abord, puis sans. Refaites-le en anglais.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Donner sa position de deux façons.** Pour cinq points de vos zones
+   habituelles, énoncez la position en coordonnées **puis** relativement
+   à un amer connu. La seconde forme doit venir aussi vite que la
+   première : c'est celle qui passe le mieux à la radio.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Jouer la consultation radiomédicale.** Un équipier tient le rôle du
+   médecin du CCMM et vous pose les questions de la fiche. Vous
+   répondez avec la fiche sous les yeux, puis sans. Épelez au moins un
+   nom de médicament.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Émettre un message de sécurité.** Signalez un danger fictif, en
+   terminant par **« terminé »**. L'erreur la plus fréquente est de
+   finir par « à vous » et d'attendre une réponse qui ne viendra pas.
+
+5. **Trier vingt situations à la volée.** Un équipier énonce, vous
+   répondez `MAYDAY`, `PAN PAN`, `SÉCURITÉ` ou routine, en moins de
+   trois secondes. Glissez des cas limites : la voie d'eau maîtrisée à
+   la pompe, le malaise qui s'aggrave, le feu de balisage éteint.
+
+6. **Surclasser en cours d'exercice.** Commencez un `PAN PAN` pour un
+   malaise, et à mi-parcours l'équipier annonce que la personne perd
+   connaissance. Vous devez basculer sur `MAYDAY` sans hésiter et sans
+   recommencer votre message d'urgence.
 
 </Steps>
 
@@ -80,17 +415,210 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m09"
+  questions={[
+    {
+      question: 'Le signal d’urgence PAN PAN se prononce :',
+      choices: ['« pan, pan »', '« panne, panne »', '« pane, pane »', '« pan-pan » en un seul mot'],
+      answer: 1,
+      explanation:
+        'Le manuel donne la prononciation « panne, panne », comme il donne « maider » pour MAYDAY. Ces mots ne se traduisent ni ne s’épellent : ils sont reconnus tels quels dans toutes les langues (M5).',
+    },
+    {
+      question:
+        'Dans quel ordre le texte du message d’urgence doit-il être transmis ?',
+      choices: [
+        'Nature de l’urgence, position, secours demandés, intentions, renseignements',
+        'Nombre de personnes à bord, position, nature, secours demandés',
+        'Secours demandés, position, nature de l’urgence, intentions',
+        'Position, nature de l’urgence, secours demandés, intentions, renseignements',
+      ],
+      answer: 3,
+      explanation:
+        'Le manuel indique explicitement que le message comportera ces indications « dans l’ordre », et la position vient en tête. Elle peut être absolue, en coordonnées, ou relative à un point fixe connu.',
+    },
+    {
+      question:
+        'Jusqu’à quand un message de sécurité doit-il être répété ?',
+      choices: [
+        'Jusqu’à l’accusé de réception d’une station côtière',
+        'Jusqu’à ce qu’un navire proche accuse réception',
+        'Trois fois, puis on cesse',
+        'Pendant cinq minutes',
+      ],
+      answer: 0,
+      explanation:
+        'La station côtière se charge ensuite de retransmettre l’information aux services diffusant les AVURNAV. Le message de détresse, lui, se répète jusqu’à réponse d’une station côtière ou d’un navire (M8).',
+    },
+    {
+      question:
+        'Comment demande-t-on une consultation radiomédicale ?',
+      choices: [
+        'Par un message de détresse, la santé d’une personne étant en jeu',
+        'Par un appel de routine sur une voie navire-navire',
+        'Par un message d’urgence',
+        'Par un message de sécurité adressé à toutes les stations',
+      ],
+      answer: 2,
+      explanation:
+        'Elle passe par un PAN PAN. Le navire est ensuite mis en liaison, par une station côtière ou un CROSS, avec le Centre de consultation médicale maritime de Toulouse ou un SAMU côtier.',
+    },
+    {
+      question:
+        'Avec quel organisme un navire demandant une consultation radiomédicale est-il mis en liaison ?',
+      choices: [
+        'Le SHOM ou un sémaphore',
+        'Le Centre de consultation médicale maritime de Toulouse ou un SAMU côtier',
+        'Le FMCC de Toulouse',
+        'La SNSM de la zone',
+      ],
+      answer: 1,
+      explanation:
+        'Le CCMM de Toulouse ou un SAMU côtier, la mise en liaison étant faite par une station côtière ou un CROSS. Le FMCC, également à Toulouse, traite les alertes Cospas-Sarsat : ce n’est pas le même centre (M4).',
+    },
+    {
+      question:
+        'Un voilier signale un conteneur à la dérive. Comment son message se termine-t-il dans l’exemple du manuel ?',
+      choices: [
+        'Par « à vous », puisqu’il attend un accusé de réception',
+        'Par la répétition de son indicatif',
+        'Par « silence fini »',
+        'Par « terminé »',
+      ],
+      answer: 3,
+      explanation:
+        'On informe, on ne demande rien : le message de sécurité se termine par « terminé » (out), là où le message d’urgence se termine par « à vous » (over).',
+    },
+    {
+      question: 'Les communications d’urgence peuvent être adressées :',
+      choices: [
+        'à toutes les stations ou à une station déterminée',
+        'uniquement à toutes les stations',
+        'uniquement au CROSS de la zone',
+        'uniquement à une station côtière',
+      ],
+      answer: 0,
+      explanation:
+        'Le manuel prévoit les deux. Les communications de sécurité, elles, sont généralement adressées à toutes les stations.',
+    },
+    {
+      question:
+        'Que se passe-t-il si le message d’urgence est trop long pour la voie 16 ?',
+      choices: [
+        'Il doit être scindé en plusieurs émissions d’une minute',
+        'La voie de dégagement est indiquée lors de l’appel d’urgence sur la voie 16',
+        'Il doit être transmis en ASN sur la voie 70',
+        'Il est reporté après l’accusé de réception d’une station côtière',
+      ],
+      answer: 1,
+      explanation:
+        'C’est une différence pratique avec la détresse, qui reste sur la voie 16 de bout en bout. Une consultation radiomédicale, longue par nature, se poursuit ainsi sur une autre voie.',
+    },
+    {
+      question:
+        'Un équipier fait un malaise et perd connaissance alors que vous émettez un PAN PAN. Que faites-vous ?',
+      choices: [
+        'Vous terminez le message d’urgence puis rappelez en routine',
+        'Vous attendez l’avis du médecin avant de changer de procédure',
+        'Vous passez en MAYDAY : la situation est devenue une détresse',
+        'Vous répétez le PAN PAN en insistant sur la gravité',
+      ],
+      answer: 2,
+      explanation:
+        'Le surclassement en cours de route n’est ni une faute ni un aveu d’erreur : la situation a changé. Un danger devenu grave et imminent relève du MAYDAY (M8).',
+    },
+    {
+      question:
+        'Quel champ figure dans le message de détresse mais pas dans la liste des champs du message d’urgence ?',
+      choices: [
+        'La position du navire',
+        'Les intentions du responsable du navire',
+        'La nature de l’événement',
+        'Le nombre de personnes à bord',
+      ],
+      answer: 3,
+      explanation:
+        'En détresse, ce chiffre dit aux sauveteurs combien de personnes chercher. Rien n’empêche de le donner en urgence au titre des renseignements destinés à faciliter les secours — l’exemple du manuel le fait.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
-FORMATION CRR — M9 — Carte de cockpit
-=======================================
+FORMATION CRR — M9 — URGENCE & SÉCURITÉ — Carte de cockpit
+============================================================
+                     VOIE 16
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+QUEL SIGNAL ?
+  Faut-il venir me chercher MAINTENANT ? ....... MAYDAY  (M8)
+  Problème sérieux : MON BATEAU ou QUELQU'UN ... PAN PAN
+  Je PRÉVIENS d'un danger qui ne me vise pas ... SÉCURITÉ
+
+--------------------------------------------------
+URGENCE — PAN PAN            (dire « panne, panne »)
+--------------------------------------------------
+  PAN PAN, PAN PAN, PAN PAN
+  <STATION APPELÉE> x3  OU  À TOUS x3  / ALL STATIONS
+  ICI                        / THIS IS
+  <NOM DU NAVIRE> x3
+  <INDICATIF> ÉPELÉ UNE FOIS
+
+  MESSAGE — DANS L'ORDRE :
+   1. POSITION ...... absolue (coordonnées)
+                      ou RELATIVE (point fixe connu)
+   2. NATURE de l'urgence
+   3. SECOURS demandés
+   4. INTENTIONS du responsable
+   5. RENSEIGNEMENTS utiles
+  À VOUS / OVER
+
+  Message trop long → VOIE DE DÉGAGEMENT annoncée sur la 16.
+
+--------------------------------------------------
+CONSULTATION RADIOMÉDICALE — par un message D'URGENCE
+--------------------------------------------------
+  Station côtière ou CROSS  →  met en liaison avec
+      le CCMM DE TOULOUSE   ou  un SAMU CÔTIER
+  Une ÉVACUATION SANITAIRE pourra être nécessaire.
+
+  À PRÉPARER : identité · âge · symptômes · depuis quand
+               conscience · respiration · pouls · température
+               traitements · allergies · pharmacie du bord
+               position · route · délai au port
+  ÉPELER les noms de médicaments (→ M5).
+  Ça s'aggrave → ON PASSE EN MAYDAY.
+
+--------------------------------------------------
+SÉCURITÉ — SECURITE             (dire « sécurité »)
+--------------------------------------------------
+  SÉCURITÉ, SÉCURITÉ, SÉCURITÉ
+  <STATION APPELÉE> x3  OU  À TOUS x3  / ALL STATIONS
+  ICI                        / THIS IS
+  <NOM DU NAVIRE> x3
+  <INDICATIF>                                  (une fois)
+
+  → le danger signalé
+  TERMINÉ / OUT          ← et NON « à vous »
+
+  RÉPÉTER jusqu'à l'ACCUSÉ DE RÉCEPTION
+  D'UNE STATION CÔTIÈRE — elle retransmet aux services
+  qui diffusent les AVURNAV.
+  SÉCURITÉ précède aussi les BMS et les AVURNAV (→ M12).
+
+--------------------------------------------------
+LES TROIS PROCÉDURES EN UN COUP D'ŒIL
+--------------------------------------------------
+                   DÉTRESSE    URGENCE     SÉCURITÉ
+  signal x3        MAYDAY      PAN PAN     SÉCURITÉ
+  indicatif        épelé x1    épelé x1    x1
+  personnes à bord OUI         non         non
+  dégagement       NON         si long     si long
+  répéter jusqu'à  côtière OU    —         CÔTIÈRE
+                   navire
+  fin d'exemple    à vous      à vous      TERMINÉ
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À afficher avec la carte **M8** : les trois procédures se lisent
+ensemble, parce que c'est ensemble qu'on les confond.
