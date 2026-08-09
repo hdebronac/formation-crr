@@ -7,72 +7,317 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 1 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 et M1 validés
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Court module, mais structurant : il installe le vocabulaire que tout le
+reste du programme emploie. Deux classements, et deux seulement. D'un
+côté les **catégories de communications**, qui répondent à la question
+« de quoi s'agit-il, et qui doit se taire ? ». De l'autre les
+**catégories de stations**, qui répondent à « qui parle, et que
+peut-elle pour moi ? ».
+
+Ces deux classements sont interrogés directement à l'examen, et ils
+commandent des réflexes concrets en mer : savoir qu'un appel de routine
+ne se fait pas sur la voie 16, savoir qu'un CROSS n'est pas une station
+portuaire, savoir que le 196 existe. On les revoit ensuite tout au long
+du programme — l'ordre de priorité en **M7**, les procédures elles-mêmes
+en **M8** et **M9**, l'organisation des secours en **M4**.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Classer une communication dans l'une des quatre catégories et lui
+  associer son signal d'alarme et sa voie.
+- [ ] Énoncer l'**ordre de priorité** des communications, et ce qu'il
+  impose aux autres stations.
+- [ ] Distinguer les **quatre types de stations** et dire ce que chacune
+  fait.
+- [ ] Nommer les **CROSS métropolitains** et la zone de chacun.
+- [ ] Dire ce qu'est la **SNSM** et à la demande de qui elle intervient.
+- [ ] Choisir la voie adaptée à un échange navire-navire ou à un appel
+  portuaire.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Détresse | Danger grave et imminent menaçant un navire ou une personne ; priorité absolue |
+| Urgence | Message très urgent concernant la sécurité d'un navire ou d'une personne, sans danger imminent |
+| Sécurité | Message concernant la sécurité de la navigation ou un avertissement météorologique |
+| Correspondance publique | Communication acheminée par une station côtière vers un abonné à terre |
+| Opérations portuaires | Messages de manœuvre, de mouvement et de sécurité dans un port ou à son voisinage |
+| Station de navire | Station mobile placée à bord d'un navire qui n'est pas amarré en permanence |
+| Station côtière | Station terrestre du service mobile maritime |
+| Station portuaire | Station côtière du service des opérations portuaires |
+| Centre de coordination des secours | Station côtière responsable du sauvetage sur une zone déterminée |
+| CROSS | Centre régional opérationnel de surveillance et de sauvetage |
+| SNSM | Société nationale de sauvetage en mer, association de bénévoles |
+| 196 | Numéro d'appel d'urgence maritime depuis un téléphone |
+| Voie 16 | Voie de détresse, d'urgence, de sécurité et d'appel en phonie |
+| Voie 9 | Voie la plus utilisée par les ports de plaisance français |
+| Voies 6, 8, 72, 77 | Les quatre voies réservées aux échanges entre navires |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve A et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve A**, **6 questions sur 24**. Il
+  correspond au chapitre du manuel ANFR intitulé **« Connaissances
+  générales du service mobile maritime »**, et plus précisément à ses
+  sections sur les **catégories de communications** et sur les **types
+  de stations**.
+- **N'est pas interrogé** : le tableau complet d'affectation des voies
+  VHF relève de l'**annexe 2**. Les quelques voies citées ici — 16, 9,
+  6, 8, 72, 77, 70 — le sont parce qu'elles s'emploient tous les jours,
+  pas pour être récitées.
+- **Confusion classique — station côtière ou station portuaire ?** Une
+  station portuaire **est** une station côtière : celle qui assure le
+  service des opérations portuaires. Un centre de coordination des
+  secours aussi est une station côtière. Le mot « côtière » est le
+  genre ; les autres sont des espèces.
+- **Confusion classique — urgence ou sécurité ?** L'urgence concerne la
+  sécurité **d'un navire ou d'une personne** ; la sécurité concerne la
+  **navigation** ou la **météorologie**. Les procédures correspondantes
+  sont l'objet de **M9**.
+- L'ordre de priorité — détresse, urgence, sécurité, puis le reste —
+  est rappelé en **M7**, où il devient une règle d'exploitation.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Quatre catégories de communications
 
-### 2. *(section à rédiger)*
+Tout ce qui passe sur une VHF marine se range dans l'une de ces
+catégories, et cet ordre n'est pas décoratif : c'est un ordre de
+**priorité**.
 
-### 3. *(section à rédiger)*
+| Priorité | Type | Signal d'alarme en phonie | Voie en phonie |
+|---|---|---|---|
+| **Absolue** | **Détresse** | `MAYDAY` | **16** |
+| **2** | **Urgence** | `PAN PAN` | **16** |
+| **3** | **Sécurité** | `SÉCURITÉ` | **16** |
+| — | Correspondance publique, routine | aucun | voie de travail |
+
+<Aside type="danger" title="Ce que « priorité absolue » veut dire">
+  Ce n'est pas un classement théorique. Une communication de détresse
+  **impose le silence à toutes les autres**. Toute station qui entend
+  une communication de détresse doit **cesser immédiatement toute
+  émission** susceptible de la brouiller, et écouter.
+
+  La règle est développée en **M8**, avec le `SILENCE MAYDAY` qui
+  l'impose formellement, et en **M11**, qui explique pourquoi la
+  protection des fréquences de détresse est une obligation et non une
+  politesse.
+</Aside>
+
+Les trois premières catégories partagent la même voie en phonie, la
+**voie 16**, et le même principe : un mot-clé prononcé trois fois qui
+annonce la nature du message. La quatrième — tout le reste — n'a ni
+signal ni priorité, et doit **dégager la voie 16** dès que le contact
+est établi (**M7**).
+
+### 2. Détresse, urgence, sécurité : où passe la frontière
+
+C'est la distinction la plus interrogée du module, et la plus utile en
+mer.
+
+| Catégorie | Ce qu'elle vise | Exemple |
+|---|---|---|
+| Détresse | Danger **grave et imminent**, assistance immédiate requise | Voie d'eau non maîtrisée, homme à la mer, incendie à bord |
+| Urgence | Sécurité d'un **navire** ou d'une **personne**, sans danger imminent | Avarie de moteur au large, demande de consultation radiomédicale |
+| Sécurité | Sécurité de la **navigation**, avertissement **météorologique** | Objet flottant dangereux signalé, bulletin météo spécial |
+
+<Aside type="tip" title="Le test à se poser">
+  **Y a-t-il un danger grave et imminent ?** → détresse.
+  **Sinon, s'agit-il de la sécurité d'un bateau ou d'une personne ?**
+  → urgence. **Sinon, s'agit-il de la navigation ou du temps ?**
+  → sécurité.
+
+  Et en cas de doute entre urgence et détresse : **on alerte**. Le
+  surclassement d'un message ne coûte rien ; le sous-classement coûte
+  des minutes.
+</Aside>
+
+### 3. Les deux modes de transmission
+
+Une VHF dotée de l'appel sélectif numérique sait faire deux choses
+différentes, et il ne faut pas les confondre :
+
+- la **transmission vocale par radiotéléphonie** — on parle, on
+  sélectionne la voie appropriée. C'est une transmission
+  **analogique** ;
+- la **transmission numérique automatique** sur la **voie 70** — l'ASN,
+  qui échange des appels codés par les menus du poste.
+
+C'est l'objet de **M10**. On retient ici seulement que la voie 70 ne
+transporte jamais de voix, et que la voie 16 ne transporte jamais de
+données.
+
+### 4. Le service des opérations portuaires
+
+Il a pour objet la transmission de messages traitant **exclusivement**
+de la **manœuvre**, du **mouvement** et de la **sécurité** des navires,
+dans un port ou à son voisinage — entre les navires et les stations
+portuaires, ou entre navires.
+
+**En France, la voie 9 est la plus utilisée par les ports de
+plaisance.** C'est celle sur laquelle on demande une place, un
+créneau de passage d'écluse, ou l'autorisation d'entrer.
+
+Ce n'est pas une voie de convenance : le service portuaire est
+« exclusivement » consacré à la manœuvre et à la sécurité. Une
+conversation privée n'y a pas sa place.
+
+### 5. Les échanges entre navires
+
+En dehors des situations de sécurité, des opérations portuaires et de
+la correspondance publique, les échanges entre navires disposent de
+**quatre voies réservées** : **6, 8, 72 et 77**.
+
+<Aside type="caution" title="La voie 16 n'est pas une voie de conversation">
+  La voie 16 sert à **appeler** et à traiter la détresse, l'urgence et
+  la sécurité. Dès qu'un contact de routine est établi, on bascule sur
+  l'une des voies ci-dessus. La procédure de dégagement, et la limite
+  d'une minute imposée aux émissions sur la 16, sont l'objet de **M7**
+  et de **M11**.
+</Aside>
+
+### 6. Quatre types de stations
+
+Le vocabulaire du manuel est précis, et l'examen l'interroge tel quel.
+
+| Station | Définition |
+|---|---|
+| **Station de navire** | Station **mobile** du service mobile maritime placée à bord d'un navire **qui n'est pas amarré en permanence**, autre qu'une station d'engin de sauvetage |
+| **Station côtière** | Station **terrestre** du service mobile maritime |
+| **Station portuaire** | **Station côtière** du service des opérations portuaires |
+| **Centre de coordination des secours** | **Station côtière** responsable des opérations de sauvetage pour une **zone déterminée** |
+
+Une station côtière peut assurer uniquement des missions de
+**sécurité**, être une station de **correspondance publique** à but
+commercial, ou exercer les deux activités.
+
+<Aside type="tip" title="Retenir la définition de la station de navire">
+  Trois éléments, et chacun a été mis là pour exclure quelque chose :
+  **mobile** (ce n'est pas une station à terre), **à bord d'un navire
+  non amarré en permanence** (un ponton-restaurant à demeure n'en est
+  pas une), **autre qu'une station d'engin de sauvetage** (un radeau
+  équipé n'en est pas une non plus).
+</Aside>
+
+### 7. Les CROSS
+
+En France, les **centres régionaux opérationnels de surveillance et de
+sauvetage** coordonnent en permanence les opérations de recherche et de
+sauvetage des zones maritimes sous leur juridiction. Ce sont les
+centres de coordination des secours définis ci-dessus.
+
+**Cinq CROSS en métropole :**
+
+| CROSS | Zone |
+|---|---|
+| **Gris-Nez** | Manche Est — Pas de Calais |
+| **Jobourg** | Manche Centrale |
+| **Corsen** | Manche Ouest — mer d'Iroise |
+| **Etel** | Atlantique |
+| **La Garde** (CROSS Med) | Méditerranée |
+
+S'y ajoutent **deux CROSS dans les DOM** — Martinique
+(Antilles-Guyane) et Réunion (Sud océan Indien) — et **deux centres de
+secours dans les COM** : un **MRCC** en Nouvelle-Calédonie, et un
+**JRCC** de coordination de sauvetage aéromaritime en Polynésie
+française.
+
+Les CROSS traitent **plus de 10 000 opérations par an**. Selon l'alerte
+reçue, ils peuvent engager tous les moyens en hommes et en matériel —
+navire, avion, hélicoptère — et contacter les navires à proximité du
+sinistre. Ils assurent aussi des missions additionnelles : surveillance
+de la navigation, sécurité maritime, sûreté maritime.
+
+<Aside type="note" title="Le 196, et le relais des sémaphores">
+  Depuis un téléphone, le numéro d'urgence maritime est le **196**. Il
+  ne remplace pas la VHF — un appel de détresse par radio est entendu
+  par tous les navires à portée, ce qu'un appel téléphonique ne fait
+  pas — mais il est utile quand la radio est hors service ou hors de
+  portée.
+
+  En cas d'indisponibilité d'un émetteur, les CROSS **peuvent être
+  relayés localement par les sémaphores de la Marine nationale**.
+</Aside>
+
+La **SNSM** — Société nationale de sauvetage en mer — est une
+**association constituée de bénévoles**. Elle n'est pas un CROSS et ne
+coordonne rien : elle **intervient à la demande des CROSS**, et elle est
+souvent sollicitée. La distinction est régulièrement interrogée.
+
+L'organisation générale du sauvetage, les zones du SMDSM et le rôle des
+centres de coordination sont approfondis en **M4**.
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Les organisations et les numéros changent — le 196 est
+  relativement récent — et une vidéo ancienne peut décrire une carte des
+  CROSS périmée. Voir [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M2/` contenant :
+
+1. **`mes-cross.md`** — pour chaque zone réellement fréquentée par le
+   bateau, le CROSS compétent et son MMSI. Le bateau du fil rouge
+   navigue en Manche et en Atlantique : il est concerné par Gris-Nez,
+   Jobourg, Corsen et Etel selon la position. Tracer la limite
+   approximative entre deux CROSS voisins sur la carte de navigation
+   habituelle, et noter à quel moment de la traversée on change
+   d'interlocuteur.
+
+2. **`voies-utiles.md`** — la liste courte des voies effectivement
+   utiles à bord, avec leur usage en une ligne : 16 (appel, détresse,
+   urgence, sécurité), 70 (ASN, jamais de voix), 9 (ports de
+   plaisance), 6, 8, 72, 77 (navire-navire). Vérifier ensuite que ces
+   voies sont bien accessibles sur le poste, et noter les voies
+   présélectionnées par le constructeur qui ne servent à rien ici.
+
+3. **`qui-appeler.md`** — une page d'arbitrage : pour six situations
+   concrètes — demander une place au port, prévenir d'un objet flottant
+   dangereux, joindre un ami sur un autre bateau, demander un avis
+   médical, signaler une avarie sans danger immédiat, un homme à la mer
+   — indiquer la **catégorie**, la **voie**, et **qui** on cherche à
+   joindre. Cette page devient la base de `bord/scenarios`.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Classer vingt situations à la volée.** Un équipier énonce une
+   situation, vous répondez en moins de trois secondes : détresse,
+   urgence, sécurité, ou routine. Sans hésiter, sans justifier. Ce
+   réflexe est la vraie compétence de ce module ; la justification vient
+   après.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Nommer les CROSS dans l'ordre géographique.** D'est en ouest puis
+   vers le sud : Gris-Nez, Jobourg, Corsen, Etel, La Garde. Récitez-les
+   en donnant la zone de chacun, puis en partant de votre port
+   d'attache : « en sortant d'ici, je suis dans la zone de… ».
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Choisir la voie, sans réfléchir.** On vous donne un besoin — entrer
+   au port, appeler un autre voilier, écouter la météo, lancer une
+   alerte — vous donnez la voie. Répétez jusqu'à ce que la voie 9 pour
+   le port et le trio 72/77/6 pour le navire-navire viennent seuls.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Distinguer les acteurs.** Expliquez à voix haute, en trois phrases
+   maximum, la différence entre un CROSS, une station portuaire et la
+   SNSM. Si vous hésitez sur qui coordonne et qui intervient, relisez
+   la section 7 : c'est exactement ce que l'examen interroge.
 
 </Steps>
 
@@ -80,9 +325,113 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m02"
+  questions={[
+    {
+      question: 'Quel est l’ordre de priorité des communications ?',
+      choices: [
+        'Sécurité, urgence, détresse, puis le reste',
+        'Détresse, sécurité, urgence, puis le reste',
+        'Détresse, urgence, sécurité, puis le reste',
+        'Urgence, détresse, sécurité, puis le reste',
+      ],
+      answer: 2,
+      explanation:
+        'La détresse a la priorité absolue, l’urgence vient en deuxième, la sécurité en troisième. Toute autre communication passe après. Cet ordre devient une règle d’exploitation en M7.',
+    },
+    {
+      question: 'Une station portuaire est :',
+      choices: [
+        'une station de navire amarrée en permanence',
+        'une station côtière du service des opérations portuaires',
+        'une station mobile placée à bord d’un remorqueur',
+        'un centre de coordination des secours spécialisé',
+      ],
+      answer: 1,
+      explanation:
+        'La station portuaire est une espèce de station côtière. Le centre de coordination des secours en est une autre : le mot « côtière » désigne le genre, les deux autres des cas particuliers.',
+    },
+    {
+      question:
+        'En France, quelle voie est la plus utilisée par les ports de plaisance ?',
+      choices: ['La voie 6', 'La voie 16', 'La voie 72', 'La voie 9'],
+      answer: 3,
+      explanation:
+        'La voie 9 est la plus utilisée par les ports de plaisance français. Le service des opérations portuaires est exclusivement consacré à la manœuvre, au mouvement et à la sécurité des navires.',
+    },
+    {
+      question: 'La SNSM :',
+      choices: [
+        'coordonne les opérations de sauvetage sur sa zone',
+        'remplace le CROSS lorsque celui-ci est indisponible',
+        'est une association de bénévoles qui intervient à la demande des CROSS',
+        'est le service de surveillance de la navigation de la Marine nationale',
+      ],
+      answer: 2,
+      explanation:
+        'La SNSM intervient, elle ne coordonne pas. Ce sont les CROSS qui coordonnent, et ce sont les sémaphores de la Marine nationale qui peuvent les relayer en cas d’indisponibilité d’un émetteur.',
+    },
+    {
+      question:
+        'Un navire subit une avarie de moteur au large, sans danger immédiat pour l’équipage. De quelle catégorie relève son message ?',
+      choices: ['Sécurité', 'Urgence', 'Détresse', 'Correspondance publique'],
+      answer: 1,
+      explanation:
+        'L’urgence concerne la sécurité d’un navire ou d’une personne sans danger grave et imminent. La détresse suppose ce danger imminent ; la sécurité concerne la navigation ou la météorologie (M9).',
+    },
+    {
+      question: 'Quelles voies sont réservées aux échanges entre navires ?',
+      choices: [
+        'Les voies 16 et 70',
+        'Les voies 9 et 13',
+        'Les voies 75 et 76',
+        'Les voies 6, 8, 72 et 77',
+      ],
+      answer: 3,
+      explanation:
+        'Quatre voies, en dehors des situations de sécurité, des opérations portuaires et de la correspondance publique. Les voies 75 et 76 sont des voies de garde adjacentes à la 16, laissées libres (M11).',
+    },
+    {
+      question: 'Combien de CROSS y a-t-il en métropole ?',
+      choices: ['Cinq', 'Trois', 'Sept', 'Deux'],
+      answer: 0,
+      explanation:
+        'Gris-Nez, Jobourg, Corsen, Etel et La Garde. S’y ajoutent deux CROSS dans les DOM et deux centres de secours dans les COM, qui ne sont pas des CROSS métropolitains.',
+    },
+    {
+      question: 'Le CROSS Corsen couvre :',
+      choices: [
+        'la Manche Est et le Pas de Calais',
+        'la Manche Ouest et la mer d’Iroise',
+        'l’Atlantique',
+        'la Méditerranée',
+      ],
+      answer: 1,
+      explanation:
+        'Corsen couvre la Manche Ouest et la mer d’Iroise. Gris-Nez tient la Manche Est et le Pas de Calais, Jobourg la Manche Centrale, Etel l’Atlantique, La Garde la Méditerranée.',
+    },
+    {
+      question: 'Quel est le numéro d’urgence maritime depuis un téléphone ?',
+      choices: ['Le 112', 'Le 15', 'Le 196', 'Le 191'],
+      answer: 2,
+      explanation:
+        'Le 196. Il ne remplace pas la VHF : un appel de détresse par radio est entendu par tous les navires à portée, ce qu’un appel téléphonique ne permet pas.',
+    },
+    {
+      question: 'La définition exacte d’une station de navire exclut :',
+      choices: [
+        'les navires de plaisance de moins de 24 mètres',
+        'les navires battant pavillon étranger',
+        'les navires dépourvus d’ASN',
+        'les stations d’engin de sauvetage et les navires amarrés en permanence',
+      ],
+      answer: 3,
+      explanation:
+        'C’est une station mobile placée à bord d’un navire qui n’est pas amarré en permanence, autre qu’une station d’engin de sauvetage. Chacun de ces éléments a été écrit pour exclure un cas précis.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +439,55 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M2 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+QUATRE CATÉGORIES DE COMMUNICATIONS
+  1. DÉTRESSE   MAYDAY    voie 16   PRIORITÉ ABSOLUE
+  2. URGENCE    PAN PAN   voie 16
+  3. SÉCURITÉ   SÉCURITÉ  voie 16
+  -. routine / correspondance publique → voie de travail
+
+  Détresse  = danger GRAVE et IMMINENT
+  Urgence   = sécurité d'un NAVIRE ou d'une PERSONNE
+  Sécurité  = NAVIGATION ou MÉTÉO
+  En cas de doute entre urgence et détresse → ON ALERTE.
+
+  Toute station qui entend une détresse : SE TAIT et ÉCOUTE.
+
+DEUX MODES DE TRANSMISSION
+  Phonie (analogique) → la voix, sur la voie choisie
+  ASN (numérique)     → voie 70, appels codés — JAMAIS de voix
+
+QUATRE TYPES DE STATIONS
+  STATION DE NAVIRE  mobile, à bord d'un navire non amarré
+                     en permanence, autre qu'un engin de sauvetage
+  STATION CÔTIÈRE    terrestre  (sécurité, et/ou corr. publique)
+  STATION PORTUAIRE  = une station côtière, service portuaire
+  CENTRE DE COORD.   = une station côtière, sauvetage sur zone
+  → « côtière » est le GENRE ; portuaire et CCS sont des ESPÈCES.
+
+LES CROSS — 5 EN MÉTROPOLE
+  GRIS-NEZ   Manche Est — Pas de Calais
+  JOBOURG    Manche Centrale
+  CORSEN     Manche Ouest — mer d'Iroise
+  ETEL       Atlantique
+  LA GARDE   Méditerranée
+  + 2 CROSS DOM (Martinique, Réunion)
+  + COM : MRCC Nouvelle-Calédonie · JRCC Polynésie
+  > 10 000 opérations par an.
+  Relais possible par les SÉMAPHORES de la Marine nationale.
+
+  SNSM = BÉNÉVOLES, elle INTERVIENT.
+  CROSS = il COORDONNE.  Ne pas confondre.
+
+  TÉLÉPHONE → 196   (ne remplace pas la VHF)
+
+VOIES À CONNAÎTRE
+  16  appel + détresse/urgence/sécurité   (dégager après contact)
+  70  ASN uniquement
+   9  ports de plaisance (France)
+   6 · 8 · 72 · 77   navire ↔ navire
+  Le tableau complet des voies = annexe 2, HORS EXAMEN.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M4**, qui reprend les CROSS dans
+l'organisation générale du sauvetage, et **M7**, qui transforme l'ordre
+de priorité en règles d'exploitation.
