@@ -1,0 +1,151 @@
+---
+// Composant Figure — illustration créditée.
+//
+// Toute image tierce publiée sur le site doit être libre (domaine public, CC0,
+// CC BY, CC BY-SA) et créditée : auteur, licence, lien vers la source. Ce
+// composant rend le crédit obligatoire par construction et alimente la page
+// /meta/credits.
+//
+// L'image est passée en slot, ce qui accepte indifféremment un SVG importé
+// (rendu comme composant par Astro) et une image matricielle optimisée par
+// <Image> d'astro:assets :
+//
+//   import Figure from '../../../components/Figure.astro';
+//   import SchemaZones from '../../../assets/modules/m04-zones-smdsm.svg';
+//
+//   <Figure
+//     legende="Les quatre zones du SMDSM se lisent depuis la côte : A1 est la
+//              portée d'une VHF avec appel sélectif numérique, soit 20 à
+//              30 milles. Au-delà, la VHF ne suffit plus — c'est la limite de
+//              ce que le CRR couvre."
+//     auteur="Prénom Nom"
+//     licence="CC BY-SA 4.0"
+//     lien="https://commons.wikimedia.org/wiki/File:Exemple.svg"
+//     source="Wikimedia Commons"
+//   >
+//     <SchemaZones />
+//   </Figure>
+//
+// ATTENTION : le nom importé doit être CAPITALISÉ. En MDX, une balise en
+// minuscules (`<schema />`) est traitée comme un élément HTML inconnu : la
+// figure se rend alors vide, sans aucune erreur au build.
+//
+// Pour une image matricielle (photographie), passer par <Image> :
+//
+//   import { Image } from 'astro:assets';
+//   import photo from '../../../assets/modules/m06-poste-vhf.jpg';
+//   <Figure legende="…" fond={false}><Image src={photo} alt="…" /></Figure>
+//
+// La légende doit ENSEIGNER (dire quoi regarder), pas seulement nommer l'objet.
+// Trois à six lignes.
+//
+// Vigilance propre au domaine : vérifier que l'illustration correspond à la
+// pratique française et aux voies de l'UIT. Une carte de voies VHF américaine
+// (voies 22A, WX1–WX7), une signalisation fluviale non-RAINWAT ou un schéma du
+// SMDSM antérieur à la généralisation de l'appel sélectif numérique
+// induiraient l'apprenant en erreur à l'examen.
+
+interface Props {
+  /** Légende pédagogique, en français. Dit ce qu'il faut observer. */
+  legende: string;
+  /** Auteur de l'image, tel que mentionné par la source. */
+  auteur?: string;
+  /** Licence exacte, ex. « CC BY-SA 4.0 », « Domaine public ». */
+  licence?: string;
+  /** URL de la page de description du fichier (pas du fichier brut). */
+  lien?: string;
+  /** Nom de la source, ex. « Wikimedia Commons ». */
+  source?: string;
+  /**
+   * Applique un fond clair derrière l'image. Indispensable pour les schémas à
+   * traits sombres et fond transparent, illisibles en thème sombre.
+   * Passer false pour une photographie.
+   */
+  fond?: boolean;
+  /** Largeur maximale de l'image, ex. « 480px ». Par défaut : pleine largeur. */
+  largeur?: string;
+}
+
+const {
+  legende,
+  auteur,
+  licence,
+  lien,
+  source,
+  fond = true,
+  largeur,
+} = Astro.props;
+---
+
+<figure class="figure">
+  <div class="figure-media" data-fond={fond ? '' : undefined} style={largeur ? `max-width:${largeur}` : undefined}>
+    <slot />
+  </div>
+  <figcaption class="figure-legende">
+    <span>{legende}</span>
+    {
+      (auteur || licence || lien) && (
+        <span class="figure-credit">
+          {auteur && <>{auteur}</>}
+          {auteur && licence && <> · </>}
+          {licence && <>{licence}</>}
+          {(auteur || licence) && lien && <> · </>}
+          {lien && <a href={lien} rel="noopener noreferrer">{source ?? 'source'}</a>}
+        </span>
+      )
+    }
+  </figcaption>
+</figure>
+
+<style>
+  .figure {
+    margin: 1.5rem 0;
+  }
+  .figure-media {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    margin-inline: auto;
+  }
+  /* Les schémas ont des traits sombres sur fond transparent : sans fond clair
+     imposé, ils deviennent illisibles en thème sombre. */
+  .figure-media[data-fond] {
+    background: #fff;
+    padding: 0.75rem;
+  }
+  .figure-media :global(img),
+  .figure-media :global(svg) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .figure-legende {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--sl-color-gray-2);
+    text-align: center;
+  }
+  .figure-credit {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85em;
+    color: var(--sl-color-gray-3);
+  }
+  .figure-credit a {
+    color: inherit;
+  }
+  /* Les fiches de synthèse et les cartes de cockpit doivent rester
+     imprimables : on évite les coupures de figure entre deux pages. */
+  @media print {
+    .figure {
+      break-inside: avoid;
+    }
+    .figure-media {
+      border-color: #ccc;
+    }
+  }
+</style>
