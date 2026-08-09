@@ -1,78 +1,374 @@
 ---
 title: "M3 · Ondes, fréquences et voies VHF"
-description: "Bandes de fréquences, VHF marine de 156 à 162 MHz, simplex et duplex, propagation et portée, antennes, sources d’énergie des stations de navire."
+description: "Bandes de fréquences, VHF marine de 156 à 162 MHz, simplex et duplex, propagation et portée, antennes, sources d'énergie des stations de navire."
 sidebar:
   order: 3
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 2,5 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 à M2 validés
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Voici le seul module un peu technique du programme, et il vaut la peine
+pour une raison simple : il explique **pourquoi votre VHF porte à
+25 milles et pas à 200**, pourquoi l'antenne se met en tête de mât, et
+pourquoi appuyer sur `H/L` change quelque chose. Ce ne sont pas des
+curiosités : ce sont les paramètres que vous manipulerez le jour où
+vous chercherez à être entendu.
+
+Rien ici ne demande de calcul. Le CRR ne comporte aucune formule à
+appliquer, et l'examen n'en pose pas. Ce qu'il interroge, ce sont des
+**ordres de grandeur** et des **règles d'installation** : la bande
+utilisée, le nombre de voies, la différence entre simplex et duplex, la
+portée réelle, la hauteur d'antenne, et l'état de la batterie qui
+alimente tout cela.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Situer la **VHF** parmi les bandes de fréquences et donner sa
+  longueur d'onde caractéristique.
+- [ ] Énoncer les bornes de la **bande VHF marine** et le nombre de
+  **voies** disponibles.
+- [ ] Distinguer **simplex**, **duplex** et **semi-duplex**, et dire
+  lequel s'applique aux échanges entre navires.
+- [ ] Expliquer la **portée** d'une VHF et les deux facteurs qui la
+  déterminent.
+- [ ] Énoncer les conditions d'installation d'une **antenne** VHF.
+- [ ] Entretenir et contrôler la **source d'énergie** de la station.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Fréquence | Nombre d'oscillations par seconde d'une onde, mesurée en hertz (Hz) |
+| Longueur d'onde | Distance parcourue pendant une oscillation ; en VHF marine, environ 2 mètres |
+| Célérité | Vitesse de propagation des ondes radioélectriques : 300 000 km/s |
+| MF | Ondes hectométriques, 300 kHz à 3 MHz — hors programme du CRR |
+| HF | Ondes décamétriques, 3 à 30 MHz — hors programme du CRR |
+| VHF | Ondes métriques, 30 à 300 MHz : la bande du CRR |
+| Bande VHF maritime | 156 à 174 MHz, dont 156 à 162 MHz pour la « VHF marine » usuelle |
+| Voie | Couple de fréquences normalisé, désigné par un numéro |
+| Simplex | Une seule fréquence pour l'émission et la réception ; on parle en alternance |
+| Duplex | Deux fréquences distinctes ; les deux stations émettent et reçoivent en même temps |
+| Semi-duplex | Une extrémité en simplex, l'autre en duplex |
+| Alternat | Touche PTT qui bascule le poste de la réception à l'émission |
+| Antenne fouet | Antenne verticale accordée, placée le plus haut possible |
+| Batterie d'accumulateurs | Source d'énergie du bord ; ultime générateur en cas d'avarie |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve A et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve A**, **6 questions sur 24**. Il
+  correspond aux sections du manuel ANFR intitulées **« Fréquences et
+  voies de la bande VHF marine »** et **« Sources d'énergie des
+  stations de navire »**, et emprunte à la section **« Antenne VHF »**
+  du chapitre sur la radiotéléphonie.
+- **N'est pas interrogé** : le **tableau d'affectation des voies VHF**
+  relève de l'**annexe 2** du manuel. On retient le **nombre** de voies
+  et leur **numérotation**, jamais la liste. Elle est reprise en
+  [Référence](/reference) pour l'usage à bord.
+- **Aucun calcul n'est demandé.** La relation entre fréquence et
+  longueur d'onde est là pour comprendre pourquoi une antenne VHF
+  mesure environ un mètre, pas pour être appliquée.
+- **Confusion classique — simplex ou duplex ?** Les voies
+  navire-navire sont en **simplex** : une seule fréquence, on parle
+  chacun son tour. Une station côtière peut travailler en duplex, et le
+  navire reste alors en simplex : c'est le **semi-duplex**.
+- **Confusion classique — la portée.** Elle dépend de la **hauteur
+  d'antenne** et de la **puissance**, pas de la seule puissance. Les
+  puissances 25 W et 1 W et leur usage sont approfondis en **M6**.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Fréquence, longueur d'onde, vitesse
 
-### 2. *(section à rédiger)*
+Toute émission radioélectrique se caractérise par trois grandeurs liées
+entre elles : sa **fréquence**, sa **longueur d'onde**, et sa **vitesse
+de propagation**, appelée célérité.
 
-### 3. *(section à rédiger)*
+Les ondes radioélectriques se propagent dans l'atmosphère à
+**300 000 km/s** — la vitesse de la lumière. La fréquence se mesure en
+**hertz (Hz)**, et comme cette unité est minuscule à notre échelle on
+emploie ses multiples :
+
+| Unité | Équivaut à | En hertz |
+|---|---|---|
+| 1 kHz (kilohertz) | 1 000 Hz | 1 000 Hz |
+| 1 MHz (mégahertz) | 1 000 kHz | 1 000 000 Hz |
+| 1 GHz (gigahertz) | 1 000 MHz | 1 000 000 000 Hz |
+
+La longueur d'onde est la distance parcourue par l'onde pendant une
+oscillation : on l'obtient en divisant la célérité par la fréquence.
+
+<Aside type="tip" title="Le seul ordre de grandeur à retenir">
+  300 000 km/s divisés par 156 MHz donnent un peu moins de **2 mètres**.
+  C'est pourquoi la VHF est la bande des **ondes métriques**, et
+  pourquoi une antenne VHF marine — qui travaille sur une fraction de
+  cette longueur — mesure environ un mètre.
+
+  Retenez le résultat, pas le calcul. Aucune question d'examen ne
+  demande de le poser.
+</Aside>
+
+### 2. Les bandes de fréquences
+
+Le spectre radioélectrique est découpé en bandes, désignées par une
+abréviation et par la longueur d'onde correspondante.
+
+| Catégorie | Abréviation | Bande de fréquences | Longueurs d'onde |
+|---|---|---|---|
+| Ondes hectométriques | **MF** | 300 kHz à 3 MHz | 1 000 m à 100 m |
+| Ondes décamétriques | **HF** | 3 MHz à 30 MHz | 100 m à 10 m |
+| **Ondes métriques** | **VHF** | **30 MHz à 300 MHz** | **10 m à 1 m** |
+| Ondes décimétriques | UHF | 300 MHz à 3 GHz | 1 m à 0,1 m |
+| Ondes centimétriques | SHF | 3 GHz à 30 GHz | 0,1 m à 0,01 m |
+
+<Aside type="caution" title="MF et HF ne sont pas au programme">
+  Le manuel de l'ANFR l'écrit : l'utilisation des équipements MF, HF et
+  Inmarsat ne figure pas au programme d'examen. On les cite pour situer
+  la VHF dans le spectre et pour comprendre les zones du SMDSM
+  (**M4**) — jamais pour les exploiter.
+
+  Un CRR délivré aujourd'hui est un **certificat VHF uniquement**
+  (**M1**).
+</Aside>
+
+La bande **SHF** mérite une mention : c'est celle des radars, et donc
+celle du répondeur SART, qui travaille entre 9,2 et 9,5 GHz (**M13**).
+
+### 3. La bande VHF marine et ses 57 voies
+
+La bande de fréquences VHF réservée au service maritime s'étend de
+**156 à 174 MHz**. Mais la plupart des équipements fonctionnent dans la
+bande dite **« VHF marine »**, de **156 à 162 MHz** — précisément de
+**156,025 MHz à 162,025 MHz**.
+
+**57 voies** y sont utilisées, **numérotées de 01 à 28 et de 60 à 88**.
+
+<Aside type="caution" title="Numérotation : deux séries, pas une">
+  De 01 à 28, puis de 60 à 88. Il n'y a **pas** de voies 29 à 59. Une
+  question d'examen peut jouer sur ce point, et la portative annoncée
+  « 57 voies » les couvre toutes.
+
+  Attention également : la **numérotation fluviale diffère de la
+  numérotation maritime**. Le fluvial est un examen distinct, traité en
+  [Référence](/reference) et hors programme ici.
+</Aside>
+
+Une **voie** n'est pas une fréquence unique : c'est un **couple de
+fréquences** normalisé, désigné par un numéro pour qu'on n'ait pas à
+manipuler des mégahertz. Selon la voie, les deux fréquences du couple
+sont identiques ou différentes — c'est tout l'objet de la section
+suivante.
+
+Trois voies reviendront sans cesse dans ce programme : la **16** pour
+l'appel et la détresse en phonie, la **70** pour l'ASN, et la **9**
+pour les ports de plaisance français (**M2**).
+
+### 4. Simplex, duplex, semi-duplex
+
+| Mode | Fréquences | Fonctionnement | Exemple |
+|---|---|---|---|
+| **Simplex** | Une seule, à l'émission comme à la réception | On communique **en alternance** | Voie 6 : 156,3 MHz dans les deux sens |
+| **Duplex** | Deux fréquences distinctes | Les deux stations émettent et reçoivent **en même temps**, comme au téléphone | Voie 79 : émission 156,975 MHz, réception 161,575 MHz |
+| **Semi-duplex** | Deux fréquences | Une extrémité en simplex, l'autre en duplex | Station côtière en duplex, navire en simplex |
+
+Les **voies navire-navire sont en simplex** : c'est pour cela qu'il faut
+parler chacun son tour et terminer ses phrases par `à vous`.
+
+Le **semi-duplex** existe pour une raison matérielle simple : un navire
+de plaisance, avec **une seule antenne**, ne peut pas émettre et
+recevoir en même temps. C'est donc la station côtière qui travaille en
+duplex, et le navire qui reste en alternat.
+
+<Aside type="tip" title="Pourquoi l'alternat existe">
+  En simplex, tant que vous appuyez sur la touche `PTT`, vous
+  **émettez** — et vous n'entendez rien. Un correspondant qui parle
+  pendant ce temps parle dans le vide.
+
+  D'où la discipline du `à vous`, qui n'est pas une politesse mais une
+  nécessité technique. La touche `PTT` et sa manipulation sont l'objet
+  de **M6**.
+</Aside>
+
+### 5. Propagation et portée
+
+Les ondes métriques se propagent **en ligne droite**. Elles ne suivent
+pas la courbure de la Terre et ne rebondissent pas sur l'ionosphère
+comme les ondes décamétriques. La conséquence est directe : **la portée
+d'une VHF est une portée optique**, limitée par l'horizon radio.
+
+D'où les deux facteurs qui la déterminent :
+
+- **la hauteur de l'antenne** — c'est le facteur principal ;
+- **la puissance utilisée**.
+
+En puissance normale, **la portée peut varier de 20 à 30 milles, voire
+au-delà**. Avec une portative limitée à 6 W et tenue à hauteur d'homme,
+elle tombe à **une dizaine de milles**.
+
+<Aside type="caution" title="Monter l'antenne fait plus que monter la puissance">
+  Doubler la puissance ne double pas la portée. Élever l'antenne, si.
+  C'est pourquoi, sur un voilier, **l'antenne se place en tête de mât**,
+  et pourquoi une portative dans un cockpit porte beaucoup moins qu'une
+  VHF fixe du même bateau — alors même que le poste fixe pourrait
+  émettre à 1 W.
+
+  Corollaire utile en mer : si vous n'êtes pas entendu, ce n'est pas
+  toujours une question de puissance. Cela peut être un obstacle, une
+  antenne mal placée, ou simplement la distance à l'horizon.
+</Aside>
+
+Cet horizon radio est aussi ce qui définit la **zone A1** du SMDSM — la
+zone de couverture d'une station côtière VHF avec ASN, soit 20 à
+30 milles en métropole. C'est l'objet de **M4**, et c'est la seule zone
+que le CRR couvre réellement.
+
+### 6. L'antenne
+
+L'antenne VHF marine est de type **fouet vertical**. Elle remplit deux
+rôles symétriques :
+
+1. **En émission**, transformer un maximum d'énergie électrique haute
+   fréquence en énergie électromagnétique de même fréquence.
+2. **En réception**, capter un maximum d'énergie électromagnétique
+   haute fréquence et la transformer en énergie électrique de même
+   fréquence, disponible pour le récepteur.
+
+Pour remplir ce rôle, elle doit être :
+
+- **dédiée à son équipement** ;
+- **conçue pour une utilisation maritime** ;
+- **accordée** à la bande de fréquences de travail de
+  l'émetteur-récepteur ;
+- placée, en théorie, à **deux longueurs d'onde au moins — soit environ
+  4 mètres en VHF — de tout objet métallique important** ;
+- placée **le plus haut possible**, bien dégagée, sans obstacle à
+  proximité. Sur un voilier : **en tête de mât**.
+
+<Aside type="tip" title="Une antenne de secours à bord">
+  Le manuel le recommande explicitement : *« il pourra se révéler très
+  utile de posséder à bord du navire une antenne de secours »*. Un
+  démâtage emporte l'antenne principale — et avec elle la VHF fixe, au
+  moment précis où l'on en a le plus besoin.
+
+  C'est aussi l'argument de la **portative dans le sac de survie**
+  (**M6** et **M13**).
+</Aside>
+
+### 7. Les sources d'énergie de la station
+
+À bord des navires de plaisance, l'énergie provient de **batteries
+d'accumulateurs**, qui stockent l'énergie électrique lors de la
+**charge** et la restituent au fur et à mesure des besoins lors de la
+**décharge**.
+
+Le manuel énonce une phrase qu'il faut prendre au sérieux : **la
+batterie est l'ultime générateur de courant en cas d'avarie des autres
+moyens d'énergie**. Autrement dit, le jour où le moteur ne tourne plus,
+c'est elle qui décide si vous pouvez encore appeler.
+
+Les batteries au plomb, les plus utilisées à bord, ont l'inconvénient
+de **se décharger lorsqu'elles ne sont pas sollicitées**. D'où les
+conseils d'entretien du manuel :
+
+| Geste | Pourquoi |
+|---|---|
+| **Recharger régulièrement** | Augmente la durée de vie et compense l'autodécharge |
+| **Contrôler la tension** aux bornes, batterie au repos | Détecte une perte de capacité avant la panne |
+| **Nettoyer les cosses** et les enduire de graisse neutre (vaseline) | Évite l'oxydation, qui fait chuter la tension disponible |
+| **Local ventilé, propre et sec** | Les batteries au plomb dégagent des gaz |
+| **Bac étanche et inaltérable** | Contient l'électrolyte en cas de fuite ou de gîte |
+
+<Aside type="danger" title="Une VHF ne fonctionne pas sans énergie">
+  C'est la panne la plus banale et la plus évitable. Une batterie
+  fatiguée tient les instruments mais pas une émission à 25 W, qui est
+  le poste de consommation le plus lourd du bord après le guindeau.
+
+  Deux conséquences pratiques : passer en **1 W** pour les
+  communications de proximité économise la batterie (**M6**), et une
+  **portative chargée** — autonomie généralement de **8 heures** — est
+  la seule radio qui survive à une panne électrique générale.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Vigilance particulière sur ce module : beaucoup de vidéos de
+  vulgarisation sur les voies VHF sont **américaines**, et la
+  numérotation comme les usages y diffèrent — voies 22A, voies météo
+  WX. Elles induiraient en erreur à l'examen. Voir
+  [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M3/` contenant :
+
+1. **`antenne.md`** — l'état des lieux de l'installation : type
+   d'antenne, position exacte, hauteur au-dessus de la flottaison,
+   distance aux objets métalliques importants — pataras, feux de mât,
+   radar. Confronter à la règle des deux longueurs d'onde et **conclure
+   si l'installation est conforme, non conforme, ou indéterminée**.
+   Noter l'état du câble et du connecteur, points de panne les plus
+   fréquents. Conclure sur la présence, ou l'absence, d'une antenne de
+   secours.
+
+2. **`portee-estimee.md`** — pour le bateau, estimer la portée en
+   puissance normale depuis l'antenne de tête de mât, et la portée de la
+   portative tenue dans le cockpit. Confronter ces estimations à un
+   contact réel déjà observé — un port, un autre bateau — et noter
+   l'écart. L'objectif n'est pas la précision : c'est de savoir à quelle
+   distance on cesse d'être entendu.
+
+3. **`energie.md`** — la fiche de la batterie de servitude : type,
+   capacité, âge, tension relevée au repos, date du dernier contrôle
+   des cosses. Noter ce que consomme la VHF en émission à 25 W et à
+   1 W, d'après la documentation du poste. Conclure par une règle
+   d'usage écrite pour l'équipage : à partir de quel niveau de batterie
+   on passe en 1 W et on réserve la VHF fixe à l'essentiel.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Situer la VHF dans le spectre, sans note.** Récitez les cinq
+   bandes — MF, HF, VHF, UHF, SHF — avec leurs bornes et leurs
+   longueurs d'onde. Puis répondez à la question inverse : « 9,4 GHz,
+   quelle bande ? » — c'est celle du radar et du SART (**M13**).
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Reconnaître un mode.** Un équipier donne une voie et son usage,
+   vous dites simplex ou duplex, et pourquoi. Voie 6 entre deux
+   voiliers ; voie 16 ; une voie de station côtière. Terminez par la
+   question qui compte : « pourquoi un voilier ne peut-il pas
+   travailler en duplex ? »
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Mesurer sa propre portée.** À la prochaine sortie, notez la
+   distance à laquelle un port ou un CROSS cesse de vous répondre
+   clairement, en puissance normale puis en puissance réduite.
+   Reportez-la dans `portee-estimee.md`. Une portée mesurée vaut mieux
+   qu'une portée théorique.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Inspecter l'antenne et son câble.** Au mouillage, contrôlez
+   visuellement le fouet, sa fixation, le cheminement du câble et
+   l'état du connecteur. Un connecteur corrodé fait chuter la portée
+   bien avant de couper la communication — c'est une panne progressive
+   et silencieuse.
+
+5. **Contrôler la batterie.** Relevez la tension au repos, nettoyez et
+   graissez les cosses, vérifiez la ventilation et l'étanchéité du bac.
+   Puis chargez la portative à fond et notez la date : c'est la radio
+   qui vous restera si tout le reste s'éteint.
 
 </Steps>
 
@@ -80,9 +376,132 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m03"
+  questions={[
+    {
+      question: 'La bande VHF correspond aux :',
+      choices: [
+        'ondes hectométriques, de 300 kHz à 3 MHz',
+        'ondes décamétriques, de 3 à 30 MHz',
+        'ondes décimétriques, de 300 MHz à 3 GHz',
+        'ondes métriques, de 30 à 300 MHz',
+      ],
+      answer: 3,
+      explanation:
+        'VHF signifie « very high frequency » : ce sont les ondes métriques, de 30 à 300 MHz, dont les longueurs d’onde vont de 10 m à 1 m. Les ondes hectométriques (MF) et décamétriques (HF) ne sont pas au programme du CRR.',
+    },
+    {
+      question: 'Combien de voies sont utilisées dans la bande VHF marine ?',
+      choices: ['57 voies', '28 voies', '88 voies', '70 voies'],
+      answer: 0,
+      explanation:
+        '57 voies, numérotées de 01 à 28 puis de 60 à 88 — il n’existe pas de voies 29 à 59. Le tableau complet de leur affectation relève de l’annexe 2 du manuel et n’est pas interrogé.',
+    },
+    {
+      question:
+        'Sur une voie exploitée en simplex, comme les voies navire-navire :',
+      choices: [
+        'les deux stations émettent et reçoivent simultanément',
+        'une même fréquence sert à l’émission et à la réception, et l’on parle en alternance',
+        'deux fréquences distinctes sont utilisées, l’une par le navire, l’autre par la station côtière',
+        'la station côtière est en duplex et le navire en simplex',
+      ],
+      answer: 1,
+      explanation:
+        'En simplex, une seule fréquence sert dans les deux sens : il faut parler chacun son tour, d’où le « à vous ». La dernière proposition décrit le semi-duplex.',
+    },
+    {
+      question:
+        'De quoi dépend principalement la portée d’une VHF en ondes métriques ?',
+      choices: [
+        'De la seule puissance d’émission',
+        'De l’heure de la journée et des conditions ionosphériques',
+        'De la hauteur de l’antenne et de la puissance utilisée',
+        'Du nombre de voies dont dispose l’appareil',
+      ],
+      answer: 2,
+      explanation:
+        'Les ondes métriques se propagent en ligne droite : la portée est une portée optique, limitée par l’horizon radio. La hauteur d’antenne est le facteur principal, la puissance vient ensuite.',
+    },
+    {
+      question:
+        'Quelle portée peut-on attendre d’une VHF fixe en puissance normale ?',
+      choices: [
+        '5 à 10 milles',
+        '20 à 30 milles, voire au-delà',
+        '60 à 80 milles',
+        'Plus de 150 milles',
+      ],
+      answer: 1,
+      explanation:
+        '20 à 30 milles voire au-delà en puissance normale. Une portative, limitée à 6 W et tenue à hauteur d’homme, se limite à une dizaine de milles. C’est cette portée qui définit la zone A1 du SMDSM (M4).',
+    },
+    {
+      question:
+        'À quelle distance d’un objet métallique important une antenne VHF doit-elle en théorie être placée ?',
+      choices: [
+        'À au moins 1 mètre',
+        'À au moins 10 mètres',
+        'Peu importe : seule la hauteur compte',
+        'À au moins deux longueurs d’onde, soit environ 4 mètres',
+      ],
+      answer: 3,
+      explanation:
+        'Deux longueurs d’onde au moins, soit environ 4 mètres en VHF. L’antenne doit par ailleurs être dédiée à son équipement, conçue pour un usage maritime, accordée à la bande de travail, et placée le plus haut possible.',
+    },
+    {
+      question: 'Quelle est la vitesse de propagation des ondes radioélectriques ?',
+      choices: [
+        '300 000 km/s',
+        '3 000 km/s',
+        '340 m/s',
+        'Elle dépend de la fréquence utilisée',
+      ],
+      answer: 0,
+      explanation:
+        '300 000 km/s, la vitesse de la lumière. C’est ce qui donne, pour 156 MHz, une longueur d’onde d’un peu moins de 2 mètres : la VHF est bien la bande des ondes métriques.',
+    },
+    {
+      question: 'Sur un voilier, où place-t-on l’antenne VHF ?',
+      choices: [
+        'Sur le balcon arrière, pour la protéger',
+        'Dans le cockpit, à portée de main',
+        'En tête de mât',
+        'Contre le pataras, pour l’accorder',
+      ],
+      answer: 2,
+      explanation:
+        'En tête de mât : les ondes métriques se propageant en ligne droite, la hauteur commande la portée. L’antenne doit aussi être dégagée et éloignée des objets métalliques importants.',
+    },
+    {
+      question:
+        'Concernant les batteries au plomb utilisées à bord, quelle affirmation est exacte ?',
+      choices: [
+        'Elles ne se déchargent pas tant qu’aucun appareil n’est branché',
+        'Elles se déchargent même lorsqu’elles ne sont pas sollicitées',
+        'Elles doivent être stockées dans un local fermé et non ventilé',
+        'Leur tension ne se contrôle qu’en charge',
+      ],
+      answer: 1,
+      explanation:
+        'L’autodécharge est leur principal inconvénient, d’où la recommandation de recharge régulière. Elles doivent être placées dans un endroit ventilé, propre et sec, et reposer dans un bac étanche et inaltérable.',
+    },
+    {
+      question:
+        'Pourquoi un navire de plaisance travaille-t-il en semi-duplex avec une station côtière plutôt qu’en duplex ?',
+      choices: [
+        'Parce que le duplex est réservé aux communications de détresse',
+        'Parce que la réglementation l’interdit aux navires de plaisance',
+        'Parce que le duplex consomme trop de batterie',
+        'Parce qu’avec une seule antenne, il ne peut pas émettre et recevoir en même temps',
+      ],
+      answer: 3,
+      explanation:
+        'C’est une contrainte matérielle : une antenne unique ne permet pas l’émission et la réception simultanées. La station côtière travaille donc en duplex et le navire reste en alternat.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +509,56 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M3 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+ONDES — LES ORDRES DE GRANDEUR
+  Vitesse de propagation : 300 000 km/s
+  1 kHz = 10^3 Hz   1 MHz = 10^6 Hz   1 GHz = 10^9 Hz
+
+  MF   hectométriques  300 kHz – 3 MHz     1000 – 100 m
+  HF   décamétriques   3 – 30 MHz           100 – 10 m
+  VHF  MÉTRIQUES       30 – 300 MHz          10 – 1 m   ← le CRR
+  UHF  décimétriques   300 MHz – 3 GHz        1 – 0,1 m
+  SHF  centimétriques  3 – 30 GHz           0,1 – 0,01 m  (radar, SART)
+
+  MF / HF / Inmarsat : HORS PROGRAMME.
+
+BANDE VHF MARINE
+  Service maritime : 156 – 174 MHz
+  « VHF marine » usuelle : 156 – 162 MHz
+                           (156,025 → 162,025 MHz)
+  57 VOIES : 01 à 28  ET  60 à 88
+  (pas de voies 29 à 59 — tableau complet = annexe 2, hors examen)
+
+MODES
+  SIMPLEX      1 fréquence, on parle CHACUN SON TOUR
+               → toutes les voies navire-navire
+               ex. voie 6 = 156,3 MHz dans les deux sens
+  DUPLEX       2 fréquences, simultané, comme au téléphone
+               ex. voie 79 : Tx 156,975 / Rx 161,575 MHz
+  SEMI-DUPLEX  côtière en duplex, NAVIRE EN SIMPLEX
+               (une seule antenne à bord)
+
+PORTÉE — PROPAGATION EN LIGNE DROITE
+  Dépend de : 1. LA HAUTEUR D'ANTENNE   2. la puissance
+  25 W, antenne en tête de mât → 20 à 30 milles, voire +
+  Portative 6 W à hauteur d'homme → ~10 milles
+  Monter l'antenne fait plus que monter la puissance.
+
+ANTENNE — FOUET VERTICAL
+  dédiée à son équipement · conçue pour la mer
+  ACCORDÉE à la bande de travail
+  à >= 2 LONGUEURS D'ONDE (≈ 4 m) de tout métal important
+  LE PLUS HAUT POSSIBLE, dégagée → VOILIER : TÊTE DE MÂT
+  Prévoir une ANTENNE DE SECOURS.
+
+ÉNERGIE — BATTERIES D'ACCUMULATEURS
+  « ultime générateur de courant en cas d'avarie »
+  Plomb → SE DÉCHARGE MÊME AU REPOS
+  Recharger régulièrement · contrôler la tension au repos
+  Cosses propres + graisse neutre (vaseline)
+  Local VENTILÉ, propre et sec · bac ÉTANCHE et inaltérable
+  Portative chargée : autonomie ~8 h → la dernière radio debout
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M6**, qui reprend l'antenne et la puissance
+du côté des commandes, et **M4**, où la portée de 20 à 30 milles devient
+la définition de la zone A1.
