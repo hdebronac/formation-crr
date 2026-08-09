@@ -317,10 +317,20 @@ des vies**.
    `main` pour publication).
 2. `pnpm check` doit passer avant tout commit.
 3. `pnpm build` doit passer avant tout push.
-4. **Un commit par module**, message en français au format « Sujet —
+4. **`pnpm install --frozen-lockfile` doit passer avant tout push**, et
+   après toute modification de `package.json`. C'est la première étape de
+   la CI, et elle échoue si les spécificateurs du lockfile ne
+   correspondent pas exactement à ceux de `package.json` — épingler une
+   version à la main sans régénérer le lockfile
+   (`pnpm install --lockfile-only`) suffit à casser le déploiement, alors
+   que `pnpm build` continue de passer en local.
+5. **Vérifier que le run de CI est vert après le push.** Un `git push`
+   réussi ne prouve rien : le job `build` peut échouer ensuite, et le site
+   reste alors figé sur la version précédente sans aucun signal.
+6. **Un commit par module**, message en français au format « Sujet —
    précisions ». Exemple : « M8 complet — Détresse en phonie : MAYDAY, accusé
    de réception, MAYDAY RELAY, silence radio ».
-5. **Pas de pull request** créée automatiquement — attendre la demande
+7. **Pas de pull request** créée automatiquement — attendre la demande
    explicite.
 
 ## Ce qu'il ne faut PAS faire
