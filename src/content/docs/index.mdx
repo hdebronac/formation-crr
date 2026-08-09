@@ -1,0 +1,112 @@
+---
+title: "Formation CRR"
+description: "Programme d'auto-formation au certificat restreint de radiotéléphoniste du service mobile maritime : 15 modules, environ 33 heures, aligné sur le manuel ANFR V16."
+template: splash
+hero:
+  tagline: "Obtenir le certificat restreint de radiotéléphoniste du service mobile maritime — et savoir réellement s'en servir en mer. Quinze modules, environ 33 heures, trois à quatre semaines."
+  actions:
+    - text: Commencer par le module 0
+      link: /modules/m00-cadre-et-examen
+      icon: right-arrow
+      variant: primary
+    - text: Lire la méthode
+      link: /meta/methode
+      icon: open-book
+      variant: minimal
+---
+
+import { Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+<Aside type="danger" title="Ce site n'a aucune valeur réglementaire">
+
+Ce site est un carnet d'auto-formation rédigé **par un candidat en cours de
+préparation**, pour son propre usage. Il ne remplace ni le **manuel de
+préparation de l'ANFR**, ni les Règlements des radiocommunications de l'UIT,
+ni une formation dispensée par un organisme agréé, et n'a **aucune valeur
+réglementaire**.
+
+Les valeurs qui n'ont pas été vérifiées sur une source primaire y sont
+signalées `[à vérifier ANFR]` — ces mentions sont à prendre au sérieux.
+
+Il porte sur le **CRR maritime passé en France métropolitaine**. L'outre-mer
+applique un autre format d'examen, et le CRR fluvial est un examen distinct.
+
+En mer, une procédure de détresse approximative coûte des minutes. Si vous
+arrivez ici par un moteur de recherche pour trancher une question précise,
+allez à la source : le [manuel de préparation de
+l'ANFR](https://www.anfr.fr/fileadmin/mediatheque/documents/radiomaritime/manuel-crr-maritime-25_-_tableau_vhf.pdf).
+
+</Aside>
+
+## Ce que vous allez apprendre
+
+<CardGrid stagger>
+  <Card title="Appeler au secours, correctement" icon="warning">
+    Émettre un **MAYDAY** dans sa forme normalisée, sans note et dans le bon
+    ordre des champs : appel, message, position, nature de la détresse,
+    personnes à bord. Puis l'accusé de réception, le MAYDAY RELAY et le
+    silence radio.
+  </Card>
+  <Card title="Exploiter une VHF marine" icon="setting">
+    Les commandes du poste, le squelch, les 25 W et le 1 W, la double veille,
+    l'antenne et la portée réelle. Ce qu'on peut dire sur la voie 16, et
+    pendant combien de temps.
+  </Card>
+  <Card title="L'appel sélectif numérique" icon="rocket">
+    La voie 70, le MMSI, les classes A, B et D — et pourquoi une VHF de
+    plaisance **ne peut pas accuser réception d'une détresse autrement que par
+    la voix**. C'est l'épreuve la plus lourde de l'examen.
+  </Card>
+  <Card title="Le SMDSM et les secours" icon="star">
+    Les neuf fonctions du système mondial de détresse et de sécurité en mer,
+    les zones A1 à A4, les CROSS et le 196. Savoir qui répond, avec quels
+    moyens, et à quelle distance.
+  </Card>
+  <Card title="Les balises et les alertes" icon="approve-check">
+    Radiobalise de localisation des sinistres, balise personnelle, répondeur
+    radar, AIS-SART, MOB-AIS. Ce que chacune fait, ce qu'aucune ne fait — et
+    qu'aucune ne remplace la veille.
+  </Card>
+  <Card title="Annuler une fausse alerte" icon="error">
+    Une alerte déclenchée par erreur s'annule, elle ne se cache pas. La
+    procédure est au programme de l'examen, et elle s'apprend en entier.
+  </Card>
+</CardGrid>
+
+## Cadre du programme
+
+- **Durée** — environ 33 heures utiles, soit **3 à 4 semaines** à raison de
+  8 à 10 heures par semaine. Comptez 5 à 6 semaines à un rythme plus calme.
+- **Examen** — QCM de **24 questions** en **trois épreuves**, 22 secondes par
+  question, sans retour en arrière, environ 25 minutes. Il faut **la moyenne à
+  chacune** des trois épreuves : un bon total ne rattrape pas une épreuve
+  ratée.
+- **Budget** — **78 €** de droit d'examen. Le manuel de l'ANFR et son module
+  d'entraînement sont gratuits, et suffisent.
+- **Rythme** — deux séances d'étude et une séance de bachotage chronométré par
+  semaine. Le détail est dans [la méthode](/meta/methode).
+
+## Par où commencer
+
+Le programme se suit **linéairement**, de M0 à M14. Il est découpé selon les
+trois épreuves de l'examen, et le volume de travail suit le poids de chaque
+épreuve — l'épreuve C, à elle seule, pèse 10 questions sur 24.
+
+Commencez par [**M0 — Cadre, examen et
+méthode**](/modules/m00-cadre-et-examen) : il vous dira ce qu'est exactement
+ce certificat, ce qu'il autorise, comment s'inscrire, et comment travailler.
+
+En parallèle, deux sections transverses accompagnent tout le programme :
+**À bord**, qui rassemble ce qui est réellement affiché ou programmé sur le
+bateau, et **Référence**, qui rassemble les aides-mémoire.
+
+## Réutilisation
+
+Le contenu rédactionnel est publié sous licence [CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), le code sous
+licence MIT, et les illustrations sous leur licence propre — voir la page
+[Crédits des illustrations](/meta/credits) et le fichier
+[`LICENSE`](https://github.com/hdebronac/formation-crr/blob/main/LICENSE).
+
+Le manuel de l'ANFR n'est ni reproduit ni redistribué ici : il est cité et
+lié vers sa source officielle.
