@@ -1,78 +1,322 @@
 ---
 title: "M5 · Alphabet phonétique et vocabulaire normalisé OMI"
-description: "Alphabet phonétique international, prononciation normalisée des lettres et des chiffres, signaux de base du vocabulaire normalisé de l’OMI."
+description: "Alphabet phonétique international, prononciation normalisée des lettres, épellation des noms et des nombres, signaux de base du vocabulaire normalisé de l'OMI."
 sidebar:
   order: 5
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 1,5 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M0 à M4 validés
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Vingt-six mots à savoir par cœur. C'est le module le plus simple du
+programme et l'un des plus rentables : l'épellation revient dans chaque
+procédure, et c'est elle qui fait la différence entre un indicatif
+compris du premier coup et un indicatif redemandé trois fois — trois
+fois qui, en détresse, se comptent en minutes.
+
+Ne vous fiez pas à l'apparente familiarité de la liste. Les pièges sont
+ailleurs : dans la **prononciation normalisée**, qui n'est pas la
+prononciation anglaise spontanée ; dans **JULIETT** et **ALFA**, qui ne
+s'écrivent pas comme les mots français correspondants ; et dans le
+réflexe d'épeler **chiffre par chiffre** plutôt que par groupes.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Réciter les **26 mots de code** de l'alphabet phonétique
+  international, dans l'ordre et dans le désordre.
+- [ ] Employer la **prononciation normalisée** de chaque mot de code.
+- [ ] Épeler sans hésitation le **nom** et l'**indicatif** de mon
+  navire.
+- [ ] Transmettre un **nombre** de la manière attendue en
+  radiotéléphonie.
+- [ ] Dire à quoi sert le **vocabulaire normalisé de l'OMI** et où le
+  trouver.
+- [ ] Identifier ce qui, dans ce module, **n'est pas interrogé** à
+  l'examen.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Alphabet phonétique international | Table faisant correspondre à chaque lettre un mot de code convenu |
+| Appendice 14 du RR | Le texte de l'UIT qui fixe cette table |
+| Mot de code | Le mot convenu — ALFA, BRAVO — dont la première lettre est celle à transmettre |
+| Prononciation normalisée | La façon de dire le mot de code, indiquée par le manuel |
+| Syllabe accentuée | Syllabe sur laquelle porte l'appui de la voix |
+| Épellation | Transmission d'un mot lettre par lettre au moyen des mots de code |
+| Indicatif d'appel | Identifiant du navire, épelé dans les procédures |
+| Vocabulaire normalisé de l'OMI | Ensemble de phrases et signaux de base destinés à lever l'ambiguïté |
+| Annexe 5 du manuel | Lexique français-anglais, extraits du vocabulaire OMI — hors questions |
+| Anglais | Langue universelle des opérateurs radio de tous pays |
+| Alphabet radio | Autre nom, courant mais impropre, de l'alphabet phonétique international |
+| Épeler un nombre | Le transmettre chiffre par chiffre, sans grouper |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve A et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve A**, **6 questions sur 24**. Il
+  correspond au chapitre du manuel ANFR intitulé **« Alphabet
+  phonétique international et vocabulaire anglais normalisé »**.
+- La table d'épellation est donnée par le manuel **suivant l'appendice
+  14 du Règlement des radiocommunications de l'UIT**. C'est la
+  référence à citer.
+- **N'est pas interrogé** : le **lexique français-anglais** relève de
+  l'**annexe 5** du manuel, dont il n'est donné que des extraits, et
+  *« l'examen ne comporte pas de questions se rapportant aux annexes »*.
+  On retient l'existence et l'usage du vocabulaire OMI, pas son
+  contenu.
+- **Ce qui est interrogé**, en revanche, ce sont **les mots de code
+  eux-mêmes** et le principe de l'épellation. Une question peut donner
+  une lettre et demander son mot, ou l'inverse.
+- **Piège d'orthographe** : **ALFA** et **JULIETT** s'écrivent ainsi
+  dans la table — sans « PH », avec deux « T ». Les formes *ALPHA* et
+  *JULIET* sont des transcriptions courantes, pas la table officielle.
+- Ce module sert tous les autres : l'indicatif s'épelle dans l'appel de
+  détresse (**M8**), dans l'appel de routine (**M7**), et le MMSI se
+  transmet chiffre par chiffre en ASN (**M10**).
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Pourquoi épeler
 
-### 2. *(section à rédiger)*
+L'alphabet phonétique international **permet de renforcer la
+compréhension des mots** — nom du navire, indicatif, abréviation —
+transmis par radiotéléphonie.
 
-### 3. *(section à rédiger)*
+Le principe : on épelle les mots ou les nombres **en faisant
+correspondre à chaque lettre un mot convenu dont la première lettre est
+la même** que celle du mot à épeler.
+
+> Exemple du manuel : le mot **MARTIN** sera épelé
+> **MIKE, ALFA, ROMEO, TANGO, INDIA, NOVEMBER**.
+
+<Aside type="tip" title="Ce que l'épellation compense">
+  Une VHF n'est pas un téléphone. Le signal est bruité, la voix est
+  compressée, le vent souffle dans le micro, et le correspondant est
+  souvent étranger. Dans ces conditions, **B**, **D**, **P**, **T**,
+  **V** et **G** deviennent indiscernables.
+
+  BRAVO, DELTA, PAPA, TANGO, VICTOR et GOLF, non. C'est tout l'objet de
+  la table : remplacer des sons courts et voisins par des mots longs et
+  distincts.
+</Aside>
+
+### 2. La table d'épellation
+
+Suivant l'**appendice 14 du Règlement des radiocommunications de
+l'UIT**. La colonne de droite donne la prononciation indiquée par le
+manuel ; **la syllabe en gras porte l'accent**.
+
+| Lettre | Mot de code | Prononciation |
+|---|---|---|
+| A | **ALFA** | **AL**-fah |
+| B | **BRAVO** | **BRA**-vo |
+| C | **CHARLIE** | **TCHAH**-li ou **CHAR**-li |
+| D | **DELTA** | **DEL**-tah |
+| E | **ECHO** | **ÈK**-o |
+| F | **FOXTROT** | **FOX**-trott |
+| G | **GOLF** | **GOLF** |
+| H | **HOTEL** | ho-**TÈLL** |
+| I | **INDIA** | **IN**-di-ah |
+| J | **JULIETT** | **DJOU**-li-ètt |
+| K | **KILO** | **KI**-lo |
+| L | **LIMA** | **LI**-mah |
+| M | **MIKE** | **MAÏK** |
+| N | **NOVEMBER** | no-**VÈMM**-ber |
+| O | **OSCAR** | **OSS**-kar |
+| P | **PAPA** | pah-**PAH** |
+| Q | **QUEBEC** | ké-**BEK** |
+| R | **ROMEO** | **RO**-mi-o |
+| S | **SIERRA** | si-**ER**-rah |
+| T | **TANGO** | **TANG**-go |
+| U | **UNIFORM** | **YOU**-ni-form ou **OU**-ni-form |
+| V | **VICTOR** | **VIK**-tar |
+| W | **WHISKEY** | **OUISS**-ki |
+| X | **X-RAY** | **EKSS**-ré |
+| Y | **YANKEE** | **YANG**-ki |
+| Z | **ZULU** | **ZOU**-lou |
+
+<Aside type="caution" title="Trois pièges d'orthographe et de prononciation">
+  - **ALFA**, pas *ALPHA*. **JULIETT**, avec deux T. Ce sont les
+    graphies de la table.
+  - **VICTOR** se dit **VIK-tar**, pas « victor » à la française.
+    **WHISKEY** se dit **OUISS-ki**, sans « W » appuyé.
+  - Deux lettres admettent **deux prononciations** : **CHARLIE**
+    (TCHAH-li ou CHAR-li) et **UNIFORM** (YOU-ni-form ou OU-ni-form).
+    Les deux sont correctes.
+</Aside>
+
+### 3. Épeler en pratique
+
+Trois règles d'usage, qui ne s'apprennent qu'en le faisant :
+
+<Steps>
+
+1. **On annonce ce qu'on va faire.** « J'épelle » — ou, en anglais,
+   *I spell* — prévient le correspondant qu'il doit noter lettre à
+   lettre.
+
+2. **On dit le mot, puis on l'épelle, puis on redit le mot.** Le mot
+   entier donne le contexte, l'épellation lève l'ambiguïté, la
+   répétition confirme.
+
+3. **On marque une courte pause entre les mots de code.** Enchaînés
+   trop vite, ALFA et LIMA se confondent. C'est le défaut le plus
+   fréquent chez les débutants, et il annule tout le bénéfice de
+   l'épellation.
+
+</Steps>
+
+<Aside type="tip" title="Ce qui s'épelle réellement à bord">
+  On n'épelle pas tout. En pratique, trois choses :
+
+  - **l'indicatif d'appel** du navire — toujours ;
+  - **le nom du navire**, s'il n'est pas évident à l'oreille ou s'il
+    est étranger ;
+  - **un nom propre** qu'on transmet : un port, un patronyme, un
+    médicament lors d'une consultation radiomédicale (**M9**).
+
+  Le reste se dit normalement. Épeler une phrase entière encombre la
+  voie pour rien.
+</Aside>
+
+### 4. Les nombres
+
+Les nombres se transmettent **chiffre par chiffre**, et non par groupes.
+Un MMSI ne se dit pas « deux cent vingt-sept millions… » mais
+`2 · 2 · 7 · 1 · 3 · 2 · 1 · 2 · 0`. Une position ne se dit pas
+« quarante-trois degrés » mais chiffre à chiffre, degrés puis minutes.
+
+<Aside type="caution" title="La prononciation normalisée des chiffres">
+  Le Règlement des radiocommunications de l'UIT prévoit également des
+  **mots de code pour les chiffres**, sur le même principe que pour les
+  lettres.
+
+  **Ces mots ne figurent pas dans la table du manuel ANFR** telle que
+  nous avons pu la consulter : le chapitre « Alphabet phonétique
+  international et vocabulaire anglais normalisé » ne donne que les
+  26 lettres. Leur forme exacte et leur caractère exigible à l'examen
+  sont donc marqués **`[à vérifier ANFR]`** — nous ne publierons pas
+  une table que nous n'avons pas lue dans la source.
+
+  Ce qui est certain et suffisant en pratique : **on transmet chiffre
+  par chiffre**, distinctement, et on fait répéter en cas de doute.
+</Aside>
+
+### 5. Le vocabulaire normalisé de l'OMI
+
+L'alphabet règle la transmission des **lettres**. Le **vocabulaire
+normalisé de l'Organisation maritime internationale** règle celle des
+**idées** : il fournit des phrases et des signaux de base convenus, de
+sorte que deux opérateurs qui ne partagent pas de langue puissent
+néanmoins se comprendre sans ambiguïté.
+
+**L'anglais est la langue universelle parlée par les opérateurs radio
+de tous pays.** Le manuel signale que cet outil est *« très utile pour
+qui navigue près des côtes étrangères »*, et en propose quelques
+expressions courantes en **annexe 5**.
+
+<Aside type="note" title="L'annexe 5 n'est pas interrogée">
+  Le lexique français-anglais de l'annexe 5 n'est donné qu'en extraits,
+  et les annexes du manuel ne font l'objet d'aucune question d'examen.
+
+  Retenez donc **ce qu'est** le vocabulaire normalisé et **pourquoi il
+  existe** — pas son contenu. Il est repris en
+  [Référence](/reference) pour l'usage à bord, où il sert vraiment.
+</Aside>
+
+Quelques signaux de base circulent d'ailleurs bien au-delà du monde
+anglophone, parce qu'ils sont normalisés : `ROGER` pour « reçu »,
+`OVER` pour « à vous », `OUT` pour « terminé ». On les rencontre en
+**M7**, avec les procédures d'exploitation.
+
+### 6. Trois mots qui ne s'épellent jamais
+
+Une remarque qui sauve du temps et évite un contresens : les mots-clés
+de détresse, d'urgence et de sécurité — **MAYDAY**, **PAN PAN**,
+**SÉCURITÉ** — **ne s'épellent pas**. Ils se prononcent, dans leur
+forme normalisée exacte, et se répètent trois fois.
+
+<Aside type="danger" title="On ne « traduit » pas non plus ces mots">
+  MAYDAY n'est pas « m'aider », PAN PAN n'est pas « panne », et
+  SÉCURITÉ ne se remplace pas par « attention ». Ce sont des signaux
+  normalisés, reconnus tels quels par tous les opérateurs et par les
+  automatismes d'écoute. Les paraphraser, c'est ne pas être entendu.
+
+  Leur forme exacte et leur ordre sont l'objet de **M8** et de **M9**.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Pour ce module en particulier, la ressource la plus efficace
+  n'est pas une vidéo mais la **répétition à voix haute**, chronométrée.
+  Voir [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M5/` contenant :
+
+1. **`epellation-du-bord.md`** — l'épellation **écrite** du nom du
+   navire et de son indicatif d'appel, mot de code par mot de code,
+   telle qu'elle devra être dite. Exemple de forme :
+   `FH 2827 → FOXTROT HOTEL, chiffres 2 · 8 · 2 · 7`. Ajouter
+   l'épellation du **port d'attache** et des **noms des équipiers
+   habituels**, utiles en consultation radiomédicale (**M9**).
+
+2. **`carte-alphabet.md`** — la table complète, mise en forme pour être
+   **imprimée et fixée près du poste**. C'est la seule aide-mémoire du
+   programme qu'un débutant consultera réellement en direct : elle doit
+   être lisible d'un coup d'œil, de nuit, à l'éclairage rouge.
+
+3. **`mots-a-epeler.md`** — la liste des mots que l'on sait devoir
+   épeler sur ses zones de navigation : ports d'escale aux noms
+   difficiles, amers, noms bretons ou anglais. Les épeler une fois par
+   écrit évite de les improviser à la VHF.
+
+Ces fichiers alimentent la carte de cockpit compilée dans
+`bord/procedures-affichees`.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Réciter la table, dans l'ordre, chronomètre en main.** Objectif :
+   vingt-six mots sans hésitation ni retour en arrière. Notez le temps,
+   refaites-le le lendemain. C'est le seul module du programme où la
+   répétition brute est la bonne méthode.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Réciter la table dans le désordre.** Un équipier annonce des
+   lettres au hasard, vous donnez le mot de code — puis l'inverse, il
+   donne le mot, vous donnez la lettre. C'est cette seconde direction
+   qui sert en réception, quand vous notez l'indicatif d'un autre
+   navire.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Épeler l'indicatif du bord, micro éteint, dix fois.** Jusqu'à ce
+   qu'il sorte sans y penser. C'est l'information que vous donnerez en
+   premier dans tout appel, y compris un MAYDAY (**M8**), c'est-à-dire
+   au moment précis où vous ne réfléchirez plus.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Épeler sous contrainte.** Reprenez l'exercice en ajoutant une gêne
+   réaliste : debout, en mouvement, avec du bruit, ou en tenant la barre
+   d'une main. Ce qui tient dans ces conditions tiendra en mer.
+
+5. **Transmettre des nombres.** Faites-vous dicter cinq MMSI et cinq
+   positions, chiffre par chiffre, et notez-les. Puis inversez les
+   rôles. L'erreur classique est de grouper les chiffres : elle se
+   corrige en s'écoutant.
 
 </Steps>
 
@@ -80,17 +324,176 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m05"
+  questions={[
+    {
+      question: 'Quel texte fixe la table de l’alphabet phonétique international reprise par le manuel ?',
+      choices: [
+        'L’annexe 5 du manuel ANFR',
+        'L’appendice 14 du Règlement des radiocommunications de l’UIT',
+        'Le chapitre IV de la convention SOLAS',
+        'L’arrêté du 18 mai 2005',
+      ],
+      answer: 1,
+      explanation:
+        'Le manuel donne la table « suivant l’appendice 14 du Règlement des radiocommunications de l’UIT ». L’annexe 5 du manuel contient le lexique français-anglais du vocabulaire OMI, qui n’est pas interrogé.',
+    },
+    {
+      question: 'Comment le mot « MARTIN » s’épelle-t-il ?',
+      choices: [
+        'MIKE ALFA ROMEO TANGO INDIA NOVEMBER',
+        'MIKE ALPHA ROMEO TANGO ITALIA NOVEMBER',
+        'MAMIE ANATOLE RAOUL THÉRÈSE IRMA NICOLAS',
+        'MIKE ALFA ROMEO TANGO INDIA NORWAY',
+      ],
+      answer: 0,
+      explanation:
+        'C’est l’exemple donné par le manuel. Attention aux graphies : la table dit ALFA, sans « PH », et NOVEMBER. Les prénoms français appartiennent à un autre code, sans valeur en radiotéléphonie maritime.',
+    },
+    {
+      question: 'Quel est le mot de code de la lettre J ?',
+      choices: ['JULIET', 'JUPITER', 'JULIETT', 'JOKER'],
+      answer: 2,
+      explanation:
+        'JULIETT, avec deux T, prononcé DJOU-li-ètt. La forme JULIET est une transcription courante mais ce n’est pas celle de la table.',
+    },
+    {
+      question: 'La lettre C se prononce :',
+      choices: [
+        'SI-ar-li uniquement',
+        'KA-ro-li',
+        'TCHAH-li ou CHAR-li, les deux étant admises',
+        'CHÈR-li uniquement',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel donne deux prononciations pour CHARLIE, comme pour UNIFORM (YOU-ni-form ou OU-ni-form). Les autres lettres n’en ont qu’une.',
+    },
+    {
+      question: 'Comment transmet-on un MMSI en radiotéléphonie ?',
+      choices: [
+        'En le regroupant par tranches de trois chiffres',
+        'En l’épelant avec les mots de code de l’alphabet',
+        'En annonçant seulement les trois premiers chiffres, le MID',
+        'Chiffre par chiffre, distinctement',
+      ],
+      answer: 3,
+      explanation:
+        'Les nombres se transmettent chiffre par chiffre, sans les grouper. Grouper est l’erreur la plus fréquente, et elle produit des erreurs de transcription à l’autre bout (M10).',
+    },
+    {
+      question: 'À quoi sert le vocabulaire normalisé de l’OMI ?',
+      choices: [
+        'À remplacer l’alphabet phonétique dans les communications de détresse',
+        'À fournir des phrases et signaux de base convenus, pour se comprendre sans ambiguïté entre langues différentes',
+        'À traduire automatiquement les messages ASN',
+        'À normaliser les noms de navires immatriculés en Europe',
+      ],
+      answer: 1,
+      explanation:
+        'Il règle la transmission des idées, là où l’alphabet règle celle des lettres. L’anglais étant la langue universelle des opérateurs radio, il est particulièrement utile près des côtes étrangères.',
+    },
+    {
+      question: 'Le lexique français-anglais du manuel figure en annexe 5. Quelle en est la conséquence ?',
+      choices: [
+        'Il constitue le cœur de l’épreuve A',
+        'Il doit être appris par cœur avant l’examen',
+        'Il n’est pas interrogé, l’examen ne portant pas sur les annexes',
+        'Il remplace l’alphabet phonétique à l’étranger',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel indique que l’examen ne comporte pas de questions se rapportant à ses annexes. On retient l’existence et l’usage du vocabulaire OMI, pas son contenu — qui reste utile à bord.',
+    },
+    {
+      question: 'Le mot de code de la lettre W est :',
+      choices: ['WHISKEY, prononcé OUISS-ki', 'WILLIAM, prononcé OUIL-yam', 'WASHINGTON', 'WHISKY, prononcé OUISS-kaï'],
+      answer: 0,
+      explanation:
+        'WHISKEY, prononcé OUISS-ki, sans appuyer le « W ». La prononciation normalisée du manuel diffère souvent de la prononciation anglaise spontanée : VICTOR se dit VIK-tar, X-RAY se dit EKSS-ré.',
+    },
+    {
+      question: 'Les mots MAYDAY, PAN PAN et SÉCURITÉ :',
+      choices: [
+        's’épellent avec l’alphabet phonétique pour être mieux compris',
+        'se traduisent dans la langue du correspondant',
+        'se prononcent une seule fois, pour ne pas encombrer la voie',
+        'se prononcent tels quels, dans leur forme normalisée, sans être épelés',
+      ],
+      answer: 3,
+      explanation:
+        'Ce sont des signaux normalisés, reconnus tels quels par les opérateurs. Les épeler, les traduire ou les paraphraser, c’est ne pas être identifié comme émettant une détresse (M8, M9).',
+    },
+    {
+      question: 'En pratique, qu’épelle-t-on à bord ?',
+      choices: [
+        'La totalité de chaque message, pour éviter toute erreur',
+        'L’indicatif d’appel, le nom du navire s’il est ambigu, et les noms propres transmis',
+        'Uniquement les nombres',
+        'Rien : l’épellation est réservée aux stations côtières',
+      ],
+      answer: 1,
+      explanation:
+        'Épeler une phrase entière encombre la voie pour rien. On épelle l’indicatif systématiquement, le nom du navire quand il est difficile à l’oreille, et les noms propres — port, patronyme, médicament en consultation radiomédicale (M9).',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
 FORMATION CRR — M5 — Carte de cockpit
 =======================================
+    (à fixer près du poste — se lit en direct)
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+ALPHABET PHONÉTIQUE INTERNATIONAL
+  appendice 14 du RR de l'UIT — accent sur la SYLLABE EN CAPITALES
+
+  A  ALFA ....... AL-fah        N  NOVEMBER ... no-VÈMM-ber
+  B  BRAVO ...... BRA-vo        O  OSCAR ...... OSS-kar
+  C  CHARLIE .... TCHAH-li      P  PAPA ....... pah-PAH
+                  ou CHAR-li    Q  QUEBEC ..... ké-BEK
+  D  DELTA ...... DEL-tah       R  ROMEO ...... RO-mi-o
+  E  ECHO ....... ÈK-o          S  SIERRA ..... si-ER-rah
+  F  FOXTROT .... FOX-trott     T  TANGO ...... TANG-go
+  G  GOLF ....... GOLF          U  UNIFORM .... YOU-ni-form
+  H  HOTEL ...... ho-TÈLL                       ou OU-ni-form
+  I  INDIA ...... IN-di-ah      V  VICTOR ..... VIK-tar
+  J  JULIETT .... DJOU-li-ètt   W  WHISKEY .... OUISS-ki
+  K  KILO ....... KI-lo         X  X-RAY ...... EKSS-ré
+  L  LIMA ....... LI-mah        Y  YANKEE ..... YANG-ki
+  M  MIKE ....... MAÏK          Z  ZULU ....... ZOU-lou
+
+  ORTHOGRAPHE : ALFA (pas ALPHA) · JULIETT (deux T)
+  DEUX PRONONCIATIONS ADMISES : CHARLIE · UNIFORM
+
+ÉPELER — LA MÉTHODE
+  1. annoncer : « j'épelle » / I SPELL
+  2. dire le MOT, puis l'ÉPELER, puis REDIRE le mot
+  3. PAUSE entre chaque mot de code (sinon ALFA/LIMA se confondent)
+
+  On épelle : l'INDICATIF (toujours) · le NOM du navire si ambigu
+              les NOMS PROPRES transmis (port, patronyme, médicament)
+  On n'épelle PAS le reste : cela encombre la voie.
+
+NOMBRES
+  CHIFFRE PAR CHIFFRE, jamais par groupes.
+  MMSI  → 2 · 2 · 7 · 1 · 3 · 2 · 1 · 2 · 0
+  Position → chiffre à chiffre, degrés puis minutes
+  Prononciation normalisée des chiffres → [à vérifier ANFR]
+
+NE S'ÉPELLENT JAMAIS — NE SE TRADUISENT JAMAIS
+  MAYDAY · PAN PAN · SÉCURITÉ
+  forme normalisée exacte, prononcés TROIS FOIS (→ M8, M9)
+
+VOCABULAIRE NORMALISÉ DE L'OMI
+  Des phrases convenues pour se comprendre sans langue commune.
+  L'anglais est la langue universelle des opérateurs radio.
+  Lexique = annexe 5 du manuel → HORS EXAMEN, utile à bord.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver **près du poste**, et non dans le classeur : c'est la seule
+fiche du jeu qui se consulte pendant qu'on parle. Elle accompagne les
+cartes **M7**, **M8** et **M9**, où l'épellation sert enfin à quelque
+chose.
