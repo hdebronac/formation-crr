@@ -1,78 +1,366 @@
 ---
-title: "M7 · Procédures d’exploitation en phonie"
-description: "Ordre de priorité des communications, appel de routine, dégagement de la voie 16, choix d’une voie de travail, correspondance publique et taxation."
+title: "M7 · Procédures d'appel en phonie"
+description: "Sauvegarde de la vie humaine, ordre de priorité des communications, appel de routine et dégagement, appel d'une station côtière, correspondance publique."
 sidebar:
   order: 7
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **B** — 8 questions sur 24 · **Volume** : 2 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M5 et M6 validés — épellation et commandes du poste
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Le poste est réglé. Reste à savoir **quoi dire**, et dans quel ordre. Ce
+module installe la grammaire commune de la radio maritime : une
+communication s'annonce, s'identifie, se déroule et se termine selon une
+forme convenue, la même pour tout le monde et dans toutes les langues.
+
+Cette forme n'est pas du formalisme. Elle existe parce qu'une voie est
+partagée par tous les navires à portée : sans discipline, personne n'est
+entendu. On voit ici la notion de **sauvegarde de la vie humaine**, les
+**quatre rangs de priorité** qui commandent tout le reste, l'appel de
+routine avec son **dégagement**, l'appel d'une **station côtière**, et
+la **correspondance publique**. Les trois procédures d'urgence
+proprement dites viennent ensuite, en **M8** et **M9**.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Définir la **SVH** et dire ce qui en relève.
+- [ ] Classer une communication dans l'un des **quatre rangs de
+  priorité**.
+- [ ] Dire **sur l'ordre de qui** un appel de détresse est émis.
+- [ ] Émettre un **appel de routine** et **dégager** sur une voie de
+  travail.
+- [ ] Appeler une **station côtière** dans la forme attendue.
+- [ ] Décrire la procédure de **correspondance publique** et ses
+  limites.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| SVH | Sauvegarde de la vie humaine en mer : fonction essentielle d'une station maritime |
+| Message SVH | Message reconnaissable à un mot convenu, compris dans toutes les langues |
+| Voie 16 | Voie d'appel et de détresse en phonie |
+| Priorité 1 — détresse | `MAYDAY` : danger grave et imminent, aide immédiate requise |
+| Priorité 2 — urgence | `PAN PAN` : sécurité d'un navire ou d'une personne |
+| Priorité 3 — sécurité | `SÉCURITÉ` : danger pour la navigation, ou météorologie |
+| Priorité 4 — routine | Tout appel qui ne relève pas de la SVH |
+| Chef de bord | Responsable sur l'ordre de qui les appels SVH sont émis |
+| Dégagement | Passage de la voie 16 à une voie de travail après contact |
+| Voie de travail | Voie sur laquelle se déroule l'échange : 6, 8, 72 ou 77 entre navires |
+| Identification | Nom du navire, indicatif radio, ou les deux |
+| Correspondance publique | Liaison avec un abonné à terre par une station côtière |
+| CIAC | Code d'identification de l'autorité comptable : 2 lettres, 2 chiffres |
+| `à vous` | *Over* : je vous rends la parole |
+| `terminé` | *Out* : l'échange est clos |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve B et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve B**, « Radiotéléphonie VHF », **8
+  questions sur 24**. Il correspond au chapitre du manuel ANFR intitulé
+  **« Procédures d'exploitation des communications radiotéléphoniques »**.
+- **N'est pas interrogé** : le tableau d'affectation des voies relève de
+  l'**annexe 2**. Les voies citées ici — 16, 6, 8, 72, 77 — le sont pour
+  l'usage, pas pour la récitation.
+- **L'ordre de priorité est le cœur du module.** Quatre rangs, et
+  l'examen interroge aussi bien l'ordre lui-même que le classement d'une
+  situation concrète.
+- **Point souvent ignoré** : le manuel indique que ces appels sont
+  **émis sur ordre du commandant, du patron ou du chef de bord**. Ce
+  n'est pas une initiative individuelle.
+- **Confusion classique — l'appel et le message.** Sur la voie 16 on
+  **appelle** ; le contenu se traite ensuite, sur une voie de travail
+  pour la routine, ou sur la 16 elle-même pour la détresse (**M8**).
+- **Confusion classique — la correspondance publique.** Elle est au
+  programme, mais **n'existe plus en France** (**M1**). Une question peut
+  porter sur sa procédure sans qu'elle soit praticable ici.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. La fonction essentielle : la SVH
 
-### 2. *(section à rédiger)*
+Le manuel pose le principe avant toute procédure :
 
-### 3. *(section à rédiger)*
+> La fonction essentielle d'une station radioélectrique maritime est
+> d'assurer la **transmission et la réception des messages relatifs à la
+> sauvegarde de la vie humaine en mer (SVH)**.
+
+Tout le reste — la météo, le port, l'ami sur l'autre bateau — vient
+après. C'est ce qui justifie que la voie 16 soit protégée, que les
+priorités existent, et qu'un opérateur doive savoir se taire.
+
+Les messages SVH sont de **trois types**, et ils sont reconnaissables à
+l'emploi d'**un mot, ou groupe de mots, prononcé et compris dans toutes
+les langues** — `MAYDAY`, `PAN PAN`, `SÉCURITÉ`. C'est leur raison
+d'être : un opérateur grec ou norvégien identifie la nature de votre
+message sans comprendre un mot de français.
+
+Ces appels **s'adressent à tout navire et à toute station côtière**, et
+la **voie 16** est la voie d'appel et de détresse.
+
+### 2. Les quatre rangs de priorité
+
+| Priorité | Type | Mot-clé | Situation |
+|---|---|---|---|
+| **1** | **Détresse** | `MAYDAY` | Un navire ou une personne est sous la menace d'un **danger grave et imminent** et a besoin qu'on lui vienne **immédiatement** en aide : voie d'eau importante, incendie, échouement, homme à la mer |
+| **2** | **Urgence** | `PAN PAN` | Signaler une urgence concernant la **sécurité du navire** (demande de remorquage après avarie) ou **d'une personne** (blessé ou malade à bord, consultation médicale) |
+| **3** | **Sécurité** | `SÉCURITÉ` | Signaler tout danger lié à la **sécurité de la navigation** (objets dangereux, épaves à la dérive, phares éteints) ou à la **météorologie** (coup de vent, tempête, vents supérieurs à force 7 Beaufort non signalés dans les bulletins réguliers) |
+| **4** | **Routine** | aucun | Autres appels, qui ne concernent pas la SVH |
+
+<Aside type="note" title="Le message de sécurité précède les bulletins">
+  Le manuel précise que ce type de message **précède toute émission de
+  bulletins météorologiques spéciaux (BMS) et tout avis urgent aux
+  navigateurs (AVURNAV)**. Autrement dit, `SÉCURITÉ` sert aussi
+  d'annonce aux stations côtières qui vont diffuser : c'est le signal
+  qui vous dit de monter le son.
+
+  La diffusion des renseignements sur la sécurité maritime est l'objet
+  de **M12**.
+</Aside>
+
+<Aside type="danger" title="Ce que la priorité impose aux autres">
+  Une communication de détresse a la **priorité absolue** : toute station
+  qui l'entend doit **cesser immédiatement toute émission** susceptible
+  de la brouiller, et écouter. Ce n'est pas une courtoisie, c'est une
+  obligation — développée en **M8** avec le `SILENCE MAYDAY`, et en
+  **M11** avec la protection des fréquences de détresse.
+</Aside>
+
+### 3. Qui décide d'émettre
+
+Un point que le manuel énonce et que l'on rencontre rarement ailleurs :
+les appels SVH sont émis **sur ordre du commandant, du patron, ou du
+chef de bord**.
+
+Sur un voilier familial, le chef de bord, c'est le skipper. En pratique
+cela veut dire deux choses :
+
+- **La décision d'alerter lui appartient.** Un équipier n'émet pas un
+  MAYDAY de sa propre initiative pendant que le skipper est occupé
+  ailleurs — sauf si le skipper est précisément ce qui manque à bord.
+- **Elle doit donc être déléguée à l'avance.** Si le chef de bord tombe
+  à l'eau ou perd connaissance, quelqu'un doit savoir qu'il lui revient
+  d'appeler, et savoir le faire. C'est tout l'objet des consignes
+  d'équipage rédigées en **M6**.
+
+<Aside type="caution" title="Ce que cette règle ne veut pas dire">
+  Elle n'autorise personne à **attendre** un ordre qui ne viendra pas.
+  En cas de doute, **on alerte** : l'annulation d'une fausse alerte est
+  une procédure normale et prévue (**M8**, **M11**). Ce qui est
+  sanctionné, c'est la fausse alerte **intentionnelle ou par
+  négligence** — pas la prudence.
+</Aside>
+
+### 4. L'appel de routine, et le dégagement
+
+C'est l'appel le plus fréquent, et celui où les mauvaises habitudes
+s'installent. La règle du manuel tient en une phrase : pour un contact
+de routine, il faut **d'abord utiliser la voie 16 — sans trop
+l'encombrer — puis basculer sur une autre voie navire-navire : 6, 8, 72
+ou 77.**
+
+L'échange se déroule ainsi :
+
+<Steps>
+
+1. **Appel, sur la voie 16.** Le nom de la station appelée, puis « ICI »
+   et votre identification.
+
+2. **Réponse, sur la voie 16.** La station appelée répond et **indique
+   la voie de dégagement**.
+
+3. **Dégagement.** Les deux stations basculent sur la voie annoncée.
+
+4. **Échange, sur la voie de travail.** Le contenu se traite là, et
+   seulement là.
+
+</Steps>
+
+Exemple, avec le voilier du fil rouge — **ALIZÉ**, indicatif
+**FH 2827** — appelant un autre voilier, *Petrel* :
+
+| Étape | En français | En anglais |
+|---|---|---|
+| Appel sur la 16 | `PETREL, PETREL — ICI ALIZÉ, ALIZÉ — Me recevez-vous ? À vous.` | `PETREL, PETREL — THIS IS ALIZÉ, ALIZÉ — Do you read me? Over.` |
+| Réponse sur la 16 | `ALIZÉ — ICI PETREL — Bonjour — Dégagez voie 72 — À vous.` | `ALIZÉ — THIS IS PETREL — Channel 72 — Over.` |
+| Suite | *les deux stations passent sur la voie 72* | |
+
+<Aside type="caution" title="« Sans trop l'encombrer »">
+  Le manuel choisit ses mots. La voie 16 est une voie d'**appel**, pas de
+  conversation : on y établit le contact, on dégage, on discute
+  ailleurs. Une durée maximale d'émission s'y applique, et la règle est
+  détaillée en **M11**.
+
+  Le réflexe à prendre : **le nom de la voie de dégagement fait partie de
+  la réponse**. Ne pas l'indiquer oblige à un échange de plus sur la 16.
+</Aside>
+
+### 5. Appeler une station côtière
+
+La forme est plus complète que pour un appel navire-navire, et se fait
+**généralement sur la voie 16** :
+
+<Steps>
+
+1. **Identification de la station côtière — trois fois.**
+
+2. **« ICI »**, en anglais **`THIS IS`**.
+
+3. **Identification du navire — trois fois.**
+
+</Steps>
+
+Le manuel précise ce qu'il faut entendre par **identification** : *« le
+nom du navire, l'indicatif radio de la station, ou les deux à la fois »*.
+
+Exemple d'une demande de liaison :
+
+| En français | En anglais |
+|---|---|
+| `JERSEY RADIO, JERSEY RADIO, JERSEY RADIO` | `JERSEY RADIO, JERSEY RADIO, JERSEY RADIO` |
+| `ICI ALIZÉ, ALIZÉ, ALIZÉ` | `THIS IS ALIZÉ, ALIZÉ, ALIZÉ` |
+| `Me recevez-vous ?` | `Do you read me?` |
+
+<Aside type="tip" title="Trois fois, et pas plus">
+  La répétition triple sert à percer le bruit et à laisser à
+  l'opérateur le temps de vous identifier. Au-delà, elle encombre. En
+  détresse, le nom du navire se donne également trois fois — et
+  l'indicatif, lui, s'épelle **une seule fois** (**M5**, **M8**).
+</Aside>
+
+### 6. La correspondance publique, pas à pas
+
+Rappel de **M1** : la correspondance publique désigne la communication
+d'un navire qui fait appel à une **station côtière** pour être relié à
+un correspondant disposant d'une **ligne téléphonique à terre**. **En
+France, ce service n'existe plus** ; quelques rares stations étrangères
+le pratiquent encore, et c'est à ce titre que la procédure reste au
+programme.
+
+<Steps>
+
+1. **Demande de liaison**, dans la forme d'appel d'une station côtière
+   vue ci-dessus.
+
+2. **La station côtière répond sur la voie 16** en précisant la **voie
+   de dégagement**. On positionne l'appareil sur cette voie.
+
+3. **Une sonnerie de retour d'appel** se fait entendre dès que l'appel a
+   été enregistré.
+
+4. **L'opérateur demande le CIAC** et le **numéro du correspondant**,
+   puis établit la connexion.
+
+5. **Fin de l'appel** : à votre demande, la station côtière vous donne le
+   **coût de la communication**.
+
+</Steps>
+
+Le **CIAC** est le code d'identification de l'autorité comptable
+reconnue : **deux lettres** correspondant à l'État dans lequel elle est
+domiciliée, et **deux chiffres** — par exemple `FR01`, `FR13`. De moins
+en moins utilisé, il reste exigé dans certains pays pour transmettre des
+appels téléphoniques navire-terre par l'intermédiaire d'une station
+côtière.
+
+### 7. Bien parler : ce qui fait gagner du temps
+
+Quelques règles qui ne sont pas des règles d'examen mais qui font la
+différence entre un opérateur clair et un opérateur qu'on fait répéter :
+
+- **Annoncer avant de parler.** Appuyer sur `PTT`, marquer un temps,
+  puis parler (**M6**). Le premier mot est toujours celui qu'on perd.
+- **Une idée par prise de parole**, terminée par `à vous` — *over*.
+- **`terminé`** — *out* — clôt l'échange, et ne se combine jamais avec
+  `à vous`.
+- **Épeler ce qui doit l'être** : l'indicatif toujours, les noms propres
+  quand ils sont ambigus (**M5**).
+- **Parler lentement et à distance constante du micro.** Une VHF
+  compresse la voix ; crier dégrade la compréhension au lieu de
+  l'améliorer.
+- **Écouter avant d'émettre.** Une voie occupée reste occupée : émettre
+  par-dessus ne fait que détruire les deux messages.
+
+<Aside type="tip" title="L'essai radio">
+  Un essai se fait sur une **voie de travail**, jamais sur la 16, et
+  jamais en émettant un mot-clé de détresse. En ASN, l'essai a une
+  procédure dédiée — un appel individuel de catégorie routine — décrite
+  en **M10**.
+</Aside>
 
 ## Vidéos sélectionnées
 
 | Source | Sujet couvert | Durée |
 |--------|---------------|------:|
-| *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
+| *(passe vidéos non encore effectuée)* | — | — |
+
+<Aside type="note" title="Pourquoi cette table est vide">
+  Aucun lien vidéo n'est publié avant d'avoir été **ouvert, vérifié et
+  daté**. Vigilance sur ce module : beaucoup d'enregistrements
+  d'échanges réels circulent, et l'on y entend surtout des **mauvaises
+  pratiques** — appels interminables sur la 16, absence de dégagement.
+  Voir [Ressources](/meta/ressources).
+</Aside>
 
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M7/` contenant :
+
+1. **`appels-types.md`** — trois appels rédigés mot pour mot avec
+   l'identité réelle du bateau : appeler un autre navire, appeler la
+   capitainerie sur la voie 9, appeler un CROSS pour une demande non
+   urgente. Chacun en français **et** en anglais, puisque le bateau
+   traverse la Manche. Ces textes sont destinés à être **lus tels quels**
+   au micro par un débutant.
+
+2. **`priorites.md`** — le tableau des quatre rangs, complété d'une
+   colonne « exemples à bord » remplie avec des situations réellement
+   possibles sur ce bateau et sur ces zones. C'est ce travail
+   d'appropriation qui fait la différence à l'examen, où les questions
+   partent de situations concrètes.
+
+3. **`qui-appelle.md`** — la délégation écrite : qui, à bord, est chef
+   de bord ; qui prend la décision d'alerter s'il est indisponible ; et
+   quelles consignes chaque équipier a reçues. Une demi-page, datée,
+   relue par l'équipage.
+
+4. **`voies-de-travail.md`** — quelles voies de dégagement sont
+   réellement utilisées sur les zones fréquentées, et lesquelles sont
+   encombrées. Reporter ce constat dans `bord/procedures-affichees`.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Classer sans hésiter.** Un équipier énonce vingt situations, vous
+   annoncez le rang — 1, 2, 3 ou 4 — et le mot-clé s'il y en a un.
+   Moins de trois secondes par réponse. Reprenez ensuite en justifiant
+   d'une phrase.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Faire un appel de routine complet, poste éteint.** Appel sur la 16,
+   réponse jouée par un équipier, dégagement annoncé, bascule de voie,
+   échange, `terminé`. Recommencez jusqu'à ce que le dégagement soit
+   annoncé **par la station appelée**, sans y penser.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Appeler une station côtière.** La forme complète, trois fois le nom
+   de la station, « ICI », trois fois votre identification. Faites-le en
+   français, puis en anglais avec `THIS IS`. Le passage à l'anglais ne
+   doit rien changer au rythme.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Dérouler une correspondance publique.** Même si le service n'existe
+   plus en France, jouez la séquence complète jusqu'au CIAC et à la
+   demande du coût. C'est une procédure d'examen, et elle s'oublie
+   précisément parce qu'on ne la pratique jamais.
+
+5. **Se faire critiquer.** Enregistrez trois appels et faites-les écouter
+   à quelqu'un qui ne connaît pas le bateau. Ce qu'il n'a pas compris du
+   premier coup est à corriger : c'est le seul juge qui compte.
 
 </Steps>
 
@@ -80,9 +368,139 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m07"
+  questions={[
+    {
+      question:
+        'Quelle est la fonction essentielle d’une station radioélectrique maritime ?',
+      choices: [
+        'Assurer la correspondance publique avec les abonnés à terre',
+        'Assurer la transmission et la réception des messages relatifs à la sauvegarde de la vie humaine en mer',
+        'Diffuser les bulletins météorologiques spéciaux',
+        'Permettre les communications entre navires d’une même flottille',
+      ],
+      answer: 1,
+      explanation:
+        'C’est la formulation du manuel. Tout le reste — météo, port, échanges privés — vient après, et c’est ce qui justifie la protection de la voie 16 et l’ordre de priorité.',
+    },
+    {
+      question:
+        'Un navire demande un remorquage après une avarie, sans danger immédiat. De quel rang de priorité relève son message ?',
+      choices: [
+        'Priorité 1, détresse, MAYDAY',
+        'Priorité 3, sécurité, SÉCURITÉ',
+        'Priorité 2, urgence, PAN PAN',
+        'Priorité 4, routine',
+      ],
+      answer: 2,
+      explanation:
+        'La demande de remorquage après avarie est l’exemple même que le manuel donne pour l’urgence. La détresse suppose un danger grave et imminent exigeant une aide immédiate.',
+    },
+    {
+      question:
+        'Sur l’ordre de qui les appels de détresse, d’urgence et de sécurité sont-ils émis ?',
+      choices: [
+        'Du CROSS de la zone',
+        'De n’importe quel équipier titulaire du CRR',
+        'De la station côtière la plus proche',
+        'Du commandant, du patron ou du chef de bord',
+      ],
+      answer: 3,
+      explanation:
+        'Le manuel l’indique explicitement. En pratique, cela oblige à déléguer la décision par avance : si le chef de bord est indisponible, quelqu’un doit savoir que c’est à lui d’appeler.',
+    },
+    {
+      question:
+        'Pour un contact de routine entre deux navires, quelle est la procédure ?',
+      choices: [
+        'Appeler directement sur une voie navire-navire sans passer par la 16',
+        'Appeler sur la voie 16 sans trop l’encombrer, puis basculer sur 6, 8, 72 ou 77',
+        'Rester sur la voie 16 pendant tout l’échange',
+        'Appeler sur la voie 70 puis dégager en phonie',
+      ],
+      answer: 1,
+      explanation:
+        'La voie 16 est une voie d’appel, pas de conversation. La voie 70 est réservée à l’ASN et ne transporte jamais de voix (M10).',
+    },
+    {
+      question:
+        'Lors d’un appel de routine, qui indique la voie de dégagement ?',
+      choices: [
+        'La station appelée, dans sa réponse',
+        'La station appelante, dès son premier appel',
+        'La station côtière la plus proche',
+        'Aucune : la voie est choisie après avoir dégagé',
+      ],
+      answer: 0,
+      explanation:
+        'Le nom de la voie de dégagement fait partie de la réponse. L’omettre oblige à un échange supplémentaire sur la voie 16, qu’il s’agit précisément de ne pas encombrer.',
+    },
+    {
+      question:
+        'Quelle est la forme d’un appel adressé à une station côtière ?',
+      choices: [
+        'Nom de la station une fois, « ICI », nom du navire une fois',
+        'Nom du navire trois fois, puis nom de la station trois fois',
+        'Identification de la station trois fois, « ICI », identification du navire trois fois',
+        'MAYDAY une fois, puis identification des deux stations',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel précise qu’« identification » signifie le nom du navire, l’indicatif radio, ou les deux à la fois. La répétition triple perce le bruit et laisse à l’opérateur le temps de vous identifier.',
+    },
+    {
+      question: 'Que désigne le CIAC dans la correspondance publique ?',
+      choices: [
+        'Le code d’identification de l’autorité comptable : deux lettres et deux chiffres',
+        'Le centre international d’assistance aux communications',
+        'Le code d’identification de l’abonné appelé',
+        'Le certificat d’installation d’antenne conforme',
+      ],
+      answer: 0,
+      explanation:
+        'Deux lettres pour l’État où l’autorité comptable est domiciliée, puis deux chiffres — FR01, FR13. L’opérateur le demande avec le numéro du correspondant avant d’établir la connexion.',
+    },
+    {
+      question: 'Un message de sécurité, selon le manuel :',
+      choices: [
+        'ne concerne que les navires astreints au SMDSM',
+        'précède toute émission de bulletins météorologiques spéciaux et d’avis urgents aux navigateurs',
+        'doit être émis exclusivement sur une voie de travail',
+        'est réservé aux stations côtières',
+      ],
+      answer: 1,
+      explanation:
+        'SÉCURITÉ sert aussi d’annonce avant diffusion : c’est le signal qui vous dit de monter le son. La diffusion des renseignements sur la sécurité maritime est traitée en M12.',
+    },
+    {
+      question:
+        'Pourquoi les messages SVH sont-ils annoncés par un mot convenu comme MAYDAY ?',
+      choices: [
+        'Parce que la réglementation impose l’anglais sur toutes les voies',
+        'Pour déclencher automatiquement l’alerte des CROSS',
+        'Pour être prononcés et compris dans toutes les langues',
+        'Parce que ces mots sont plus courts que les phrases équivalentes',
+      ],
+      answer: 2,
+      explanation:
+        'C’est leur raison d’être : un opérateur étranger identifie la nature du message sans comprendre la langue employée. C’est aussi pourquoi ils ne se traduisent ni ne s’épellent jamais (M5).',
+    },
+    {
+      question:
+        'Comment se termine correctement un échange radio de routine ?',
+      choices: [
+        'Par « à vous » puis « terminé » enchaînés',
+        'Par « terminé », qui clôt l’échange et ne se combine pas avec « à vous »',
+        'Par le retour automatique sur la voie 16, sans annonce',
+        'Par la répétition de l’indicatif trois fois',
+      ],
+      answer: 1,
+      explanation:
+        '« À vous » (over) rend la parole, « terminé » (out) clôt l’échange : les deux ensemble se contredisent. On revient ensuite sur la voie 16 pour la veille (M11).',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
@@ -90,7 +508,60 @@ explications renvoyant aux autres modules. Écrit ici entre backticks : un
 FORMATION CRR — M7 — Carte de cockpit
 =======================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+SVH — SAUVEGARDE DE LA VIE HUMAINE EN MER
+  Fonction ESSENTIELLE d'une station maritime.
+  3 types de messages SVH, chacun annoncé par un MOT CONVENU
+  prononcé et compris DANS TOUTES LES LANGUES.
+  Émis SUR ORDRE DU COMMANDANT, DU PATRON OU DU CHEF DE BORD.
+  Voie d'appel et de détresse : 16.
+
+LES QUATRE RANGS DE PRIORITÉ
+  1  DÉTRESSE  MAYDAY    danger GRAVE et IMMINENT, aide immédiate
+                         voie d'eau · incendie · échouement ·
+                         homme à la mer
+  2  URGENCE   PAN PAN   sécurité d'un NAVIRE (remorquage/avarie)
+                         ou d'une PERSONNE (blessé, malade,
+                         consultation médicale)
+  3  SÉCURITÉ  SÉCURITÉ  danger pour la NAVIGATION (objet, épave,
+                         phare éteint) ou MÉTÉO (> force 7
+                         non annoncée)
+                         → précède les BMS et les AVURNAV
+  4  ROUTINE   —         tout ce qui ne relève pas de la SVH
+
+  Détresse entendue → CESSER TOUTE ÉMISSION et ÉCOUTER.
+
+APPEL DE ROUTINE — LA SÉQUENCE
+  1. appel sur la 16, SANS TROP L'ENCOMBRER
+  2. la station APPELÉE répond ET DONNE LA VOIE DE DÉGAGEMENT
+  3. les deux stations basculent
+  4. l'échange se fait SUR LA VOIE DE TRAVAIL
+  Voies navire-navire : 6 · 8 · 72 · 77
+
+  PETREL, PETREL — ICI ALIZÉ, ALIZÉ — Me recevez-vous ? À vous.
+  ALIZÉ — ICI PETREL — Dégagez voie 72 — À vous.
+
+APPEL D'UNE STATION CÔTIÈRE  (généralement sur la 16)
+  identification de la STATION ........... TROIS FOIS
+  « ICI »  /  THIS IS
+  identification du NAVIRE ............... TROIS FOIS
+  « identification » = le NOM, l'INDICATIF, ou LES DEUX
+
+CORRESPONDANCE PUBLIQUE   (n'existe PLUS en France)
+  1. demande de liaison
+  2. la côtière répond sur la 16 + VOIE DE DÉGAGEMENT
+  3. sonnerie de retour d'appel
+  4. l'opérateur demande le CIAC + le numéro du correspondant
+  5. coût donné SUR DEMANDE en fin d'appel
+  CIAC = 2 lettres (État) + 2 chiffres — ex. FR01, FR13
+
+BIEN PARLER
+  appuyer · MARQUER UN TEMPS · parler · « à vous » · relâcher
+  « à vous » = OVER, je vous rends la parole
+  « terminé » = OUT, l'échange est clos — JAMAIS les deux
+  épeler l'INDICATIF (→ M5) · écouter AVANT d'émettre
+  essai radio → sur une VOIE DE TRAVAIL, jamais sur la 16
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À conserver avec la carte **M5** pour l'épellation. Les trois procédures
+d'urgence — `MAYDAY`, `PAN PAN`, `SÉCURITÉ` — sont l'objet des cartes
+**M8** et **M9**.

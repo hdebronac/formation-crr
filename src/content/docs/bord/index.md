@@ -19,6 +19,7 @@ Tout le programme s'applique à un bateau concret. Il est choisi pour tomber
 
 | Élément | Caractéristique |
 |---|---|
+| Nom | **ALIZÉ** — indicatif d'appel `FH 2827`, MMSI `227 132 120` |
 | Type | Voilier habitable d'environ **10 mètres** |
 | Navigation | **Côtière et semi-hauturière**, Atlantique et Manche |
 | VHF fixe | **25 W**, avec **appel sélectif numérique (ASN) de classe D**, raccordée au GPS |
@@ -26,6 +27,13 @@ Tout le programme s'applique à un bateau concret. Il est choisi pour tomber
 | VHF portative | Étanche, **≤ 6 W**, rangée dans le sac de survie |
 | MF / HF, Inmarsat | **Aucun** — hors programme du CRR |
 | Équipage | Familial réduit, souvent deux personnes de quart |
+
+:::caution[Identité fictive]
+Le nom, l'indicatif d'appel et le MMSI d'ALIZÉ sont **inventés pour les
+besoins du programme**. Ils servent aux exemples travaillés des modules et ne
+désignent aucun navire réel. Dans vos propres fiches, remplacez-les par
+l'identité portée sur **votre** licence de station de navire (M1).
+:::
 
 ### Pourquoi ce bateau
 
