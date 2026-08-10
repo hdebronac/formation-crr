@@ -585,9 +585,9 @@ l'examen : c'est lui qui prouve que la formation a atteint son objectif.
 | 5 | Composants `Quiz.astro` et `Figure.astro` | ✅ |
 | 6 | Page d'accueil, pages `meta/`, index `bord/` et `reference/` | ✅ |
 | 7 | **Module M0 complet** — module pilote, à valider avant d'enchaîner | ✅ |
-| 8 | **Module M10** (ASN) — le plus dense, rédigé en second pour éprouver le gabarit | ⬜ |
-| 9 | Modules M1 → M9 | ⬜ |
-| 10 | Modules M11 → M14 | ⬜ |
+| 8 | **Module M10** (ASN) — le plus dense, rédigé en second pour éprouver le gabarit | ✅ |
+| 9 | Modules M1 → M9 | ✅ |
+| 10 | Modules M11 → M14 | ✅ |
 | 11 | Passe vidéos — liens réels ouverts, vérifiés et datés | ⬜ |
 | 12 | Sections `bord/` et `reference/` complètes | ⬜ |
 | 13 | Illustrations créditées + page de crédits | ⬜ |
