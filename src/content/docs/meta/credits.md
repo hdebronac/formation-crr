@@ -50,8 +50,17 @@ Réalisés spécifiquement pour ce site et publiés sous la licence du contenu,
 
 | Module | Schéma | Ce qu'il montre |
 |---|---|---|
+| M0 | Les trois épreuves | Les bandes à l'échelle — 6, 8 et 10 questions — et la règle de la moyenne à chacune |
+| M1 | Certificat et licence | Deux colonnes : ce qui porte sur la personne, ce qui porte sur le bateau |
+| M2 | Les types de stations | L'emboîtement : portuaire et centre de coordination sont des stations côtières |
+| M3 | Simplex et duplex | Une fréquence et deux sens, contre deux fréquences simultanées |
 | M4 | Les quatre zones du SMDSM | Les zones A1 à A4 lues depuis la côte, avec le moyen radio de chacune et la limite de ce que le CRR autorise |
+| M6 | Les commandes d'un poste | Huit repères numérotés sur une face avant, du squelch au bouton sous capot |
 | M7 | Les quatre rangs de priorité | Détresse, urgence, sécurité, routine, et l'accolade de la sauvegarde de la vie humaine sur les trois premiers |
+| M8 | Entendre un MAYDAY | Les cinq obligations dans l'ordre, et le relais au bout de cinq minutes |
+| M9 | Quel signal émettre | Trois questions posées dans l'ordre, et la sortie qu'elles donnent |
+| M10 | Les quatre nombres de l'alerte | 5 s, 5 fois, 4 min et 5 min replacés sur une même ligne de temps |
+| M11 | Les voies protégées et leurs voisines | 75-76 autour de la 16, 10-11 autour de la 70 : deux statuts différents |
 | M13 | La chaîne Cospas-Sarsat | De la balise au CROSS : satellites, LUT, MCC, FMCC de Toulouse, avec les rôles distincts du 406 et du 121,5 MHz |
 | M13 | La trace d'un SART sur un écran radar | Les douze traits régulièrement espacés, alignés dans l'axe du répondeur |
 
@@ -71,9 +80,16 @@ et la légende peut être écrite pour enseigner.
 
 ## État de la passe
 
-Sept illustrations sur quatre modules. Les autres modules n'en portent pas
-encore : plutôt qu'illustrer pour illustrer, chaque image est ajoutée quand
-elle apprend quelque chose que le texte ne dit pas aussi bien.
+**Seize illustrations sur treize modules** : trois photographies et treize
+schémas. Deux modules n'en portent pas, et c'est délibéré — **M5** est déjà
+une table d'épellation, **M14** un récapitulatif : dans les deux cas, la
+forme tabulaire enseigne mieux qu'une image.
+
+Le rapport s'est inversé en cours de route. Faute d'images libres dont la
+provenance soit sûre, la plupart des figures sont désormais **dessinées
+ici** : cela coûte plus de temps, mais la légende peut alors être écrite pour
+enseigner un point précis du programme, et non pour décrire ce qu'une photo
+montrait par hasard.
 
 ## Signaler un problème de crédit
 

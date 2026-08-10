@@ -7,6 +7,8 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
+import Figure from '../../../components/Figure.astro';
+import SimplexDuplex from '../../../assets/modules/m03-simplex-duplex.svg';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 2,5 h ·
@@ -171,6 +173,15 @@ l'appel et la détresse en phonie, la **70** pour l'ASN, et la **9**
 pour les ports de plaisance français (**M2**).
 
 ### 4. Simplex, duplex, semi-duplex
+
+<Figure
+  legende="Comptez les flèches, c'est toute la différence. En haut, une seule fréquence et deux sens : chacun parle à son tour, il faut alterner — c'est la voie 6 à 156,300 MHz. En bas, deux flèches simultanées et deux fréquences sur une même voie : personne n'attend son tour, comme au téléphone. Le poste bascule tout seul dès que vous sélectionnez la voie."
+  auteur="Schéma produit pour ce programme"
+  licence="CC BY-SA 4.0"
+>
+  <SimplexDuplex />
+</Figure>
+
 
 | Mode | Fréquences | Fonctionnement | Exemple |
 |---|---|---|---|

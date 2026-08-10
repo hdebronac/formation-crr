@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-poste desc-poste">
+  <title id="titre-poste">Les commandes d'une VHF fixe avec appel sélectif numérique</title>
+  <desc id="desc-poste">Schéma d'une face avant numérotée : 1 marche-arrêt et volume,
+  2 squelch, 3 écran affichant la voie, 4 touche d'accès direct à la voie 16,
+  5 commutateur de puissance 25 watts ou 1 watt, 6 double veille, 7 bouton de détresse
+  rouge sous capot, 8 commande d'alternat du combiné.</desc>
+
+  <rect x="0" y="0" width="720" height="470" fill="#ffffff"/>
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#0b3550">Ce que vous devez pouvoir désigner sur n'importe quel poste</text>
+
+  <!-- boîtier -->
+  <rect x="150" y="46" width="420" height="200" rx="12" fill="#3d4448"/>
+  <rect x="162" y="58" width="396" height="176" rx="8" fill="#4d5559"/>
+
+  <!-- écran -->
+  <rect x="256" y="76" width="150" height="70" rx="6" fill="#12251f" stroke="#1f3a32" stroke-width="2"/>
+  <text x="331" y="122" font-size="40" font-weight="700" fill="#7fe3cc" text-anchor="middle">16</text>
+  <text x="266" y="92" font-size="10" fill="#7fe3cc">DW</text>
+  <text x="396" y="92" font-size="10" fill="#7fe3cc" text-anchor="end">25W</text>
+
+  <!-- rotatifs -->
+  <circle cx="205" cy="96" r="22" fill="#23282b"/><circle cx="205" cy="96" r="7" fill="#6b7478"/>
+  <circle cx="205" cy="162" r="22" fill="#23282b"/><circle cx="205" cy="162" r="7" fill="#6b7478"/>
+
+  <!-- touches -->
+  <rect x="256" y="160" width="66" height="30" rx="5" fill="#23282b"/>
+  <text x="289" y="180" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">16</text>
+  <rect x="332" y="160" width="74" height="30" rx="5" fill="#23282b"/>
+  <text x="369" y="180" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">H / L</text>
+  <rect x="256" y="198" width="66" height="26" rx="5" fill="#23282b"/>
+  <text x="289" y="216" font-size="11" fill="#ffffff" text-anchor="middle">DW</text>
+  <rect x="332" y="198" width="74" height="26" rx="5" fill="#23282b"/>
+  <text x="369" y="216" font-size="11" fill="#ffffff" text-anchor="middle">CH ▲▼</text>
+
+  <!-- capot distress -->
+  <rect x="440" y="90" width="96" height="70" rx="8" fill="#7a1f1f"/>
+  <circle cx="488" cy="125" r="24" fill="#c62828" stroke="#ffffff" stroke-width="2"/>
+  <text x="488" y="130" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">DISTRESS</text>
+  <path d="M 440 90 L 536 90 L 536 70 L 440 70 Z" fill="#5c1717"/>
+  <text x="488" y="84" font-size="10" fill="#ffd7d7" text-anchor="middle">capot</text>
+
+  <!-- combiné -->
+  <rect x="440" y="180" width="96" height="44" rx="8" fill="#23282b"/>
+  <rect x="452" y="192" width="20" height="20" rx="3" fill="#9aa3a7"/>
+  <text x="504" y="206" font-size="11" fill="#ffffff" text-anchor="middle">PTT</text>
+
+  <!-- pastilles numérotées -->
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <circle cx="176" cy="96"  r="13" fill="#0b3550"/><text x="176" y="101" fill="#ffffff">1</text>
+    <circle cx="176" cy="162" r="13" fill="#0b3550"/><text x="176" y="167" fill="#ffffff">2</text>
+    <circle cx="424" cy="112" r="13" fill="#0b3550"/><text x="424" y="117" fill="#ffffff">3</text>
+    <circle cx="240" cy="175" r="13" fill="#0b3550"/><text x="240" y="180" fill="#ffffff">4</text>
+    <circle cx="418" cy="175" r="13" fill="#0b3550"/><text x="418" y="180" fill="#ffffff">5</text>
+    <circle cx="240" cy="211" r="13" fill="#0b3550"/><text x="240" y="216" fill="#ffffff">6</text>
+    <circle cx="548" cy="112" r="13" fill="#c62828"/><text x="548" y="117" fill="#ffffff">7</text>
+    <circle cx="548" cy="202" r="13" fill="#0b3550"/><text x="548" y="207" fill="#ffffff">8</text>
+  </g>
+
+  <line x1="24" y1="268" x2="696" y2="268" stroke="#ddd" stroke-width="1"/>
+
+  <!-- légende, deux colonnes -->
+  <g font-size="12">
+    <circle cx="36" cy="292" r="11" fill="#0b3550"/><text x="36" y="297" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="56" y="290" font-weight="700" fill="#0b3550">Marche/arrêt et volume</text>
+    <text x="56" y="307" fill="#555">le volume ne règle pas la sensibilité</text>
+
+    <circle cx="36" cy="336" r="11" fill="#0b3550"/><text x="36" y="341" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="56" y="334" font-weight="700" fill="#0b3550">Squelch</text>
+    <text x="56" y="351" fill="#555">coupe le souffle ; trop haut, il coupe</text>
+    <text x="56" y="367" fill="#555">aussi les signaux faibles</text>
+
+    <circle cx="36" cy="396" r="11" fill="#0b3550"/><text x="36" y="401" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="56" y="394" font-weight="700" fill="#0b3550">Écran</text>
+    <text x="56" y="411" fill="#555">voie affichée, puissance, veille active</text>
+
+    <circle cx="36" cy="440" r="11" fill="#0b3550"/><text x="36" y="445" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="56" y="438" font-weight="700" fill="#0b3550">Touche 16</text>
+    <text x="56" y="455" fill="#555">accès direct à la voie d'appel</text>
+
+    <circle cx="380" cy="292" r="11" fill="#0b3550"/><text x="380" y="297" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="400" y="290" font-weight="700" fill="#0b3550">H / L — 25 W ou 1 W</text>
+    <text x="400" y="307" fill="#555">la réduite n'est pas une dégradation :</text>
+    <text x="400" y="323" fill="#555">elle s'impose en zone portuaire</text>
+
+    <circle cx="380" cy="352" r="11" fill="#0b3550"/><text x="380" y="357" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="400" y="350" font-weight="700" fill="#0b3550">DW — double veille</text>
+    <text x="400" y="367" fill="#555">la voie choisie et la 16, en alternance</text>
+
+    <circle cx="380" cy="396" r="11" fill="#c62828"/><text x="380" y="401" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+    <text x="400" y="394" font-weight="700" fill="#c62828">Bouton de détresse</text>
+    <text x="400" y="411" fill="#555">sous capot · appui ≥ 5 s · jamais « pour essayer »</text>
+
+    <circle cx="380" cy="440" r="11" fill="#0b3550"/><text x="380" y="445" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+    <text x="400" y="438" font-weight="700" fill="#0b3550">Alternat (PTT)</text>
+    <text x="400" y="455" fill="#555">on appuie pour parler, on relâche pour écouter</text>
+  </g>
+</svg>

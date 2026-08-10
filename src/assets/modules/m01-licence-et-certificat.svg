@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-lc desc-lc">
+  <title id="titre-lc">Le certificat porte sur la personne, la licence porte sur le bateau</title>
+  <desc id="desc-lc">Deux documents distincts. Le CRR atteste que l'opérateur sait
+  exploiter une station : il s'obtient par examen et il est payant. La licence de station
+  de navire autorise l'installation du bateau à émettre : elle est gratuite, sans examen,
+  valable un an. Lors d'un contrôle en mer, les deux peuvent être exigés.</desc>
+
+  <rect x="0" y="0" width="720" height="360" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="700" fill="#333">Deux documents, deux objets — l'un ne remplace jamais l'autre</text>
+
+  <!-- CRR -->
+  <rect x="24" y="52" width="320" height="196" rx="10" fill="#eef4fa" stroke="#2e5f8f" stroke-width="2"/>
+  <rect x="24" y="52" width="320" height="44" rx="10" fill="#2e5f8f"/>
+  <rect x="24" y="82" width="320" height="14" fill="#2e5f8f"/>
+  <text x="184" y="81" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">CRR — le certificat</text>
+  <text x="184" y="126" font-size="14" font-weight="700" fill="#2e5f8f" text-anchor="middle">porte sur LA PERSONNE</text>
+  <text x="48" y="156" font-size="13" fill="#333">· s'obtient par <tspan font-weight="700">examen</tspan></text>
+  <text x="48" y="180" font-size="13" fill="#333">· <tspan font-weight="700">payant</tspan></text>
+  <text x="48" y="204" font-size="13" fill="#333">· atteste que vous savez <tspan font-weight="700">exploiter</tspan></text>
+  <text x="48" y="222" font-size="13" fill="#333">&#160;&#160;une station</text>
+  <text x="48" y="240" font-size="13" fill="#333">· vous suit d'un bateau à l'autre</text>
+
+  <!-- LICENCE -->
+  <rect x="376" y="52" width="320" height="196" rx="10" fill="#eef8f2" stroke="#1b6b4a" stroke-width="2"/>
+  <rect x="376" y="52" width="320" height="44" rx="10" fill="#1b6b4a"/>
+  <rect x="376" y="82" width="320" height="14" fill="#1b6b4a"/>
+  <text x="536" y="81" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">LICENCE de station</text>
+  <text x="536" y="126" font-size="14" font-weight="700" fill="#1b6b4a" text-anchor="middle">porte sur LE BATEAU</text>
+  <text x="400" y="156" font-size="13" fill="#333">· <tspan font-weight="700">sans examen</tspan></text>
+  <text x="400" y="180" font-size="13" fill="#333">· <tspan font-weight="700">gratuite</tspan>, valable <tspan font-weight="700">un an</tspan></text>
+  <text x="400" y="204" font-size="13" fill="#333">· autorise <tspan font-weight="700">l'installation</tspan> à émettre</text>
+  <text x="400" y="228" font-size="13" fill="#333">· porte l'<tspan font-weight="700">indicatif</tspan>, le <tspan font-weight="700">MMSI</tspan> et la</text>
+  <text x="400" y="244" font-size="13" fill="#333">&#160;&#160;liste des équipements</text>
+
+  <!-- contrôle -->
+  <rect x="24" y="272" width="672" height="40" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="360" y="297" font-size="14" font-weight="700" fill="#7a5b00" text-anchor="middle">Lors d'un contrôle en mer, LES DEUX peuvent être exigés.</text>
+
+  <text x="360" y="338" font-size="12" fill="#555" text-anchor="middle">Une licence sans opérateur certifié ne suffit pas — et un CRR sans licence non plus.</text>
+</svg>

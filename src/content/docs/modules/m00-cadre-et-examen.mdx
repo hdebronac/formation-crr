@@ -7,6 +7,8 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
+import Figure from '../../../components/Figure.astro';
+import TroisEpreuves from '../../../assets/modules/m00-trois-epreuves.svg';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : transverse (aucune épreuve dédiée) · **Volume** : 1 h ·
@@ -183,6 +185,15 @@ section [À bord](/bord) :
 </Aside>
 
 ### 4. Le format de l'examen
+
+<Figure
+  legende="Les bandes sont à l'échelle : elles montrent le poids réel de chaque épreuve. Regardez la largeur de la bande C — dix questions, plus que A et B réunies — puis l'encadré rouge, qui dit l'essentiel : la moyenne se joue à chacune des trois épreuves séparément. C'est cette double contrainte, le poids et la séparation, qui explique pourquoi le programme n'est pas lissé."
+  auteur="Schéma produit pour ce programme"
+  licence="CC BY-SA 4.0"
+>
+  <TroisEpreuves />
+</Figure>
+
 
 L'épreuve est courte, entièrement en QCM, et se passe sur une **télécommande
 intelligente** — le même type de boîtier qu'au permis plaisance. Les questions

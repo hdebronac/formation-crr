@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-4n desc-4n">
+  <title id="titre-4n">Les quatre nombres d'une alerte ASN, sur une ligne de temps</title>
+  <desc id="desc-4n">Appui d'au moins cinq secondes sur le bouton DISTRESS ; l'alerte
+  est alors transmise cinq fois de suite sur la voie 70, puis renouvelée automatiquement
+  toutes les quatre minutes tant qu'aucun accusé de réception n'est reçu. En parallèle,
+  un navire qui a entendu la détresse et n'a vu aucun accusé au bout de cinq minutes
+  émet un MAYDAY RELAY.</desc>
+
+  <rect x="0" y="0" width="760" height="400" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="700" fill="#0b3550">Quatre nombres, quatre moments différents</text>
+
+  <!-- ligne de temps -->
+  <line x1="60" y1="150" x2="700" y2="150" stroke="#0b3550" stroke-width="3"/>
+  <polygon points="716,150 698,142 698,158" fill="#0b3550"/>
+  <text x="700" y="176" font-size="12" fill="#555" text-anchor="end">le temps passe</text>
+
+  <!-- 1. appui -->
+  <circle cx="110" cy="150" r="9" fill="#c62828"/>
+  <line x1="110" y1="150" x2="110" y2="96" stroke="#c62828" stroke-width="2"/>
+  <rect x="34" y="52" width="152" height="44" rx="6" fill="#c62828"/>
+  <text x="110" y="72" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">5 SECONDES</text>
+  <text x="110" y="89" font-size="11" fill="#ffd7d7" text-anchor="middle">d'appui sur DISTRESS</text>
+
+  <!-- 2. cinq émissions -->
+  <g fill="#ef6c00">
+    <rect x="216" y="140" width="7" height="20" rx="2"/>
+    <rect x="232" y="140" width="7" height="20" rx="2"/>
+    <rect x="248" y="140" width="7" height="20" rx="2"/>
+    <rect x="264" y="140" width="7" height="20" rx="2"/>
+    <rect x="280" y="140" width="7" height="20" rx="2"/>
+  </g>
+  <line x1="251" y1="140" x2="274" y2="96" stroke="#ef6c00" stroke-width="2"/>
+  <rect x="198" y="52" width="152" height="44" rx="6" fill="#ef6c00"/>
+  <text x="274" y="72" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">5 FOIS</text>
+  <text x="274" y="89" font-size="11" fill="#ffe6cc" text-anchor="middle">de suite, sur la voie 70</text>
+
+  <!-- 3. renouvellement -->
+  <g fill="#ef6c00" opacity="0.55">
+    <rect x="392" y="140" width="7" height="20" rx="2"/>
+    <rect x="404" y="140" width="7" height="20" rx="2"/>
+    <rect x="416" y="140" width="7" height="20" rx="2"/>
+    <rect x="536" y="140" width="7" height="20" rx="2"/>
+    <rect x="548" y="140" width="7" height="20" rx="2"/>
+    <rect x="560" y="140" width="7" height="20" rx="2"/>
+  </g>
+  <path d="M 300 200 L 396 200" stroke="#0b3550" stroke-width="2" fill="none"/>
+  <path d="M 444 200 L 540 200" stroke="#0b3550" stroke-width="2" fill="none"/>
+  <polygon points="396,200 384,194 384,206" fill="#0b3550"/>
+  <polygon points="540,200 528,194 528,206" fill="#0b3550"/>
+  <rect x="396" y="184" width="48" height="32" rx="5" fill="#0b3550"/>
+  <text x="420" y="205" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4 min</text>
+  <text x="300" y="236" font-size="12" fill="#333">l'alerte est <tspan font-weight="700">renouvelée automatiquement toutes les 4 minutes</tspan></text>
+  <text x="300" y="254" font-size="12" fill="#333">tant qu'<tspan font-weight="700">aucun accusé de réception</tspan> n'est reçu</text>
+
+  <!-- 4. relais -->
+  <line x1="24" y1="286" x2="736" y2="286" stroke="#ddd" stroke-width="1"/>
+  <rect x="24" y="304" width="180" height="44" rx="6" fill="#6a1b9a"/>
+  <text x="114" y="324" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">5 MINUTES</text>
+  <text x="114" y="341" font-size="11" fill="#e8d6f2" text-anchor="middle">et c'est un autre navire</text>
+  <text x="224" y="320" font-size="12" fill="#333">Le navire qui a <tspan font-weight="700">entendu</tspan> la détresse et ne voit <tspan font-weight="700">aucun accusé</tspan></text>
+  <text x="224" y="338" font-size="12" fill="#333">au bout de <tspan font-weight="700">cinq minutes</tspan> émet un <tspan font-weight="700">MAYDAY RELAY</tspan> — c'est M8,</text>
+  <text x="224" y="356" font-size="12" fill="#333">pas la même horloge que les 4 minutes du poste en détresse.</text>
+
+  <text x="24" y="386" font-size="13" font-weight="700" fill="#c62828">5 s · 5 fois · 4 min appartiennent au poste qui alerte. 5 min appartient à celui qui écoute.</text>
+</svg>

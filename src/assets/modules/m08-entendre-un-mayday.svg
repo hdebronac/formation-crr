@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-my desc-my">
+  <title id="titre-my">Ce que fait tout navire qui entend un MAYDAY</title>
+  <desc id="desc-my">Cinq obligations dans l'ordre : cesser immédiatement toute émission
+  susceptible de troubler le trafic de détresse ; noter en restant à l'écoute sur la
+  voie 16 ; laisser à une station côtière le temps de répondre ; répondre soi-même si
+  personne ne l'a fait dans un délai raisonnable ; alerter une station côtière si c'est
+  possible. Au bout de cinq minutes sans accusé de réception, on émet un MAYDAY RELAY.</desc>
+
+  <rect x="0" y="0" width="720" height="420" fill="#ffffff"/>
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#c62828">Vous n'êtes pas en détresse — mais vous avez déjà cinq obligations</text>
+
+  <!-- étapes -->
+  <g>
+    <rect x="24" y="46" width="672" height="52" rx="8" fill="#fdecea" stroke="#c62828" stroke-width="2"/>
+    <circle cx="54" cy="72" r="16" fill="#c62828"/><text x="54" y="78" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="82" y="68" font-size="14" font-weight="700" fill="#c62828">CESSER IMMÉDIATEMENT toute émission</text>
+    <text x="82" y="88" font-size="12" fill="#555">le doigt quitte l'alternat — on ne finit pas sa phrase</text>
+
+    <rect x="24" y="108" width="672" height="52" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+    <circle cx="54" cy="134" r="16" fill="#0b3550"/><text x="54" y="140" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="82" y="130" font-size="14" font-weight="700" fill="#0b3550">NOTER, en restant à l'écoute sur la voie 16</text>
+    <text x="82" y="150" font-size="12" fill="#555">nom du navire · position · nature · personnes à bord</text>
+
+    <rect x="24" y="170" width="672" height="52" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+    <circle cx="54" cy="196" r="16" fill="#0b3550"/><text x="54" y="202" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="82" y="192" font-size="14" font-weight="700" fill="#0b3550">ATTENDRE — laisser à une station côtière le temps de répondre</text>
+    <text x="82" y="212" font-size="12" fill="#555">elle a les moyens ; se précipiter encombre la fréquence</text>
+
+    <rect x="24" y="232" width="672" height="52" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+    <circle cx="54" cy="258" r="16" fill="#ef6c00"/><text x="54" y="264" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="82" y="254" font-size="14" font-weight="700" fill="#ef6c00">RÉPONDRE si personne ne l'a fait dans un délai raisonnable</text>
+    <text x="82" y="274" font-size="12" fill="#555">MAYDAY · &lt;navire&gt; ×3 · ICI · &lt;vous&gt; ×3 · REÇU MAYDAY</text>
+
+    <rect x="24" y="294" width="672" height="52" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+    <circle cx="54" cy="320" r="16" fill="#0b3550"/><text x="54" y="326" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="82" y="316" font-size="14" font-weight="700" fill="#0b3550">ALERTER une station côtière si c'est possible</text>
+    <text x="82" y="336" font-size="12" fill="#555">par radio, ou par téléphone — le 196 est un moyen légitime</text>
+  </g>
+
+  <!-- relais -->
+  <rect x="24" y="360" width="672" height="46" rx="8" fill="#6a1b9a"/>
+  <text x="48" y="382" font-size="14" font-weight="700" fill="#ffffff">Toujours aucun accusé de réception au bout de CINQ MINUTES ?</text>
+  <text x="48" y="400" font-size="12" fill="#e8d6f2">Vous émettez alors un MAYDAY RELAY — À TOUS, votre nom, puis les renseignements du navire.</text>
+</svg>

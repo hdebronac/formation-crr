@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-qs desc-qs">
+  <title id="titre-qs">Quel signal émettre : trois questions dans l'ordre</title>
+  <desc id="desc-qs">Première question : faut-il venir me chercher maintenant ? Si oui,
+  MAYDAY. Sinon, deuxième question : mon bateau ou une personne à bord court-il un
+  risque sérieux ? Si oui, PAN PAN. Sinon, troisième question : est-ce que je préviens
+  d'un danger pour la navigation ou la météorologie ? Si oui, SÉCURITÉ. Sinon, c'est de
+  la routine.</desc>
+
+  <rect x="0" y="0" width="720" height="440" fill="#ffffff"/>
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#333">Trois questions, toujours dans cet ordre</text>
+
+  <!-- Q1 -->
+  <rect x="24" y="50" width="420" height="58" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+  <text x="44" y="76" font-size="14" font-weight="700" fill="#333">1. Faut-il venir me chercher MAINTENANT ?</text>
+  <text x="44" y="96" font-size="12" fill="#555">danger grave et imminent, aide immédiate</text>
+  <line x1="444" y1="79" x2="500" y2="79" stroke="#c62828" stroke-width="2.5"/>
+  <polygon points="512,79 496,72 496,86" fill="#c62828"/>
+  <text x="470" y="70" font-size="11" font-weight="700" fill="#c62828" text-anchor="middle">OUI</text>
+  <rect x="516" y="52" width="180" height="54" rx="8" fill="#c62828"/>
+  <text x="606" y="76" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">MAYDAY</text>
+  <text x="606" y="95" font-size="11" fill="#ffd7d7" text-anchor="middle">voie 16 + ASN voie 70</text>
+
+  <line x1="234" y1="108" x2="234" y2="134" stroke="#90a4ae" stroke-width="2.5"/>
+  <polygon points="234,146 227,130 241,130" fill="#90a4ae"/>
+  <text x="252" y="130" font-size="11" font-weight="700" fill="#607d8b">NON</text>
+
+  <!-- Q2 -->
+  <rect x="24" y="148" width="420" height="58" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+  <text x="44" y="174" font-size="14" font-weight="700" fill="#333">2. Mon BATEAU ou QUELQU'UN est-il en cause ?</text>
+  <text x="44" y="194" font-size="12" fill="#555">avarie, remorquage, blessé, malade, consultation médicale</text>
+  <line x1="444" y1="177" x2="500" y2="177" stroke="#ef6c00" stroke-width="2.5"/>
+  <polygon points="512,177 496,170 496,184" fill="#ef6c00"/>
+  <text x="470" y="168" font-size="11" font-weight="700" fill="#ef6c00" text-anchor="middle">OUI</text>
+  <rect x="516" y="150" width="180" height="54" rx="8" fill="#ef6c00"/>
+  <text x="606" y="174" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">PAN PAN</text>
+  <text x="606" y="193" font-size="11" fill="#ffe6cc" text-anchor="middle">voie 16 · fin « à vous »</text>
+
+  <line x1="234" y1="206" x2="234" y2="232" stroke="#90a4ae" stroke-width="2.5"/>
+  <polygon points="234,244 227,228 241,228" fill="#90a4ae"/>
+  <text x="252" y="228" font-size="11" font-weight="700" fill="#607d8b">NON</text>
+
+  <!-- Q3 -->
+  <rect x="24" y="246" width="420" height="58" rx="8" fill="#f4f6f8" stroke="#90a4ae" stroke-width="2"/>
+  <text x="44" y="272" font-size="14" font-weight="700" fill="#333">3. Est-ce que je PRÉVIENS d'un danger ?</text>
+  <text x="44" y="292" font-size="12" fill="#555">navigation ou météorologie — objet flottant, feu éteint, coup de vent</text>
+  <line x1="444" y1="275" x2="500" y2="275" stroke="#b8860b" stroke-width="2.5"/>
+  <polygon points="512,275 496,268 496,282" fill="#b8860b"/>
+  <text x="470" y="266" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">OUI</text>
+  <rect x="516" y="248" width="180" height="54" rx="8" fill="#f9a825"/>
+  <text x="606" y="272" font-size="20" font-weight="700" fill="#3b2c00" text-anchor="middle">SÉCURITÉ</text>
+  <text x="606" y="291" font-size="11" fill="#4a3a00" text-anchor="middle">voie 16 · fin « terminé »</text>
+
+  <line x1="234" y1="304" x2="234" y2="330" stroke="#90a4ae" stroke-width="2.5"/>
+  <polygon points="234,342 227,326 241,326" fill="#90a4ae"/>
+  <text x="252" y="326" font-size="11" font-weight="700" fill="#607d8b">NON</text>
+
+  <!-- routine -->
+  <rect x="24" y="344" width="420" height="46" rx="8" fill="#e0e0e0"/>
+  <text x="234" y="373" font-size="16" font-weight="700" fill="#555" text-anchor="middle">ROUTINE — appel ordinaire</text>
+
+  <line x1="24" y1="404" x2="696" y2="404" stroke="#ddd" stroke-width="1"/>
+  <text x="24" y="428" font-size="13" font-weight="700" fill="#c62828">En cas de doute entre deux rangs, on prend le plus élevé : on peut toujours déclasser.</text>
+</svg>
