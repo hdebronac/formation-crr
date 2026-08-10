@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-prio desc-prio">
+  <title id="titre-prio">Les quatre rangs de priorité des communications</title>
+  <desc id="desc-prio">De haut en bas : détresse, signal MAYDAY ; urgence, signal PAN PAN ;
+  sécurité, signal SÉCURITÉ ; puis la routine. Les trois premiers rangs relèvent de la
+  sauvegarde de la vie humaine et priment sur tout le reste.</desc>
+
+  <rect x="0" y="0" width="720" height="400" fill="#ffffff"/>
+
+  <text x="24" y="34" font-size="15" font-weight="700" fill="#333">Quatre rangs, un seul ordre — il ne s'inverse jamais</text>
+
+  <!-- rang 1 -->
+  <rect x="150" y="52" width="480" height="66" rx="8" fill="#c62828"/>
+  <text x="172" y="82" font-size="22" font-weight="700" fill="#ffffff">1 · DÉTRESSE</text>
+  <text x="172" y="104" font-size="14" fill="#ffe9e9">MAYDAY — danger grave et imminent, aide immédiate</text>
+
+  <!-- rang 2 -->
+  <rect x="150" y="126" width="480" height="66" rx="8" fill="#ef6c00"/>
+  <text x="172" y="156" font-size="22" font-weight="700" fill="#ffffff">2 · URGENCE</text>
+  <text x="172" y="178" font-size="14" fill="#fff1e2">PAN PAN — sécurité d'un navire ou d'une personne</text>
+
+  <!-- rang 3 -->
+  <rect x="150" y="200" width="480" height="66" rx="8" fill="#f9a825"/>
+  <text x="172" y="230" font-size="22" font-weight="700" fill="#3b2c00">3 · SÉCURITÉ</text>
+  <text x="172" y="252" font-size="14" fill="#4a3a00">SÉCURITÉ — sécurité de la navigation ou météorologie</text>
+
+  <!-- rang 4 -->
+  <rect x="150" y="284" width="480" height="60" rx="8" fill="#e0e0e0"/>
+  <text x="172" y="312" font-size="20" font-weight="700" fill="#444">4 · ROUTINE</text>
+  <text x="172" y="332" font-size="14" fill="#555">tout le reste — hors sauvegarde de la vie humaine</text>
+
+  <!-- accolade SVH -->
+  <path d="M 132 52 L 118 52 L 118 266 L 132 266" fill="none" stroke="#c62828" stroke-width="3"/>
+  <path d="M 118 159 L 104 159" fill="none" stroke="#c62828" stroke-width="3"/>
+  <text x="96" y="150" font-size="15" font-weight="700" fill="#c62828" text-anchor="end">SVH</text>
+  <text x="96" y="170" font-size="12" fill="#c62828" text-anchor="end">sauvegarde de</text>
+  <text x="96" y="186" font-size="12" fill="#c62828" text-anchor="end">la vie humaine</text>
+
+  <!-- note -->
+  <text x="150" y="368" font-size="13" fill="#555">Ces trois appels sont émis sur ordre du commandant, du patron ou du chef de bord.</text>
+  <text x="150" y="388" font-size="13" fill="#555">En cas de doute entre deux rangs, on prend le plus élevé.</text>
+</svg>

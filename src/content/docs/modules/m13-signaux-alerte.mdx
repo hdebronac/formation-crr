@@ -7,6 +7,12 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
+import { Image } from 'astro:assets';
+import Figure from '../../../components/Figure.astro';
+import ChaineCospas from '../../../assets/modules/m13-chaine-cospas-sarsat.svg';
+import TraceSart from '../../../assets/modules/m13-trace-sart.svg';
+import largueur from '../../../assets/modules/m13-largueur-hydrostatique.jpg';
+import ecranAis from '../../../assets/modules/m13-ecran-ais.jpg';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 3 h ·
@@ -181,6 +187,20 @@ par **974** désigne un équipement, pas un navire.
 
 ### 4. La chaîne Cospas-Sarsat, du déclenchement au CROSS
 
+<Figure
+  legende="Suivez la chaîne dans le sens des flèches : elle est linéaire, et
+           l'examen la parcourt dans cet ordre. Deux couleurs, deux fréquences :
+           en rouge le 406 MHz, qui monte vers les satellites et redescend vers
+           les stations au sol — c'est lui qui identifie et localise ; en violet
+           le 121,5 MHz, qui ne sert qu'à la toute fin, quand le sauveteur est
+           déjà sur zone. Le FMCC de Toulouse est le maillon français."
+  auteur="Schéma produit pour ce programme"
+  licence="CC BY-SA 4.0"
+>
+  <ChaineCospas />
+</Figure>
+
+
 C'est un enchaînement à réciter, parce qu'il est linéaire et qu'il tombe
 bien à l'examen.
 
@@ -226,6 +246,24 @@ balises.
 </Aside>
 
 ### 5. Deux versions, deux montages
+
+<Figure
+  legende="Le largueur hydrostatique d'une balise de pont, en place sur son
+           conteneur. Deux choses à regarder : le boîtier orange, qui libère la
+           balise sous la pression de l'eau — à moins de 4 mètres de profondeur —
+           et la couronne graduée en mois et en années, qui porte sa propre date
+           de remplacement. Ce dispositif s'entretient comme la balise : le
+           manuel demande de le contrôler."
+  auteur="12thave"
+  licence="CC BY-SA 3.0"
+  lien="https://commons.wikimedia.org/wiki/File:Epirb_hydrostatic_release_mechanism.jpg"
+  source="Wikimedia Commons"
+  fond={false}
+  largeur="420px"
+>
+  <Image src={largueur} alt="Largueur hydrostatique orange monté sur un conteneur de balise de pont." />
+</Figure>
+
 
 Les EPIRB sont déclinées en **deux versions**, et la différence porte
 sur le déclenchement.
@@ -329,6 +367,23 @@ déployée verticalement au-dessus de l'eau**.
 
 ### 8. AIS, AIS-SART et SART
 
+<Figure
+  legende="Un écran AIS et sa liste de navires à proximité : distance, relèvement
+           et nom, puis en bas la position, la vitesse et la route du navire
+           porteur. Cherchez la ligne qui affiche un nombre au lieu d'un nom —
+           c'est un MMSI, celui d'une station dont le nom n'est pas transmis. Cet
+           écran ne fait pas partie du SMDSM : il sert à voir et à être vu, pas à
+           alerter."
+  auteur="Ulf Larsen"
+  licence="CC BY-SA 3.0"
+  lien="https://commons.wikimedia.org/wiki/File:Ships_AIS_display_with_lists_of_nearby_vessels.jpg"
+  source="Wikimedia Commons"
+  fond={false}
+>
+  <Image src={ecranAis} alt="Écran AIS affichant la liste des navires à proximité." />
+</Figure>
+
+
 **L'AIS** — *Automatic Identification System*, système d'identification
 automatique — est un **système d'échanges automatisés de messages entre
 navires, et entre les navires et la terre, par VHF**. Il permet de
@@ -376,6 +431,19 @@ recherche et de sauvetage — fonctionne sur un tout autre principe :
 - sa portée est d'**environ 5 à 10 milles**, selon sa **hauteur par
   rapport au niveau de l'eau** et celle de l'**antenne du radar** qui le
   détecte.
+
+<Figure
+  legende="Ce que voit le sauveteur sur son écran radar. Le répondeur n'apparaît
+           pas comme un écho ordinaire mais comme une série de douze traits
+           régulièrement espacés, alignés dans l'axe du répondeur et s'éloignant
+           du centre. Le trait le plus proche du centre marque la position du
+           naufragé : c'est celui-là qu'on rallie. Cette signature est reconnue
+           internationalement comme un signal de détresse."
+  auteur="Schéma produit pour ce programme"
+  licence="CC BY-SA 4.0"
+>
+  <TraceSart />
+</Figure>
 
 <Aside type="tip" title="Douze traits, et tenir le SART haut">
   Deux détails qui tombent à l'examen et qui sauvent en mer. **Douze

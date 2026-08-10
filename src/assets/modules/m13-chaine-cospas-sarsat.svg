@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-cs desc-cs">
+  <title id="titre-cs">La chaîne d'alerte Cospas-Sarsat, de la balise au CROSS</title>
+  <desc id="desc-cs">La balise émet sur 406 mégahertz vers les satellites, qui
+  retransmettent aux stations au sol dites LUT ; les LUT alimentent les centres de
+  contrôle et de mission MCC, qui valident et distribuent l'alerte ; en France le FMCC
+  de Toulouse la retransmet au CROSS compétent, qui engage les moyens. L'approche
+  finale se fait au radioralliement sur 121,5 mégahertz.</desc>
+
+  <rect x="0" y="0" width="760" height="400" fill="#ffffff"/>
+
+  <text x="24" y="32" font-size="15" font-weight="700" fill="#0b3550">De la balise au sauveteur : une chaîne linéaire</text>
+
+  <!-- satellites -->
+  <g fill="#0b3550">
+    <circle cx="300" cy="86" r="13"/>
+    <rect x="272" y="80" width="18" height="12" rx="2"/>
+    <rect x="310" y="80" width="18" height="12" rx="2"/>
+    <circle cx="470" cy="86" r="13"/>
+    <rect x="442" y="80" width="18" height="12" rx="2"/>
+    <rect x="480" y="80" width="18" height="12" rx="2"/>
+  </g>
+  <text x="385" y="60" font-size="14" font-weight="700" fill="#0b3550" text-anchor="middle">satellites</text>
+
+  <!-- balise -->
+  <rect x="40" y="220" width="86" height="96" rx="12" fill="#ff8f1f"/>
+  <rect x="70" y="196" width="26" height="30" rx="6" fill="#ff8f1f"/>
+  <text x="83" y="278" font-size="14" font-weight="700" fill="#4a2600" text-anchor="middle">BALISE</text>
+  <text x="83" y="296" font-size="12" fill="#4a2600" text-anchor="middle">RLS · PLB</text>
+  <text x="83" y="340" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">406 MHz</text>
+  <text x="83" y="358" font-size="11" fill="#555" text-anchor="middle">identifie et localise</text>
+
+  <!-- montée vers satellite -->
+  <path d="M 118 200 L 268 104" stroke="#c0392b" stroke-width="2.5" fill="none" stroke-dasharray="7 5"/>
+  <polygon points="276,99 262,99 268,110" fill="#c0392b"/>
+
+  <!-- descente vers LUT -->
+  <path d="M 486 104 L 604 196" stroke="#c0392b" stroke-width="2.5" fill="none" stroke-dasharray="7 5"/>
+  <polygon points="610,201 600,190 597,203" fill="#c0392b"/>
+
+  <!-- LUT -->
+  <rect x="576" y="212" width="150" height="52" rx="8" fill="#0b3550"/>
+  <text x="651" y="234" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">LUT</text>
+  <text x="651" y="252" font-size="11" fill="#cfe2ef" text-anchor="middle">stations au sol</text>
+
+  <!-- MCC -->
+  <rect x="576" y="280" width="150" height="52" rx="8" fill="#0b3550"/>
+  <text x="651" y="302" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">MCC</text>
+  <text x="651" y="320" font-size="11" fill="#cfe2ef" text-anchor="middle">valident et distribuent</text>
+  <line x1="651" y1="264" x2="651" y2="274" stroke="#0b3550" stroke-width="2.5"/>
+  <polygon points="651,280 645,270 657,270" fill="#0b3550"/>
+
+  <!-- FMCC -->
+  <rect x="366" y="280" width="180" height="52" rx="8" fill="#1b6b4a"/>
+  <text x="456" y="302" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">FMCC de Toulouse</text>
+  <text x="456" y="320" font-size="11" fill="#d4eee2" text-anchor="middle">le centre français</text>
+  <line x1="576" y1="306" x2="556" y2="306" stroke="#0b3550" stroke-width="2.5"/>
+  <polygon points="546,306 558,300 558,312" fill="#0b3550"/>
+
+  <!-- CROSS -->
+  <rect x="176" y="280" width="150" height="52" rx="8" fill="#1b6b4a"/>
+  <text x="251" y="302" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">CROSS</text>
+  <text x="251" y="320" font-size="11" fill="#d4eee2" text-anchor="middle">engage les moyens</text>
+  <line x1="366" y1="306" x2="336" y2="306" stroke="#1b6b4a" stroke-width="2.5"/>
+  <polygon points="326,306 338,300 338,312" fill="#1b6b4a"/>
+
+  <!-- radioralliement -->
+  <path d="M 176 306 C 130 306 120 330 126 344" stroke="#8e44ad" stroke-width="2.5" fill="none"/>
+  <polygon points="128,352 120,340 133,338" fill="#8e44ad"/>
+  <text x="150" y="376" font-size="12" font-weight="700" fill="#8e44ad">121,5 MHz — radioralliement, approche finale</text>
+
+  <text x="736" y="360" font-size="11" fill="#555" text-anchor="end">Le satellite donne un point sur la carte ;</text>
+  <text x="736" y="376" font-size="11" fill="#555" text-anchor="end">le 121,5 MHz mène le sauveteur jusqu'à vous.</text>
+</svg>

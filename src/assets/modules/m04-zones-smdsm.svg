@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380"
+     font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+     role="img" aria-labelledby="titre-zones desc-zones">
+  <title id="titre-zones">Les quatre zones océaniques du SMDSM</title>
+  <desc id="desc-zones">Depuis la côte vers le large : zone A1, couverture d'une station
+  côtière VHF avec appel sélectif numérique, 20 à 30 milles ; zone A2, station côtière
+  en ondes hectométriques, 150 à 300 milles ; zone A3, couverture satellite Inmarsat
+  entre 76 degrés nord et 76 degrés sud ; zone A4, au-delà. Le CRR ne couvre que la
+  zone A1.</desc>
+
+  <rect x="0" y="0" width="720" height="380" fill="#ffffff"/>
+
+  <!-- la terre -->
+  <path d="M 0 60 L 78 60 L 70 300 L 0 300 Z" fill="#e8e2d5"/>
+  <text x="36" y="186" font-size="14" fill="#6b6353" text-anchor="middle" transform="rotate(-90 36 186)">côte</text>
+  <!-- la station côtière -->
+  <line x1="70" y1="150" x2="70" y2="110" stroke="#333" stroke-width="3"/>
+  <circle cx="70" cy="106" r="5" fill="#333"/>
+
+  <!-- bandes -->
+  <rect x="78" y="60" width="150" height="240" fill="#cfe6f7"/>
+  <rect x="228" y="60" width="170" height="240" fill="#a9d3ef"/>
+  <rect x="398" y="60" width="200" height="240" fill="#7fb9e2"/>
+  <rect x="598" y="60" width="122" height="240" fill="#5a97c4"/>
+  <g stroke="#ffffff" stroke-width="2">
+    <line x1="228" y1="60" x2="228" y2="300"/>
+    <line x1="398" y1="60" x2="398" y2="300"/>
+    <line x1="598" y1="60" x2="598" y2="300"/>
+  </g>
+
+  <!-- libellés de zone -->
+  <g text-anchor="middle" font-weight="700" fill="#0b3550">
+    <text x="153" y="130" font-size="30">A1</text>
+    <text x="313" y="130" font-size="30">A2</text>
+    <text x="498" y="130" font-size="30">A3</text>
+    <text x="659" y="130" font-size="30">A4</text>
+  </g>
+  <g text-anchor="middle" font-size="13" fill="#0b3550">
+    <text x="153" y="160">VHF avec ASN</text>
+    <text x="153" y="178">20 à 30 milles</text>
+    <text x="313" y="160">station côtière MF</text>
+    <text x="313" y="178">150 à 300 milles</text>
+    <text x="498" y="160">satellite Inmarsat</text>
+    <text x="498" y="178">76° N à 76° S</text>
+    <text x="659" y="160">au-delà</text>
+    <text x="659" y="178">HF et balises</text>
+  </g>
+  <g text-anchor="middle" font-size="12" fill="#0b3550" opacity="0.85">
+    <text x="153" y="204">voie 16 · voie 70</text>
+    <text x="313" y="204">ASN en MF · NAVTEX</text>
+    <text x="498" y="204">Inmarsat · HF</text>
+    <text x="659" y="204">HF · Cospas-Sarsat</text>
+  </g>
+
+  <!-- ce que couvre le CRR -->
+  <rect x="78" y="252" width="150" height="34" rx="6" fill="#0b3550"/>
+  <text x="153" y="274" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">LE CRR S'ARRÊTE ICI</text>
+
+  <!-- flèche du large -->
+  <line x1="78" y1="326" x2="700" y2="326" stroke="#333" stroke-width="2"/>
+  <polygon points="712,326 696,320 696,332" fill="#333"/>
+  <text x="86" y="348" font-size="13" fill="#333">on s'éloigne de la côte</text>
+  <text x="700" y="348" font-size="13" fill="#333" text-anchor="end">le large</text>
+
+  <text x="78" y="30" font-size="15" font-weight="700" fill="#0b3550">Les quatre zones du SMDSM se lisent depuis la côte</text>
+  <text x="46" y="52" font-size="12" fill="#333" text-anchor="start">station côtière</text>
+</svg>

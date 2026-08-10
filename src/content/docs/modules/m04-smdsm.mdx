@@ -7,6 +7,8 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
+import Figure from '../../../components/Figure.astro';
+import ZonesSmdsm from '../../../assets/modules/m04-zones-smdsm.svg';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **A** — 6 questions sur 24 · **Volume** : 2,5 h ·
@@ -147,6 +149,21 @@ figure pas dans la liste.
 </Aside>
 
 ### 3. Les quatre zones
+
+<Figure
+  legende="Les quatre zones se lisent depuis la côte, et chacune correspond à un
+           moyen radio, pas à une distance arbitraire. Regardez où s'arrête la
+           bande A1 : c'est la portée d'une station côtière VHF avec appel
+           sélectif numérique, 20 à 30 milles en métropole — et c'est exactement
+           là que s'arrête ce que le CRR autorise. Au-delà, les moyens changent :
+           ondes hectométriques en A2, satellite en A3, ondes décamétriques et
+           balises en A4."
+  auteur="Schéma produit pour ce programme"
+  licence="CC BY-SA 4.0"
+>
+  <ZonesSmdsm />
+</Figure>
+
 
 Les zones du SMDSM ne se définissent pas par des distances arbitraires
 mais par la **couverture disponible**. La distance n'en est que la

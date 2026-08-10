@@ -7,6 +7,9 @@ sidebar:
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
+import { Image } from 'astro:assets';
+import Figure from '../../../components/Figure.astro';
+import navtex from '../../../assets/modules/m12-navtex-recepteur.jpg';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 2 h ·
@@ -170,6 +173,23 @@ Deux compléments utiles, donnés eux aussi par le manuel :
 </Aside>
 
 ### 3. Le système NAVTEX
+
+<Figure
+  legende="Un récepteur NAVTEX à bord, et ce qui le caractérise : le message
+           sort imprimé, sur papier. Repérez le 518 affiché en vert sur la
+           façade — c'est la fréquence du service international, et le texte
+           imprimé est donc en anglais. Chaque message est encadré par ZCZC à
+           l'ouverture et NNNN à la fermeture. Notez enfin que ce boîtier n'est
+           pas la VHF : c'est un appareil distinct, avec sa propre antenne."
+  auteur="Clipper"
+  licence="CC BY 2.5"
+  lien="https://commons.wikimedia.org/wiki/File:Navtex.jpg"
+  source="Wikimedia Commons"
+  fond={false}
+>
+  <Image src={navtex} alt="Récepteur NAVTEX imprimant un message ; la façade affiche 518." />
+</Figure>
+
 
 **NAVTEX** — de *NAVigational TelEX* — est un **système de diffusion et
 de réception automatique des RSM**. Il permet aux navires de recevoir

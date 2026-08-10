@@ -590,7 +590,7 @@ l'examen : c'est lui qui prouve que la formation a atteint son objectif.
 | 10 | Modules M11 → M14 | ✅ |
 | 11 | Passe vidéos — liens réels ouverts, vérifiés et datés | ⬜ |
 | 12 | Sections `bord/` et `reference/` complètes | ✅ |
-| 13 | Illustrations créditées + page de crédits | ⬜ |
+| 13 | Illustrations créditées + page de crédits | 🟡 première passe — 7 illustrations sur 4 modules |
 
 L'ordre de rédaction n'est pas l'ordre de lecture : **M0 puis M10**, parce que
 M0 fixe le gabarit et que M10 est le module le plus difficile — le rédiger tôt
