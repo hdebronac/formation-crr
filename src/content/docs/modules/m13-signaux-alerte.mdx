@@ -1,55 +1,399 @@
 ---
 title: "M13 · Signaux d’alerte et de localisation"
-description: "Radiobalise de localisation des sinistres, balise personnelle, répondeur radar SART, AIS-SART, MOB-AIS, AIS et système Cospas-Sarsat."
+description: "Radiobalises RLS et EPIRB, codage hexadécimal, chaîne Cospas-Sarsat, balises personnelles PLB, AIS, transpondeur AIS-SART et répondeur radar SART."
 sidebar:
   order: 13
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
-  **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 2,5 h ·
-  **Prérequis** : modules précédents validés
+  **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 3 h ·
+  **Prérequis** : M4 et M10 validés — le SMDSM et le MMSI
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Tout ce que vous avez appris jusqu'ici suppose que quelqu'un tienne un
+micro. Ce module traite du cas où plus personne ne le tient : le bateau
+a coulé, la VHF est sous l'eau, l'équipage est dans le radeau. Il faut
+alors que **le matériel alerte tout seul**, et qu'il continue ensuite à
+dire où il se trouve pendant que les moyens de secours convergent.
+
+C'est la distinction structurante du module, et l'examen la teste sous
+plusieurs formes : **alerter** et **se faire trouver** sont deux
+fonctions différentes, assurées par des équipements différents, sur des
+fréquences différentes. La radiobalise alerte à l'échelle de la planète
+mais localise mal ; le répondeur radar n'alerte personne mais vous place
+au mètre près sur l'écran du sauveteur.
+
+Vous y croiserez aussi le piège de vocabulaire le plus retors du
+manuel : **deux choses différentes s'appellent RLS**.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Distinguer un signal d'**alerte** d'un signal de **localisation**.
+- [ ] Décrire le **codage** d'une radiobalise et son lien avec le MMSI.
+- [ ] Dérouler la **chaîne Cospas-Sarsat**, du déclenchement au CROSS.
+- [ ] Citer les **fréquences** et les caractéristiques d'une RLS.
+- [ ] Distinguer **RLS de pont** et **RLS de survie**, **RLS** et
+  **PLB**.
+- [ ] Expliquer ce que font l'**AIS**, l'**AIS-SART** et le **SART**.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| RLS | Radiobalise de localisation des sinistres, en anglais EPIRB |
+| RLS (*Return Link System*) | Fonction récente d'accusé de réception sur la balise — homonyme trompeur |
+| PLB | *Personal Locator Beacon* — balise personnelle, portée sur soi |
+| Code hexadécimal | Identifiant de 15 chiffres et lettres programmé dans la balise |
+| Cospas-Sarsat | Système satellitaire international de détection des balises |
+| 406 MHz | Fréquence d'alerte et de localisation par satellite |
+| 121,5 MHz | Fréquence de radioralliement en phase finale d'approche |
+| LUT | *Local User Terminal* — station au sol recevant les données satellite |
+| MCC | Centre de contrôle et de mission validant et distribuant les alertes |
+| FMCC | Centre français, à Toulouse, qui retransmet aux CROSS |
+| Largueur hydrostatique | Dispositif libérant la balise de pont sous quelques mètres d'eau |
+| AIS | Système d'identification automatique des navires, par VHF |
+| AIS-SART | Transpondeur émettant sa position GPS sur les voies AIS |
+| SART | Répondeur radar déclenché par un radar voisin |
+| Radioralliement | Repérage final d'une balise à courte distance |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve C et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve C**, « Le système mondial de détresse
+  et de sécurité en mer », **10 questions sur 24**. Il correspond à la
+  section du manuel ANFR intitulée **« Signaux d'alerte et de
+  localisation dans le SMDSM »**.
+- **Ce qui est interrogé** : les **fréquences** et leur rôle respectif,
+  les **caractéristiques chiffrées** des balises, la différence entre
+  **balise de pont** et **balise de survie**, le statut de la **PLB** au
+  regard de la licence, et l'aspect du signal **SART** sur un écran
+  radar.
+- **Confusion classique — RLS contre RLS.** Le sigle désigne d'abord la
+  **radiobalise de localisation des sinistres**. Depuis 2023, il
+  désigne aussi le ***Return Link System***, une fonction d'accusé de
+  réception intégrée aux balises récentes. Le manuel signale lui-même
+  qu'il ne faut pas les confondre.
+- **Confusion classique — l'AIS n'est pas du SMDSM.** Le manuel l'écrit
+  noir sur blanc : « le système AIS ne fait pas partie du SMDSM ». Mais
+  l'**AIS-SART**, lui, est un équipement de localisation de survie.
+- **Confusion classique — quel centre à Toulouse ?** Le **FMCC** traite
+  les alertes de balises ; le **CCMM**, également à Toulouse, donne les
+  consultations médicales (**M9**). Deux centres, deux métiers.
+- **N'est pas interrogé** : la liste des MID, qui figure en **annexe**
+  du manuel et se consulte (`reference/mmsi-et-mid`).
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Alerter, puis se faire trouver
 
-### 2. *(section à rédiger)*
+Cinq équipements, deux fonctions. Le tableau qui suit est l'ossature du
+module : si vous le tenez, le reste s'y accroche.
 
-### 3. *(section à rédiger)*
+| Équipement | Fonction | Fréquences | Portée |
+|---|---|---|---|
+| **RLS / EPIRB** | Alerte **et** localisation par satellite | 406 MHz et 121,5 MHz | Mondiale |
+| **PLB** | Alerte **et** localisation, pour une personne | 406 MHz et 121,5 MHz | Mondiale |
+| **AIS** | Identification et suivi du trafic | AIS 1 et AIS 2 | 20 à 40 milles |
+| **AIS-SART** | **Localisation** des naufragés | AIS 1 et AIS 2 | Portée VHF |
+| **SART** | **Localisation** sur écran radar | Bande radar 9200–9500 MHz | 5 à 10 milles |
+
+Deux lectures de ce tableau, à faire dès maintenant.
+
+- **La portée diminue quand la précision augmente.** Le satellite vous
+  entend depuis n'importe où mais vous situe dans un cercle ; le radar
+  du sauveteur ne vous entend qu'à quelques milles mais vous place sur
+  son écran. Les deux se complètent, ils ne se remplacent pas.
+- **L'alerte est instantanée, la localisation dure.** Une balise alerte
+  une fois et continue d'émettre ; un SART ne sert qu'à la fin, quand
+  quelqu'un est déjà en route.
+
+<Aside type="danger" title="Aucune balise ne remplace la veille">
+  Une RLS, un SART, une VHF portative servent à **être secouru**. Ils ne
+  remplacent ni la veille, ni le gilet, ni la ligne de vie, ni le plan
+  de navigation, ni le fait d'avoir dit à terre où vous alliez et quand
+  vous rentriez. Un équipement de survie n'améliore pas une décision de
+  navigation : il limite les dégâts quand elle a été mauvaise.
+</Aside>
+
+### 2. La radiobalise : ce qu'elle est, comment elle est codée
+
+**RLS**, en anglais **EPIRB** — *Emergency Position Indicating Radio
+Beacon*. Le manuel en donne la définition fonctionnelle : ces balises
+« transmettent aux organismes de secours, via un réseau de plusieurs
+satellites, les données permettant d'**identifier** et de **localiser**
+un navire ayant déclenché son EPIRB ».
+
+Le codage est le point que l'examen aime, parce qu'il relie la balise à
+tout ce que vous avez appris en **M1** et **M10** :
+
+- Suivant le **MMSI attribué au navire**, l'installateur ou le revendeur
+  programme la balise avec un **code hexadécimal de 15 chiffres et
+  lettres**, suivant un protocole imposé par la réglementation
+  **Cospas-Sarsat**.
+- Ce code est **visible sur une face de la balise** et sur la **fiche de
+  codage**.
+- Il doit être **communiqué à l'ANFR** pour **figurer sur la licence
+  radio**.
+- Lors d'une alerte, le **décodage** du code hexadécimal permet
+  **l'identification du navire grâce au MMSI**.
+
+<Aside type="tip" title="Pourquoi 15 caractères et pas 9 ?">
+  Le MMSI compte 9 chiffres (**M10**). Le code balise en compte 15,
+  chiffres **et** lettres, parce qu'il transporte davantage que
+  l'identité : le protocole, le type de balise, le pays. Le MMSI s'en
+  déduit par décodage — c'est pour cela qu'une balise correctement codée
+  suffit à savoir **quel bateau** appelle.
+</Aside>
+
+### 3. Le piège du sigle : deux RLS
+
+Le manuel prend soin de le signaler, ce qui est le meilleur indice que
+la question existe.
+
+Depuis **2023**, les constructeurs proposent une nouvelle génération de
+balises satellitaires dites **RLS**, pour ***Return Link System*** —
+**à ne pas confondre avec Radiobalise de Localisation des Sinistres**.
+
+Ces balises apportent deux choses :
+
+- un **voyant d'accusé de réception**, qui indique à l'utilisateur que
+  **l'alerte a bien été reçue par un centre de coordination de
+  sauvetage** ;
+- un **identifiant AIS** (ID-AIS), ou numéro AIS, qui **commence par
+  974**.
+
+<Aside type="caution" title="Le voyant qui change tout, psychologiquement">
+  Jusqu'à cette génération, on déclenchait sa balise sans jamais savoir
+  si quelqu'un avait reçu quoi que ce soit. Le voyant d'accusé de
+  réception répond à la question que se pose tout naufragé : « est-ce
+  que ça a marché ? ». C'est un progrès de sécurité autant qu'un
+  progrès technique — mais l'absence de voyant sur une balise plus
+  ancienne ne signifie **pas** que l'alerte n'est pas passée.
+</Aside>
+
+Retenez aussi que l'**ID-AIS** n'est pas un MMSI : le manuel prévient
+en **M10** qu'il ne faut pas les confondre. Un identifiant commençant
+par **974** désigne un équipement, pas un navire.
+
+### 4. La chaîne Cospas-Sarsat, du déclenchement au CROSS
+
+C'est un enchaînement à réciter, parce qu'il est linéaire et qu'il tombe
+bien à l'examen.
+
+<Steps>
+
+1. **La balise émet** sur **406 MHz**, avec son code hexadécimal.
+
+2. **Les satellites captent** et retransmettent aux **stations au sol**,
+   les **LUT** (*Local User Terminal*).
+
+3. **Les LUT alimentent les MCC**, centres de contrôle et de mission,
+   qui **valident** et **distribuent** les données d'alerte aux centres
+   de sauvetage compétents.
+
+4. **En France, le FMCC de Toulouse** retransmet les données d'alerte
+   aux **centres de coordination du sauvetage** concernés — le **CROSS
+   Gris-Nez** pour la métropole.
+
+5. **Le CROSS engage les moyens**, et l'approche finale se fait au
+   **radioralliement**.
+
+</Steps>
+
+Les balises fonctionnent sur **deux fréquences**, et il faut savoir dire
+à quoi sert chacune :
+
+| Fréquence | Rôle |
+|---|---|
+| **406 MHz** | Transmise aux satellites : **identifie** et **localise** la balise |
+| **121,5 MHz** | **Radioralliement** : repérage en phase finale d'approche sur zone |
+
+La précision de la localisation, « de l'ordre d'un à deux milles pour
+les anciens modèles », est « limitée à quelques mètres avec la fonction
+GPS, devenue un standard désormais ». Le repérage final s'effectue par
+le 121,5 MHz et par l'**option AIS**, intégrée à de plus en plus de
+balises.
+
+<Aside type="note" title="Toulouse deux fois, deux centres différents">
+  Le **FMCC** de Toulouse traite les alertes de balises. Le **CCMM**,
+  lui aussi à Toulouse, est le centre de consultation médicale maritime
+  (**M9**). L'examen peut proposer l'un pour l'autre : le premier
+  s'occupe des balises, le second des malades.
+</Aside>
+
+### 5. Deux versions, deux montages
+
+Les EPIRB sont déclinées en **deux versions**, et la différence porte
+sur le déclenchement.
+
+| Critère | **Balise de survie** | **Balise de pont** |
+|---|---|---|
+| Forme | **Portable** | Logée dans un **conteneur** |
+| Mise en marche | **Manuelle** | Manuelle **ou automatique** |
+| Dispositif | — | **Largueur hydrostatique** |
+| Emplacement | **Poste de navigation** | Support **solidaire du pont** |
+| Ce qu'on en fait | Doit **pouvoir être portée** à bord d'une embarcation ou d'un radeau de sauvetage | Doit **se dégager librement** afin de se déclencher seule si le navire coule |
+
+Le largueur hydrostatique est la pièce à comprendre : c'est un
+dispositif qui libère la balise sous l'effet de la pression de l'eau. Le
+manuel donne le seuil : pour les **RLS de pont**, la balise doit être
+**éjectée automatiquement de son conteneur à moins de 4 mètres de
+profondeur**.
+
+<Aside type="caution" title="Une balise de survie ne part pas toute seule">
+  C'est l'erreur de raisonnement classique à bord : croire que la balise
+  du poste de navigation flottera et s'activera si le bateau coule. Non
+  — la balise de survie se déclenche **manuellement** et doit être
+  **emportée** dans le radeau. Si personne ne la prend, elle coule avec
+  le bateau. D'où sa place dans le sac de survie, et non au fond d'un
+  coffre.
+</Aside>
+
+Les autres caractéristiques physiques sont interrogeables telles
+quelles :
+
+- de couleur **jaune ou orange**, pour faciliter le repérage visuel ;
+- **étanches à une profondeur de 10 mètres** ;
+- devant pouvoir **fonctionner pendant 48 heures**.
+
+### 6. Entretenir une balise
+
+Une balise est un équipement qu'on n'utilise jamais et dont on doit
+pourtant garantir qu'il marchera. Le manuel prévoit trois gestes.
+
+**L'essai.** Un **autotest incorporé** permet d'effectuer des essais sur
+**tous les types de RLS et PLB maritimes**, **sans risque de déclencher
+une fausse alerte** — en suivant la notice du fabricant. Une
+visualisation du fonctionnement est souvent intégrée à la balise, sous
+forme de **clignotements lumineux**.
+
+**La batterie.** Le **carnet d'entretien** mentionne la **date de
+péremption** de la batterie ; celle-ci est en outre **inscrite de
+manière indélébile sur le corps de la radiobalise**. La durée de
+conservation est **de cinq ans en général**.
+
+**Le contrôle.** Il est recommandé de contrôler régulièrement la balise
+et, le cas échéant, **son largueur hydrostatique** pour les balises de
+pont.
+
+<Aside type="tip" title="L'autotest ne déclenche pas d'alerte">
+  C'est la même logique qu'en **M11** pour la VHF : le constructeur
+  prévoit un test qui n'émet pas vers les satellites. Un plaisancier qui
+  n'ose pas tester sa balise de peur d'alerter les secours embarque
+  pendant dix ans un boîtier dont il ignore l'état.
+</Aside>
+
+Le manuel rappelle enfin l'obligation d'emport : « les navires de
+plaisance de longueur de coque inférieure à 24 mètres effectuant une
+navigation hauturière à plus de **60 milles d'un abri** doivent
+obligatoirement emporter une EPIRB ». Le cadre général de l'emport
+radio est traité en **M1**.
+
+### 7. La balise personnelle (PLB)
+
+**PLB** — *Personal Locator Beacon*. Petite, **prévue pour être portée
+sur soi**. Il en existe des modèles dédiés à des usages différents :
+**aéronautique**, **terrestre**, **maritime**.
+
+La différence décisive avec une RLS est administrative, et c'est celle
+que l'examen retient :
+
+- La PLB est **programmée en usine** avec un code hexadécimal **qui ne
+  permet pas de décoder un MMSI**. Elle **ne figure donc pas sur la
+  licence**.
+- Pour être identifié, il faut **absolument déclarer sa PLB auprès du
+  FMCC de Toulouse** — registre en ligne du CNES, `registre406.cnes.fr`.
+- La réglementation impose aux **professionnels** qui embarquent une PLB
+  maritime de la faire **recoder avec le MMSI attribué à
+  l'embarcation**. Dans ce cas, la PLB **doit figurer sur la licence**
+  avec son nouveau code hexadécimal.
+
+Techniquement, les PLB fonctionnent sur **les mêmes fréquences que les
+EPIRB — 406 et 121,5 MHz** — avec possibilité de choisir l'**option
+AIS**. Une condition d'emploi mérite d'être retenue parce qu'elle se
+joue au pire moment : **pour être opérationnelle, l'antenne doit être
+déployée verticalement au-dessus de l'eau**.
+
+<Aside type="danger" title="Une PLB non déclarée alerte sans dire qui vous êtes">
+  Une balise personnelle non enregistrée transmet une alerte que
+  personne ne peut rattacher à un nom, à un bateau, à un nombre de
+  personnes à bord. Les secours partent avec un point sur une carte et
+  rien d'autre. L'enregistrement auprès du FMCC prend dix minutes et se
+  fait une fois : c'est le meilleur rapport effort/sécurité de tout ce
+  module.
+</Aside>
+
+### 8. AIS, AIS-SART et SART
+
+**L'AIS** — *Automatic Identification System*, système d'identification
+automatique — est un **système d'échanges automatisés de messages entre
+navires, et entre les navires et la terre, par VHF**. Il permet de
+connaître à intervalles réguliers **l'identité, le statut, la position
+et la route** des navires alentour.
+
+Cinq faits à retenir :
+
+- Sa portée est **limitée par la portée de la radio VHF**, soit **20 à
+  40 milles**.
+- **Le système AIS ne fait pas partie du SMDSM.**
+- Il utilise principalement les voies **AIS 1 (161,975 MHz)** et
+  **AIS 2 (162,025 MHz)**.
+- L'émetteur-récepteur AIS est **codé avec le MMSI** affecté au navire
+  ou à la station terrestre.
+- Un simple **récepteur** AIS **ne peut ni communiquer ni être codé avec
+  un MMSI** : il reçoit, c'est tout. Certaines VHF disposant de cette
+  fonction affichent les stations à proximité sur un petit écran.
+
+L'AIS sert à **identifier les navires lorsque la reconnaissance visuelle
+ou radar n'est plus possible** : nuit, brume, faibles échos radar. Des
+émetteurs AIS sont également utilisés sur des **bouées, phares et
+autres aides à la navigation** pour signaler des zones dangereuses ; ces
+stations sont codées avec un **MMSI particulier commençant par 99**.
+
+**L'AIS-SART** — transpondeur AIS de recherche et de sauvetage —
+« permet la localisation des naufragés sur les récepteurs AIS à bord des
+navires à proximité ». Une fois **déclenché par l'utilisateur**, il émet
+**continuellement pendant au moins 96 heures** sur les voies **AIS 1 et
+AIS 2**, en transmettant sa **position GPS précise**, qui peut être
+fournie aux unités de secours.
+
+**Le SART** — *Search And Rescue radar Transponder*, répondeur radar de
+recherche et de sauvetage — fonctionne sur un tout autre principe :
+
+- c'est un dispositif **récepteur/émetteur** qui, **une fois déclenché
+  par l'utilisateur**, **s'active par les émissions de tout radar** se
+  trouvant dans son voisinage et fonctionnant dans la bande **9200 à
+  9500 MHz** ;
+- dès réception d'une impulsion radar, il émet des signaux
+  caractéristiques qui apparaissent sur l'écran radar du navire qui
+  l'interroge sous la forme d'une **série de douze traits régulièrement
+  espacés** — une trace lumineuse **reconnue internationalement comme
+  signal de détresse SAR** ;
+- sa portée est d'**environ 5 à 10 milles**, selon sa **hauteur par
+  rapport au niveau de l'eau** et celle de l'**antenne du radar** qui le
+  détecte.
+
+<Aside type="tip" title="Douze traits, et tenir le SART haut">
+  Deux détails qui tombent à l'examen et qui sauvent en mer. **Douze
+  traits** : c'est le nombre, et il n'y a pas d'autre bonne réponse.
+  **La hauteur** : la portée dépend de la hauteur du SART au-dessus de
+  l'eau — dans un radeau, on le hisse, on ne le laisse pas au fond.
+  Même raisonnement que pour l'antenne VHF en **M3**.
+</Aside>
+
+<Aside type="caution" title="Le SART n'alerte personne">
+  Un SART ne prévient pas les secours : il **répond** à un radar qui
+  l'interroge. Sans navire ou aéronef équipé à quelques milles, il reste
+  muet. Il ne remplace donc jamais la balise, qui elle alerte à
+  l'échelle mondiale — les deux se déclenchent, dans cet ordre.
+</Aside>
+
+Ce module clôt les contenus techniques de l'épreuve C. **M14** ne
+présente plus rien de nouveau : il entraîne, chronomètre et corrige.
 
 ## Vidéos sélectionnées
 
@@ -57,22 +401,77 @@ pourquoi ce module compte à bord et pas seulement à l'examen)*
 |--------|---------------|------:|
 | *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
 
+<Aside type="note" title="Pourquoi ce tableau est vide">
+  Aucune vidéo n'est référencée tant qu'elle n'a pas été **ouverte,
+  regardée et datée**. Une vidéo antérieure à juin 2025 peut décrire un
+  programme qui a changé. Le tableau se remplira au fil des
+  vérifications.
+</Aside>
+
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M13/` contenant :
+
+1. **`balises.md`** — l'inventaire réel de ce que le bateau embarque :
+   pour chaque balise, le **type** (RLS de pont, RLS de survie, PLB), le
+   **code hexadécimal** relevé sur le boîtier, la **date de péremption
+   de la batterie**, la date du dernier autotest, et l'emplacement
+   exact à bord. Si le bateau n'embarque rien, écrivez-le : c'est une
+   information de sécurité, pas un vide.
+
+2. **`licence-balises.md`** — la vérification croisée : les codes
+   hexadécimaux relevés **figurent-ils sur la licence de station**
+   (**M1**) ? Toute divergence est à corriger auprès de l'ANFR. Pour une
+   PLB non professionnelle, la vérification porte sur l'enregistrement
+   au **registre 406 du CNES**.
+
+3. **`sac-de-survie.md`** — le contenu du sac, avec la place de la RLS
+   de survie, de la VHF portative (**M6**) et du SART s'il y en a un.
+   Précisez **qui** prend le sac en cas d'abandon. Un objet dont
+   personne n'est responsable ne quitte pas le bateau.
+
+4. **`abandon.md`** — la séquence d'abandon en dix lignes : MAYDAY
+   (**M8**), balise, sac, radeau, SART hissé. Écrite dans l'ordre, à
+   relire avec l'équipage, et affichée à la descente.
+
+5. **`echeances.md`** — un tableau des dates : péremption des batteries,
+   révision du largueur hydrostatique, prochain autotest. Avec la date
+   du **prochain** contrôle inscrite en tête, sans quoi le tableau
+   vieillit sans qu'on le voie.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Nommer les cinq équipements et leurs fréquences.** RLS, PLB, AIS,
+   AIS-SART, SART : pour chacun, la fonction et la ou les fréquences. À
+   réciter jusqu'à ce que ce soit fluide, dans un sens puis dans
+   l'autre — on vous donne « 9200 à 9500 MHz », vous répondez « SART ».
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Trouver et lire son code hexadécimal.** Allez physiquement lire les
+   15 caractères sur la face de la balise. Recopiez-les, puis
+   comparez-les à la licence. Cet exercice révèle très souvent une
+   erreur de saisie ou une balise héritée de l'ancien propriétaire.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Faire l'autotest, notice en main.** Une fois, en suivant la
+   procédure du fabricant, et notez la date dans `echeances.md`.
+   L'objectif est autant de vérifier la balise que de vous débarrasser
+   de la peur de la manipuler.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Dérouler la chaîne à voix haute.** Balise → satellites → LUT → MCC
+   → FMCC de Toulouse → CROSS Gris-Nez pour la métropole. Puis dites
+   quelle fréquence sert à quoi, 406 et 121,5.
+
+5. **Simuler un abandon.** À quai, sans rien mouiller : qui prend le
+   sac, qui déclenche la balise, qui emporte la VHF portative, où se
+   hisse le SART. Chronométrez. Refaites-le une fois de nuit, à la
+   frontale.
+
+6. **Trier vingt affirmations.** Un équipier énonce des phrases
+   plausibles — « le SART alerte les secours », « la PLB figure sur la
+   licence », « l'AIS fait partie du SMDSM » — et vous répondez vrai ou
+   faux en moins de trois secondes, avec la correction. Ce sont
+   exactement les tournures de l'examen.
 
 </Steps>
 
@@ -80,17 +479,208 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m13"
+  questions={[
+    {
+      question:
+        'Sur quelles fréquences fonctionne une radiobalise de localisation des sinistres ?',
+      choices: [
+        '156,8 MHz et 156,525 MHz',
+        '406 MHz et 121,5 MHz',
+        '518 kHz et 490 kHz',
+        '161,975 MHz et 162,025 MHz',
+      ],
+      answer: 1,
+      explanation:
+        'Le 406 MHz est transmis aux satellites : il identifie et localise la balise. Le 121,5 MHz sert au radioralliement, c’est-à-dire au repérage en phase finale d’approche sur zone.',
+    },
+    {
+      question:
+        'Combien de caractères compte le code hexadécimal programmé dans une radiobalise ?',
+      choices: ['9 chiffres', '10 chiffres', '15 chiffres et lettres', '6 chiffres et lettres'],
+      answer: 2,
+      explanation:
+        'Il est programmé par l’installateur ou le revendeur suivant le MMSI du navire, visible sur une face de la balise et sur la fiche de codage, et communiqué à l’ANFR pour figurer sur la licence radio (M1).',
+    },
+    {
+      question:
+        'Quelle est la différence entre une balise de pont et une balise de survie ?',
+      choices: [
+        'La balise de pont émet sur 406 MHz, la balise de survie sur 121,5 MHz',
+        'La balise de pont est réservée aux navires professionnels',
+        'La balise de survie a une autonomie de 96 heures, la balise de pont de 48 heures',
+        'La balise de pont peut se déclencher automatiquement par largueur hydrostatique, la balise de survie se déclenche manuellement',
+      ],
+      answer: 3,
+      explanation:
+        'La balise de pont doit se dégager librement pour se déclencher seule si le navire coule ; la balise de survie est installée au poste de navigation et doit pouvoir être emportée dans le radeau. Si personne ne la prend, elle coule avec le bateau.',
+    },
+    {
+      question:
+        'À quelle profondeur une RLS de pont doit-elle être éjectée automatiquement de son conteneur ?',
+      choices: ['À moins de 4 mètres', 'À moins de 10 mètres', 'À moins de 20 mètres', 'Dès l’immersion'],
+      answer: 0,
+      explanation:
+        'Ne pas confondre avec l’étanchéité, qui est garantie à 10 mètres de profondeur. Les balises doivent par ailleurs pouvoir fonctionner pendant 48 heures.',
+    },
+    {
+      question:
+        'En France, quel organisme retransmet les données d’alerte des balises aux centres de coordination du sauvetage ?',
+      choices: [
+        'Le CCMM de Toulouse',
+        'L’ANFR',
+        'Le FMCC de Toulouse',
+        'Le CROSS Corsen',
+      ],
+      answer: 2,
+      explanation:
+        'La chaîne va des satellites aux stations au sol (LUT), puis aux centres de contrôle et de mission (MCC) qui valident et distribuent. Le CCMM, également à Toulouse, est le centre de consultation médicale maritime (M9).',
+    },
+    {
+      question:
+        'Une balise personnelle PLB non professionnelle figure-t-elle sur la licence de station de navire ?',
+      choices: [
+        'Oui, comme toute balise embarquée',
+        'Non, car son code hexadécimal ne permet pas de décoder un MMSI',
+        'Oui, mais seulement si elle dispose de l’option AIS',
+        'Non, car elle n’émet pas sur 406 MHz',
+      ],
+      answer: 1,
+      explanation:
+        'Elle est programmée en usine et doit être déclarée auprès du FMCC de Toulouse. Les professionnels, eux, doivent la faire recoder avec le MMSI de l’embarcation, et elle figure alors sur la licence.',
+    },
+    {
+      question:
+        'Que voit-on sur un écran radar lorsqu’un SART répond ?',
+      choices: [
+        'Un écho fixe accompagné d’un signal sonore',
+        'Un cercle concentrique centré sur le naufragé',
+        'Une série de douze traits régulièrement espacés',
+        'Un point clignotant portant le MMSI du navire',
+      ],
+      answer: 2,
+      explanation:
+        'Cette trace lumineuse est reconnue internationalement comme signal de détresse SAR. Le SART s’active par les émissions de tout radar voisin fonctionnant entre 9200 et 9500 MHz.',
+    },
+    {
+      question: 'Le système AIS fait-il partie du SMDSM ?',
+      choices: [
+        'Oui, c’est le neuvième sous-système',
+        'Oui, depuis la généralisation de l’AIS-SART',
+        'Uniquement pour les navires soumis à la convention SOLAS',
+        'Non, le manuel précise qu’il n’en fait pas partie',
+      ],
+      answer: 3,
+      explanation:
+        'L’AIS sert à identifier et suivre le trafic, sur les voies AIS 1 et AIS 2, dans la limite de la portée VHF de 20 à 40 milles. L’AIS-SART, en revanche, est bien un équipement de localisation de survie.',
+    },
+    {
+      question:
+        'Pendant combien de temps un AIS-SART émet-il une fois déclenché ?',
+      choices: [
+        'Pendant au moins 96 heures',
+        'Pendant 48 heures',
+        'Pendant 24 heures',
+        'Tant qu’un radar l’interroge',
+      ],
+      answer: 0,
+      explanation:
+        'Il émet continuellement sur les voies AIS 1 et AIS 2 en transmettant sa position GPS précise. Les 48 heures sont l’autonomie exigée des radiobalises ; répondre à l’interrogation d’un radar est le principe du SART.',
+    },
+    {
+      question:
+        'Que désigne le sigle RLS employé pour les balises apparues depuis 2023 ?',
+      choices: [
+        'Un nouveau protocole de codage hexadécimal',
+        'Une radiobalise de localisation des sinistres de seconde génération',
+        'Le Return Link System, fonction d’accusé de réception de l’alerte',
+        'Un répondeur de localisation par satellite',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel signale lui-même de ne pas le confondre avec Radiobalise de Localisation des Sinistres. Ces balises portent un voyant indiquant que l’alerte a été reçue par un centre de coordination de sauvetage, et un identifiant AIS commençant par 974.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
-FORMATION CRR — M13 — Carte de cockpit
-=======================================
+FORMATION CRR — M13 — BALISES & LOCALISATION — Carte de survie
+===============================================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+                ALERTER          SE FAIRE TROUVER
+  RLS/EPIRB ..... OUI mondiale ... 121,5 MHz + AIS
+  PLB ........... OUI mondiale ... 121,5 MHz + AIS
+  AIS-SART ...... non ............ voies AIS, 96 h
+  SART .......... non ............ radar, 5-10 milles
+
+--------------------------------------------------
+RLS / EPIRB
+--------------------------------------------------
+  406 MHz ..... satellites : IDENTIFIE + LOCALISE
+  121,5 MHz ... RADIORALLIEMENT, approche finale
+
+  CODE HEXADÉCIMAL 15 chiffres et lettres
+    codé d'après le MMSI par l'installateur
+    sur une FACE de la balise + fiche de codage
+    → communiqué à l'ANFR → sur la LICENCE
+    décodé à l'alerte → identifie le navire
+
+  jaune ou orange · étanche 10 m · 48 HEURES
+  précision : 1-2 milles (ancien) → quelques m (GPS)
+
+  DE PONT ..... conteneur + LARGUEUR HYDROSTATIQUE
+                éjectée à MOINS DE 4 M de profondeur
+                manuelle OU automatique
+  DE SURVIE ... poste de navigation, MANUELLE
+                À EMPORTER dans le radeau !
+
+  CHAÎNE : balise → satellites → LUT → MCC
+           → FMCC TOULOUSE → CROSS (Gris-Nez métropole)
+
+  ENTRETIEN : AUTOTEST (ne déclenche PAS d'alerte)
+              batterie : carnet + gravée sur le corps
+                         ~5 ANS en général
+              largueur hydrostatique : contrôle
+
+  Plaisance < 24 m au-delà de 60 MILLES d'un abri
+  → EPIRB OBLIGATOIRE
+
+  « RLS » 2023 = RETURN LINK SYSTEM
+     voyant d'accusé de réception + ID-AIS en 974...
+     ≠ Radiobalise de Localisation des Sinistres
+
+--------------------------------------------------
+PLB — balise personnelle
+--------------------------------------------------
+  Mêmes fréquences 406 / 121,5 · option AIS
+  Codée EN USINE → PAS de MMSI décodable
+  → NE FIGURE PAS sur la licence
+  → À DÉCLARER au FMCC : registre406.cnes.fr
+  Professionnels : RECODAGE au MMSI → sur licence
+  ANTENNE DÉPLOYÉE VERTICALEMENT au-dessus de l'eau
+
+--------------------------------------------------
+AIS / AIS-SART / SART
+--------------------------------------------------
+  AIS ...... NE FAIT PAS PARTIE DU SMDSM
+             AIS 1 = 161,975   AIS 2 = 162,025 MHz
+             portée VHF : 20 à 40 milles
+             codé avec le MMSI (récepteur seul : non)
+             aides à la navigation : MMSI en 99...
+  AIS-SART . déclenché par l'utilisateur
+             ≥ 96 HEURES, position GPS précise
+  SART ..... répond aux radars 9200-9500 MHz
+             DOUZE TRAITS régulièrement espacés
+             5 à 10 milles — LE HISSER HAUT
+
+--------------------------------------------------
+AUCUN DE CES ÉQUIPEMENTS
+ne remplace la VEILLE, le GILET, le PLAN DE NAV,
+ni le fait d'avoir prévenu quelqu'un à terre.
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À ranger **dans le sac de survie**, avec la carte **M8** : ce sont les
+deux seules qui servent une fois le bateau quitté.
