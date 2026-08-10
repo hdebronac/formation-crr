@@ -1,55 +1,305 @@
 ---
 title: "M12 · Renseignements sur la sécurité maritime"
-description: "NAVTEX, SafetyNET, avis urgents aux navigateurs, bulletins météorologiques spéciaux, catégories de messages non rejetables."
+description: "Les RSM dans le SMDSM : bulletins météorologiques et AVURNAV diffusés en VHF par les CROSS, système NAVTEX, fréquences 518 et 490 kHz, catégories de messages non rejetables."
 sidebar:
   order: 12
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
-  **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 1,5 h ·
-  **Prérequis** : modules précédents validés
+  **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 2 h ·
+  **Prérequis** : M4 et M9 validés — le SMDSM et le message de sécurité
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+Jusqu'ici, la radio vous a servi à **émettre**. Ce module traite de
+l'autre sens : ce que le système vous envoie, sans que vous ayez rien
+demandé, parce que vous êtes en mer.
+
+Le coup de vent qui arrive dans six heures, le conteneur signalé ce
+matin sur votre route, le feu de balisage éteint à l'entrée du chenal,
+l'exercice de tir qui ferme une zone : tout cela vous parvient sous le
+nom de **renseignements sur la sécurité maritime**, en abrégé **RSM**.
+C'est la septième des neuf fonctions du SMDSM (**M4**), et c'est
+probablement celle dont vous vous servirez le plus souvent — chaque
+sortie, alors qu'un MAYDAY, vous n'en émettrez peut-être jamais.
+
+Deux canaux à distinguer, et l'examen les distingue : **la VHF**, celle
+que vous avez à bord, sur laquelle les CROSS diffusent la météo et les
+avis urgents ; et le **NAVTEX**, un récepteur séparé, qui n'écoute pas
+du tout la même bande.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Dire ce que recouvre le sigle **RSM** et citer les trois familles
+  de messages.
+- [ ] Recevoir les **bulletins météorologiques** et les **AVURNAV** sur
+  ma VHF.
+- [ ] Décrire le **système NAVTEX** : fréquences, portée, zone couverte.
+- [ ] Citer les catégories de messages qu'un récepteur NAVTEX **ne peut
+  pas rejeter**.
+- [ ] Nommer les **CROSS** qui assurent le service NAVTEX français.
+- [ ] Expliquer comment un navire **alimente** à son tour les RSM.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| RSM | Renseignements sur la sécurité maritime, en anglais MSI |
+| AVURNAV | Avis urgent aux navigateurs — danger pour la navigation |
+| BMR | Bulletin météorologique régulier, diffusé à heures fixes |
+| BMS | Bulletin météorologique spécial, émis dès réception d'un avis |
+| NAVTEX | *Navigational Telex* — diffusion et réception automatiques des RSM |
+| 518 kHz | Fréquence du service NAVTEX international, en langue anglaise |
+| 490 kHz | Fréquence des services NAVTEX nationaux, en langue nationale |
+| 4209,5 kHz | Fréquence NAVTEX en ondes décamétriques, zones tropicales |
+| NAVAREA | Zone du service mondial d'avertissements de navigation |
+| METAREA | Zone du service mondial de diffusion météorologique |
+| Voies 79 et 80 | Voies VHF de diffusion des bulletins par les CROSS, selon la zone |
+| Sémaphore | Station de la Marine nationale pouvant relayer un CROSS |
+| Message non rejetable | Catégorie NAVTEX que le récepteur ne permet pas d'écarter |
+| 196 | Numéro d'appel d'un CROSS depuis une ligne fixe ou un portable |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve C et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve C**, « Le système mondial de détresse
+  et de sécurité en mer », **10 questions sur 24**. Il correspond à la
+  section du manuel ANFR intitulée **« Renseignements sur la sécurité
+  maritime (RSM) dans le SMDSM »**, complétée par la section
+  **« Réception de renseignements sur la sécurité maritime par
+  radiotéléphonie en VHF »**.
+- **Ce qui est interrogé** : les **trois fréquences** NAVTEX et ce qui
+  les distingue, la **portée** du système et la zone qu'il couvre, les
+  **catégories non rejetables**, et les deux CROSS qui assurent le
+  service français.
+- **Confusion classique — 518 ou 490 ?** Le **518 kHz** est le service
+  **international**, en **anglais**. Le **490 kHz** porte les services
+  **nationaux**, en **langue nationale** — c'est celui sur lequel vous
+  lirez du français. Le sens est contre-intuitif : le plus petit nombre
+  n'est pas le service le plus large.
+- **Confusion classique — NAVTEX et VHF.** Le NAVTEX n'est **pas** une
+  fonction de votre VHF : c'est un récepteur distinct, sur une autre
+  bande, avec sa propre antenne. Ce que votre VHF reçoit, ce sont les
+  bulletins diffusés par les CROSS sur les **voies 79 ou 80**.
+- **N'est pas interrogé** : les horaires détaillés de diffusion par
+  CROSS, ni le découpage nominatif des NAVAREA, qui ne figurent pas au
+  programme.
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. RSM : la septième fonction du SMDSM
 
-### 2. *(section à rédiger)*
+Le SMDSM impose neuf fonctions à tout navire qui y est soumis (**M4**).
+La septième est formulée ainsi : **émettre et recevoir des
+renseignements sur la sécurité maritime**. Le sigle anglais, que vous
+lirez sur les matériels, est **MSI** — *Maritime Safety Information*.
 
-### 3. *(section à rédiger)*
+Ces renseignements se rangent en trois familles, et c'est ce triptyque
+qu'il faut avoir en tête :
+
+| Famille | Ce qu'elle contient | Exemples |
+|---|---|---|
+| **Avertissements de navigation** | Ce qui rend la navigation dangereuse | Objets dangereux, épaves à la dérive, phares éteints |
+| **Avertissements météorologiques** | Ce que le temps prépare | Coup de vent, tempête, vents supérieurs à force 7 |
+| **Recherche et sauvetage** | Ce qui concerne une opération en cours | Alerte relayée, recherche en cours sur zone |
+
+Vous reconnaissez les deux premières : ce sont exactement les motifs du
+message de **sécurité** vus en **M9**. C'est logique, et nous verrons en
+fin de module que la boucle se referme.
+
+<Aside type="note" title="AVURNAV, un acronyme qui se lit">
+  **AV**is **UR**gent aux **NAV**igateurs. Le mot est construit comme
+  un télégramme, et c'est bien de cela qu'il s'agit : un avis diffusé
+  vite, court, à tous. Son équivalent météorologique est le **BMS**,
+  bulletin météorologique spécial.
+</Aside>
+
+### 2. Ce que votre VHF reçoit : les CROSS
+
+C'est le canal qui vous concerne directement, parce qu'il ne demande
+aucun matériel supplémentaire.
+
+En France, les **CROSS** sont chargés d'assurer la **diffusion
+régulière des bulletins météorologiques plusieurs fois par jour**. Ces
+diffusions se font :
+
+- **à des heures précises** ;
+- sur les **voies 79 ou 80** **selon la zone**.
+
+La voie 79 fonctionne en **duplex** — le CROSS émet sur 156,975 MHz et
+vous recevez sur 161,575 MHz, votre poste faisant la bascule tout seul
+dès que vous sélectionnez la voie (**M3**).
+
+Quand un avis de **coup de vent** est émis — le manuel donne le seuil :
+**supérieur à 7 Beaufort en zone côtière des 20 milles** — il fait
+l'objet d'un **bulletin météorologique spécial (BMS)**. Le régime de
+diffusion des BMS est particulier, et c'est une question d'examen
+possible :
+
+> Ils sont diffusés **dès réception** et **répétés toutes les heures**
+> tant qu'ils sont **en cours de validité**.
+
+Autrement dit, un BMS n'attend pas l'heure du bulletin régulier, et il
+ne se dit pas une fois pour toutes : il revient chaque heure tant que la
+situation dure.
+
+<Aside type="tip" title="Le BMR attend l'heure, le BMS ne l'attend pas">
+  Le **bulletin régulier** (BMR) tombe à heures fixes, plusieurs fois
+  par jour. Le **bulletin spécial** (BMS) tombe dès réception, puis
+  toutes les heures. Si vous ne deviez retenir qu'une opposition de ce
+  module, ce serait celle-là.
+</Aside>
+
+Deux compléments utiles, donnés eux aussi par le manuel :
+
+- En cas d'**indisponibilité d'un émetteur**, les CROSS peuvent être
+  **relayés localement par les sémaphores de la Marine nationale**.
+- Depuis une **ligne fixe ou un portable**, on joint un CROSS par le
+  numéro **196**.
+
+<Aside type="caution" title="Les horaires sont locaux — allez les chercher">
+  Le manuel dit « à des heures précises sur les voies 79 ou 80 selon la
+  zone », et n'en dit pas davantage : les horaires et les voies exactes
+  dépendent du CROSS et de la zone, et **ce site ne les invente pas**.
+  Ils sont publiés par chaque CROSS. C'est le premier livrable de la
+  mise en situation ci-dessous : les relever pour **vos** zones, les
+  dater, et les afficher.
+</Aside>
+
+### 3. Le système NAVTEX
+
+**NAVTEX** — de *NAVigational TelEX* — est un **système de diffusion et
+de réception automatique des RSM**. Il permet aux navires de recevoir
+automatiquement, **sous forme imprimée ou sur écran**, des alertes de
+détresse ainsi que des avertissements de navigation (AVURNAV) et de
+météorologie (BMS).
+
+Deux propriétés le définissent, et le manuel les met en titre.
+
+**C'est un système d'émissions coordonnées.** Les stations NAVTEX à
+terre envoient **à tour de rôle** des messages de **10 minutes**, et
+cela **toutes les 4 heures**, suivant un **plan d'attribution des
+horaires d'émission** sur une **fréquence unique**. C'est ce plan qui
+évite les brouillages à l'intérieur d'une même **NAVAREA**.
+
+**C'est un système de réception automatique.** Les récepteurs permettent
+de **sélectionner les stations émettrices** et de **choisir les messages
+à conserver ou à rejeter** — vous ne subissez pas le trafic de
+l'Atlantique entier quand vous naviguez en Manche.
+
+Mais ce tri a une limite, et c'est le point le plus interrogeable du
+module. **Trois catégories ne peuvent pas être rejetées** :
+
+1. les **avertissements de navigation** (AVURNAV) ;
+2. les **avertissements météorologiques** (BMS) ;
+3. les **renseignements concernant la recherche et le sauvetage**.
+
+<Aside type="danger" title="Ce qu'on ne vous laisse pas filtrer">
+  Ces trois catégories sont exactement celles dont l'ignorance tue. Le
+  système est conçu pour que personne ne puisse, par confort ou par
+  agacement, couper l'information qui lui aurait sauvé la mise. Le
+  raisonnement est le même que celui de la veille sur la voie 16.
+</Aside>
+
+### 4. Trois fréquences, trois usages
+
+Le NAVTEX utilise une **fréquence unique suivant le service désigné** :
+
+| Fréquence | Service | Langue |
+|---|---|---|
+| **518 kHz** | Service NAVTEX **international** | **Anglais** |
+| **490 kHz** | Services NAVTEX **nationaux**, dans certains pays | **Langue nationale** |
+| **4209,5 kHz** | Service en **ondes décamétriques** | Réservé aux **zones tropicales** |
+
+En France, le service NAVTEX est assuré par les **CROSS La Garde** et
+**Corsen**. Ces organismes diffusent un **service NAVTEX national en
+langue française sur la fréquence 490 kHz**.
+
+<Aside type="tip" title="Corsen et La Garde, les deux façades">
+  Corsen couvre la façade Manche-Atlantique, La Garde la Méditerranée —
+  ce sont d'ailleurs deux des CROSS métropolitains rencontrés en
+  **M2**. Si l'examen vous demande « qui diffuse le NAVTEX français ? »,
+  la réponse tient en deux noms.
+</Aside>
+
+### 5. La portée, et ce qu'elle implique
+
+La portée des émissions NAVTEX varie de **250 à 400 milles**, ce qui,
+écrit le manuel, **limite le système à la zone A2**.
+
+Cette phrase mérite qu'on s'y arrête, parce qu'elle situe le NAVTEX par
+rapport à votre certificat. Le CRR autorise l'usage de la **VHF**,
+c'est-à-dire la **zone A1** — 20 à 30 milles en métropole (**M4**). Le
+NAVTEX, lui, émet en **ondes hectométriques** (MF) et porte bien
+au-delà.
+
+Deux conséquences concrètes :
+
+- Le NAVTEX **n'est pas** une fonction de votre VHF, et il ne
+  s'obtient pas en changeant de voie. C'est un **récepteur distinct**,
+  avec sa propre antenne, que l'on embarque ou non.
+- Un plaisancier qui navigue en A1 reçoit ses RSM **par la VHF**, sur
+  les voies 79 ou 80. Le NAVTEX prend son intérêt quand on s'éloigne, ou
+  quand on veut recevoir les messages **par écrit** plutôt qu'à la
+  volée.
+
+<Aside type="caution" title="Piège d'examen : NAVTEX = MF, pas VHF">
+  Le NAVTEX figure dans le tableau des sous-systèmes du SMDSM à la ligne
+  de la **télégraphie à impression directe en MF** (**M4**), pas à celle
+  de la radiotéléphonie VHF. Une question qui vous propose « le NAVTEX
+  se reçoit sur la voie 70 » ou « sur la voie 16 » est fausse par
+  construction.
+</Aside>
+
+### 6. Les zones : NAVAREA et METAREA
+
+Deux découpages mondiaux, symétriques, que le manuel définit dans son
+lexique :
+
+| Sigle | Ce que c'est | Découpage |
+|---|---|---|
+| **NAVAREA** | Système mondial de diffusion des **avertissements de navigation** | Les océans divisés en **16 zones** |
+| **METAREA** | Système mondial de diffusion **météorologique** | Les océans divisés en **16 zones** |
+
+Retenez le principe et le nombre ; le détail des zones et de leurs
+limites **n'est pas au programme** du CRR.
+
+### 7. Le navire n'est pas qu'un récepteur
+
+La septième fonction du SMDSM dit « **émettre et** recevoir » des RSM.
+La boucle se referme ici, et elle passe par une procédure que vous
+connaissez déjà.
+
+Quand vous croisez un conteneur à la dérive, vous émettez un message de
+**sécurité** (**M9**). Une station côtière en accuse réception, puis
+— le manuel est explicite sur ce point — elle se charge de
+**retransmettre l'information aux services diffusant les AVURNAV**.
+
+<Steps>
+
+1. **Vous voyez.** Un objet flottant dangereux, une bouée disparue, un
+   feu éteint.
+
+2. **Vous émettez.** `SÉCURITÉ` trois fois, à toutes les stations, sur
+   la voie 16, dans la forme exacte de **M9**.
+
+3. **Une station côtière accuse réception.** Vous répétez votre message
+   jusque-là, et pas au-delà.
+
+4. **L'information devient un AVURNAV.** Elle est transmise aux services
+   compétents, puis diffusée à tous — par VHF, et par NAVTEX.
+
+5. **Un autre navire la reçoit.** Peut-être demain, peut-être à
+   200 milles de là. C'est le sens de la fonction.
+
+</Steps>
+
+Ce module referme la partie « information » de l'épreuve C. Restent les
+**signaux d'alerte et de localisation** — les balises et répondeurs qui
+alertent et se font trouver sans que personne ne parle : c'est **M13**.
 
 ## Vidéos sélectionnées
 
@@ -57,22 +307,68 @@ pourquoi ce module compte à bord et pas seulement à l'examen)*
 |--------|---------------|------:|
 | *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
 
+<Aside type="note" title="Pourquoi ce tableau est vide">
+  Aucune vidéo n'est référencée tant qu'elle n'a pas été **ouverte,
+  regardée et datée**. Une vidéo antérieure à juin 2025 peut décrire un
+  programme qui a changé. Le tableau se remplira au fil des
+  vérifications.
+</Aside>
+
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M12/` contenant :
+
+1. **`meteo-vhf.md`** — pour **chacune** de vos zones de navigation : le
+   CROSS compétent, la **voie** de diffusion, les **horaires** des
+   bulletins réguliers, et la source d'où vous tenez ces informations,
+   avec sa date de consultation. C'est la fiche que vous consulterez le
+   plus souvent de tout le dossier.
+
+2. **`avurnav.md`** — trois AVURNAV réels, relevés sur votre zone au
+   cours des dernières semaines, recopiés tels quels. L'objectif est de
+   vous habituer au **style** : abrégé, chiffré, sans phrase inutile.
+   On lit mal ce qu'on n'a jamais lu.
+
+3. **`ecoute-meteo.md`** — votre routine de réception : qui écoute, à
+   quel moment, sur quel support on note, et où la note se range. Un
+   bulletin entendu et non noté est un bulletin perdu.
+
+4. **`196.md`** — une carte au format carte de visite portant le **196**
+   et le nom du CROSS de votre zone, à glisser dans l'étui du téléphone
+   de bord. C'est aussi le moyen de joindre le MRCC « par n'importe quel
+   moyen » exigé en **M11**.
+
+5. **`navtex.md`** — une demi-page : votre bateau embarque-t-il un
+   NAVTEX ? Si oui, sur quelle fréquence est-il réglé et quelles
+   stations avez-vous sélectionnées ? Si non, ce que vous perdez et ce
+   qui le remplace à bord.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Écouter un bulletin en entier.** Sur la voie de votre zone, à
+   l'heure de diffusion, écoutez un bulletin météorologique complet
+   sans rien noter. Puis un second en notant. Comparez : la deuxième
+   écoute est beaucoup plus productive, et c'est le but de l'exercice.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Réduire un bulletin à six lignes.** Vent, mer, visibilité,
+   évolution, avis en cours, validité. Entraînez-vous jusqu'à tenir sur
+   un carnet de quart sans écrire de phrases.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Réciter les trois fréquences.** 518, 490, 4209,5 : la fréquence, le
+   service, la langue. Puis dans l'autre sens : on vous donne « service
+   national en langue française », vous répondez « 490 kHz, CROSS Corsen
+   et La Garde ».
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Trier des messages NAVTEX.** À partir de dix messages fictifs
+   énoncés par un équipier, dites pour chacun s'il est **rejetable** ou
+   non. Les trois catégories protégées doivent venir sans réfléchir.
+
+5. **Boucler la chaîne.** Émettez un message de sécurité pour un danger
+   fictif (**M9**), puis énoncez à voix haute ce qu'il devient : accusé
+   de réception d'une station côtière, retransmission aux services,
+   diffusion en AVURNAV. C'est la fonction 7 du SMDSM, jouée en entier.
 
 </Steps>
 
@@ -80,17 +376,202 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m12"
+  questions={[
+    {
+      question: 'Que signifie le sigle RSM ?',
+      choices: [
+        'Réseau de sécurité maritime',
+        'Renseignements sur la sécurité maritime',
+        'Recherche et sauvetage maritime',
+        'Radiotéléphonie du service mobile',
+      ],
+      answer: 1,
+      explanation:
+        'En anglais MSI, Maritime Safety Information. Émettre et recevoir des RSM est la septième des neuf fonctions du SMDSM (M4).',
+    },
+    {
+      question:
+        'Sur quelle fréquence est diffusé le service NAVTEX international, et en quelle langue ?',
+      choices: [
+        '490 kHz, en langue nationale',
+        '4209,5 kHz, en anglais',
+        '518 kHz, en anglais',
+        '518 kHz, en langue nationale',
+      ],
+      answer: 2,
+      explanation:
+        'Le 518 kHz porte le service international en anglais ; le 490 kHz porte les services nationaux en langue nationale, dont le service français. Le 4209,5 kHz est réservé aux zones tropicales, en ondes décamétriques.',
+    },
+    {
+      question:
+        'Quelles catégories de messages un récepteur NAVTEX ne permet-il pas de rejeter ?',
+      choices: [
+        'Les messages de la station la plus proche uniquement',
+        'Uniquement les alertes de détresse',
+        'Les avis aux navigateurs, les avertissements météorologiques et les renseignements de recherche et sauvetage',
+        'Les messages émis en anglais',
+      ],
+      answer: 2,
+      explanation:
+        'Le tri est possible pour tout le reste : on peut sélectionner les stations émettrices et choisir les messages à conserver. Ces trois catégories, elles, passent toujours.',
+    },
+    {
+      question:
+        'Quelle est la portée des émissions NAVTEX, et quelle zone du SMDSM cela couvre-t-il ?',
+      choices: [
+        '20 à 30 milles, la zone A1',
+        'Au-delà de 76° de latitude, la zone A4',
+        'Toutes zones, par satellite',
+        '250 à 400 milles, ce qui limite le système à la zone A2',
+      ],
+      answer: 3,
+      explanation:
+        'Le NAVTEX émet en ondes hectométriques et porte bien au-delà de la VHF. Ce n’est pas une fonction du poste VHF : c’est un récepteur distinct, avec sa propre antenne.',
+    },
+    {
+      question:
+        'Quels organismes assurent le service NAVTEX en France ?',
+      choices: [
+        'Les CROSS La Garde et Corsen',
+        'Le CCMM de Toulouse et le FMCC',
+        'L’ANFR et le SHOM',
+        'Les CROSS Gris-Nez et Jobourg',
+      ],
+      answer: 0,
+      explanation:
+        'Ils diffusent un service NAVTEX national en langue française sur la fréquence 490 kHz. Le CCMM de Toulouse est le centre de consultation médicale (M9), le FMCC traite les alertes Cospas-Sarsat (M13).',
+    },
+    {
+      question:
+        'Sur quelles voies VHF les CROSS diffusent-ils les bulletins météorologiques ?',
+      choices: [
+        'Sur la voie 16, comme tout message de sécurité',
+        'Sur la voie 70, en appel sélectif numérique',
+        'Sur les voies 6 et 8',
+        'Sur les voies 79 ou 80, selon la zone',
+      ],
+      answer: 3,
+      explanation:
+        'Les diffusions ont lieu à des heures précises, plusieurs fois par jour. La voie 79 fonctionne en duplex : le CROSS émet sur 156,975 MHz, le navire reçoit sur 161,575 MHz (M3).',
+    },
+    {
+      question:
+        'À quel rythme un bulletin météorologique spécial est-il diffusé ?',
+      choices: [
+        'Dès réception, puis répété toutes les heures tant qu’il est en cours de validité',
+        'Aux mêmes heures que les bulletins réguliers',
+        'Trois fois de suite, puis on cesse',
+        'Toutes les quatre heures, comme les messages NAVTEX',
+      ],
+      answer: 0,
+      explanation:
+        'C’est ce qui le distingue du bulletin régulier, diffusé à heures fixes. Un BMS est émis pour un avis de coup de vent supérieur à 7 Beaufort en zone côtière des 20 milles.',
+    },
+    {
+      question:
+        'Selon quel principe les stations NAVTEX à terre se partagent-elles la fréquence ?',
+      choices: [
+        'Chaque station dispose de sa propre fréquence',
+        'Les stations émettent simultanément, les récepteurs faisant le tri',
+        'Elles émettent à tour de rôle, des messages de 10 minutes toutes les 4 heures, selon un plan d’horaires',
+        'La station la plus proche du navire émet en priorité',
+      ],
+      answer: 2,
+      explanation:
+        'La fréquence est unique : c’est le plan d’attribution des horaires d’émission qui évite les brouillages à l’intérieur d’une même NAVAREA.',
+    },
+    {
+      question:
+        'Vous signalez une épave à la dérive par un message de sécurité. Que devient l’information ?',
+      choices: [
+        'Elle est enregistrée au journal de bord de la station côtière, sans autre suite',
+        'Elle est retransmise par la station côtière aux services diffusant les AVURNAV',
+        'Elle est diffusée telle quelle sur la voie 70 en appel sélectif numérique',
+        'Elle est transmise au FMCC de Toulouse pour validation',
+      ],
+      answer: 1,
+      explanation:
+        'C’est la boucle de la septième fonction du SMDSM : le navire émet des RSM autant qu’il en reçoit. Le message de sécurité se répète jusqu’à l’accusé de réception d’une station côtière (M9).',
+    },
+    {
+      question:
+        'En combien de zones les océans sont-ils divisés dans le système NAVAREA ?',
+      choices: ['4 zones', '9 zones', '22 zones', '16 zones'],
+      answer: 3,
+      explanation:
+        'Même découpage en 16 zones pour les METAREA, qui organisent la diffusion météorologique. Le détail des limites de ces zones n’est pas au programme du CRR.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
-FORMATION CRR — M12 — Carte de cockpit
-=======================================
+FORMATION CRR — M12 — RSM & MÉTÉO — Carte de table à cartes
+============================================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+RSM = RENSEIGNEMENTS SUR LA SÉCURITÉ MARITIME  (angl. MSI)
+      7e des 9 fonctions du SMDSM  (→ M4)
+
+  AVURNAV ... AVis URgent aux NAVigateurs
+              objets dangereux, épaves, feux éteints
+  BMR ....... bulletin météo RÉGULIER — heures fixes
+  BMS ....... bulletin météo SPÉCIAL — coup de vent
+              > 7 Beaufort en zone côtière des 20 milles
+
+--------------------------------------------------
+CE QUE MA VHF REÇOIT — LES CROSS
+--------------------------------------------------
+  VOIES 79 ou 80 selon la zone, à HEURES PRÉCISES
+  voie 79 duplex : CROSS 156,975 / navire 161,575
+
+  BMS : diffusé DÈS RÉCEPTION
+        puis RÉPÉTÉ TOUTES LES HEURES
+        tant qu'il est EN COURS DE VALIDITÉ
+
+  Émetteur indisponible → relais par les SÉMAPHORES
+  Depuis un téléphone : CROSS = 196
+
+  MA ZONE : CROSS ..............  voie ......
+            bulletins à .........................
+
+--------------------------------------------------
+NAVTEX — récepteur SÉPARÉ, PAS la VHF
+--------------------------------------------------
+  518 kHz ..... international ......... ANGLAIS
+  490 kHz ..... national .... LANGUE NATIONALE
+                France : CROSS CORSEN + LA GARDE
+  4209,5 kHz .. ondes décamétriques
+                zones TROPICALES
+
+  PORTÉE 250 à 400 milles  →  limité à la ZONE A2
+  Émissions COORDONNÉES : à tour de rôle,
+     messages de 10 MIN toutes les 4 H,
+     plan d'horaires, FRÉQUENCE UNIQUE
+
+  RÉCEPTION AUTOMATIQUE : on choisit les stations
+     et les messages à garder... SAUF :
+     → AVURNAV
+     → avertissements MÉTÉO (BMS)
+     → RECHERCHE ET SAUVETAGE
+     ces trois-là NE SE REJETTENT PAS.
+
+--------------------------------------------------
+ZONES MONDIALES
+--------------------------------------------------
+  NAVAREA .. avertissements de navigation .. 16 zones
+  METAREA .. météorologie .................. 16 zones
+
+--------------------------------------------------
+J'ÉMETS AUSSI DES RSM
+--------------------------------------------------
+  Danger vu  →  SÉCURITÉ sur la 16      (→ M9)
+             →  accusé d'une station côtière
+             →  retransmis aux services AVURNAV
+             →  rediffusé à tous
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À afficher à la table à cartes, avec la carte **M9** : l'une dit
+comment signaler, l'autre dit ce que le signalement devient.
