@@ -1,55 +1,340 @@
 ---
 title: "M11 · Protection des fréquences de détresse"
-description: "Brouillages et émissions non autorisées, voies de garde, protocoles d’essai, fausses alertes de détresse et procédure d’annulation."
+description: "Brouillages et émissions non autorisées, voies de garde, veille sur la voie 70, protocoles d’essai en ASN et en phonie, fausses alertes et procédure d’annulation."
 sidebar:
   order: 11
 ---
 
 import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
 import Quiz from '../../../components/Quiz.astro';
-import Figure from '../../../components/Figure.astro';
 
 <Aside type="note" title="Cadre">
   **Épreuve** : **C** — 10 questions sur 24 · **Volume** : 2 h ·
-  **Prérequis** : modules précédents validés
+  **Prérequis** : M8 et M10 validés — le MAYDAY en phonie et l'ASN
 </Aside>
 
-*(chapeau narratif à rédiger : 8 à 10 lignes, en langage direct, disant
-pourquoi ce module compte à bord et pas seulement à l'examen)*
+La voie 16 et la voie 70 ne vous appartiennent pas. Ce sont deux
+fréquences que quelques milliers de bateaux partagent en même temps
+sur la même zone, et sur lesquelles quelqu'un, quelque part, est peut-être
+en train d'appeler à l'aide. Chaque seconde que vous y passez pour autre
+chose est une seconde pendant laquelle son appel ne passe pas.
+
+C'est tout le sujet de ce module : non pas ce qu'il faut dire, mais ce
+qu'il ne faut **pas** émettre, et comment vérifier que son matériel
+fonctionne sans polluer les fréquences des autres. Puis, parce que cela
+arrive à tout le monde, la procédure d'**annulation d'une fausse
+alerte** — le geste que la moitié des plaisanciers ne connaît pas, et
+qui transforme une bavure en incident sans conséquence.
+
+Retenez d'emblée l'ordre des choses : **on n'hésite jamais à alerter**.
+Une alerte de trop s'annule en trente secondes ; une alerte qu'on n'a
+pas osé émettre ne se rattrape pas.
 
 ## Objectifs de fin de module
 
 À l'issue de ce module, je suis capable de :
 
-- [ ] *(à rédiger — verbe opérationnel : émettre, identifier, formuler,
-  distinguer, dérouler, annuler)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
-- [ ] *(à rédiger)*
+- [ ] Citer les règles qui **limitent les émissions** sur les voies 16
+  et 70.
+- [ ] Dire ce que je fais **dès que j'entends** une communication de
+  détresse.
+- [ ] Conduire un **essai** de ma VHF, en phonie et en ASN, sans gêner
+  personne.
+- [ ] **Annuler une fausse alerte de détresse** dans la forme exacte, en
+  français et en anglais.
+- [ ] Expliquer ce qu'est un **brouillage préjudiciable** et ce que la
+  loi prévoit.
+- [ ] Nommer les **voies de garde** et dire pourquoi elles restent
+  libres.
 
 ## Concepts clés
 
 | Concept | Définition courte |
 |---------|-------------------|
-| *(à rédiger — 12 à 15 lignes)* | — |
+| Brouillage préjudiciable | Émission qui perturbe le fonctionnement d'un service de radiocommunication |
+| Occupation abusive | Usage des fréquences de détresse et de sécurité à d'autres fins, assimilé à un brouillage préjudiciable |
+| Voie 16 | Voie d'appel, de détresse, d'urgence et de sécurité en phonie |
+| Voie 70 | Voie réservée à l'appel sélectif numérique (ASN), jamais à la voix |
+| Voies de garde | Voies 75 et 76, encadrant la voie 16, laissées libres |
+| Veille | Écoute permanente d'une fréquence, en phonie sur la 16 et en ASN sur la 70 |
+| Émission d'essai | Émission destinée à vérifier le fonctionnement d'un équipement |
+| Autotest | Fonction de test interne de la VHF, sans émission vers l'extérieur |
+| Appel de routine ASN | Appel individuel de catégorie `ROUTINE`, format d'essai vers une autre station |
+| Fausse alerte | Alerte de détresse émise sans motif, par erreur, manipulation ou défaut |
+| Annulation | Message qui retire une alerte émise par erreur, sur la voie 16 |
+| MRCC | Centre de coordination de sauvetage maritime, en France le CROSS |
+| Négligence | Défaut de précaution qui suffit à engager la responsabilité pénale |
+| Puissance réduite | Position 1 W du poste, à utiliser pour les essais et la proximité |
 
 ## Ce que l'examen en attend
 
-- *(rattachement à l'épreuve C et poids de cette épreuve)*
-- *(renvoi au chapitre du manuel ANFR V16, **par intitulé et non par
-  numéro**)*
-- *(ce qui n'est pas interrogé — typiquement les annexes du manuel)*
-- *(les confusions que l'examen exploite, avec renvoi au module qui les
-  traite)*
+- Ce module relève de l'**épreuve C**, « Le système mondial de détresse
+  et de sécurité en mer », **10 questions sur 24** — l'épreuve la plus
+  lourde du certificat. Il correspond à la section du manuel ANFR
+  intitulée **« Protection des fréquences de détresse »**.
+- **Ce qui est interrogé** : les valeurs chiffrées (la durée maximale
+  d'une émission sur la voie 16), le numéro des **voies de garde**, la
+  conduite à tenir dès qu'on entend une détresse, et la **procédure
+  d'annulation** d'une fausse alerte.
+- **Confusion classique — quelles voies jouxtent quoi ?** Les voies
+  **75 et 76** encadrent la **voie 16** et restent libres. Les voies
+  **10 et 11** demandent des précautions parce qu'elles peuvent gêner
+  la **voie 70**. Ce sont deux paires différentes, pour deux voies
+  protégées différentes.
+- **Confusion classique — par quel moyen annule-t-on ?** Une fausse
+  alerte ASN s'annule **d'abord en ASN** si l'équipement le permet,
+  mais **dans tous les cas** par la voix sur la **voie 16**. Ce n'est
+  pas l'un ou l'autre : c'est l'un puis l'autre.
+- **N'est pas interrogé** : le détail du tableau d'affectation des
+  voies, qui figure en **annexe** du manuel et se consulte
+  (`reference/voies-vhf`).
 
 ## Cours
 
-### 1. *(section à rédiger)*
+### 1. Deux fréquences que tout le monde partage
 
-### 2. *(section à rédiger)*
+Le CRR protège deux voies, pour deux raisons différentes.
 
-### 3. *(section à rédiger)*
+| Voie | Ce qui s'y passe | Ce qui la menace |
+|---|---|---|
+| **16** | Appel, détresse, urgence, sécurité **en phonie** | Les conversations qui s'éternisent |
+| **70** | Alerte et appel **en ASN**, jamais la voix | Les émissions sur les voies voisines |
+
+Le manuel emploie un mot précis pour la faute : l'**occupation abusive**
+des fréquences de détresse et de sécurité pour des usages autres
+constitue un **brouillage préjudiciable**, « assimilable à une
+perturbation des fréquences radioélectriques ». Ce n'est donc pas une
+question de savoir-vivre : c'est la même qualification juridique qu'un
+émetteur qui perturberait un service.
+
+Deux règles en découlent, à connaître par cœur :
+
+- Toutes les émissions sur la **voie 16** doivent être **réduites au
+  minimum** et **ne pas dépasser une minute**.
+- Toute émission susceptible de causer un **brouillage préjudiciable**
+  aux communications de détresse, d'urgence ou de sécurité **sur les
+  voies 16 et 70** est **interdite**.
+
+<Aside type="caution" title="Une minute, pas une conversation">
+  La minute est le plafond, pas la cible. La voie 16 sert à **prendre
+  contact**, après quoi on dégage sur une voie de travail — 6, 8, 72 ou
+  77 selon le cas (**M7**). Une conversation qui s'installe sur la 16
+  est une faute d'exploitation, même si elle dure moins d'une minute.
+</Aside>
+
+### 2. Les voies qu'on laisse tranquilles
+
+Deux paires de voies méritent une attention particulière, et l'examen
+les confond volontiers.
+
+**Les voies 75 et 76** encadrent immédiatement la voie 16. Ce sont des
+**voies de garde** : elles ne sont **pas utilisées**, précisément pour
+qu'aucune émission ne vienne déborder sur la 16.
+
+**Les voies 10 et 11** sont utilisables, mais le manuel demande que
+« toutes les précautions soient prises pour ne pas causer de brouillage
+préjudiciable à la voie 70 » lorsqu'on les emploie. En pratique :
+émission courte, puissance réduite quand c'est possible.
+
+<Aside type="tip" title="75-76 autour de 16, précautions sur 10-11 pour 70">
+  Une phrase à retenir telle quelle. Les deux nombres qui **encadrent**
+  quelque chose sont 75 et 76 ; les deux nombres qui **demandent des
+  précautions** sont 10 et 11. Si vous les inversez à l'examen, vous
+  perdez deux questions au lieu d'une.
+</Aside>
+
+L'équipement VHF ASN doit par ailleurs pouvoir assurer une **veille
+efficace sur la voie 70**. C'est ce qui permet à votre poste de recevoir
+l'alerte d'un autre navire pendant que vous discutez sur une voie de
+travail — le fonctionnement de cette veille est détaillé en **M10**.
+
+### 3. Dès que vous entendez une détresse
+
+C'est la règle la plus immédiatement opérationnelle du module, et elle
+ne souffre aucune nuance. Le manuel écrit :
+
+> Toute station entendant une communication de détresse doit **cesser
+> immédiatement toute émission** susceptible de troubler le trafic de
+> détresse et **rester en veille sur la fréquence d'émission** de cette
+> détresse.
+
+Deux gestes, dans cet ordre :
+
+1. **Le doigt quitte l'alternat.** Vous n'êtes pas en train de finir
+   votre phrase, vous vous taisez.
+2. **Vous restez sur la fréquence** et vous écoutez. Vous ne changez pas
+   de voie, vous ne coupez pas le poste, vous notez.
+
+Ce que vous faites ensuite — noter, laisser à une station côtière le
+temps de répondre, accuser réception si personne ne l'a fait, relayer
+au besoin — relève de la procédure de détresse elle-même, traitée en
+**M8**.
+
+<Aside type="danger" title="Se taire est un acte, pas une absence">
+  Un équipage qui continue de bavarder pendant un MAYDAY couvre le
+  message de quelqu'un qui coule. À bord, le réflexe s'installe à
+  l'entraînement : dès que le mot MAYDAY sort du haut-parleur, tout le
+  monde se tait, y compris ceux qui ne tiennent pas le micro.
+</Aside>
+
+### 4. Installer et informer
+
+La protection des fréquences commence avant le premier appel, au moment
+de l'installation. Le manuel pose trois exigences.
+
+- Le matériel doit être **installé de manière à ce qu'il ne soit pas
+  possible de déclencher une alerte de détresse accidentellement**.
+  C'est la raison d'être du capot rouge sur le bouton `DISTRESS`
+  (**M10**), et la raison pour laquelle on ne range rien contre ce
+  bouton.
+- Des **instructions claires et précises** sur l'utilisation du matériel
+  doivent être fournies par le fabricant ou le revendeur et être
+  **disponibles à proximité des équipements radioélectriques**. La
+  notice ne vit pas dans un carton au fond d'un coffre.
+- Les utilisateurs doivent être **familiarisés avec le fonctionnement
+  des équipements installés à bord** et **savoir prendre toutes les
+  mesures afin d'annuler une fausse alerte de détresse** et de
+  **communiquer avec le MRCC par n'importe quel moyen**.
+
+Cette troisième exigence est celle que le programme tout entier
+travaille : elle est écrite au pluriel, « les utilisateurs ». Pas le
+skipper seul.
+
+<Aside type="note" title="« Par n'importe quel moyen »">
+  Le manuel ne dit pas « par radio ». Si votre VHF émet une fausse
+  alerte et que vous ne parvenez pas à joindre le CROSS sur la 16, le
+  téléphone portable est un moyen parfaitement légitime — et souvent le
+  plus rapide près des côtes. Le numéro du CROSS de votre zone a sa
+  place sur la carte de cockpit.
+</Aside>
+
+### 5. Essayer son matériel sans gêner personne
+
+Un poste dont on ne vérifie jamais le fonctionnement est un poste dont
+on ignore l'état. Le manuel prévoit deux protocoles distincts.
+
+**En ASN.** Pour vérifier que la communication en ASN fonctionne
+correctement, deux voies s'offrent à vous :
+
+- la **fonction de test interne** de la VHF — c'est l'autotest, il
+  n'émet rien vers l'extérieur ;
+- un **essai avec une station côtière ou un autre navire**, sous forme
+  d'un **appel de routine, format individuel**.
+
+Pour ce second essai, la manipulation est celle-ci : on choisit
+`INDIVIDUAL` dans le menu de sélection du type d'appel, on saisit le
+**MMSI** de la station appelée, et on précise dans la sélection des
+catégories d'appel : **`ROUTINE`**.
+
+**En phonie.** Trois règles, dont deux chiffrées et une de méthode :
+
+- le **nombre** et la **durée** des émissions sont **réduits au
+  minimum** sur la voie 16 ;
+- ces essais s'effectuent **avec une puissance réduite** ;
+- **avant d'émettre** sur une quelconque des fréquences définies pour le
+  trafic de détresse et de sécurité, une station doit **écouter** sur la
+  fréquence envisagée, puis **s'assurer qu'aucune émission de détresse
+  n'est en cours** et que **la station appelée n'est pas en
+  communication** avec une autre station.
+
+<Aside type="caution" title="Écouter d'abord, toujours">
+  Cette règle vaut pour tout appel, pas seulement pour un essai. Émettre
+  sans avoir écouté est la façon la plus courante de couvrir une
+  communication en cours — et sur la 16, la communication en cours est
+  peut-être une détresse.
+</Aside>
+
+La différence entre l'autotest et l'essai avec une autre station est
+que le premier vérifie **le poste**, le second vérifie **la chaîne
+complète** : poste, antenne, câble, propagation. Les deux sont utiles,
+et pour des raisons différentes — la question de l'antenne est traitée
+en **M3** et **M6**.
+
+### 6. Annuler une fausse alerte
+
+Cela arrive. Un capot mal refermé, un enfant curieux, un équipier qui
+« regarde comment ça marche », un défaut d'alimentation. La question
+n'est pas de savoir si c'est honteux : c'est de savoir quoi faire dans
+les secondes qui suivent.
+
+Le manuel donne la règle en deux temps :
+
+> Une fausse alerte de détresse émise par ASN en ondes métriques doit
+> être **annulée immédiatement par ASN** si l'équipement le permet.
+> Dans tous les cas, les annulations doivent être **transmises par
+> radiotéléphonie sur la voie 16**.
+
+Autrement dit : l'annulation ASN, quand elle est possible, ne dispense
+**jamais** de l'annulation à la voix. Le message se dit comme ceci.
+
+| En français | En anglais |
+|---|---|
+| `À TOUS, À TOUS, À TOUS` | `ALL STATIONS, ALL STATIONS, ALL STATIONS` |
+| `ICI` | `THIS IS` |
+| **Nom du navire** (trois fois) | **Nom du navire** (trois fois) |
+| **Indicatif d'appel** (une fois) | **Indicatif d'appel** (une fois) |
+| **MMSI** (si l'alerte a été émise par ASN) | **MMSI** (si l'alerte a été émise par ASN) |
+| `Veuillez annuler mon alerte de détresse du…` | `Please cancel my distress alert of…` |
+| **Date et heure UTC** de l'alerte | **Date et heure UTC** de l'alerte |
+
+Sur ALIZÉ, cela donne :
+
+```
+À TOUS, À TOUS, À TOUS
+ICI
+ALIZÉ, ALIZÉ, ALIZÉ
+FOXTROT HOTEL DEUX HUIT DEUX SEPT
+MMSI DEUX DEUX SEPT UN TROIS DEUX UN DEUX ZÉRO
+VEUILLEZ ANNULER MON ALERTE DE DÉTRESSE
+DU 14 JUILLET, 09 HEURES 42 UTC
+```
+
+Puis — et cette dernière ligne est aussi importante que le message :
+
+> Il faut ensuite **rester quelques minutes en veille sur la voie 16**
+> et **répondre aux communications** concernant cette alerte de
+> détresse, le cas échéant.
+
+Un CROSS peut très bien vous rappeler pour confirmer. Si vous avez
+annulé puis coupé le poste, vous laissez planer un doute, et les moyens
+de secours restent engagés.
+
+<Aside type="tip" title="L'heure de l'alerte, pas l'heure de l'annulation">
+  Le message porte la **date et l'heure UTC de l'alerte** que vous
+  annulez, pas celle du moment où vous parlez. Dans le feu de l'action
+  on confond les deux — d'où l'intérêt de noter l'heure au moment où
+  l'alerte part, ou de la lire dans l'historique des appels de la VHF
+  (**M10**).
+</Aside>
+
+### 7. Ce que dit la loi, et ce que dit le bon sens
+
+Le manuel est explicite : **des poursuites sont prévues à l'encontre des
+personnes responsables, intentionnellement ou par négligence, de
+l'émission de fausses alertes de détresse.**
+
+Deux mots comptent dans cette phrase.
+
+- **Intentionnellement** : le canular, l'alerte émise « pour voir ».
+- **Par négligence** : la balise mal rangée, le poste laissé aux enfants,
+  la VHF revendue sans reprogrammation du MMSI. On n'a rien voulu, on
+  répond quand même.
+
+Cela n'a **rien à voir** avec le fait d'alerter dans le doute. Le doute
+sincère sur la gravité d'une situation n'est ni une intention ni une
+négligence : c'est exactement le cas pour lequel l'alerte existe.
+
+<Aside type="danger" title="En cas de doute, on alerte">
+  Une alerte émise dans le doute puis annulée coûte quelques minutes à
+  un CROSS. Une alerte que l'on n'a pas osé émettre coûte parfois une
+  vie. La procédure d'annulation existe pour rendre la première option
+  sans conséquence — c'est précisément pour cela qu'on l'apprend.
+</Aside>
+
+Ce module ferme la partie « exploitation » de l'épreuve C. Les
+**renseignements sur la sécurité maritime** que ces fréquences
+transportent sont l'objet de **M12**, et les balises qui alertent sans
+qu'on parle sont l'objet de **M13**.
 
 ## Vidéos sélectionnées
 
@@ -57,22 +342,77 @@ pourquoi ce module compte à bord et pas seulement à l'examen)*
 |--------|---------------|------:|
 | *(à indexer — lien réel ouvert, vérifié et daté)* | — | — |
 
+<Aside type="note" title="Pourquoi ce tableau est vide">
+  Aucune vidéo n'est référencée tant qu'elle n'a pas été **ouverte,
+  regardée et datée**. Une vidéo antérieure à juin 2025 peut décrire un
+  programme qui a changé. Le tableau se remplira au fil des
+  vérifications.
+</Aside>
+
 ## Mise en situation — à bord
 
-**Livrable attendu** : *(à rédiger — fichiers nommés, versés au dossier radio
-du bord)*
+**Livrable attendu** : un dossier `dossier-radio/M11/` contenant :
+
+1. **`annulation.md`** — la carte d'annulation d'une fausse alerte,
+   rédigée mot pour mot avec l'identité réelle du bateau, en français et
+   en anglais, champs variables laissés en blanc. Elle se range **avec
+   la carte MAYDAY**, pas ailleurs : c'est au même moment qu'on en a
+   besoin.
+
+2. **`contacts-cross.md`** — le nom, le MMSI et le **numéro de
+   téléphone** du ou des CROSS de vos zones de navigation. C'est le
+   « n'importe quel moyen » du manuel : à vérifier sur le site du CROSS
+   concerné, et à dater.
+
+3. **`essais.md`** — votre protocole d'essai en dix lignes : quand
+   (avant chaque sortie, ou une fois par mois), avec qui, sur quelle
+   puissance, et la manipulation ASN `INDIVIDUAL` + MMSI + `ROUTINE`
+   écrite pas à pas pour **votre** modèle de poste.
+
+4. **`journal-essais.md`** — un tableau vide à trois colonnes — date,
+   type d'essai, résultat — qui se remplira au fil des sorties. Un essai
+   qui n'est pas noté n'a pas eu lieu.
+
+5. **`notice-emplacement.md`** — une ligne indiquant **où** est rangée
+   la notice du constructeur à bord. Le manuel exige qu'elle soit
+   disponible à proximité des équipements ; le plus simple est de
+   photographier les pages utiles et de les plastifier avec les cartes.
 
 ## Entraînement — micro en main
 
 <Steps>
 
-1. **_(titre à rédiger)_** *(3 à 5 lignes)*
+1. **Annuler une fausse alerte, carte en main.** Poste éteint, lisez le
+   message d'annulation à voix haute, du premier `À TOUS` à l'heure UTC.
+   Faites-le trois fois, puis rangez la carte et refaites-le de mémoire.
+   Puis en anglais.
 
-2. **_(titre à rédiger)_** *(3 à 5 lignes)*
+2. **Se taire sur commande.** Un équipier lance « MAYDAY » à
+   l'improviste pendant que vous parlez sur une voie de travail. Le
+   geste attendu : le doigt quitte l'alternat, la main reste sur le
+   sélecteur, personne ne parle. Répétez jusqu'à ce que ce soit un
+   réflexe et non une décision.
 
-3. **_(titre à rédiger)_** *(3 à 5 lignes)*
+3. **Chronométrer une minute.** Tenez une conversation d'essai en
+   respectant le plafond d'une minute sur la voie 16, montre en main.
+   La plupart des gens sous-estiment la durée d'un échange de moitié :
+   l'exercice sert à recalibrer votre horloge interne.
 
-4. **_(titre à rédiger)_** *(3 à 5 lignes)*
+4. **Dérouler l'essai ASN.** Sur votre poste, allez jusqu'à l'écran de
+   confirmation d'un appel `INDIVIDUAL` de catégorie `ROUTINE` avec le
+   MMSI d'un autre navire — **sans valider**. Comptez les appuis. Puis
+   faites l'autotest, qui lui n'émet rien.
+
+5. **Écouter avant d'émettre.** Avant chacun de vos cinq appels
+   suivants, imposez-vous cinq secondes d'écoute silencieuse sur la voie
+   visée. Dites à voix haute « voie libre » avant d'appuyer. C'est un
+   rituel, et les rituels tiennent quand la tension monte.
+
+6. **Le scénario complet de la bavure.** Un équipier annonce : « le
+   bouton détresse a été appuyé il y a deux minutes ». Vous devez
+   annuler en ASN, puis à la voix sur la 16, puis rester en veille et
+   répondre au CROSS qui rappelle — le rôle du CROSS étant tenu par un
+   autre équipier, qui demandera votre position et le motif.
 
 </Steps>
 
@@ -80,17 +420,193 @@ du bord)*
 
 Seuil : 80 %.
 
-*(à intégrer — un `<Quiz />` de 10 questions, 4 choix, réponses mélangées,
-explications renvoyant aux autres modules. Écrit ici entre backticks : un
-`<Quiz />` sans prop `questions` fait échouer le build.)*
+<Quiz
+  id="m11"
+  questions={[
+    {
+      question:
+        'Quelle est la durée maximale d’une émission sur la voie 16 ?',
+      choices: ['Trente secondes', 'Trois minutes', 'Une minute', 'Cinq minutes'],
+      answer: 2,
+      explanation:
+        'Le manuel demande que toutes les émissions sur la voie 16 soient réduites au minimum et ne dépassent pas une minute. Au-delà d’un simple contact, on dégage sur une voie de travail (M7).',
+    },
+    {
+      question: 'Pourquoi les voies 75 et 76 ne sont-elles pas utilisées ?',
+      choices: [
+        'Ce sont des voies de garde encadrant la voie 16, laissées libres pour éviter tout brouillage',
+        'Elles sont réservées à l’appel sélectif numérique',
+        'Elles sont réservées aux stations côtières françaises',
+        'Elles sont réservées au service des opérations portuaires',
+      ],
+      answer: 0,
+      explanation:
+        'Elles sont situées juste à côté de la voie 16. Les laisser vides évite qu’une émission voisine ne vienne gêner la voie d’appel et de détresse.',
+    },
+    {
+      question:
+        'Quelles voies demandent des précautions particulières parce qu’elles peuvent brouiller la voie 70 ?',
+      choices: ['Les voies 15 et 17', 'Les voies 6 et 8', 'Les voies 75 et 76', 'Les voies 10 et 11'],
+      answer: 3,
+      explanation:
+        'Ne pas confondre les deux paires : 75 et 76 encadrent la voie 16 et restent inutilisées, tandis que 10 et 11 sont utilisables mais demandent des précautions vis-à-vis de la voie 70, celle de l’ASN (M10).',
+    },
+    {
+      question:
+        'Vous êtes en conversation sur une voie de travail et vous entendez une communication de détresse. Que faites-vous ?',
+      choices: [
+        'Vous réduisez la puissance à 1 W et vous terminez votre échange',
+        'Vous cessez immédiatement toute émission susceptible de troubler le trafic et vous restez en veille sur cette fréquence',
+        'Vous coupez le poste pour être certain de ne pas gêner',
+        'Vous changez de voie pour libérer la fréquence',
+      ],
+      answer: 1,
+      explanation:
+        'Se taire ne suffit pas : il faut rester à l’écoute sur la fréquence d’émission de cette détresse. C’est ce qui permet ensuite d’accuser réception si personne ne l’a fait (M8).',
+    },
+    {
+      question:
+        'Avec quelle puissance un essai en radiotéléphonie doit-il être conduit ?',
+      choices: [
+        'Avec la puissance normale, afin de vérifier la portée maximale',
+        'La puissance importe peu, seule la durée compte',
+        'Avec une puissance réduite',
+        'Avec la puissance maximale autorisée par la licence de station',
+      ],
+      answer: 2,
+      explanation:
+        'Le manuel demande de réduire le nombre et la durée des émissions sur la voie 16 et d’effectuer ces essais avec une puissance réduite. La position 1 W est faite pour cela (M6).',
+    },
+    {
+      question:
+        'Pour un essai ASN avec un autre navire, quel type et quelle catégorie d’appel choisit-on ?',
+      choices: [
+        'Type ALL SHIPS, catégorie SAFETY',
+        'Type INDIVIDUAL, catégorie ROUTINE',
+        'Type INDIVIDUAL, catégorie SAFETY',
+        'Type TEST, catégorie DISTRESS',
+      ],
+      answer: 1,
+      explanation:
+        'On sélectionne INDIVIDUAL, on saisit le MMSI de la station appelée, puis on précise la catégorie ROUTINE. L’autre solution est la fonction de test interne du poste, qui n’émet rien (M10).',
+    },
+    {
+      question:
+        'Avant d’émettre sur une fréquence définie pour le trafic de détresse et de sécurité, une station doit :',
+      choices: [
+        'annoncer son indicatif d’appel avant toute autre chose',
+        'demander l’autorisation de la station côtière la plus proche',
+        'passer en puissance réduite pendant cinq secondes',
+        'écouter sur la fréquence envisagée et s’assurer qu’aucune émission de détresse n’est en cours',
+      ],
+      answer: 3,
+      explanation:
+        'Il faut également s’assurer que la station appelée n’est pas déjà en communication avec une autre station. Écouter avant d’émettre est la règle générale, pas seulement une règle d’essai.',
+    },
+    {
+      question:
+        'Votre VHF ASN a émis une fausse alerte de détresse. Comment l’annulez-vous ?',
+      choices: [
+        'Uniquement par ASN, l’annulation étant automatiquement relayée',
+        'Uniquement en phonie sur la voie 16',
+        'Immédiatement par ASN si l’équipement le permet, et dans tous les cas en phonie sur la voie 16',
+        'En appelant le CROSS par téléphone, ce qui dispense de toute émission',
+      ],
+      answer: 2,
+      explanation:
+        'L’annulation ASN, quand elle est possible, ne dispense jamais de l’annulation à la voix sur la voie 16. Le téléphone reste un moyen utile de joindre le MRCC, mais il ne remplace pas le message radio.',
+    },
+    {
+      question:
+        'Dans le message d’annulation d’une fausse alerte, que faut-il indiquer après « veuillez annuler mon alerte de détresse » ?',
+      choices: [
+        'La date et l’heure UTC de l’alerte annulée',
+        'La position du navire au moment de l’annulation',
+        'Le motif du déclenchement accidentel',
+        'Le nombre de personnes à bord',
+      ],
+      answer: 0,
+      explanation:
+        'C’est bien l’heure de l’alerte que l’on annule, et non celle de l’annulation. Le message comporte aussi le nom du navire trois fois, l’indicatif une fois et le MMSI si l’alerte a été émise par ASN.',
+    },
+    {
+      question:
+        'Vous venez d’annuler votre fausse alerte sur la voie 16. Que faites-vous ensuite ?',
+      choices: [
+        'Vous coupez le poste, l’incident est clos',
+        'Vous répétez l’annulation toutes les quatre minutes pendant une heure',
+        'Vous émettez un message de sécurité pour prévenir les navires alentour',
+        'Vous restez quelques minutes en veille sur la voie 16 et répondez aux communications concernant cette alerte',
+      ],
+      answer: 3,
+      explanation:
+        'Un CROSS peut rappeler pour confirmer que l’alerte est bien levée. Couper le poste laisserait le doute subsister et les moyens de secours engagés.',
+    },
+  ]}
+/>
 
 ## Fiche de synthèse
 
 ```
-FORMATION CRR — M11 — Carte de cockpit
-=======================================
+FORMATION CRR — M11 — FRÉQUENCES PROTÉGÉES — Carte de cockpit
+==============================================================
 
-*(à rédiger — bloc ASCII brut, imprimable et plastifiable)*
+CE QU'ON N'ÉMET PAS
+  VOIE 16 ...... émissions RÉDUITES AU MINIMUM
+                 JAMAIS PLUS D'UNE MINUTE
+  VOIE 70 ...... ASN uniquement — JAMAIS la voix
+  VOIES 75-76 .. voies de GARDE autour de la 16 → libres
+  VOIES 10-11 .. utilisables, PRÉCAUTIONS pour la 70
+
+  Occupation abusive = BROUILLAGE PRÉJUDICIABLE
+                     = perturbation des fréquences
+
+--------------------------------------------------
+J'ENTENDS UNE DÉTRESSE
+--------------------------------------------------
+  1. CESSER IMMÉDIATEMENT toute émission
+  2. RESTER EN VEILLE sur cette fréquence
+  → suite de la procédure : carte M8
+
+--------------------------------------------------
+ESSAIS
+--------------------------------------------------
+  PHONIE  nombre et durée AU MINIMUM sur la 16
+          PUISSANCE RÉDUITE
+          ÉCOUTER d'abord → pas de détresse en cours
+                          → station appelée libre
+  ASN     autotest interne (n'émet rien)
+          ou INDIVIDUAL + MMSI + ROUTINE
+
+--------------------------------------------------
+FAUSSE ALERTE — ANNULATION            VOIE 16
+--------------------------------------------------
+  D'ABORD par ASN si le poste le permet
+  DANS TOUS LES CAS à la voix sur la 16 :
+
+  À TOUS, À TOUS, À TOUS   / ALL STATIONS x3
+  ICI                      / THIS IS
+  <NOM DU NAVIRE> x3
+  <INDICATIF>                             (une fois)
+  <MMSI>                       (si alerte par ASN)
+  VEUILLEZ ANNULER MON ALERTE DE DÉTRESSE DU...
+  <DATE, HEURE UTC DE L'ALERTE>
+   / Please cancel my distress alert of ...
+
+  PUIS : VEILLE sur la 16 quelques minutes
+         et RÉPONDRE si le CROSS rappelle.
+
+--------------------------------------------------
+À RETENIR
+--------------------------------------------------
+  EN CAS DE DOUTE, ON ALERTE.
+  L'annulation est une PROCÉDURE NORMALE.
+  Fausses alertes INTENTIONNELLES ou PAR NÉGLIGENCE
+  → POURSUITES.
+  Joindre le MRCC PAR N'IMPORTE QUEL MOYEN
+  → tél. CROSS : ..............................
 ```
 
-*(phrase de clôture renvoyant aux fiches voisines)*
+À afficher au dos de la carte **M8** : c'est au moment où l'on vient
+d'émettre une alerte que l'on a besoin de savoir l'annuler. Les
+procédures ASN correspondantes sont sur la carte **M10**.
