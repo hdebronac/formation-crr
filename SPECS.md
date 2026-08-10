@@ -589,7 +589,7 @@ l'examen : c'est lui qui prouve que la formation a atteint son objectif.
 | 9 | Modules M1 → M9 | ✅ |
 | 10 | Modules M11 → M14 | ✅ |
 | 11 | Passe vidéos — liens réels ouverts, vérifiés et datés | ⬜ |
-| 12 | Sections `bord/` et `reference/` complètes | ⬜ |
+| 12 | Sections `bord/` et `reference/` complètes | ✅ |
 | 13 | Illustrations créditées + page de crédits | ⬜ |
 
 L'ordre de rédaction n'est pas l'ordre de lecture : **M0 puis M10**, parce que

@@ -60,13 +60,17 @@ l'identité portée sur **votre** licence de station de navire (M1).
 
 | Page | Contenu | État |
 |---|---|---|
-| `station-radio` | Inventaire du matériel, MMSI, indicatif d'appel, licence de station, programmation de la VHF | ⬜ à rédiger |
-| `procedures-affichees` | Les cartes de cockpit compilées : détresse, urgence, sécurité, essai radio, annulation de fausse alerte | ⬜ à rédiger |
-| `scenarios` | Homme à la mer, échouement, voie d'eau, avarie de moteur, consultation radiomédicale, veille météo, entrée de port | ⬜ à rédiger |
-| `avant-depart` | Checklist radio à dérouler avant chaque sortie | ⬜ à rédiger |
+| [`station-radio`](/bord/station-radio/) | Inventaire du matériel, MMSI, indicatif d'appel, licence de station, programmation de la VHF | ✅ |
+| [`procedures-affichees`](/bord/procedures-affichees/) | Les cartes de cockpit compilées : détresse, urgence, sécurité, essai radio, annulation de fausse alerte | ✅ |
+| [`scenarios`](/bord/scenarios/) | Homme à la mer, échouement, voie d'eau, avarie de moteur, consultation radiomédicale, veille météo, entrée de port | ✅ |
+| [`avant-depart`](/bord/avant-depart/) | Checklist radio à dérouler avant chaque sortie | ✅ |
 
 Ces pages se construisent au fil des modules : chaque module dépose ici un
 **livrable nommé**, produit par sa section « Mise en situation — à bord ».
+
+Les quatre pages sont écrites, avec le bateau de référence en exemple. Elles
+sont faites pour être **recopiées et remplies avec l'identité de votre
+bateau** — pas lues.
 
 :::danger[Aucun équipement ne remplace la veille]
 La VHF, la radiobalise et le répondeur radar servent à **être secouru**. Ils ne
