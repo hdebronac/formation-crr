@@ -15,14 +15,14 @@ valeur ici sans la comprendre, allez au module.
 
 | Page | Contenu | Module qui explique | État |
 |---|---|---|---|
-| `voies-vhf` | Tableau des voies et de leur usage | M3, M7 | ⬜ |
-| `alphabet-phonetique` | Alphabet international et prononciation des chiffres | M5 | ⬜ |
-| `procedures` | Les trois procédures côte à côte, même mise en page | M8, M9 | ⬜ |
-| `mmsi-et-mid` | Formats de MMSI, MID français, MMSI des CROSS | M10 | ⬜ |
-| `sigles` | Glossaire | tous | ⬜ |
-| `cross` | Les CROSS, leurs zones, le 196 | M4 | ⬜ |
-| `chiffres-cles` | Les seuils et durées à ne jamais approximer | M8, M10, M13 | ⬜ |
-| `radiotelephonie-fluviale` | ATIS, voies fluviales, interdiction de l'ASN — **hors programme de l'examen maritime** | — | ⬜ |
+| [`voies-vhf`](/reference/voies-vhf/) | Tableau des voies et de leur usage | M3, M7 | ✅ |
+| [`alphabet-phonetique`](/reference/alphabet-phonetique/) | Alphabet international et prononciation des chiffres | M5 | ✅ |
+| [`procedures`](/reference/procedures/) | Les trois procédures côte à côte, même mise en page | M8, M9 | ✅ |
+| [`mmsi-et-mid`](/reference/mmsi-et-mid/) | Formats de MMSI, MID français, MMSI des CROSS | M10 | ✅ |
+| [`sigles`](/reference/sigles/) | Glossaire | tous | ✅ |
+| [`cross`](/reference/cross/) | Les CROSS, leurs zones, le 196 | M4 | ✅ |
+| [`chiffres-cles`](/reference/chiffres-cles/) | Les seuils et durées à ne jamais approximer | M8, M10, M13 | ✅ |
+| [`radiotelephonie-fluviale`](/reference/radiotelephonie-fluviale/) | ATIS, voies fluviales, interdiction de l'ASN — **hors programme de l'examen maritime** | — | ✅ |
 
 ## Deux mises en garde
 
