@@ -20,7 +20,7 @@ comment la travailler.
 | **156,800 MHz** | Voie 16 — appel, détresse, urgence, sécurité en phonie | M3 |
 | **156,525 MHz** | Voie 70 — appel sélectif numérique, jamais la voix | M3, M10 |
 | **156,300 MHz** | Voie 6 — navire-navire, exploitation simplex | M3 |
-| **156,975 / 161,575 MHz** | Voie 79 — émission CROSS / réception navire, duplex | M3, M12 |
+| **156,975 / 161,575 MHz** | Voie 79 — les deux fréquences de cette voie duplex | M3, M12 |
 | **161,975 MHz** | Voie AIS 1 | M13 |
 | **162,025 MHz** | Voie AIS 2 | M13 |
 | **156 à 174 MHz** | Bande VHF du service mobile maritime | M3 |

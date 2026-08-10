@@ -27,7 +27,7 @@ utilisées, **numérotées de 01 à 28 et de 60 à 88**.
 | **72** | Navire-navire, routine — la voie de dégagement de l'exemple du manuel | — | M7 |
 | **75** et **76** | **Voies de garde** encadrant la voie 16 : **non utilisées** | — | M11 |
 | **77** | Navire-navire, routine | — | M7 |
-| **79** | **Diffusion météo** par les CROSS, **duplex** : le CROSS émet, le navire reçoit | 156,975 / 161,575 MHz | M3, M12 |
+| **79** | **Diffusion météo** par les CROSS, exploitation **duplex** | 156,975 et 161,575 MHz | M3, M12 |
 | **80** | Diffusion météo par les CROSS, selon la zone | — | M12 |
 | **AIS 1** | Système d'identification automatique | 161,975 MHz | M13 |
 | **AIS 2** | Système d'identification automatique | 162,025 MHz | M13 |
@@ -52,7 +52,7 @@ l'encombrer, puis on **bascule** sur l'une de ces quatre.
 | Mode | Ce qui se passe | Exemple du manuel |
 |---|---|---|
 | **Simplex** | **Une seule fréquence** à l'émission et à la réception. Chacun parle à son tour | **Voie 6** — 156,300 MHz dans les deux sens |
-| **Duplex** | **Deux fréquences** différentes, on émet et on reçoit en même temps, comme au téléphone | **Voie 79** — 156,975 MHz à l'émission par le CROSS, 161,575 MHz à la réception |
+| **Duplex** | **Deux fréquences** différentes, on émet et on reçoit en même temps, comme au téléphone | **Voie 79** — 156,975 et 161,575 MHz. L'attribution de chaque fréquence à un bout de la liaison : `[à vérifier ANFR]`, voir **M12** |
 | **Semi-duplex** | Une extrémité en simplex — en général la station de navire —, l'autre en duplex — en général la station terrestre | — |
 
 :::caution[La table complète est une annexe, et les annexes ne sont pas interrogées]

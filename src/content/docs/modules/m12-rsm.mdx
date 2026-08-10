@@ -132,9 +132,23 @@ diffusions se font :
 - **à des heures précises** ;
 - sur les **voies 79 ou 80** **selon la zone**.
 
-La voie 79 fonctionne en **duplex** — le CROSS émet sur 156,975 MHz et
-vous recevez sur 161,575 MHz, votre poste faisant la bascule tout seul
-dès que vous sélectionnez la voie (**M3**).
+La voie 79 fonctionne en **duplex** : elle utilise **deux fréquences
+distinctes**, **156,975 MHz** et **161,575 MHz**, votre poste faisant la
+bascule tout seul dès que vous sélectionnez la voie (**M3**).
+
+:::caution[Quelle fréquence pour quel bout de la liaison ?]
+Le manuel écrit : « la fréquence est de 156,975 MHz à l'émission par le
+CROSS, la fréquence de réception sur cette même voie est de 161,575 MHz »,
+et son annexe porte « Voie 79 Transmission = 156,975 / Réception =
+161,575 » sans dire de quel côté. Les deux formulations ne se recoupent
+pas : si le CROSS émettait sur 156,975, c'est sur 156,975 que le navire
+recevrait.
+
+Ce qui est certain et suffisant pour l'examen : **la voie 79 est duplex et
+met en jeu 156,975 et 161,575 MHz**. **L'attribution de chaque fréquence à
+un bout de la liaison est marquée `[à vérifier ANFR]`** — et en pratique
+elle ne vous concerne pas : le poste s'en charge.
+:::
 
 Quand un avis de **coup de vent** est émis — le manuel donne le seuil :
 **supérieur à 7 Beaufort en zone côtière des 20 milles** — il fait
@@ -474,7 +488,7 @@ Seuil : 80 %.
       ],
       answer: 3,
       explanation:
-        'Les diffusions ont lieu à des heures précises, plusieurs fois par jour. La voie 79 fonctionne en duplex : le CROSS émet sur 156,975 MHz, le navire reçoit sur 161,575 MHz (M3).',
+        'Les diffusions ont lieu à des heures précises, plusieurs fois par jour. La voie 79 fonctionne en duplex et met en jeu deux fréquences, 156,975 et 161,575 MHz (M3).',
     },
     {
       question:
@@ -545,7 +559,7 @@ RSM = RENSEIGNEMENTS SUR LA SÉCURITÉ MARITIME  (angl. MSI)
 CE QUE MA VHF REÇOIT — LES CROSS
 --------------------------------------------------
   VOIES 79 ou 80 selon la zone, à HEURES PRÉCISES
-  voie 79 duplex : CROSS 156,975 / navire 161,575
+  voie 79 : DUPLEX — 156,975 et 161,575 MHz
 
   BMS : diffusé DÈS RÉCEPTION
         puis RÉPÉTÉ TOUTES LES HEURES
